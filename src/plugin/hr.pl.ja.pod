@@ -1,0 +1,53 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+hr.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ #hr
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+行頭で #hr を記述すると、区切り線になります。区切り線は上位のブロック要素の幅の60%の長さの水平線がセンタリングされて引かれます。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/hr
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/hr/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/hr.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

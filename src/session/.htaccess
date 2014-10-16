@@ -1,0 +1,9 @@
+######################################################################
+# Apache session/.htaccess for PyukiWiki
+# $Id$
+# @@PYUKIWIKIVERSION@@
+######################################################################
+
+Order deny,allow
+Deny from all
+

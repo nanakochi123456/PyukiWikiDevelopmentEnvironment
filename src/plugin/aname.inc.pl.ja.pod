@@ -1,0 +1,67 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+aname.inc.pl - PyukiWiki ¥×¥é¥°¥¤¥ó
+
+=head1 ³µÍ×
+
+ &aname( ¥¢¥ó¥«¡¼Ì¾ [,{[super], [full], [noid]}] ){ ¥¢¥ó¥«¡¼Ê¸»úÎó };
+ #aname( ¥¢¥ó¥«¡¼Ì¾ [,{[super], [full], [noid]}, ¥¢¥ó¥«¡¼Ê¸»úÎó] )
+
+=head1 ½ÅÍ×ÅÙ
+
+¡ú¡ú¡ú¡ù¡ù
+
+=head1 ÀâÌÀ
+
+»ØÄê¤·¤¿°ÌÃÖ¤Ë¥¢¥ó¥«¡¼(¥ê¥ó¥¯¤ÎÈô¤ÓÀè)¤òÀßÄê¤·¤Þ¤¹¡£
+
+=head1 °ú¿ô
+
+¥¢¥ó¥«¡¼Ì¾¤ÎÃÍ¤¬¥¢¥ó¥«¡¼¤Î¥Õ¥é¥°¥á¥ó¥È»ØÄê»Ò¤Ë»ÈÍÑ¤µ¤ì¤Þ¤¹¡£¥¢¥ó¥«¡¼Ì¾¤Ï¾ÊÎ¬¤Ç¤­¤Þ¤»¤ó¡£¥¢¥ó¥«¡¼Ì¾¤Ë¤ÏÈ¾³Ñ±Ñ»ú¡ÊÂçÊ¸»ú¡¿¾®Ê¸»ú¡Ë¤¬»ÈÍÑ²ÄÇ½¤Ç¤¹¡£
+ 
+super,full,noid ¤Ç¥¢¥ó¥«¡¼¤Î½ÐÎÏÊý¼°¤ò»ØÄê¤·¤Þ¤¹¡£
+
+super ¡¦ ¥¢¥ó¥«¡¼Ê¸»úÎó¤ò¾åÉÕ¤­É½¼¨¤·¤Þ¤¹¡£¾ÊÎ¬»þ¤Ï¾åÉÕ¤­É½¼¨¤µ¤ì¤Þ¤»¤ó¡£
+
+full ¡¦ ¥Õ¥é¥°¥á¥ó¥È»ØÄê»Ò°Ê³°¤ÎURI¤òÊä¤Ã¤Æ¥¢¥ó¥«¡¼¤ò½ÐÎÏ¤·¤Þ¤¹¡£¾ÊÎ¬»þ¤Ï¥Õ¥é¥°¥á¥ó¥È»ØÄê»Ò¤Î¤ß½ÐÎÏ¤µ¤ì¤Þ¤¹¡£
+
+noid ¡¦ ¥¢¥ó¥«¡¼¤Ë¥Õ¥é¥°¥á¥ó¥È»ØÄê»Ò¤ò½ÐÎÏ¤·¤Þ¤»¤ó¡£
+
+¥¢¥ó¥«¡¼Ê¸»úÎó¤¬»ØÄê¤µ¤ì¤¿¾ì¹ç¡¢»ØÄê¤·¤¿Ê¸»úÎó¤ËÂÐ¤·¤Æ¥¢¥ó¥«¡¼¤¬½ÐÎÏ¤µ¤ì¤Þ¤¹¡£¥¢¥ó¥«¡¼¤ÎÂ¸ºß¤òÍøÍÑ¼Ô¤ËÌÀ¼¨¤·¤¿¤¤¾ì¹ç¤ËÍøÍÑ¤·¤Þ¤¹¡£¾ÊÎ¬»þ¤Ï¶õÊ¸»ú¤ËÂÐ¤¹¤ë¥¢¥ó¥«¡¼¤È¤Ê¤ê¤Þ¤¹¡£
+
+=head1 È÷¹Í
+
+ÄÌ¾ï¤Ï¥¤¥ó¥é¥¤¥ó·¿¥×¥é¥°¥¤¥ó¤È¤·¤Æ»ÈÍÑ¤·¤Þ¤¹¡£2¤Ä¤Î¥Ö¥í¥Ã¥¯·¿¥×¥é¥°¥¤¥ó¤Ë¶´¤Þ¤ì¤¿ÉôÊ¬¤Ë¥¢¥ó¥«¡¼ÀßÄê¤·¤¿¤¤¾ì¹ç¤Ë¥¤¥ó¥é¥¤¥ó¥×¥é¥°¥¤¥ó¤È¤·¤Æµ­½Ò¤Ç¤­¤Ê¤¤¤¿¤á¡¢¥Ö¥í¥Ã¥¯·¿¥×¥é¥°¥¤¥ó¤È¤·¤Æ¤â»È¤¨¤ë¤è¤¦¤Ë¤·¤Æ¤¢¤ê¤Þ¤¹¡£
+
+=head1 »²¹Í
+
+=item PyukiWiki/Plugin/Standard/aname
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/aname/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/aname.inc.pl>
+
+=back
+
+=head1 Ãø¼Ô
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ¥é¥¤¥»¥ó¥¹
+
+@@LICENSE_NEKYO@@
+
+=cut

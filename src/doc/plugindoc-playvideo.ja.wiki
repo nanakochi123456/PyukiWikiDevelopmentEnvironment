@@ -1,0 +1,112 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*playvideo プラグイン
+セルフホストで動画再生ページを表示します。
+
+#contents(,2)
+
+**使用方法
+ &playvideo(filename [, option youtube video ID] [, option nicovideo video ID]...);
+ #playvideo(filename [, option youtube video ID] [, option nicovideo video ID]...)
+
+拡張子はいれないでください。
+
+Windows Media Video 及び、変換してあれば、HTML5ビデオ、または、Flashビデオが再生できます。
+
+**使用する前の簡単な設定
+plugin/playvideo.inc.pl を参考にして、info/setup.ini.cgi を追加する設定です。
+
+:$&#x3a;&#x3a;playvideo_plugin_usedownload=0;:ダウンロード機能を使わない場合
+:$&#x3a;&#x3a;playvideo_plugin_ziptmp="/tmp";:テンポラリディスクスペースに別の物理HDDが割り当てられていると速くなります。
+:$&#x3a;&#x3a;playvideo_plugin_videopath="video";:ビデオの配置してある./ からのパス、または絶対パス
+:$&#x3a;&#x3a;playvideo_plugin_playsite="http&#x3a;//$ENV{HTTP_HOST}/v.cgi";:デフォルトプレイサイト
+:$&#x3a;&#x3a;playvideo_plugin_videourl="http&#x3a;//$ENV{HTTP_HOST}/$videopath";|実際に配信したいビデオのホスト名〜パス
+:$&#x3a;&#x3a;playvideo_plugin_videourl{flv}="http&#x3a;//...";&br;$&#x3a;&#x3a;playvideo_plugin_videourl{mp4}="http&#x3a;//...";&br;$&#x3a;&#x3a;playvideo_plugin_videourl{ogv}="http&#x3a;//...";&br;$&#x3a;&#x3a;playvideo_plugin_videourl{webm}="http&#x3a;//...";:各拡張子の動画を、PyukiWikiをデフォルトサーバー以外に設定する場合に指定する。
+:$&#x3a;&#x3a;playvideo_plugin_downloadfilename_inwmv=0;:wmvのタイトルをzipに埋め込む
+:$&#x3a;&#x3a;playvideo_plugin_downloadfilename_inwmv_withauthor=0;:wmvの作者をzipに埋め込む
+:$playvideo&#x3a;&#x3a;usefakeyoutubeurl=0;:Youtubeの偽物（ニコニコ動画）を使用する
+
+**サンプルイメージ・・・
+
+ &playvideo(2pctest);
+ ↓
+ [Windows Media Player] [ダウンロード] (15.46 s) 
+ TOTAL: 6 TODAY: 0 YESTERDAY:1 
+
+ &playvideo(hisui3,1bQrBC-lpao,sm???????);
+ [Windows Media Player] [ブラウザーで再生] [Youtube] [ニコニコ動画] [ダウンロード] (06:46) 
+ TOTAL: 18 TODAY: 2 YESTERDAY:2
+
+**主な使い方
+
+ &playvideo(name, [options...]);
+ #playvideo(name, [options...])
+
+:name:ビデオファイル名~
+拡張子を指定しないと、リンクとして新しいウィンドウで開きます。~
+拡張子を指定すると（wmv、または html）その画面で開きます。~
+インナープレイヤーで、拡張子にYouTubeかニコニコ動画のIDを指定するとそのサイトの動画を表示します。
+
+**オプション
+:image=filename.jpg または gif または png:動画のサムネイル画像（一部のみ指定可能）添付でもURLでも可
+:inline, inline=yes:拡張子を指定しなくても、その画面にプレイヤーを開く
+:autoplay, autoplay=yes, autostart, autostart=yes:その画面にプレイヤーを開いた時に、自動再生をする
+:loop, loop=yes:繰り返し再生をする~
+（新しいウィンドウのWMV/HTML5か、インナーウィンドウのHTML5のみ）
+:notime, notime=yes:時間を表示しない（プレイヤーでは時間が表示されます）
+:nodownload, nodownload=yes:ダウンロードリンクを設置しない
+:size=(0-100)%:インナープレイヤーのサイズを指定する。
+:width=xxx height=xxx or 640x480:インナープレイヤーのサイズを指定する。
+:youtube=ID:YouTubeのIDを指定する。
+:niconico=ID:ニコニコ動画のIDを指定する。
+
+**動画情報に付加できる情報
+***Windows Media Video
+Windows Media エンコーダーにおいて、以下のものを設定すれば、自動的に反映されます。
+-題名
+-作成者
+-著作権
+***MP4
+MP4エンコード時に、タイトルと作成者が設定できます。
+
+**エンコーダーのダウンロード
+:Windows Media Encoder 32bit版:http://www.microsoft.com/downloads/ja-jp/resultsForCategory.aspx?displaylang=ja&categoryid=4
+:Windows Media Encoder 64bit版:http://www.microsoft.com/downloads/ja-jp/details.aspx?FamilyID=cc41218d-7e37-4546-bf0b-1276959ee3ef
+:Microsoft Expression Encoder:http://www.microsoft.com/downloads/ja-jp/details.aspx?FamilyID=75402BE0-C603-4998-A79C-BECDD197AA79
+
+**フリーのエンコーダーのダウンロードと注意事項
+:XMedia Recode (日本語対応):http://www.xmedia-recode.de/~
+フレームレートをそのままである「オリジナルを保持」を選択すると、非常に巨大なファイルが出来ます。適時、29.97もしくは 30 あたりを選択してみて下さい。
+:ffmpeg:http://ja.wikipedia.org/wiki/FFmpeg~
+ffmpeg -y -i "入力ファイル名" -acodec libfaac -ar 44100 -ab 128k -vcodec libx264 -level 41 -b ビットレート -bufsize 20000k -maxrate 25000k -g 250 -r 29.97 -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method umh -subq 7 -me_range 16 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -rc_eq 'blurCplx^(1-qComp)' -bf 16 -b_strategy 1 -bidir_refine 1 -refs 6 -deblockalpha 0 -deblockbeta 0 -threads 2 "出力ファイル名.flv"~
+ffmpeg -y -i "入力ファイル名" -acodec libfaac -ar 44100 -ab 128k -vcodec libx264 -level 41 -b ビットレート -bufsize 20000k -maxrate 25000k -g 250 -r 29.97 -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method umh -subq 7 -me_range 16 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -rc_eq 'blurCplx^(1-qComp)' -bf 16 -b_strategy 1 -bidir_refine 1 -refs 6 -deblockalpha 0 -deblockbeta 0   -threads 2 "出力ファイル名.mp4"~
+ffmpeg -y -i "入力ファイル名" -f webm -vcodec libvpx -acodec libvorbis -ab 128k -r 29.97 -aq 90 -b ビットレート  -threads 2 "出力ファイル名.webm"~
+ffmpeg -y -i "入力ファイル名" -acodec libvorbis -ab 128k -r 29.97 -aq 90  -b ビットレート  -threads 2 "出力ファイル名.ogv"
+:iWisoft Free Video Converter (英語のみ):http://www.easy-video-converter.com/~
+以前、紹介していましたが、現在お勧めできません。しかし、動画が認識できない場合の、緊急回避用のエンコーダーとして利用することもできます。
+
+**注意点
+アップデート時、及び、新たにHTML5ビデオやフラッシュビデオを使用するには、一度 deletecacheプラグインでplayvideoを全て削除する必要があります。
+
+**その他
+-HTML5ビデオの、Android、iPad、iPhoneでは、完全なる動作確認できていませんが、以前のバージョンより動作しやすいようになっています。~
+しかし、未サポート状態になっています。
+-カウンターがV2でないとうまく昨日のが取得できないかもしれません。~
+多分ですが、PyukiWiki Classic では動作しません。
+-あえて行っていませんが、v.cgi の外部からのアクセスの制限は行っていません。~
+そのため、他の人のyoutube IDやニコニコ動画のIDのビデオが再生される可能性があります。
+**謝辞
+このプラグイン作成において、Image::ExifTool ver 8.50 及び、flowplayer 3.2.7、video.js 3.2.0を使用しています。
+
+:Image&#x3a;&#x3a;ExifTool:http://search.cpan.org/~exiftool/Image-ExifTool-8.50/
+:flowplayer:http://flowplayer.org/
+:HTML5 Video Player Video.js:http://videojs.com/
+
+**ライセンス
+LGPL
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

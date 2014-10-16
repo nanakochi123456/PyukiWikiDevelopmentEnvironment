@@ -1,0 +1,36 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*主な本体ファイル構成
+-index.cgi~
+wrapper
+-lib/wiki.cgi~
+本体起動
+-lib/wiki_init.cgi~
+初期化用
+-lib/wiki_auth.cgi~
+認証モジュール
+-lib/wiki_db.cgi~
+データベース
+-lib/wiki_func.cgi~
+汎用関数
+-lib/wiki_html.cgi~
+HTML生成
+-lib/wiki_http.cgi~
+HTTPモジュール
+-lib/wiki_link.cgi~
+リンク用モジュール
+-lib/wiki_plugin.cgi~
+プラグイン用モジュール
+-lib/wiki_spam.cgi~
+スパムフィルターモジュール
+-lib/wiki_skin.cgi~
+スキンモジュール
+-lib/wiki_sub.cgi~
+自動生成される内部サブルーチン定義スクリプト
+-lib/wiki_version.cgi~
+バージョン記述のためのモジュール
+-lib/wiki_wiki.cgi~
+その他のモジュール
+-lib/wiki_write.cgi~
+書き込み用モジュール

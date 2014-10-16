@@ -1,0 +1,64 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+list.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=list
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+全ページの一覧を表示します。
+
+=head1 TIPS
+
+perlモジュール MeCab、または、Text::MeCabを導入すると、ひらがなでのインデックスも作成できます。
+
+この機能は、設定で停止することもできます。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/list
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/list/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/list.inc.pl>
+
+=item mecab
+
+L<http://mecab.googlecode.com/>
+
+=item Daisuke Maki
+
+L<http://search.cpan.org/~dmaki/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

@@ -1,0 +1,69 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+captcha.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 概要
+
+SPAM防止の為の画像文字認証を処理する。
+
+=head1 説明
+
+SPAM防止の為の画像文字認証を処理する。
+
+=head1 使用方法
+
+GD モジュールをインストールして下さい。
+
+captcha.inc.cgi にリネームして下さい。
+
+skinディレクトリに、True Type フォントを指定して下さい。
+
+info/setup.cgi に 使用するフォントのパスを $captcha::font 変数に指定して下さい。
+=head1 上書きする関数
+
+spam_filter
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/captcha
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/captcha/>
+
+=item PyukiWiki/Plugin/Standard/captcha
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/captcha/>
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/captcha.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/captcha.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

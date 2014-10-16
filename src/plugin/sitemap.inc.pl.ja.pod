@@ -1,0 +1,88 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+sitemap.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=sitemap
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+「明示的」訪問者をナビゲーションしやすくするプラグインです。
+
+=head1 USAGE
+
+=head2 MenuBar
+
+MenuBarでは以下のように記述する
+
+ ***項目名
+ [[WikiName]]
+ [[ページ]]
+
+(WikiNameだけでは動きません)
+
+=head2 各ページ
+
+MenuBarに登録されたページでは、以下のように記述する
+
+ -[[WikiName]] (WikiNameだけでは動きません)
+ -[[ページ]]~
+ --[[ページ]]~
+ ---[[ページ]]~
+ -[[?cmd=プラグイン&.....]]~
+
+ [[リンク>http://www.yahoo.co.jp/]] 等外部リンクははじきます。
+
+=back
+
+=head1 設定
+
+=head2 pyukiwiki.ini.cgi
+
+=over 4
+
+=item $::use_SiteMap
+
+1 にすると、サイトマップを使用します。
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/sitemap
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/sitemap/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/sitemap.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

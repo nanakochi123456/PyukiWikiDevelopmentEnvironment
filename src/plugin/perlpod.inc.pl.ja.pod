@@ -1,0 +1,57 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+perlpod.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=perlpod&file=perl script file or pod file. [&notitle=true] [&source=true]
+ #perlpod(perl script file or pod file.)
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+perlスクリプトのドキュメントである pod を表示します。
+
+ディレクトリは指定できませんが、これは他のディレクトリの物を見られないようにするためのセキュリティー措置です。
+
+自動的に、pyukiwiki.ini.cgiで設定されたディレクトリを検索します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/perlpod
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/perlpod/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/perlpod.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/Pod2Wiki.pm>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

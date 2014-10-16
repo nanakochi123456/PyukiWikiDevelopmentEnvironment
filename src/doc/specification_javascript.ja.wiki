@@ -1,0 +1,140 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*JavaScript関数仕様一覧
+common.???.jsにある関数一覧です。
+
+**ua
+:入力:(ブラウザー名)
+:出力:true、false
+
+使用中のブラウザーの種類を返します。~
+以下のオプションが選択できます。~
+~
+MSIE、FIREFOX、GECKO、CHROME、SAFARI、WINDOWS、MACOS、VERSION、MAGERVERSION
+
+**ln
+:入力:(langname),(string),(langname),(string)...
+:出力:string
+
+言語セレクターです。~
+langnameは、en、ja、stringは、対応する言語の出力する文字列です。
+
+**sins
+:入力:エレメントオブジェクト, HTML
+:出力:なし
+
+エレメントオブジェクトにinnerhtmlをします。
+
+**sinss
+:入力:エレメントオブジェクトの文字列, HTML
+:出力:なし
+
+エレメントオブジェクトの文字列にinnerhtmlをします。
+
+**gid
+:入力:エレメントオブジェクトの文字列
+:出力:エレメントオブジェクト
+
+エレメントオブジェクトを返します。(getElementById)
+
+**ou
+:入力:URL,target
+:出力:なし
+
+window.openをします。targetの文字列を"b"とすると、"_blank" に入れ替わります。
+
+**keyCode
+:入力:イベント
+:出力:キーコード
+
+入力されたキーボードのコードを返します。
+
+**getClientWidth
+:入力:なし
+:出力:ウィンドウの幅
+
+ブラウザーの幅を返します。
+
+**getClientHeight
+:入力:なし
+:出力:ウィンドウの高さ
+
+ブラウザーの高さを返します。
+
+**getDocHeight
+:入力:なし
+:出力:ドキュメントの高さ
+
+表示されているページの高さを返します。
+
+**getScrollY
+:入力:なし
+:出力:現在位置
+
+表示されている位置を返します。
+
+**ar
+:入力:なし
+:出力:new Arrayの返り値
+new Array を行ないます。
+
+**defined
+:入力:オブジェクト、変数
+:出力:true, false
+指定したオブジェクト、または変数が存在するか確認します。
+
+**replaceAll
+:入力:文字変数、置換前文字、置換後文字
+:出力:文字
+replaceの全文字対象です。
+
+**http
+:入力:メソッド, URL, POSTするデータ, 正常時のコールバック関数, 異常時のコールバック関数
+:出力:なし
+
+http非同期クライアントです。コールバック関数は、以下の通りの引数です。
+
+***okfunc
+:入力:HTTPステータス, レスポンステキスト
+:出力:なし
+
+***errfunc
+:入力:HTTPステータス, レスポンステキスト
+:出力:なし
+
+***httpreq
+:入力:なし
+:出力:http object
+ブラウザーのhttpクライアントオブジェクトを返します
+
+**ev.add
+:入力:イベント名, 実行する関数（文字列）, 実行する関数のパラメータ
+:出力:なし
+
+イベントハンドラーです。対応しているイベントは以下の通り
+-onload
+-onkeypress
+-onkeydown
+-onkeyup
+-onclick
+-onbeforeunload
+-oncontextmenu
+
+**ev.del
+:入力:イベント名, 実行する関数（文字列）
+:出力:なし
+
+イベントを削除します
+
+**ev.ex
+:入力:イベント名
+:出力:なし
+
+イベントを強制実行します。
+
+**debug
+:入力:メッセージ
+:出力:なし
+
+デバッグログをtextareaフォーム、及び、console.logに出力します。

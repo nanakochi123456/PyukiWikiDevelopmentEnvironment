@@ -1,0 +1,68 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+popup.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #popup(, NG Page or URL, OK Button, NG Button, width, height)
+ wiki string
+ wiki string
+ ...
+ #popup
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+ページ訪問時に、ポップアップ画面を表示します。
+
+=head1 使用方法
+
+ #popup(, http://example.jp/ignorer/,同意する,同意しない,300,100)
+ wiki文書
+ ...
+ #popup
+
+ #popup(, http://example.jp/ignorer/,はい,いいえ,する,同意しない,300,200)
+ *１８歳以上ですか？
+ このコンテンツは、未成年の方が閲覧できないコンテンツを含んでいます。
+ あなたの年齢は１８才以上ですか？
+ #popup
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/popup
+
+L<@@BASEURL/PyukiWiki/Plugin/Standard/popup/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/popup.inc.pl>
+
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

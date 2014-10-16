@@ -1,0 +1,52 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+title.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #title(titleタグ文字列)
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+titleタグを設定します。
+
+なお、安全の為に凍結されたページからしか使えません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/title
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/title/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/title.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

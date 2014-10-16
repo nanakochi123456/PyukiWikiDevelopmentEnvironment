@@ -1,0 +1,47 @@
+*内部モジュール仕様 - wiki_spam.cgi
+<<$Id$>>
+#contents(,1)
+*wiki_spam.cgi
+**NAME
+wiki_spam.cgi - This is PyukiWiki, yet another Wiki clone.
+
+**SEE ALSO
+
+
+
+:PyukiWiki/Dev/Specification/wiki_spam.cgi:[[@@BASEURL@@/PyukiWiki/Dev/Specification/wiki_spam.cgi/]]&nbsp;
+:PyukiWiki CVS:[[@@CVSURL@@/PyukiWiki-Devel/lib/wiki_spam.cgi]]&br;&br;
+
+**AUTHOR
+
+
+@@AUTHOR_NEKYO@@@@AUTHOR_NANAMI@@@@AUTHOR_PYUKI@@
+
+**LICENSE
+
+
+@@LICENSE_NEKYO@@
+
+
+
+***snapshot
+
+
+
+:設定:$&#x3a;&#x3a;deny_log = 1 詳細出力をpyukiwiki.ini.cgiに設定した$&#x3a;&#x3a;deny_logに出力する。&br;&br;$&#x3a;&#x3a;filter_flg = 1 スパムフィルターを設定したときに$&#x3a;&#x3a;black_logに出力する。&nbsp;
+:入力値:&#x26;snapshot(ログ出力の理由のメッセージ);&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:不可&nbsp;
+:概要:スパムフィルター &#x26;spam_filter においてのロギングをする。 add by Nekyo&br;&br;
+
+
+
+***spam_filter
+
+
+
+:入力値:&#x26;spam_filter(なし 文字列指定, レベル, URIカウント, メールカウント, リターンフラグ);&br;&br;レベル&br;&br;0または指定なしの場合Over Httpのみのチェックをする。&br;&br;1の場合日本語チェックをする&br;&br;2の場合Over Httpと日本語チェックのみをする。&br;&br;3の場合、無効フォームへのポストのみのチェック&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:不可&nbsp;
+:概要:掲示板、コメント等のスパムフィルター  add by Nekyo&br;&br;
+

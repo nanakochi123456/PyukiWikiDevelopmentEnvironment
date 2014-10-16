@@ -1,0 +1,54 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+metarobots.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #metarobots(キーワード[,キーワード]...[,noarchive])
+ #metarobots(description,説明文)
+ #metarobots(disable)
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+robotsコントロールを設定します。
+
+なお、安全の為に凍結されたページからしか使えません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/metarobots
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/metarobots/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/metarobots.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

@@ -1,0 +1,89 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+***CGI群
+以下のファイルはCGIが実行できるディレクトリにFTPします。
+
+ * と記載されているファイルは、コンパクト版にはありません。
+
+                        転送モード パーミッション   説明
+ +-- index.cgi               TEXT  755 (rwxr-xr-x)  CGIwrapper
+ +-- pyukiwiki.ini.cgi       TEXT  644 (rw-r--r--)  定義ファイル
+ +-- lib                           755 (rwxr-xr-x)  使用モジュール群
+     +-- wiki.cgi            TEXT  644 (rw-r--r--)  CGI本体
+     +-- aguse.inc.pl*       TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- antispam.inc.pl     TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- antispamwiki.inc..  TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- authadmin_..inc.pl  TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- autometa....inc.pl  TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- google_an...inc.pl* TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- iecompati...inc.pl  TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- lang.inc.pl*        TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- linktrack.inc.pl*   TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- logs.inc.pl*        TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- punyurl.inc.pl*     TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- setting.inc.pl*     TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- slashpage.inc.pl*   TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- urlhack.inc.pl*     TEXT  644 (rw-r--r--)  Exプラグイン
+     +-- Algorithm                 755 (rwxr-xr-x)  ディレクトリ
+     |   +-- Diff.pm         TEXT  644 (rw-r--r--)  差分用
+     |   AWS *                     755 (rwxr-xr-x)  ディレクトリ
+     |   |-- browsers.pm*    TEXT  644 (rw-r--r--)  アクセス解析定義ファイル
+     |   |-- domains.pm*     TEXT  644 (rw-r--r--)  （リリース版のみ）
+     |   |-- operating_...*  TEXT  644 (rw-r--r--)
+     |   |-- robots.pm*      TEXT  644 (rw-r--r--)
+     |   +-- search_eng...*  TEXT  644 (rw-r--r--)
+     +-- Digest*                   755 (rwxr-xr-x)  ディレクトリ
+     |   +-- Perl*                 755 (rwxr-xr-x)  ディレクトリ
+     |       +-- MD5.pm*     TEXT  644 (rw-r--r--)  md5 計算用
+     +-- File                      755 (rwxr-xr-x)  ディレクトリ
+     |   |-- MMagic.pm       TEXT  644 (rw-r--r--)  ファイル種別監査用
+     |   |-- magic.txt*      TEXT  644 (rw-r--r--)  Magicファイル（リリース版のみ）
+     |   +-- magic_compa..**TEXT  644 (rw-r--r--)  Magicファイル（コンパクト版のみ）
+     +-- HTTP                      755 (rwxr-wr-x)  ディレクトリ 
+     |   +-- Lite.pm         TEXT  644 (rw-r--r--)  HTTPクライアント
+     +-- IDNA*                     755 (rwxr-wr-x)  ディレクトリ 
+     |   +-- Punycode.pm*    TEXT  644 (rw-r--r--)  recent.inc.plで使用
+     +-- Jcode*                    755 (rwxr-wr-x)  ディレクトリ 
+     |   +-- Unicode*              755 (rwxr-wr-x)  ディレクトリ
+     |   |   +-- Contants.pm*TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     |   |   +-- NoXS.pm*    TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     |   |-- _Classic.pm*    TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     |   |-- Contants.pm*    TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     |   |-- H2Z.pm*         TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     |   |-- Tr.pm*          TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     |   +-- Unicode.pm*     TEXT  644 (rw-r--r--)  Jcode.pm で使用
+     +-- Nana                      755 (rwxr-xr-x)  ディレクトリ
+     |   |-- Cache.pm        TEXT  644 (rw-r--r--)  キャッシュモジュール
+     |   |-- Carp.pm         TEXT  644 (rw-r--r--)  エラーキャプチャーモジュール
+     |   |-- Code.pm         TEXT  644 (rw-r--r--)  コード変換
+     |   |-- Cookie.pm       TEXT  644 (rw-r--r--)  HTTPクッキー
+     |   |-- Crypt.pm        TEXT  644 (rw-r--r--)  ハッシュ暗号化モジュール (wrapper)
+     |   |-- Date.pm         TEXT  644 (rw-r--r--)  日付モジュール
+     |   |-- Enc.pm          TEXT  644 (rw-r--r--)  暗号化モジュール
+     |   |-- File.pm         TEXT  644 (rw-r--r--)  ファイルアクセスモジュール
+     |   |-- GDBM.pm*        TEXT  644 (rw-r--r--)  GDBMモジュール
+     |   |-- GZIP.pm*        TEXT  644 (rw-r--r--)  gzip圧縮モジュール
+     |   |-- HTTP.pm         TEXT  644 (rw-r--r--)  HTTPクライアント
+     |   |-- ImageSize.pm    TEXT  644 (rw-r--r--)  画像サイズモジュール
+     |   |-- Kana.pm         TEXT  644 (rw-r--r--)  かな変換モジュール
+     |   |-- Lock.pm         TEXT  644 (rw-r--r--)  ファイルロック用
+     |   |-- Logs.pm*        TEXT  644 (rw-r--r--)  アクセスログ解析用
+     |   |-- Mail.pm         TEXT  644 (rw-r--r--)  メール送信用
+     |   |-- MD5.pm          TEXT  644 (rw-r--r--)  MD5 wrapper
+     |   |-- OPML.pm         TEXT  644 (rw-r--r--)  OPML
+     |   |-- Pod2Wiki.pm*    TEXT  644 (rw-r--r--)  pod→wiki変換モジュール
+     |   |-- RemoteHost.pm*  TEXT  644 (rw-r--r--)  リモートホスト
+     |   |-- RSS.pm          TEXT  644 (rw-r--r--)  RSS1.0/2.0、ATOM
+     |   |-- Search.pm*      TEXT  644 (rw-r--r--)  あいまい検索用
+     |   |-- Sitemaps.pm*    TEXT  644 (rw-r--r--)  SEO対策向けsitemaps
+     |   |-- SQLite.pm*      TEXT  644 (rw-r--r--)  SQLiteモジュール
+     |   |-- Temp.pm         TEXT  644 (rw-r--r--)  テンポラリモジュール
+     |   |-- YukiWikiDB.pm   TEXT  644 (rw-r--r--)  YukiWikiDB
+     |   +-- YukiWikiDB_G..* TEXT  644 (rw-r--r--)  gzip圧縮版YukiWikiDB
+     +-- Time                      755 (rwxr-wr-x)  ディレクトリ 
+     |   +-- Local.pm        TEXT  644 (rw-r--r--)  recent.inc.plで使用
+     +-- Yuki                      755 (rwxr-xr-x)  ディレクトリ
+         |-- DiffText.pm     TEXT  644 (rw-r--r--)  差分用
+         |-- RSS.pm          TEXT  644 (rw-r--r--)  RSS用
+         +-- YukiWikiDB.pm   TEXT  644 (rw-r--r--)  オリジナルのYukiWikiDB

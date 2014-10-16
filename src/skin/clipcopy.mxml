@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://hhh.j73x.com/memo/e/10722.html -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" creationComplete="initApp()"
+	paddingTop="0"
+	paddingBottom="0"
+	paddingRight="0"
+	paddingLeft="0"
+	horizontalScrollPolicy="off"
+	verticalScrollPolicy="off"
+	backgroundAlpha="0">
+
+	<mx:Script>
+		<![CDATA[
+			import flash.external.*;
+			
+			//コピー対象のテキスト
+			private var _copyText:String = "";
+
+			//初期設定
+			public function initApp():void {
+				ExternalInterface.addCallback("setCopyText", setCopyText);
+				
+				//ボタンのラベルを設定
+				btn1.label = Application.application.parameters.label;
+
+				//コピーする文字列を設定
+				_copyText = Application.application.parameters.text;
+			}  
+
+			//コピー
+			private function _copy():void {
+				System.setClipboard(_copyText);
+			}
+
+			//コピーする文字列を変更する
+			public function setCopyText(text:String):void {
+				_copyText = text;
+			}
+		]]>
+	</mx:Script>
+
+	<mx:Button click="_copy()" id="btn1" width="100%" />
+	
+</mx:Application>

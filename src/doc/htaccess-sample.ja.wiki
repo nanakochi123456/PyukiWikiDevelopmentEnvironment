@@ -1,0 +1,320 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*.htaccess サンプルファイル集
+
+<<$Id$>>
+
+#contents
+
+**TOPページ用の.htaccess
+
+ ## / で終わるURLのデフォルトインデックスを指定する。
+ DirectoryIndex nph-index.cgi index.cgi wiki.cgi pyukiwiki.cgi index.php index.html index.htm
+ 
+ ## 末尾 ini.cgi、pl、txt で終わる拡張子を見れなくする
+ <FilesMatch "\.(ini\.cgi|pl|txt)$">
+     Order allow,deny
+     Deny from all
+ </FilesMatch>
+ 
+ ## 上記で、.txt を見れなくしたため、robots.txt を見れるようにする
+ <FilesMatch "^robots\.txt$">
+     Order deny,allow
+     Allow from all
+ </FilesMatch>
+ 
+ ## .htaccess を見れなくする
+ <FilesMatch "^\.ht">
+      Order allow,deny
+      Deny from all
+ </FilesMatch>
+ 
+ ## 末尾 /wiki 等で終わるURLで、urlhackを利用する。
+ #<FilesMatch "^wiki$">
+ #     ForceType application/x-httpd-cgi
+ #</FilesMatch>
+ 
+ ## BASIC認証を利用する。
+ #AuthType Basic
+ #AuthName      "Authentication required"
+ #AuthUserFile  /fullpath/.htpasswwd
+ #AuthGroupFile /dev/null
+ #Require       valid-user
+ 
+ ## SPAM対策の為に、書き込みのみBASIC認証を利用する。
+ ## (パスワードは空欄でも可： 例：user:
+ #<Limit POST>
+ #     AuthType          Basic
+ #     AuthName          "Please Input Username: user"
+ #     AuthUserFile     /fullpath/.htpasswd
+ #     AuthGroupFile     /dev/null
+ #     Require               valid-user
+ #     require valid-user
+ #</Limit>
+ 
+ ## urlhackを利用する
+ #RewriteEngine on
+ #RewriteBase /
+ #
+ #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ #RewriteRule ^\?(.*)$ ./index.cgi?$1 [L]
+ #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ #RewriteRule ^(.+)/$ ./index.cgi/$1 [L]
+ #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ #RewriteRule ^$ ./index.cgi [L]
+ 
+ ## もしくは
+ #
+ #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ #RewriteRule ^\?(.*)$ /cgi-bin/w?$1 [L]
+ #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ #RewriteRule ^(.+)/$ /cgi-bin/w/$1 [L]
+ #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ #RewriteRule ^$ /cgi-bin/w [L]
+ 
+ ## サーバーエラー出力をPyukiWikiで行なうようにする。
+ #
+ #ErrorDocument 400 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 401 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 402 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 403 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 404 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 405 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 406 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 407 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 408 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 409 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 410 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 411 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 412 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 413 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 414 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 415 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 416 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 417 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 418 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 419 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 420 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 421 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 422 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 423 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 424 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 425 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 426 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 500 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 501 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 502 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 503 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 504 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 505 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 506 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 507 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 508 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 509 ./nph-index.cgi?cmd=servererror
+ #ErrorDocument 510 ./nph-index.cgi?cmd=servererror
+ 
+ ## もしくは
+ #
+ #ErrorDocument 400 http://hogehoge/?cmd=servererror&code=400
+ #ErrorDocument 401 http://hogehoge/?cmd=servererror&code=401
+ #ErrorDocument 402 http://hogehoge/?cmd=servererror&code=402
+ #ErrorDocument 403 http://hogehoge/?cmd=servererror&code=403
+ #ErrorDocument 404 http://hogehoge/?cmd=servererror&code=404
+ #ErrorDocument 405 http://hogehoge/?cmd=servererror&code=405
+ #ErrorDocument 406 http://hogehoge/?cmd=servererror&code=406
+ #ErrorDocument 407 http://hogehoge/?cmd=servererror&code=407
+ #ErrorDocument 408 http://hogehoge/?cmd=servererror&code=408
+ #ErrorDocument 409 http://hogehoge/?cmd=servererror&code=409
+ #ErrorDocument 410 http://hogehoge/?cmd=servererror&code=410
+ #ErrorDocument 411 http://hogehoge/?cmd=servererror&code=411
+ #ErrorDocument 412 http://hogehoge/?cmd=servererror&code=412
+ #ErrorDocument 413 http://hogehoge/?cmd=servererror&code=413
+ #ErrorDocument 414 http://hogehoge/?cmd=servererror&code=414
+ #ErrorDocument 415 http://hogehoge/?cmd=servererror&code=415
+ #ErrorDocument 416 http://hogehoge/?cmd=servererror&code=416
+ #ErrorDocument 417 http://hogehoge/?cmd=servererror&code=417
+ #ErrorDocument 418 http://hogehoge/?cmd=servererror&code=418
+ #ErrorDocument 419 http://hogehoge/?cmd=servererror&code=419
+ #ErrorDocument 420 http://hogehoge/?cmd=servererror&code=420
+ #ErrorDocument 421 http://hogehoge/?cmd=servererror&code=421
+ #ErrorDocument 422 http://hogehoge/?cmd=servererror&code=422
+ #ErrorDocument 423 http://hogehoge/?cmd=servererror&code=423
+ #ErrorDocument 424 http://hogehoge/?cmd=servererror&code=424
+ #ErrorDocument 425 http://hogehoge/?cmd=servererror&code=425
+ #ErrorDocument 426 http://hogehoge/?cmd=servererror&code=426
+ #ErrorDocument 500 http://hogehoge/?cmd=servererror&code=500
+ #ErrorDocument 501 http://hogehoge/?cmd=servererror&code=501
+ #ErrorDocument 502 http://hogehoge/?cmd=servererror&code=502
+ #ErrorDocument 503 http://hogehoge/?cmd=servererror&code=503
+ #ErrorDocument 504 http://hogehoge/?cmd=servererror&code=504
+ #ErrorDocument 505 http://hogehoge/?cmd=servererror&code=505
+ #ErrorDocument 506 http://hogehoge/?cmd=servererror&code=506
+ #ErrorDocument 507 http://hogehoge/?cmd=servererror&code=507
+ #ErrorDocument 508 http://hogehoge/?cmd=servererror&code=508
+ #ErrorDocument 509 http://hogehoge/?cmd=servererror&code=509
+ #ErrorDocument 510 http://hogehoge/?cmd=servererror&code=510
+ #ErrorDocument 400 http://hogehoge/?cmd=servererror&code=400
+ #ErrorDocument 401 http://hogehoge/?cmd=servererror&code=401
+ #ErrorDocument 402 http://hogehoge/?cmd=servererror&code=402
+ #ErrorDocument 403 http://hogehoge/?cmd=servererror&code=403
+ #ErrorDocument 404 http://hogehoge/?cmd=servererror&code=404
+ #ErrorDocument 405 http://hogehoge/?cmd=servererror&code=405
+ #ErrorDocument 406 http://hogehoge/?cmd=servererror&code=406
+ #ErrorDocument 407 http://hogehoge/?cmd=servererror&code=407
+ #ErrorDocument 408 http://hogehoge/?cmd=servererror&code=408
+ #ErrorDocument 409 http://hogehoge/?cmd=servererror&code=409
+ #ErrorDocument 410 http://hogehoge/?cmd=servererror&code=410
+ #ErrorDocument 411 http://hogehoge/?cmd=servererror&code=411
+ #ErrorDocument 412 http://hogehoge/?cmd=servererror&code=412
+ #ErrorDocument 413 http://hogehoge/?cmd=servererror&code=413
+ #ErrorDocument 414 http://hogehoge/?cmd=servererror&code=414
+ #ErrorDocument 415 http://hogehoge/?cmd=servererror&code=415
+ #ErrorDocument 416 http://hogehoge/?cmd=servererror&code=416
+ #ErrorDocument 417 http://hogehoge/?cmd=servererror&code=417
+ #ErrorDocument 418 http://hogehoge/?cmd=servererror&code=418
+ #ErrorDocument 419 http://hogehoge/?cmd=servererror&code=419
+ #ErrorDocument 420 http://hogehoge/?cmd=servererror&code=420
+ #ErrorDocument 421 http://hogehoge/?cmd=servererror&code=421
+ #ErrorDocument 422 http://hogehoge/?cmd=servererror&code=422
+ #ErrorDocument 423 http://hogehoge/?cmd=servererror&code=423
+ #ErrorDocument 424 http://hogehoge/?cmd=servererror&code=424
+ #ErrorDocument 425 http://hogehoge/?cmd=servererror&code=425
+ #ErrorDocument 426 http://hogehoge/?cmd=servererror&code=426
+ #ErrorDocument 500 http://hogehoge/?cmd=servererror&code=500
+ #ErrorDocument 501 http://hogehoge/?cmd=servererror&code=501
+ #ErrorDocument 502 http://hogehoge/?cmd=servererror&code=502
+ #ErrorDocument 503 http://hogehoge/?cmd=servererror&code=503
+ #ErrorDocument 504 http://hogehoge/?cmd=servererror&code=504
+ #ErrorDocument 505 http://hogehoge/?cmd=servererror&code=505
+ #ErrorDocument 506 http://hogehoge/?cmd=servererror&code=506
+ #ErrorDocument 507 http://hogehoge/?cmd=servererror&code=507
+ #ErrorDocument 508 http://hogehoge/?cmd=servererror&code=508
+ #ErrorDocument 509 http://hogehoge/?cmd=servererror&code=509
+ #ErrorDocument 510 http://hogehoge/?cmd=servererror&code=510
+
+**attach の.htaccess
+
+ # 末尾 .html からのアクセスを禁止する
+ Order allow,deny
+ Allow from all
+ 
+ <FilesMatch "\.(html)$">
+      Order allow,deny
+      Deny from all
+ </FilesMatch>
+ 
+ ## 一覧の取得とCGIの実行を禁止する。
+ #Options -Indexes -ExecCGI
+
+ ## 外部サイトから参照できないようにする
+ #SetEnvIf Referer "^http://pyukiwiki.sourceforge.jp/" ref01
+ #Order deny,allow
+ #Deny from all
+ #Allow from env=ref01
+
+**backup、counter、info、wikiの.htaccess
+
+ # 全体から見れなくする
+ Order allow,deny
+ Deny from all
+ 
+ ## 一覧の取得とCGIの実行を禁止する。
+ #Options -Indexes -ExecCGI
+
+**cache の.htaccess
+
+ # 一部の拡張子のみ有効にする
+ Order deny,allow
+ Deny from all
+ 
+ <FilesMatch "\.(htm|html|gif|png|jpg|js|json)$">
+      Allow from all
+ </FilesMatch>
+ 
+ ## 一覧の取得とCGIの実行を禁止する。
+ #Options -Indexes -ExecCGI
+ 
+ ## 外部サイトから参照できないようにする
+ #SetEnvIf Referer "^http://pyukiwiki.sourceforge.jp/" ref01
+ #Order deny,allow
+ #Deny from all
+ #Allow from env=ref01
+
+**imageの.haccess
+
+ # 全体から見えるようにする。
+ Order allow,deny
+ Allow from all
+ 
+ ## 一覧の取得とCGIの実行を禁止する。
+ #Options -Indexes -ExecCGI
+ 
+ ## 外部サイトから参照できないようにする
+ #SetEnvIf Referer "^http://pyukiwiki.sourceforge.jp/" ref01
+ #Order deny,allow
+ #Deny from all
+ #Allow from env=ref01
+
+**lib、plugin、resourceの.htaacess
+
+ # 全体から見えなくする
+ Order allow,deny
+ Deny from all
+ 
+ ## 一覧の取得とCGIの実行を禁止する。
+ #Options -Indexes -ExecCGI
+ 
+ ## 自作プラグインをこのディレクトり配下で公開する場合、有効にする
+ ## lib、pluginの場合
+ #<FilesMatch "\.(inc\.pl|pl|pm|pod)$">
+ #     Order deny,allow
+ #     Allow from all
+ #</FilesMatch>
+ #AddType text/plain .pl
+ #AddType text/plain .pm
+ #AddType text/plain .pod
+ 
+ ##resourceの場合
+ #<FilesMatch "\.(txt)$">
+ #     Order deny,allow
+ #     Allow from all
+ #</FilesMatch>
+ #AddType text/plain .txt
+
+**skinの.htaacess
+
+ # 全体から見えなくする
+ Order allow,deny
+ Deny from all
+ 
+ # 以下の意拡張子を見えるようにする
+ <FilesMatch "\.(cgi|php|css|js|gz|swf|gif|jpg|jpeg|png)$">
+      Order allow,deny
+      Allow from all
+ </FilesMatch>
+ 
+ ## 一覧の取得を禁止する。
+ #Options -Indexes
+ 
+ ## 外部サイトから参照できないようにする
+ #SetEnvIf Referer "^http://pyukiwiki.sourceforge.jp/" ref01
+ #Order deny,allow
+ #Deny from all
+ #Allow from env=ref01
+ 
+ ## 圧縮済(gz)のJavaScriptとCSSを用いる時に選択する
+ #RewriteEngine on
+ #RewriteCond %{HTTP:Accept-Encoding} gzip
+ #RewriteCond %{REQUEST_FILENAME}\.gz -s
+ #RewriteRule .+ %{REQUEST_URI}.gz
+ #
+ #<FilesMatch "\.css\.gz$">
+ #     ForceType   text/css
+ #     AddEncoding x-gzip .gz
+ #</FilesMatch>
+ #
+ #<FilesMatch "\.js\.gz$">
+ #     ForceType   application/x-javascript
+ #     AddEncoding x-gzip .gz
+ #</FilesMatch>

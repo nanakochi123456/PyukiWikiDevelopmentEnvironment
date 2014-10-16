@@ -1,0 +1,67 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+attach.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #attach
+ ?cmd=attach&mypage=page
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+ページ上に添付ファイルのアップロードフォームを生成します。また、全体的な添付ファイルの管理を行ないます。
+
+=head1 設定
+
+=head2 pyukiwiki.ini.cgi
+
+=over 4
+
+=item $::file_uploads
+
+添付を 0:使わない/1:使う/2:認証付き/3:削除のみ認証付
+
+=item $::max_filesize
+
+アップロードファイルの最大容量 
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/attach
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/attach/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/attach.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

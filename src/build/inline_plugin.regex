@@ -1,0 +1,25 @@
+##################################################################
+# $Id$
+##################################################################
+# inline plugin
+##################################################################
+$amp='&amp;';
+#$amp='&';
+$space='\s?';
+$cmdname='[^(;{]+';
+$openinline="$space\\($space";
+$inlines="[^)]*?";
+$noinline="(?:[()$space]*?)";
+$closeinline="$space\\)";
+$openopt="$space\\{$space";
+$opts='[^&}]*?';
+$closeopt="$space\\}";
+$endinline=';';
+
+$opt=qq(($cmdname)$noinline$openopt($opts)$closeopt);
+$cmdonly=qq(($cmdname));
+$parm=qq(($cmdname)$openinline($inlines)$closeinline);
+$parmopt=qq(($cmdname)$openinline($inlines)$closeinline$openopt($opts)$closeopt);
+$::embedded_inline=qq($amp(?:$opt|$cmdonly|$parm|$parmopt)$endinline);
+
+print $::embedded_inline;

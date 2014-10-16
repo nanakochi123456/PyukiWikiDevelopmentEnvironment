@@ -1,0 +1,85 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+multicomment.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #multicomment(label=コメントする=,name=お名前=,url=Webページ（任意）=http://,mail=メールアドレス（任意）=,textarea=コメント=)
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+高機能コメントフォームを表示して、訪問者からのコメント入力を受け付ける
+
+=head1 使用方法
+
+ #multicomment(label=コメントする=,name=お名前=,url=Webページ（任意）=http://,mail=メールアドレス（任意）=,textarea=コメント=)
+
+=head1 設定
+
+=head2 pyukiwiki.ini.cgiの設定
+
+=over 4
+
+=item $::writefrozenplugin
+
+１の場合、凍結されたページでも書き込めるようにする。
+
+=back
+
+=head2 multicomment.inc.plの設定
+
+=over 4
+
+=item my $multicomment_format
+Wiki文法でコメントを挿入する書式
+
+\x08はセパレーターなので、削除しないで下さい。
+
+=item $multicomment::noname
+
+1 の場合、名前なしで処理しない
+
+=item $multicomment::nodata
+
+1 の場合、コメントなしでエラーとする
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/multicomment
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/multicomment/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/multicomment.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

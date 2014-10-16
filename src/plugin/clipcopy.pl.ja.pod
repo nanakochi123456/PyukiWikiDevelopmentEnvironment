@@ -1,0 +1,52 @@
+#$Id: clipcopy.pl.ja.pod,v 1.19 2011/09/01 12:24:21 papu Exp $
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+clipcopy.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &clipcopy(linkurl, text, [copiedtext]);
+ &clipcopy(@@BASEURL@@/?rss
+  ,RSS Link Copy,@@BASEURL@@/?rss Copied to clipboard);
+
+=head1 説明
+
+指定したURLをクリップボードにコピーします。URL以外の文字列を指定することはできません。
+
+Internet Explorerのみで動作するプラグインです。それ以外のブラウザでは何も返しません。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Nanami/clipcopy
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/clipcopy/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/clipcopy.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

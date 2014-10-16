@@ -1,0 +1,73 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+antispam.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+Anti Spam プラグイン
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+迷惑メール及びメールアドレス収集プログラムへの対策のために、PyukiWikiで出力されるメールアドレスをすべて暗号化し、ブラウザーで復号できるようにします。
+
+=head1 使用方法
+
+antispam.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+関数 make_link_mail を上書きします。
+
+=head1 注意事項
+
+プラグイン等から、直接 <a href="mailto:...."> のように出力された場合のメールアドレスは暗号化されません。make_link_mail 関数を経由するようにして下さい。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/antispam
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/antispam/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/antispam.inc.pl>
+
+=item メールアドレスの収集業者（自動収集プログラム／ロボット）対策について
+
+L<http://ninja.index.ne.jp/~toshi/soft/untispam.shtml>
+
+このライブラリはコピーフリーです。
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+=item Toshi(NINJA104)
+
+L<http://ninja.index.ne.jp/~toshi/>
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

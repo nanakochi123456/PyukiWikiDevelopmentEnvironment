@@ -1,0 +1,56 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+adminedit.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=adminedit&mypage=ページ名
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+指定したページを編集・凍結する
+
+編集・凍結するには、凍結パスワードが必要です。
+
+ページ名はエンコードされていなければならない。
+
+=head1 参考
+
+=over 4
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/adminedit
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/adminedit/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/adminedit.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

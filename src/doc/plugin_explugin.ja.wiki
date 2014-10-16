@@ -1,0 +1,900 @@
+*PyukiWiki Explugin
+<<$Id$>>
+#contents(,1)
+*aguse.inc.pl
+aguse.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+クライアントのブラウザ上で、リンク先が安全であるかポップアップで確認できるプラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+リンク先の安全性について、実際に行く前に調査しポップアップで表示します。
+
+**使用方法
+
+
+aguse.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+なし
+
+
+
+*antispam.inc.pl
+antispam.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+Anti Spam プラグイン
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+迷惑メール及びメールアドレス収集プログラムへの対策のために、PyukiWikiで出力されるメールアドレスをすべて暗号化し、ブラウザーで復号できるようにします。
+
+**使用方法
+
+
+antispam.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+関数 make_link_mail を上書きします。
+
+**注意事項
+
+
+プラグイン等から、直接 <a href="mailto&#x3a;...."> のように出力された場合のメールアドレスは暗号化されません。make_link_mail 関数を経由するようにして下さい。
+
+*antispamwiki.inc.pl
+antispamwiki.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+wikiスパミング防止プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+cookieを用いて、簡易的にwikiスパミングを防止します。
+
+**使用方法
+
+
+antispamwiki.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+なし
+
+*authadmin_cookie.inc.pl
+authadmin_cookie.inc.pl - PyukiWiki 管理者用プラグイン
+
+**概要
+
+
+凍結パスワードを一時クッキーに保存するプラグイン
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+凍結パスワードを一時クッキーに保存します。一度凍結パスワードで認証されると、ブラウザを閉じるまで認証のテキストボックスが出現しなくなります。
+
+**使用方法
+
+
+authadmin_cookie.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+関数 authadminpassword を上書きします。
+
+**バグ
+
+
+このプラグインは評価版です。1.0において、実装方法が変更される予定です。
+
+*autometarobot.inc.pl
+autometarobot.inc.pl - PyukiWiki 管理者用プラグイン
+
+**概要
+
+
+ロボット型検索エンジン向けのキーワードを自動生成する
+
+**重要度
+
+
+★★★☆☆
+
+**使用方法
+
+
+autometarobot.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+関数 meta_robots を上書きします。
+
+*canonical.inc.pl
+canonical.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+検索エンジンに対して重複URLのオリジナルを指定する
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+検索エンジンに対して重複URLのオリジナルを指定する
+
+**使用方法
+
+
+canonical.inc.cgi にリネームして下さい。
+
+$&#x3a;&#x3a;canonical&#x3a;&#x3a;url にオリジナルのURLを指定して下さい。
+
+**上書きする関数
+
+
+なし
+
+**備考
+
+
+CMSエンジンとして考慮すると、同一のページの別名URLの存在を消すことは、困難なことです。
+
+*captcha.inc.pl
+captcha.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★★☆☆
+
+**概要
+
+
+SPAM防止の為の画像文字認証を処理する。
+
+**説明
+
+
+SPAM防止の為の画像文字認証を処理する。
+
+**使用方法
+
+
+GD モジュールをインストールして下さい。
+
+captcha.inc.cgi にリネームして下さい。
+
+skinディレクトリに、True Type フォントを指定して下さい。
+
+info/setup.cgi に 使用するフォントのパスを $captcha&#x3a;&#x3a;font 変数に指定して下さい。**上書きする関数
+
+
+spam_filter
+
+*cdn.inc.pl
+cdn.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+PyukiWiki CDNを利用する。
+
+**説明
+
+
+PyukiWikiをより快適に表示するために、コンテンツデリバリーネットワークを利用する。
+
+**使用方法
+
+
+cdn.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+なし
+
+*google_analytics.inc.pl
+google_analytics.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+google-analytics.com サービスによる、サイトトラッキングシステム
+
+**説明
+
+
+googleアナリティスによるサイトトラッキングシステム
+
+**使用方法
+
+
+google_analytics.inc.cgi にリネームします。
+
+info/setup.cgi に登録したアカウント (UA- で始まるもの) を
+
+$GOOGLEANALTYCS&#x3a;&#x3a;ACCOUNT 変数にセットする。
+
+複数のサブドメインがある場合は、
+
+$GOOGLEANALTYCS&#x3a;&#x3a;MULTISUB に 「.example.com」の形式で記載する。
+
+複数のトップレベルドメインがある場合、
+
+$GOOGLEANALTYCS&#x3a;&#x3a;MULTITOP=1 をセットする。
+
+
+
+**上書きする関数
+
+
+なし
+
+**注意
+
+
+合計で１ヶ月500万ビューを超えると課金が発生するようです。
+
+*google_translate.inc.pl
+google_transrate.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+**概要
+
+
+transrate.google.com サービスによる、自動翻訳サービス
+
+**説明
+
+
+google翻訳による、選択式自動翻訳です。
+
+**使用方法
+
+
+google_transrate.inc.cgi にリネームします。
+
+**上書きする関数
+
+
+なし
+
+*iecompatiblehack.inc.pl
+iecompatiblehack.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+IEの互換表示ボタンを強制的になくすプラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+Internet Explorere 8 以降で互換表示ボタンが表示されるのを阻止します。
+
+なお、他のコンテンツやスキンのCSSの互換が悪い場合には使用しないで下さい。ブラウジングできるようにします。
+
+**備考
+
+
+2011年11月に発表された、Windows 8 の Internet Explorer では、互換表示ボタンがなくなりません。
+
+**使用方法
+
+
+iecompatiblehack.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+なし
+
+*ignoreoldbrowser.inc.pl
+ignoreoldbrowser.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+PyukiWikiと互換性のない古いブラウザーでアクセスされた場合、ブラウザーのアップデート促進画面を強制表示するプラグイン
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+PyukiWikiと互換性のない古いブラウザーでアクセスされた場合、ブラウザーのアップデート促進画面を強制表示するものです。
+
+**備考
+
+
+PyukiWiki 0.2.1より、Internet Explorer 6 以前でのサポートがなくなるため、追加されました。
+
+**使用方法
+
+
+ignoreoldbrowser.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+なし
+
+*lang.inc.pl
+lang.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★★★☆
+
+**概要
+
+
+Wiki国際化対応プラグイン
+
+**説明
+
+
+言語別のwikiを作成できるようにします。
+
+HTTP_ACCEPT_LANGUAGEを自動認識し、優先される言語を表示し、プラグイン lang.inc.pl によって設定された言語を表示できるようにします。
+
+**使用方法
+
+
+lang.inc.cgi にリネームして下さい。
+
+以下のディレクトリを作成して下さい。
+
+ attach.(lang)  example attach.en
+ diff.(lang)    example diff.ja
+ cache.(lang)   example cache.zh-cn
+ counter.(lang) example counter.en-us
+ info.(lang)    example info.fr
+ wiki.(lang)    example wiki.ja
+
+
+**設定
+
+
+***pyukiwiki.ini.cgi
+
+
+
+:$&#x3a;&#x3a;lang:デフォルトの言語を設定します。&br;&br;ja en fr en-us etc...&nbsp;
+:$&#x3a;&#x3a;charcode:未実装&nbsp;
+:$&#x3a;&#x3a;kanjicode:日本語の場合のみ、表示する漢字コードを指定します。&br;&br;
+ euc sjis utf8
+&nbsp;
+:$&#x3a;&#x3a;lang_list:必要とする言語リストをスペース区切りで指定します。&br;&br;
+ $::lang_list="ja en";
+&nbsp;
+:$&#x3a;&#x3a;write_location=1;:このプラグインは、Locationによる移動を行ないます。&br;&br;
+
+**バグ
+
+
+この機能を利用すると、以下の初期化が2回行なわれますが、仕様です。
+
+ init_lang が2回呼び出される
+ リソースの読み込み（上書きします）
+ データベースをクローズし、ディレクトリを再設定し、データベースをオープン
+
+
+**上書きする関数
+
+
+ありません
+
+*linktrack.inc.pl
+linktrack.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+**概要
+
+
+外部リンクへのカウンターを取る
+
+**使用方法
+
+
+linktrack.inc.cgi にリネームして下さい。
+
+必要な場合、info/setup.cgi に以下の変数を記載して下さい。
+
+$linktrack&#x3a;&#x3a;ignoredomain = wikiのURL (http://等のプリフィックスは除く）
+
+複数指定する場合は、「,」で区切って指定できます。
+
+例：abcdefg.com/~user,example.com
+
+*logs.inc.pl
+logs.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+アクセスログをプラグイン
+
+**説明
+
+
+wikiへのアクセスログを取得します。
+
+**使用方法
+
+
+logs.inc.cgi にリネームして下さい。
+
+logs ディレクトリを作成して下さい。（デフォルト）
+
+**設定
+
+
+
+:$logs&#x3a;&#x3a;compress:重いサイトを運用する時には、0 を設定して下さい。アクセスログが圧縮されません。&br;&br;また、アクセスログのキャッシュ保持も圧縮されなくなります。&nbsp;
+:$logs&#x3a;&#x3a;directory:アクセスログの保存先を設定します。&br;&br;
+
+**バグ
+
+
+この機能を利用すると、以下の初期化が2回行なわれますが、仕様です。
+
+ init_logs が2回呼び出される
+ リソースの読み込み（上書きします）
+ データベースをクローズし、ディレクトリを再設定し、データベースをオープン
+
+
+**上書きする関数
+
+
+ありません
+
+*ogp.inc.pl
+ogp.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★★★☆
+
+**概要
+
+
+The Open Graph protocol
+
+**説明
+
+
+The Open Graph protocol
+
+**使用方法
+
+
+ogp.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+ありません
+
+*pathmenu.inc.pl
+pathmenu.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★★☆☆
+
+**概要
+
+
+階層下にMenuBar等のシステムページを生成する。
+
+**説明
+
+
+階層下にMenuBar等のシステムページを生成する。
+
+**使用方法
+
+
+pathmenu.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+ありません
+
+*ping.inc.pl
+ping.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★★☆☆
+
+**概要
+
+
+Weblog用のpingを送信する。
+
+**説明
+
+
+指定したサーバーリストにWeblog用のpingを送信します。
+
+**使用方法
+
+
+ping.inc.cgi にリネームして下さい。
+
+$ping&#x3a;&#x3a;serverlist に pingサーバー一覧を1行ずつ記載します。
+
+RSSのURLが必要な場合は、パラメータ中に __RSSURIENC__ を含めて下さい。
+
+デフォルトの登録内容だけでも、使用できるようになっています。
+
+**上書きする関数
+
+
+関数 do_write_after を上書きします。
+
+*punyurl.inc.pl
+punyurl.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★★★★
+
+**概要
+
+
+ASCII文字以外のドメイン名を持つURLをpunycode形式に変換する
+
+**説明
+
+
+多言語文字等のASCII文字以外のドメイン名を持つURLをpunycode形式に変換します。
+
+http://日本語.jp/ → http://xn--wgv71a119e.jp/
+
+**警告
+
+
+perl 5.8.1 以降の環境でないと使用できません。
+
+現在のバージョンは日本語ドメインにしか対応していません。
+
+**使用方法
+
+
+punyurl.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+関数 make_link_url を上書きします。
+
+*slashpage.inc.pl
+slashpage.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+階層下のページ名を容易にリンクするプラグイン
+
+**説明
+
+
+WikiName や、[[BracketName]] でリンクしても、以下のような階層下にあるようなページにリンクできるようにします。
+
+ PyukiWiki/Glossary/WikiName
+ PyukiWiki/Sample/BracketName
+
+
+先に、階層下よりも、実際のページ名で検索しますので、名前が重複する場合はすべてのページ名でエイリアス等を使用してリンクして下さい。
+
+**使用方法
+
+
+slashpage.inc.cgi にリネームして下さい。
+
+**上書きする関数
+
+
+関数 make_link_wikipage を上書きします。
+
+*stdin.inc.pl
+stdin.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+**概要
+
+
+スクリプトからページへ書き込む
+
+**使用方法
+
+
+stdin.inc.cgi にリネームして下さい。
+
+echo "mypage=title&#x26;mymsg=wikipage" | perl index.cgi cmd=write
+
+*trackback.inc.pl
+trackback.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+Weblog用のtrackbackを処理する。
+
+**説明
+
+
+Weblog用のtrackbackを処理する。
+
+**使用方法
+
+
+trackback.inc.cgi にリネームして下さい。
+
+./trackback ディレクトリを作成して下さい。
+
+**上書きする関数
+
+
+なし
+
+*urlhack.inc.pl
+urlhack.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+SEO対策の為に、URLから ? を取り除いて検索エンジンにヒットしやすくするプラグイン
+
+**説明
+
+
+GoogleやYahoo等のロボット型検索エンジンでは、明らかにスクリプトであるようなページをクロールしにくいようになっています。そのために、サイトの検索エンジンの結果がランクダウンしてしまう可能性があります。
+
+そのために、URLから ? 等を取り除いて、PyukiWikiを動的ページではなく、静的ページとしてロボットに認識させる方法を提供します。
+
+
+
+WikiName や、[[BracketName]] でリンクしても、以下のような階層下にあるようなページにリンクできるようにします。
+
+ PyukiWiki/Glossary/WikiName
+ PyukiWiki/Sample/BracketName
+
+
+先に、階層下よりも、実際のページ名で検索しますので、名前が重複する場合はすべてのページ名でエイリアス等を使用してリンクして下さい。
+
+**使用方法
+
+
+***プラグインを有効にする
+
+
+urlhack.inc.cgi にリネームして下さい。
+
+***PATH_INFOを使用する場合
+
+
+デフォルトでは、PATH_INFOを使用するようになっていますので、そのまま使用利用できます。対応していないサーバーもあるものの、こちらのが軽快に動作します。
+
+http://example.com/ 等、CGI名をTOPページとして省略させるようなURLには対応していません。
+
+http://example.com/index.cgi が実態であれば ''index.cgi''を''wiki''にリネームしてから、以下の記述を .htaccessに加えることをおすすめします。
+
+ <FilesMatch "^wiki$">
+    ForceType application/x-httpd-cgi
+ </FilesMatch>
+
+
+こうすることで、 http://example.com/wiki をTOPページとすることができます。
+
+
+
+***404 Not foundエラーとしてサーバーからリダイレクトされるものを使用する場合
+
+
+こちらのが多くのサーバー、及び、省略されたURLに対応できますが、アクセスされる度にサーバーにエラーログが残るという問題があります。
+
+ただし、nphスクリプトが対応していないサーバーでは使用できません。
+
+
+:index.cgi etc...:nphスクリプトとして動作させるために、nph-index.cgi 等にリネームします。&nbsp;
+:urlhack.inc.cgi:$use_path_info=1; を $use_path_info=0; に変更します。&nbsp;
+:.htaccess: DirectoryIndex B<nph-index.cgi> index.cgi wiki.cgi pyukiwiki.cgi index.html
+ RewriteEngine on
+ RewriteBase /
+ 
+ RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ RewriteRule ^\?(.*)$ ./index.cgi?$1 [L]
+ RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ RewriteRule ^(.+)/$ ./index.cgi/$1 [L]
+ RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+ RewriteRule ^$ ./index.cgi [L]
+ ErrorDocument 400 /nph-index.cgi?cmd=servererror
+ ErrorDocument 401 /nph-index.cgi?cmd=servererror
+ ErrorDocument 402 /nph-index.cgi?cmd=servererror
+ ErrorDocument 403 /nph-index.cgi?cmd=servererror
+ ErrorDocument 404 /nph-index.cgi?cmd=servererror
+ ErrorDocument 500 /nph-index.cgi?cmd=servererror
+
+
+**設定
+
+
+
+:$urlhack&#x3a;&#x3a;use_path_info:PATH_INFO環境変数を使用する場合は１、404 Not found エラーを利用する場合は０にします。&nbsp;
+:$urlhack&#x3a;&#x3a;fake_extention:PATH_INFO使用時、偽装できるのは「/」のみです。拡張子等をつけて、偽装します。
+ 
+ $::fake_extention='/';
+ http://example.com/FrontPage/
+ http://example.com/PyukiWiki/Download/
+ http://example.com/a5d8a5eba5d7/
+&nbsp;
+:$urlhack&#x3a;&#x3a;use_puny: 0:16進エンコードを使用します。
+ 1:punyエンコードを使用します。少しURLが短くなります。
+ 2:UTF8エンコードを使用します。ブラウザーや検索結果に母国語が表示されます。
+ 3:短縮URLロジックを用いたエンコードを使用します。別途短縮用データベースの
+   ディレクトリ(./urldb/)が必要です。
+&nbsp;
+:$urlhack&#x3a;&#x3a;noconvert_marks:指定された文字のみで構成されるページ名の場合、エンコードをしません。&br;&br;
+ 0: 無条件エンコードをする
+ 1: 数字とアルファベットのみで構成されるページのみエンコードをしない
+ 2: 数字、アルファベット、dot(.)、slash(/)で構成されるページのみエンコードをしない
+
+
+**上書きする関数
+
+
+関数 make_cookedurl を上書きします。
+
+*xframe.inc.pl
+xframe.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+クリックジャッキング対策を行なう。
+
+**説明
+
+
+外部サイトからフレームタグで表示指定された時に、セキュリティー確保の理由で表示できなくするプラグイン
+
+Internet Explorer 8 から対応されています。
+
+**使用方法
+
+
+xframe.inc.cgi にリネームして下さい。
+
+**設定
+
+
+以下の内容が、info/setting.ini.cgi に記載できます。
+
+$XFRAME&#x3a;&#x3a;MODE="DENY" - 他のWebページのframe上またはiframe上での表示を拒否する。
+
+$XFRAME&#x3a;&#x3a;MODE="SAMEORIGIN" - Top-level-browsing-contextが一致した時のみ、他のWebページ上のframe又はiframe上での表示を許可する。
+
+**備考
+
+
+クリックジャッキングとは、外部から判断のつかない悪意のある攻撃者サイトに誘導された利用者が、気づかない間に標的サイト上で不正操作（ショッピングカートの送信、メール送信、広告のクリック、会員サービスからの退会）を引き起こすクリックをさせられる可能性があります。攻撃事例はまだ少ないものの、Twitterにおいて利用者の意図しない投稿をさせられてしまう事件がありました。
+
+JavaScriptを用いたクリックジャッキング対策もありますが、今ではブラウザー側で、X-FRAME-OPTIONSを設定することで、外部サイトからFRAME、またはIFRAMEで表示しようとした時に、阻止することができます。
+
+なお、このExpluginでは、HTTPヘッダで出力していますが、HTMLで出力することも可能で、または、ウェブサーバー上で、「X-FRAME-OPTIONS」ヘッダに、「DENY」か「SAMEORIGIN」を記述することでも、実現可能です。
+
+**上書きする関数
+
+
+なし
+

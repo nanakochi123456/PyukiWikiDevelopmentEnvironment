@@ -1,0 +1,31 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*NAME
+clipcopy.pl - PyukiWiki / YukiWiki プラグイン
+
+#contents(,1)
+
+*概要
+
+ &clipcopy(linkurl, text, [copiedtext]);
+ &clipcopy(@@BASEURL@@/?rss
+  ,RSS Link Copy,@@BASEURL@@/?rss Copied to clipboard);
+
+*説明
+指定したURLやメッセージをクリップボードにコピーします。URL以外の文字列を指定することはできません。
+
+Internet Explorerのみで動作するプラグインです。それ以外のブラウザでは何も返しません。
+
+このプラグインはYukiWikiと互換性があります。
+
+
+*参考
+:PyukiWiki/Plugin/Nanami/clipcopy:@@BASEURL@@/PyukiWiki/Plugin/Nanami/clipcopy/
+
+:PyukiWiki CVS:@@CVSURL@@/PyukiWiki-Devel/plugin/clipcopy.inc.pl
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

@@ -1,0 +1,103 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+logs_viewer.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+アクセスログ解析プラグイン（評価版）
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+wikiのアクセスログを解析します。
+
+ただし、現状におきましては、未完成です。
+
+動作しない訳ではありませんが、動作環境を満たしていても、古いperlのバージョンですと、正常に集計動作ができない場合があります。
+
+=head1 機能について
+
+このアクセスログ解析プラグインは、生ログを取得する為に開発されたもので、効率的なアクセスログ解析を行えません。
+
+その為、可能であれば、外部のアクセス解析サービスを効率的に利用することをお勧めします。
+
+google analytics は、無料（解析数により課金）で、非常に多くの情報を得ることができ、かつ、PyukiWikiでは拡張プラグインとしてインストールできますので、設置がとても容易です。場合によっては、多くの有料アクセス解析よりも、圧倒的、かつ、効率的な情報を得ることができます。
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/google_analytics/>
+
+他にも、他社の無料アクセス解析がありますが、日本国内ですと、これも非常に解析能力、及び、アクセスに対するレスポンスが瞬時に反応できるものとして、Ａｃｅ─ａｎａｌｙｚｅｒ があります。
+
+このアクセス解析プログラムは、広告がついてしまいますが、個人サイトには有効です。
+
+
+L<http://www.ace-analyzer.com/>
+
+PyukiWiki開発者に寄付するには、こちらから（登録・解析タグ設置で収入になります）
+
+L<http://px.a8.net/svt/ejp?a8mat=1ZIHDM+3K0CGY+2HB0+639IR>
+
+アクセス解析タグを設置するには、ad、htmlプラグインが便利です。
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/ad/>
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/html/>
+ 
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/logs_viewer
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/logs_viewer>
+
+=item PyukiWiki/Plugin/ExPlugin/logs
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/logs/>
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/Logs.pml>
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/logs_viewer.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/Logs.pm>
+
+このアクセス解析プラグインは、AWStatsから流用し、かつ、改良をした定義を使用しています。
+
+L<@@AWSTATS_URL@@>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/AWS/browsers.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/AWS/domains.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/AWS/operating_systems.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/AWS/robots.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/AWS/search_engines.pm>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

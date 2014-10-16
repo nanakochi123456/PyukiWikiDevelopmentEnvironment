@@ -1,0 +1,55 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+location.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #location(url or ページ名)
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+指定したURLまたはページ名に自動移動します。
+なお、安全の為に凍結されたページからしか使えません。
+
+=head1 使用方法
+
+ #location(url または ページ名)
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/location
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/location/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/location.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

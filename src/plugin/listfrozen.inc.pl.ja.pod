@@ -1,0 +1,50 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+listfrozen.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=listfrozen
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+すべてのページのリストを表示し、一覧形式でページの凍結・凍結解除を一度に行ないます。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/listfrozen
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/listfrozen/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/listfrozen.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

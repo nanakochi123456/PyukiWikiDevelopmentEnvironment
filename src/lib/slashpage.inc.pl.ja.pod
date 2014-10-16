@@ -1,0 +1,62 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+slashpage.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 概要
+
+階層下のページ名を容易にリンクするプラグイン
+
+=head1 説明
+
+WikiName や、[[BracketName]] でリンクしても、以下のような階層下にあるようなページにリンクできるようにします。
+
+ PyukiWiki/Glossary/WikiName
+ PyukiWiki/Sample/BracketName
+
+先に、階層下よりも、実際のページ名で検索しますので、名前が重複する場合はすべてのページ名でエイリアス等を使用してリンクして下さい。
+
+=head1 使用方法
+
+slashpage.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+関数 make_link_wikipage を上書きします。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/slashpage
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/slashpage/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/slashpage.inc.pl>
+
+=back
+
+=head1 著者
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

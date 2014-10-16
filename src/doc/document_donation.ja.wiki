@@ -1,0 +1,48 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+**寄付のお願い
+
+開発環境強化、継続的な開発の為に、寄付をお願いしています。~
+vector シェアレジ、銀行振り込みに対応しています。
+
+:Paypal:http://pyukiwiki.info/Paypal/
+
+:Vector シェアレジ (1,155円):http://www.vector.co.jp/soft/unix/net/se496490.html
+
+:Vector シェアレジ (3,255円):http://www.vector.co.jp/soft/unix/net/se496491.html
+
+:銀行振り込み、その他:銀行振り込み等は以下のお振込に対応しています。~
+住信SBIネット銀行　ミカン支店　普通　2786854~
+三菱東京UFJ銀行　大久保支店　普通　3980703~
+三井住友銀行　柏支店　普通　7638195~
+りそな銀行　北小金支店　普通　1167353~
+楽天銀行　メルマネ (papu@users.sourceforge.jp または o@daiba.cx)
+ゆうちょ銀行　10540-54047051
+
+:寄付をしたくないが、安いものを買い物したい:[[[激安問屋！かいもの.jp>http://shop.daiba.cx/]]] http://shop.daiba.cx/
+
+:真似をして、VPSを使ってみたい:[[[VPS比較>http://vpsinfo.jp/]]] http://vpsinfo.jp/
+
+:-パソコンのパーツを買いたい:[[[自作PC最新情報>http://jisaku-pc.info/]]] http://jisaku-pc.info/
+
+:vectorのPCソフトのダウンロード:[[[サテライトサイトですみません>http://down.jp.net/]] http://down.jp.net/]
+
+:VPS、または専用サーバーの導入相談を受け付けています:[[[VPSサーバー・専用サーバーの導入相談（個人向け）>http://www.abilie.com/tickets/1585]]] http://www.abilie.com/tickets/1585
+
+:ネタかもしれませんが、これでもセキュリティーを守れます。:[[[できる限りタダでインターネットを安全に>http://www.abilie.com/tickets/1595]]] （初心者〜中級者向けオンラインPDF書籍） http://www.abilie.com/tickets/1595
+
+:バナー＆テキスト広告をもっとクリックして！:こちらのチケットより、同様に作成された [[ad プラグイン>http://pyukiwiki.info/PyukiWiki/Plugin/Nanami/ad/]]の拡張部分がダウンロード可能です。~
+http://www.abilie.com/tickets/2050
+
+:CGIスクリプトをインストールします。:http://www.abilie.com/tickets/8828
+
+:誰でも必ずあり得る！介護を受けずに一人で車いすを活用する方法 完全版:http://www.abilie.com/tickets/8827
+
+:amazonから寄付をする:http://www.amazon.co.jp/registry/wishlist/1HJXA69R6EYZZ
+
+:有料着メロのダウンロード:１曲ダウンロードに付、１円相当　大した曲はありませんが~
+http://j-ken.com/creator/4730/
+
+:その他、寄付に関しまして:寄付に関してのURLは、以下となります。~
+http://www.daiba.cx/%3a%e5%af%84%e4%bb%98%e3%81%8a%e6%8c%af%e8%be%bc%e5%85%88/

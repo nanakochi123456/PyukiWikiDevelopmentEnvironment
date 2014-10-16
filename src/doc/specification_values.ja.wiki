@@ -1,0 +1,46 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*内部変数仕様情報
+-$::HTTP_HEADER~
+HTTPヘッダー
+-$::IN_HEAD~
+<head>〜</head>
+-$::IN_JSHEADVALUE~
+最初に実行されるJavaScript
+-$::IN_JSHEAD~
+JavaScriptファイル読み込み後に実行されるJavaScript
+-$::IN_CSSHEAD~
+生のCSS
+-$::IN_CSSFILES~
+CSSファイル一覧
+-$::IN_JSFILES~
+JavaScriptファイル一覧
+-$::IN_JSLOADER~
+JavaScriptローダーのHTMLが入る
+-$::IN_BODY~
+<body>の中に入る
+-$::IN_TITLE~
+タイトルタグ
+-$::IN_META_ROBOTS~
+ロボット制御
+-%::functions~
+グローバル関数の一覧
+-%::database~
+wiki/
+-%::infobase~
+info/
+-%::diffbase~
+diff/
+-%::backupbase~
+backup/
+-%::resource~
+リソース
+-%::form~
+フォーム (GET/POST共用）
+-$::is_xhtml~
+XHTMLであれば1
+-$::version~
+バージョン
+-$::version_number~
+バージョン数値（Majer×10000+Miner×100+Sub)

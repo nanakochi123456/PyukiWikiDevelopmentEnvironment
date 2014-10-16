@@ -1,0 +1,921 @@
+*PyukiWiki プラグイン (I-P)
+<<$Id$>>
+#contents(,1)
+*img.inc.pl
+img.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #img(http://example.com/image.png)
+ #img(http://example.com/image.jpg,right)
+ #img(http://example.com/image.gif,l,AlternateText)
+ #img(http://example.com/image.gif,center,AlternateText)
+ #img(,c)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+画像を表示します。
+
+**使用方法
+
+
+ #img(image_url,[alt],[l|left],[r|right],center,c)
+
+
+
+:image_url:画像のあるURLを指定します。&nbsp;
+:left または l:左寄せします。&nbsp;
+:right または r:右寄せします。&nbsp;
+:center:センタリングします。&nbsp;
+:c:テキストの回りこみを解除します。&br;&br;
+
+*include.inc.pl
+include.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #include(ページ名[,notitle])
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+記述した場所に指定したページを挿入する
+
+**使用方法
+
+
+
+:notitle:挿入元のページ名を表示しない&br;&br;
+
+*ipv6check.inc.pl
+ipv6check.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &ipv6check([IPV6で表示するページ],[IPV4で表示するページ]);
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+クライアントからのアクセスのIPV4か、IPV6かをチェックするプラグイン
+
+*link.pl
+link.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &link(結城浩,http://www.hyuki.com/,_blank|_top|frame name]);
+ &link(メール,<mail (at) example (dot) com>);
+ &link(メール,<mail (at) example (dot) com?cc=cc>@<example (dot) com&bcc=bcc (at) example (dot) com>);
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+リンクをします。
+
+PyukiWikiの内部パーサーの影響を受けません。
+
+メールアドレスで、? 以降に他のオプションを指定した場合、ASCII文字以外を指定することはできません。
+
+*links.inc.pl
+links.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #links
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+自動的に逆リンクを行なうプラグイン
+
+*list.inc.pl
+list.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=list
+
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+全ページの一覧を表示します。
+
+**TIPS
+
+
+perlモジュール MeCab、または、Text&#x3a;&#x3a;MeCabを導入すると、ひらがなでのインデックスも作成できます。
+
+この機能は、設定で停止することもできます。
+
+*location.inc.pl
+location.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #location(url or ページ名)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+指定したURLまたはページ名に自動移動します。なお、安全の為に凍結されたページからしか使えません。
+
+**使用方法
+
+
+ #location(url または ページ名)
+
+
+*lookup.inc.pl
+lookup.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #lookup(google,Googleで検索)
+ #lookup(pyukiwiki,PyukiWiki開発サイトのページ,Download)
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+記述した位置にテキスト入力欄とボタンを表示します。任意の文字列を入力してボタンを押すと、InterWikiNameと入力値から生成したURLへ移動します。これによって、検索エンジンにクエリを送信したり、番号をタイプするだけで該当するアーカイブにアクセスすることなどが可能になります。
+
+**使用方法
+
+
+ #lookup(InterWikiName, [ボタン名], [入力欄の初期値])
+
+
+
+:InterWikiName:InterWikiNameに設定した値の一つを指定します。&nbsp;
+:ボタン名:ボタンに表示するキャプションを指定します。省略時は'LookUp'です。&nbsp;
+:入力欄の初期値:初期値を指定したい場合に記入します。省略時は空文字列になります。&br;&br;**設定
+
+
+URLの生成にはInterWikiを利用します。このプラグインが生成するURLは、以下のようなInterWikiと同じです。InterWikiNameのページに、あらかじめURLの生成に使用するInterWikiNameを設定しておく必要があります。
+
+ [InterWikiName interwikiname]
+ [URLサフィックス InterWikiName] utf8またはsjis,euc,jis,raw
+
+
+
+
+*ls2.inc.pl
+ls2.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #ls2
+ #ls2(パターン,[title],[include],[link],[reverse])
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+指定したパターンで始まるページ名を一覧表示します。省略時には現在のページが起点となります。
+
+**使用方法
+
+
+ #ls2(pattern, [title],[include],[link],[reverse])
+
+
+
+:pattern:パターンには表示するページ名の共通部分を指定します。省略時は"設置したページ名/"となります。省略する時、他のオプションを指定する場合は、カンマが必要です。&nbsp;
+:title:ページに含まれる見出し(*,**,***)の一覧を併記します。 &nbsp;
+:include:インクルードしているページの見出しを再帰的に列挙します。&nbsp;
+:link:actionプラグインを呼び出すリンクを表示します。&nbsp;
+:reverse:ページの並び順を反転し、降順にします。&br;&br;
+
+*mailform.inc.pl
+mailform.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #mailform
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+メール送信フォームを表示し、管理人に匿名メールを送信します。
+
+**使用方法
+
+
+ #mailform
+
+
+*metarobots.inc.pl
+metarobots.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #metarobots(キーワード[,キーワード]...[,noarchive])
+ #metarobots(description,説明文)
+ #metarobots(disable)
+
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+robotsコントロールを設定します。
+
+なお、安全の為に凍結されたページからしか使えません。
+
+*multiarticle.inc.pl
+multiarticle.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #multiarticle(name=name,subject=subject,textarea=comment,commentname=name,commenttextarea=comment)
+
+
+ #multiarticle(name=お名前,url=Webページ=http://,mail=メールアドレス=,
+ select=選択ラベル=選択肢１|選択肢２|選択肢３|選択肢４|選択肢５,
+ checkbox=チェックボックス=checked,checkbox=チェックボックス,
+ star=点数,subject=タイトル,textarea=テキスト,
+ commentlabel=コメントする,commentname=お名前,commenturl=Webページ=http://,
+ commentmail=メールアドレス（任意）=,commenttextarea=コメント)
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+高機能BBS風プラグイン
+
+**設定
+
+
+***pyukiwiki.ini.cgiの設定
+
+
+
+:$&#x3a;&#x3a;writefrozenplugin:１の場合、凍結されたページでも書き込めるようにする。&br;&br;
+
+***multiarticle.inc.plの設定
+
+
+
+:$multiarticle&#x3a;&#x3a;cols:テキストエリアのカラム数&nbsp;
+:$multiarticle&#x3a;&#x3a;rows:テキストエリアの行数&nbsp;
+:$multiarticle&#x3a;&#x3a;name_cols:名前テキストエリアのカラム数&nbsp;
+:$multiarticle&#x3a;&#x3a;subject_cols:題名テキストエリアのカラム数&nbsp;
+:$multiarticle&#x3a;&#x3a;name_format:名前の挿入フォーマット（リソースに記述されています）&nbsp;
+:$multiarticle&#x3a;&#x3a;subject_format:題名の挿入フォーマット&nbsp;
+:$multiarticle&#x3a;&#x3a;ins:挿入する位置 1&#x3a;欄の前 0&#x3a;欄の後&nbsp;
+:$multiarticle&#x3a;&#x3a;comment:書き込み下に一行コメントを 1&#x3a;入れる 0&#x3a;入れない&nbsp;
+:$multiarticle&#x3a;&#x3a;auto_br:改行を自動的に変換する 1&#x3a;する 0&#x3a;しない&nbsp;
+:$multiarticle&#x3a;&#x3a;noname:1 の場合、名前なしで処理しない&nbsp;
+:$multiarticle&#x3a;&#x3a;nosubject:1 の場合、題名なしで処理しない&br;&br;
+
+*multicomment.inc.pl
+multicomment.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #multicomment(label=コメントする=,name=お名前=,url=Webページ（任意）=http://,mail=メールアドレス（任意）=,textarea=コメント=)
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+高機能コメントフォームを表示して、訪問者からのコメント入力を受け付ける
+
+**使用方法
+
+
+ #multicomment(label=コメントする=,name=お名前=,url=Webページ（任意）=http://,mail=メールアドレス（任意）=,textarea=コメント=)
+
+
+**設定
+
+
+***pyukiwiki.ini.cgiの設定
+
+
+
+:$&#x3a;&#x3a;writefrozenplugin:１の場合、凍結されたページでも書き込めるようにする。&br;&br;
+
+***multicomment.inc.plの設定
+
+
+
+:my $multicomment_format:Wiki文法でコメントを挿入する書式&br;&br;\x08はセパレーターなので、削除しないで下さい。&nbsp;
+:$multicomment&#x3a;&#x3a;noname:1 の場合、名前なしで処理しない&nbsp;
+:$multicomment&#x3a;&#x3a;nodata:1 の場合、コメントなしでエラーとする&br;&br;
+
+*multimailform.inc.pl
+multimailform.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #multimailform(mail=Mail address,subject=Mail title,textarea=Body)
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+高機能メールフォーム
+
+**使用方法
+
+
+ #multimailform(name=name form,mail=Mail address,subject=Mail title,select=select|select|select,textarea=Body)
+
+
+**著者
+
+
+@@AUTHOR_NANAMI@@@@AUTHOR_PYUKI@@
+
+**ライセンス
+
+
+@@LICENSE_NANAMI@@
+
+*navi.inc.pl
+navi.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #navi([prefix] [,prefix_title] [,reverse])
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+DocBook風ナビゲーションバーを表示します。
+
+目次となるページに下階層のページが存在する時、それら全てのページ（の先頭と末尾）に記述する事で Prev, Home, Next というリンクを表示します。これによって下階層のページを順に参照するのに便利になります。
+
+**使用方法
+
+
+
+:prefix:目次ページに順番に見て回るページの上階層にあたるページを指定します。&br;&br;例えば hoge, hoge/1, hoge/2, hoge/3 というページが存在する場合、hoge/2に&#x23;navi(hoge)を記述するとhogeに移動するHomeというリンク、hoge/1に移動するPrevというリンク、hoge/3に移動するNextというリンクを表示します。&br;&br;ページで最初に呼び出した場合はヘッダイメージのリンクを出力します。ページで２度目以降に呼び出された場合はフッタイメージのリンクを出力します。現在のページが目次ページである場合は対象となるページの一覧を表示します。&br;&br;省略した場合は、現在表示しているページの上位ページを設定します。&nbsp;
+:prefix_title:プリフィックスのタイトルを指定します。&nbsp;
+:reverse:ページを逆順にソートします。&br;&br;
+
+*new.inc.pl
+new.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &new{2006-01-01 (Sun) 00:00:00};
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+指定した日時が最近であった場合、最近更新された事を強調表示します。
+
+標準では5日以内の場合に New を、１日以内の場合に New! を表示します。期間や表示する文字列のパターンは設置者によってカスタマイズ可能です。
+
+**使用方法
+
+
+ &new{date-format};
+
+
+**設定
+
+
+
+:my $new_dates_short:New!を表示する時間を秒で指定します。&nbsp;
+:my $new_dates_long:Newを表示する時間を秒で指定します。&nbsp;
+:my $new_string_short:$new_dates_shortで指定された時間に表示される文字列をHTMLで設定します。&nbsp;
+:my $new_string_long:$new_dates_longで指定された時間に表示される文字列をHTMLで設定します。&br;&br;
+
+*newpage.inc.pl
+newpage.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=newpage&mypage=ページ名&refer=関連ページ
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+新しいページを作成する
+
+**設定
+
+
+=head 2 pyukiwiki.ini.cgi
+
+
+:$&#x3a;&#x3a;new_refer:新規作成の場合、関連ページのリンクを初期値として表示する画面を新規ページ名入力画面で表示する。&br;&br;空文字にすると表示されません。&nbsp;
+*nofollow.inc.pl
+nofollow.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #nofollow
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+robotsコントロールを設定します。
+
+PukiWiki互換性の為に設置されたプラグインです。
+
+&#x23;metarobots(disable) でも、同じ効果を得ることができます。
+
+なお、安全の為に凍結されたページからしか使えません。
+
+*now.inc.pl
+now.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &now();
+ &now(now_format, [yyyy/mm/dd]);
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+現在または指定した日付を指定フォーマットで表示します。
+
+「&#x26;now;」のように、() を指定しないで指定すると、書き込み時の日付に自動的に変換され、プラグインとして実行されません。
+
+それ以外の場合は、現在の日付、または指定した日付を表示します。
+
+**使用方法
+
+
+=now_formatnow_formatは、内部関数 date の書式文字列を指定できます。now_formatには、半角の ( ) を使用することはできません。詳しくは以下のサンプルを御覧下さい
+:yyyy/mm/dd:表示する日付を指定します。省略時は当日の年月日となります。&br;&br;
+
+**サンプル
+
+
+書式文字列のサンプルです。
+
+
+:&#x26;now(Y-n-j[D],2006/1/1):2006-1-1[Sun]&nbsp;
+:&#x26;now(y/m/J H&#x3a;m&#x3a;s,2006/1/1 23&#x3a;53&#x3a;11):06/01/01 23&#x3a;53&#x3a;11&nbsp;
+:&#x26;now(SGGY年Zn月Zj日（lL） RS,2006/1/1) with exdate:平成１８年１月１日（日） 元旦&br;&br;
+
+**書式
+
+
+***&#x26;date で使えるすべての書式です。
+
+
+ 西暦:Y:西暦(4桁)/y:西暦(2桁)
+ 
+   月:n:1-12/m:01-12/M:Jan-Dec/F:January-December
+ 
+   日:j:1-31/d:01-31
+ 
+ 曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土
+ 
+ ampm:a:am or pm/A:AM or PM/AL:午前 or 午後
+ 
+   時:g:1-12/G:0-23/h:01-12/H/00-23
+ 
+   分:k:0-59/i:00-59 
+ 
+   秒:S:0-59/s:00-59
+ 
+  t 指定した月の日数。 28 から 31 
+  O グリニッジとの時間差
+  r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200 
+  Z タイムゾーンのオフセット秒数。 -43200 から 43200 
+  L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。 
+  B Swatch インターネット時間 000 から 999 
+  U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time() 
+
+
+***拡張プラグインexdate.inc.cgi導入時に使えるすべての書式です。
+
+
+     元号:SG:明治/大正/昭和/平成 Sg:明/大/昭/平
+          SA:M/T/S/H Sa:Ｍ/Ｔ/Ｓ/Ｈ
+ 
+   元号年:SY:1-2桁(1〜10〜) Sy:0補完して2桁(01〜10〜)
+          GY:全角1-2桁(元〜２〜１０〜)
+          XY:全角1-2桁(元〜二〜十〜十一〜二十〜二十一〜)
+          Xy:全角1-2桁(元〜二〜一〇〜十一〜二〇〜二一〜)
+ 
+     年度 N4SG N4Sg N4Sa N4SY N4Sy N4GY N4XY N4Xy 上記元号年同、４月を基点
+          N9SG N9Sg N9Sa N9SY N9Sy N9GY N9XY N9Xy 上記元号年と同、９月を基点
+ 
+     西暦:Y:西暦(4桁)/y:西暦(2桁) - **
+         :ZY:全角4桁 Zy:全角2桁 KY:一七七〇〜二〇〇〇〜
+ 
+     皇暦:TY:西暦(4桁)/Ty:西暦(2桁) - **
+         :TZY:全角4桁 TZy:全角2桁 TzY:一七七〇〜二〇〇〇〜
+ 
+ 西暦年度:N4Y:西暦(4桁)/N4y:西暦(2桁)
+          N4ZY:全角2桁 N4Zy:全角2桁 N4KY:一七七〇〜二〇〇〇〜
+          N9ZY: N9Zy N9KY : ↑と同じで９月を基点
+ 
+       月:n:1-12/m:01-12/M:Jan-Dec/F:January-December - **
+          Zn:全角1-2桁(１−１２) Zm:0補完して全角2桁(０１−１２）
+          Kn:一〜十〜十二/Km:一〜一〇〜一二
+          kn:睦月,如月...
+ 
+       日:j:1-31/d:01-31 - **
+          Zj:全角1-2桁(１−３１) ZJ:0補完して全角2桁(０１−３１）
+          Kj:一〜十〜十一〜二十〜三十一/KJ:一〜一〇〜
+ 
+     曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土 - **
+ 
+     ampm:a:am or pm/A:AM or PM/AL:午前 or 午後 - **
+ 
+       時:g:1-12/G:0-23/h:01-12/H/00-23 - **
+          Zg:１−１２/ZG:０−２３/Zh:０１−１２/ZH/００−２３
+          Kg:一〜十〜十二/KG:零〜十〜十一〜二十/二十三
+          Kh:一〜一〇〜一二/KH:〇〜一〇〜一一〜二〇〜二三
+ 
+       分:k:0-59/i:00-59 - **
+          Zk:０−５９/Zi:００−５９
+          Kk:零〜五十九/Ki:〇〜五九
+ 
+       秒:S:0-59/s:00-59 - **
+          ZS:０−５９/Zs:００−５９
+          KS:零〜五十九/Ks:〇〜五九
+ 
+     祝日:RS:元旦/Rs:(元旦) 1948年より出力
+     行事:RG:七草/Rg:(七草) 1948年より出力
+   県民の:XG:都民の日/Xg:(都民の日) 1948年より出力
+     星座:SZ:おひつじ座/Sz:Aries
+   自分の:MG:.../Mg:(...) 1948年より出力
+   24節季:RK:立夏/Rk:(立夏)
+     六曜:RY:大安/赤口/先勝/友引/先負/仏滅
+   年干支:NK:甲子
+   日干支:HK:乙卵
+   日の宿:HY:角
+   旧暦年:QY:西暦(4桁)/Qy:西暦(2桁)
+         :QZY:全角4桁 QZy:全角2桁 QKY:一七七〇〜二〇〇〇〜
+ 
+     皇暦:EY:西暦(4桁)/Ey:西暦(2桁)
+         :EZY:全角4桁 EZy:全角2桁 EzY:一七七〇〜二〇〇〇〜
+ 
+       月:Qn:1-12/Qm:01-12
+          QZn:全角1-2桁(１−１２) QZm:0補完して全角2桁(０１−１２）
+          QKn:一〜十〜十二/QKm:一〜一〇〜一二
+          Qkn:睦月,如月...
+ 
+       日:Qj:1-31/QJ:01-31 - **
+          QZj:全角1-2桁(１−３１) QZJ:0補完して全角2桁(０１−３１）
+          QKj:一〜十〜十一〜二十〜三十一/QKJ:一〜一〇〜
+ 
+  t 指定した月の日数。 28 から 31 
+  O グリニッジとの時間差
+  r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200 
+  Z タイムゾーンのオフセット秒数。 -43200 から 43200 
+  L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。 
+  B Swatch インターネット時間 000 から 999 
+  U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time() 
+
+
+***以下のPHP書式は対応していません。
+
+
+ W ISO-8601 月曜日に始まる年単位の週番号 (PHP 4.1.0で追加) 例: 42 (１年の第42週目) 
+ S 英語形式の序数を表すサフィックス。2 文字。 st, nd, rd or th. Works well with j  
+ T このマシーンのタイムゾーンの設定。 Examples: EST, MDT ... 
+
+
+*online.inc.pl
+online.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &online;
+ #online
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+現在参照している、おおよそのユーザー数を表示します。
+
+*opml.inc.pl
+opml.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=opml[&lang=lang]
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+OPMLを出力します。ページ内のRSSを全て出力することができます。
+
+*pagenavi.inc.pl
+pagenavi.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #pagenavi(string, string, string...)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+上層へのページへナビゲートをしやすいようにリンクをする。
+
+**使用方法
+
+
+
+:上層から現在のページへのリンク: PyukiWiki/用語集>Glossary/ぴゅきうぃきについて>PyukiWiki
+このように記載すると、以下のように変換されます。&br;&br;
+ [[PyukiWiki]]/[[用語集>PyukiWiki/Glossary]]/[[ぴゅきうぃきについて>PyukiWiki/Glossary/PyukiWiki]]
+&nbsp;
+:パンくずリスト topicpath との相違:明示的に指定することで、ページ名に対して、擬似的に他の名前を指定し、エイリアス的な使い方ができます。&br;&br;, で区切ることで、連続して指定することができます。&nbsp;
+:その他:その他は、通常のWiki文法で記述します。すべてのパラメータを結合してから、text_to_html関数でHTMLに変換されます。&br;&br;=使用例
+ #pagenavi(*,PyukiWiki/PyukiWikiダウンロード>Download,について)
+*pcomment.inc.pl
+pcomment.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #pcomment
+ #pcomment({ [コメント記録ページ], [表示件数], [noname], [nodate], [above], [below], [reply] })
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+別のページにコメントを記録することができるcommentプラグインです。設置した場所には最新のコメントだけを表示することができます。ラジオボタンを表示し、指定した部分にコメントを付けることもできます。
+
+**使用方法
+
+
+
+:コメント記録ページ:コメント記録ページ にはコメントを記録するページ名を指定します。省略すると、pcommentプラグイン内の $pcomment&#x3a;&#x3a;comment_page で指定されたページにコメントが記録されます。デフォルトは [コメント/(設置したページ名)] です。指定したページが存在しなくても、最初にコメントを追加した時に作成します。&br;&br;コメント記録ページには数字だけで構成されるページ名を指定することができません。&nbsp;
+:表示件数:表示件数 は表示する最新コメントの数を指定します。第1レベルの番号なしリストだけをカウントします。省略すると、pcommentのデフォルト件数(通常10件。$pcomment&#x3a;&#x3a;num_comments で変更可能)が表示されます。&nbsp;
+:noname:名前の入力欄を表示しません。&nbsp;
+:nodate:日付を挿入しません。&nbsp;
+:above:挿入したコメントをフォームの上に表示します。コメントは上が古く、下に向かって新しい順に並びます。 &nbsp;
+:below:挿入したコメントをフォームの下に表示します。コメントは下が古く、上に向かって新しい順に並びます。 &nbsp;
+:reply:コメントの頭にラジオボタンを表示します。あるコメントに対するリプライが、そのコメントのラジオボタンをチェックすることで可能になります。&br;&br;
+
+**設定
+
+
+***pyukiwiki.ini.cgiの設定
+
+
+
+:$&#x3a;&#x3a;writefrozenplugin:１の場合、凍結されたページでも書き込めるようにする。&br;&br;
+
+***pcomment.inc.plの設定
+
+
+
+:$pcomment&#x3a;&#x3a;format:コメント欄の全体フォーマットをWiki文法で指定します。&br;&br;\x08はセパレーターなので、削除しないで下さい。&nbsp;
+:$comment&#x3a;&#x3a;noname:1 の場合、名前なしで処理しない&nbsp;
+:$comment&#x3a;&#x3a;nodata:1 の場合、コメントなしでエラーとする&nbsp;
+:$pcomment&#x3a;&#x3a;size_msg:コメントのテキストエリアの表示幅 &nbsp;
+:$pcomment&#x3a;&#x3a;size_name :コメントの名前テキストエリアの表示幅 &nbsp;
+:$pcomment&#x3a;&#x3a;format_name:コメントの名前挿入フォーマット&nbsp;
+:$pcomment&#x3a;&#x3a;format_msg:コメントの欄の挿入フォーマット&nbsp;
+:$pcomment&#x3a;&#x3a;format_now:コメントの日付挿入フォーマット &#x26;newプラグインで認識できる書式である必要があります。&nbsp;
+:$pcomment&#x3a;&#x3a;comment_page:デフォルトのコメントページを指定します。&nbsp;
+:$pcomment&#x3a;&#x3a;num_comments = 10:デフォルトの最新コメント表示数&nbsp;
+:$pcomment&#x3a;&#x3a;direction_default:入力内容を1&#x3a;above(先頭)/0&#x3a;below(末尾)のどちらに挿入するかを指定します。&nbsp;
+:$pcomment&#x3a;&#x3a;timestamp:タイムスタンプ更新を以下のように指定します。&br;&br;
+ 0:なし
+ 1:設置ページのタイムスタンプ更新
+ 2:コメントページのタイムスタンプ更新 (デフォルト)
+ 3:両方
+&nbsp;
+:$pcomment&#x3a;&#x3a;viewcommentpage:書き込み後の画面遷移を指定します。&br;&br;
+ 0:書き込み後コメントページへ戻る
+ 1:書き込み後設置ページへ戻る (デフォルト)
+&nbsp;
+:$pcomment&#x3a;&#x3a;frozencommentpage:1&#x3a;コメントページ新規作成時、凍結した状態にしておきます。&br;&br;pyukiwiki.ini.cgi にて、$&#x3a;&#x3a;writefrozenpluginが1に設定されていると、フォームからは書き込み可能です。&br;&br;
+
+*popular.inc.pl
+popular.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #popular(20,FrontPage|MenuBar,today)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+人気のあるページをリスト表示します
+
+やしがにもどき氏の作成されたpopular.inc.plをv0.1.6に対応し、改良したものです。
+
+**使用方法
+
+
+ #popular(最大表示件数,表示しないページを正規表現で[,total|today|yesterday][,notitle])
+
+
+
+:最大表示件数:表示する件数を設定します。デフォルトは10です。&nbsp;
+:表示しないページを正規表現で:表示しないページのリストを正規表現で設定します。&nbsp;
+:total|today|yesterday:全アクセスの表示、今日の表示、昨日の表示を設定します。デフォルトは全アクセスです。&nbsp;
+:notitle:タイトルを表示しなくなります。自由に設定できるようになります。&br;&br;
+
+**備考
+
+
+counterプラグインのカウンター情報を利用しますので、集計対象のページの全てにcounterプラグインが設置されてないと意味がありませんが、全てのページに手動で設置するのは非効率である為、MenuBarやSideBarや、スキンから直接呼び出して使用するのが一般的です。
+
+*popup.inc.pl
+popup.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #popup(, NG Page or URL, OK Button, NG Button, width, height)
+ wiki string
+ wiki string
+ ...
+ #popup
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+ページ訪問時に、ポップアップ画面を表示します。
+
+**使用方法
+
+
+ #popup(, http://example.jp/ignorer/,同意する,同意しない,300,100)
+ wiki文書
+ ...
+ #popup
+
+
+ #popup(, http://example.jp/ignorer/,はい,いいえ,する,同意しない,300,200)
+ *１８歳以上ですか？
+ このコンテンツは、未成年の方が閲覧できないコンテンツを含んでいます。
+ あなたの年齢は１８才以上ですか？
+ #popup
+
+

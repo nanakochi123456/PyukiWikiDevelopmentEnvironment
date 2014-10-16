@@ -1,0 +1,81 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+xframe.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 概要
+
+クリックジャッキング対策を行なう。
+
+=head1 説明
+
+外部サイトからフレームタグで表示指定された時に、セキュリティー確保の理由で表示できなくするプラグイン
+
+Internet Explorer 8 から対応されています。
+
+=head1 使用方法
+
+xframe.inc.cgi にリネームして下さい。
+
+=head1 設定
+
+以下の内容が、info/setting.ini.cgi に記載できます。
+
+$XFRAME::MODE="DENY" - 他のWebページのframe上またはiframe上での表示を拒否する。
+
+$XFRAME::MODE="SAMEORIGIN" - Top-level-browsing-contextが一致した時のみ、他のWebページ上のframe又はiframe上での表示を許可する。
+
+=head1 備考
+
+クリックジャッキングとは、外部から判断のつかない悪意のある攻撃者サイトに誘導された利用者が、気づかない間に標的サイト上で不正操作（ショッピングカートの送信、メール送信、広告のクリック、会員サービスからの退会）を引き起こすクリックをさせられる可能性があります。攻撃事例はまだ少ないものの、Twitterにおいて利用者の意図しない投稿をさせられてしまう事件がありました。
+
+JavaScriptを用いたクリックジャッキング対策もありますが、今ではブラウザー側で、X-FRAME-OPTIONSを設定することで、外部サイトからFRAME、またはIFRAMEで表示しようとした時に、阻止することができます。
+
+なお、このExpluginでは、HTTPヘッダで出力していますが、HTMLで出力することも可能で、または、ウェブサーバー上で、「X-FRAME-OPTIONS」ヘッダに、「DENY」か「SAMEORIGIN」を記述することでも、実現可能です。
+
+=head1 上書きする関数
+
+なし
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/xframe
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/xframe/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/xframe.inc.pl>
+
+=item 参考
+
+L<http://www.jpcert.or.jp/ed/2009/ed090001.pdf>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

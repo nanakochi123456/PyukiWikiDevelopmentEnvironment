@@ -1,0 +1,55 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+ruby.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ &ruby(ルビ){ルビをふる文字列};
+ &ruby(たかなし){小鳥遊};
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+文字列にルビをふる。
+
+=head1 備考
+
+YukiWiki版とは仕様が違うため、PyukiWiki専用です。そちらがお好みの方はそちらを使用して下さい。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/ruby
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/ruby/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/ruby.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

@@ -1,0 +1,504 @@
+/*/////////////////////////////////////////////////////////////////////
+# instag.js.src - This is PyukiWiki yet another Wiki clone
+# $Id: instag.js.src,v 1.216 2013/01/19 06:21:23 papu Exp $
+# Build 2013-01-19 15:19:13
+#
+# "PyukiWiki" ver 0.2.1-beta5 $$
+# Author Nanami http://nanakochi.daiba.cx/
+# Copyright(C) 2004-2007 Nekyo
+# Copyright(C) 2005-2013 PyukiWiki Developers Team
+# http://pyukiwiki.info/
+# Based on YukiWiki http://www.hyuki.com/yukiwiki/
+# Powerd by PukiWiki http://pukiwiki.sfjp.jp/
+# License GPL3 and/or Artistic or each later version
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the same terms as Perl itself.
+# Return=CRLF Code=Shift-JIS 1TAB=4Spaces
+/////////////////////////////////////////////////////////////////////*/
+
+var noOverwrite=false, alertText,
+	x=-1,
+	d				= document,
+//	l				= location,
+//	n				= navigator,
+
+//	OPERA			= ua("OPERA"),
+//	FIREFOX 		= ua("FIREFOX"),
+//	GECKO			= ua("GECKO"),
+//	CHROME			= ua("CHROME"),
+	SAFARI			= ua("SAFARI"),
+	MSIE			= ua("MSIE"),
+//	WINDOWS			= ua("WINDOWS"),
+//	MACOS			= ua("MACOS"),
+//	WINDOWSPHONE 	= ua("WINDOWSPHONE"),
+//	ANDROID			= ua("ANDROID"),
+//	IPOD			= ua("IPOD"),
+//	IPAD			= ua("IPAD"),
+//	IPHONE			= ua("IPHONE"),
+//	WII				= ua("WII"),
+//	GAMEBOY			= ua("GAMEBOY"),
+//	NINTENDODS		= ua("NINTENDODS"),
+//	PSP				= ua("PSP"),
+//	PS2				= ua("PS2"),
+//	PS3				= ua("PS3"),
+//	VERSION			= ua("VERSION"),
+//	MAGERVERSION	= ua("MAGERVERSION"),
+
+	id=1,
+	crlf="\\n",
+	h="",
+	instag=h
+	;
+
+/* write instag form */
+function insTagForm(readyJquery, useFacemark) {
+	sinss("editextend", mkinsTagForm(readyJquery, useFacemark));
+}
+
+/* make instag form */
+function mkinsTagForm(readyJquery, useFacemark) {
+	var html,
+		samplesize=25;
+
+
+	html = mkextend(ln(
+		"ja", "太文字",
+		"en", "Bold",
+		h), "\\'\\'", "\\'\\'", "<strong>B</strong>");
+
+	html += mkextend(ln(
+		"ja", "斜体",
+		"en", "Italic",
+		h), "\\'\\'\\'", "\\'\\'\\'", "<i>I</i>");
+
+	html += mkextend(ln(
+		"ja", "下線",
+		"en", "UnderLine",
+		h), "%%%", "%%%", "<ins>U</ins>");
+
+	html += mkextend(ln(
+		"ja", "取り消し線",
+		"en", "Strikethrough",
+		h), "%%", "%%", "<del>D</del>");
+
+
+	var ul_list=new Array(
+		ln(
+			"ja", liststr("-", 1, "リスト"),
+			"en", liststr("-", 1, "List"),
+		h),
+		ln(
+			"ja", liststr("--", 2, "リスト"),
+			"en", liststr("--", 2, "List"),
+		h),
+		ln(
+			"ja", liststr("---", 3, "リスト"),
+			"en", liststr("---", 3, "List"),
+		h)
+	);
+
+	html+=mkextendmenu(ln(
+			"ja", "リスト",
+			"en", "List",
+		h), ul_list, h, "ul", teststring, samplesize, "list_ex");
+
+	var ol_list=new Array(
+		ln(
+			"ja", liststr("+", 1, "連番リスト"),
+			"en", liststr("+", 1, "Number List"),
+		h),
+		ln(
+			"ja", liststr("++", 2, "連番リスト"),
+			"en", liststr("++", 2, "Number List"),
+		h),
+		ln(
+			"ja", liststr("+++", 3, "連番リスト"),
+			"en", liststr("+++", 3, "Number List"),
+		h)
+	);
+
+	html+=mkextendmenu(ln(
+			"ja", "連番リスト",
+			"en", "Number List",
+		h), ol_list, h, "ol", teststring, samplesize, "numbered");
+
+	html += mkextend(ln(
+		"ja", "センタリング",
+		"en", "Centering",
+		h), crlf + "CENTER:", h, "_center");
+
+	html += mkextend(ln(
+		"ja", "左寄せ",
+		"en", "Left adjust",
+		h), crlf + "LEFT:", h, "_left_just");
+
+	html += mkextend(ln(
+		"ja", "右寄せ",
+		"en", "Right adjust",
+		h), crlf + "RIGHT:", h, "_right_just");
+
+	var h_list=new Array(
+		ln(
+			"ja", liststr("*", 1, "表題"),
+			"en", liststr("*", 1, "Head"),
+		h),
+		ln(
+			"ja", liststr("**", 2, "表題"),
+			"en", liststr("**", 2, "Head"),
+		h),
+		ln(
+			"ja", liststr("***", 3, "表題"),
+			"en", liststr("***", 3, "Head"),
+		h),
+		ln(
+			"ja", liststr("****", 4, "表題"),
+			"en", liststr("****", 4, "Head"),
+		h),
+		ln(
+			"ja", liststr("*****", 5, "表題"),
+			"en", liststr("*****", 5, "Head"),
+		h)
+	);
+
+	html+=mkextendmenu("<strong>H</strong>",
+		h_list, h, "h", teststring, samplesize);
+
+	html += mkextend(ln(
+		"ja", "Wikiページ",
+		"en", "Wiki Page",
+		h), '[[',']]', "[[]]");
+
+	html += mkextend(ln(
+		"ja", "リンク",
+		"en", "Link",
+		h), '[[','&gt;http://]]', "http:://");
+
+	html += mkextend(ln(
+		"ja", "画像・添付ファイル",
+		"en", "Image or Attach file",
+		h), '&ref(',');', "_attach");
+
+	html += mkextend(ln(
+		"ja", "改行",
+		"en", "New Line",
+		h), '','~' + crlf, "&lt;BR&gt;");
+
+	html += mkextend(ln(
+		"ja", "水平線",
+		"en", "Horizontal line",
+		h), crlf + '----' + crlf,'', "<strong>--</strong>");
+
+	if(readyJquery) {
+		var color_teststring=ln(
+				"ja", "あ",
+				"en", "A",
+				h),
+
+			color_title=ln(
+				"ja", "文字色",
+				"en", "Color",
+				h),
+
+			color_default="#000000",
+
+			backgroundcolor_title=ln(
+				"ja", "背景色",
+				"en", "Background Color",
+				h),
+
+			backgroundcolor_default="#FFFFFF",
+			size_title=ln(
+				"ja", "サイズ",
+				"en", "Font size",
+				h),
+			teststring=ln(
+				"ja", "あいうえお",
+				"en", "ABCDE",
+				h),
+			size_list=new Array(10,12,14,16,18,20,24,28,32);
+			font_title=ln(
+				"ja", "フォント",
+				"en", "Font",
+				h),
+			font_list=ln(
+				"ja", new Array(
+						"serif:明朝体",
+						"sans-seri:ゴシック体",
+						"cursive:筆記体",
+						"fantasy:装飾文字",
+						"monospace:等幅",
+						"MS UI Gothic",
+						"ＭＳ Ｐゴシック",
+						"ＭＳ ゴシック",
+						"ＭＳ Ｐ明朝",
+						"ＭＳ 明朝",
+						"メイリオ",
+						"Arial",
+						"Arial Black",
+						"Comic Sans MS",
+						"Courier New",
+						"Times New Roman",
+						"Verdana"
+					),
+				"en", new Array(
+						"serif",
+						"sans-seri",
+						"cursive",
+						"fantasy",
+						"monospace",
+						"MS UI Gothic",
+						"Arial",
+						"Arial Black",
+						"Comic Sans MS",
+						"Courier New",
+						"Times New Roman",
+						"Verdana"
+					),
+				h),
+			face_title=ln(
+				"ja", "絵文字",
+				"en", "Pictogram",
+				h),
+			facemark=new Array(
+				"bigsmile:bigsmile",
+				"huh:huh",
+				"oh:oh",
+				"sad:sad",
+				"smile:smile",
+				"wink:wink",
+				"worried:worried",
+
+				"big_plus:extend_bigsmile",
+				"heart:heart",
+				"ohplus:extend_oh",
+				"sadplus:extend_sad",
+				"smileplus:extend_smile",
+				"winkplus:extend_wink",
+				"worriedplus:extend_worried",
+				"ummr:umm",
+				"star:star",
+				"tear:tear",
+				"heartplus:extend_heart"
+			);
+
+			html+=mkextendmenu(font_title, font_list, h, "font", teststring, samplesize);
+
+			html+=mkextendmenu(size_title, size_list, "px", "size", teststring, samplesize);
+
+			id++;
+			html+='<a class="exlink" href="#" onclick="return false;" id="panellink' + id + '"><span style="font-weight: bold; color:red;">' + color_teststring + '</span></a><span class="editpanel editcolorpicker" id="panelbody' + id + '"><input type="text" class="colortext" id="panel' + id + '" name="panel' + id + '" value="#000000" /><a href="#" onclick="insTag(\'&amp;color(\'+gid(\'editform\').panel' + id + '.value+\'){\',\'};\',\'' + color_title + '\');return false;" class="jqmClose"><span id="picker' + id + '"></span></a></span>';
+
+			id++;
+			html+='<a class="exlink" href="#" onclick="return false;" id="panellink' + id + '"><span style="font-weight: bold; color:white; background-color:red;">' + color_teststring + '</span></a><span class="editpanel editcolorpicker" id="panelbody' + id + '"><input type="text" class="colortext" id="panel' + id + '" name="panel' + id + '" value="#ffffff" /><a href="#" onclick="insTag(\'&amp;color(,\'+gid(\'editform\').panel' + id + '.value+\'){\',\'};\',\'' + backgroundcolor_title + '\');return false;" class="jqmClose"><span id="picker' + id + '"></span></a></span>';
+
+			if(useFacemark) {
+			id++;
+				html+='<a class="exlink" href="#" onclick="return false;" id="panellink' + id + '"><span style="font-weight: bold;">' + face_title + '</span></a><span class="editpanel editfacepanel" id="panelbody' + id + '">';
+				for (var fm in facemark) {
+					var f=facemark[fm].split(":"),
+						name=f[0],
+						image=f[1];
+					var a='<a href="#" onclick="insTag(\'&amp;' + name + ';\',\'\',\'\');return false;" class="jqmClose facesample icnface" id="icn_' + image + '" title="&amp;' + name + ';" />&nbsp;&nbsp;</a>';
+
+					html+=a;
+				}
+				html+='</span>';
+			}
+	}
+	return html;
+}
+
+function liststr(ins, level, str) {
+	return ":" + crlf + ins + ":" + ":" + str + "(" + ln(
+		"ja", "レベル",
+		"en", "Level",
+		h) + " " + level + ")";
+}
+
+function mkextend(str, start, end, title) {
+	var html;
+	html='<a class="exlink" title="' + str + '" href="javascript:insTag(' + "'" + start + "','" + end + "','" + str + "'" + ');">';
+	if(title.substr(0,1) != "_") {
+		html += title
+	} else {
+		title = title.substr(1);
+		html += '<span class="icneditex" id="icn_' + title + '">&nbsp;&nbsp;</span>';
+//		html += '<img class="exlink" src="' + image_url + '/' + title + '" alt="' + str + '" />';
+	}
+	return html;
+}
+
+function mkextendmenu(title, list, adddisplay, plugin, teststring, samplesize, image) {
+	var html;
+
+	id++;
+//	if(typeof image === "undefined") {
+	if(image === void 0)
+		image=h;
+
+	if(image == h)
+		html='<a class="exlink" href="#" onclick="return false;" title="' + title + '" id="panellink' + id + '"><span style="font-weight: bold;">' + title;
+	else
+		html='<a class="exlink" href="#" onclick="return false;" title="' + title + '" id="panellink' + id + '"><span class="icneditex" id="icn_' + image + '">&nbsp;&nbsp;';
+
+	html += '</span></a><span class="editpanel edit' + plugin + 'panel" id="panelbody' + id + '">';
+
+	for(var loop in list) {
+		var l=list[loop], arg, name, display, start, end;
+		if(typeof l == 'number') {
+			name=l;
+			display=l + adddisplay;
+		} else {
+			arg=l.split(":");
+			if(arg[0] == h) {
+				name=h;
+				start=arg[1];
+				end=arg[2];
+				display=arg[3];
+			} else {
+				name=arg[0],
+//				display=(typeof arg[1] === "undefined" ? arg[0] : arg[1]);
+				display=(arg[1] === void 0 ? arg[0] : arg[1]);
+			}
+		}
+		if(name == h) {
+			html += '<a href="#" onclick="insTag(' + "'" + start + "','" + end + "','" + display + "'" + ');return true;" class="jqmClose ' + plugin + 'sample"';
+		} else {
+			html += '<a href="#" onclick="insTag(\'&amp;' + plugin + '(' + name + '){\',\'};\',\'' + title + '\');return true;" class="jqmClose ' + plugin + 'sample"';
+		}
+		if(plugin == "font") {
+			html += ' style="font-size:' + samplesize + 'px; font-family:' + name + ';"';
+		} else if(plugin == "size") {
+			html += ' style="font-size:' + name + 'px;"';
+		} else {
+			html += ' style="font-size:' + samplesize + 'px;"';
+		}
+		html += '>'
+//			 + (typeof teststring === "undefined" ? display : teststring
+			 + (teststring === void 0 ? display : teststring
+				 +  ' (' + display + ')')
+			+ '</a><br />';
+	}
+	html+='</span>';
+	return html;
+}
+
+
+/* apply tagOpen/tagClose to selection in textarea,
+ * use sampleText instead of selection if there is none
+ * copied and adapted from phpBB
+ */
+
+function insTag(tagOpen, tagClose, sampleText) {
+	var txtarea = gid(ef).mymsg;
+	/* IE */
+	if (MSIE) {
+		var theSelection = document.selection.createRange().text;
+		if (!theSelection) { theSelection=sampleText;}
+		txtarea.focus();
+		if (theSelection.charAt(theSelection.length - 1) == " ") {
+			/* exclude ending space char, if any */
+			theSelection = theSelection.substring(0, theSelection.length - 1);
+			document.selection.createRange().text = tagOpen + theSelection + tagClose + " ";
+		} else {
+			document.selection.createRange().text = tagOpen + theSelection + tagClose;
+		}
+
+	/* Mozilla */
+	} else if(txtarea.selectionStart || txtarea.selectionStart == '0') {
+ 		var startPos = txtarea.selectionStart,
+			endPos = txtarea.selectionEnd,
+			scrollTop=txtarea.scrollTop,
+			myText = (txtarea.value).substring(startPos, endPos);
+		if(!myText) { myText=sampleText;}
+		if(myText.charAt(myText.length - 1) == " "){ /* exclude ending space char, if any */
+			subst = tagOpen + myText.substring(0, (myText.length - 1)) + tagClose + " ";
+		} else {
+			subst = tagOpen + myText + tagClose;
+		}
+		txtarea.value = txtarea.value.substring(0, startPos) + subst +
+			txtarea.value.substring(endPos, txtarea.value.length);
+		txtarea.focus();
+
+		var cPos=startPos+(tagOpen.length+myText.length+tagClose.length);
+		txtarea.selectionStart=cPos;
+		txtarea.selectionEnd=cPos;
+		txtarea.scrollTop=scrollTop;
+
+	/* All others */
+	} else {
+		var copy_alertText=alertText,
+			re1=new RegExp("\\$1","g"),
+			re2=new RegExp("\\$2","g"),
+			text;
+		copy_alertText=copy_alertText.replace(re1,sampleText);
+		copy_alertText=copy_alertText.replace(re2,tagOpen+sampleText+tagClose);
+
+		if (sampleText) {
+			text=prompt(copy_alertText);
+		} else {
+			text=h;
+		}
+		if(!text) { text=sampleText;}
+		text=tagOpen+text+tagClose;
+		document.infoform.infobox.value=text;
+		/* in Safari this causes scrolling */
+		if(!SAFARI) {
+			txtarea.focus();
+		}
+		noOverwrite=true;
+	}
+	/* reposition cursor if possible */
+	if (txtarea.createTextRange) txtarea.caretPos = document.selection.createRange().duplicate();
+}
+
+/* color picker, size picker */
+
+var op=null;
+try {
+/*
+	$(document).ready(function() {
+*/
+
+/*
+$(document).ready(function() {
+*/
+function pick() {
+		for(var i=1; i <= id; i++) {
+			if(i == 7 || i == 8) {
+				$('#picker' + i).farbtastic('#panel' + i);
+			}
+
+			$('#panelbody' + i).jqm({
+				trigger:'#panellink' + i,
+				overlay: 0,
+				onShow: function(h) {
+
+					if(op != null) {
+						op.w.jqmHide();
+					}
+					op=h;
+					h.w.show();
+				},
+				onHide: function(h) {
+					/* this or */
+					op=null;
+					h.w.hide();
+					if(h.o) h.o.remove();
+				}
+			});
+		}
+		$("#mymsg").mousedown(
+			function () {
+				if(op != null) {
+					op.w.jqmHide();
+				}
+			}
+		);
+	}
+/*
+	});
+*/
+} catch (e) {}
+

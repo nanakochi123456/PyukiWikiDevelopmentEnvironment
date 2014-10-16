@@ -1,0 +1,68 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+rsspage.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=rsspage&page=エンコードされたページ名[&ver=1.0|2.0|atom][&lang=lang]
+ #rsspage(- or *)
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+表示中のページを指定した記述をすることで、RSS(RDF Site Summary)1.0に変換して出力できるようにします。
+
+=head1 書式例
+
+#rsspage(-)
+
+-2011-07-04(月) 07:57:00 [[FrontPage]]~
+更新した。
+-2011-07-03(日) 19:48:00 何もリンクしない場合~
+その更新履歴のページにいきます。
+-2011-02-22(火) 19:00:00 [[外部リンク>http://example.com/]]~
+そこにリンクされます。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/rsspage
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/rsspage/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/rsspage.inc.pl>
+
+=item YukiWiki
+
+Yuki::RSSを使用しています。
+
+L<http://www.hyuki.com/yukiwiki/wiki.cgi>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

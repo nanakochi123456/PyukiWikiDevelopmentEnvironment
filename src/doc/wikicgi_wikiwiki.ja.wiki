@@ -1,0 +1,141 @@
+*内部モジュール仕様 - wiki_wiki.cgi
+<<$Id$>>
+#contents(,1)
+*wiki_wiki.cgi
+**NAME
+wiki_wiki.cgi - This is PyukiWiki, yet another Wiki clone.
+
+**DESCRIPTION
+
+
+PyukiWiki is yet another Wiki clone. Based on YukiWiki
+
+PyukiWiki can treat Japanese WikiNames (enclosed with [[ and ]]).PyukiWiki provides 'InterWiki' feature, RDF Site Summary (RSS),and some embedded commands (such as [[&#x23; comment]] to add comments).
+
+**SEE ALSO
+
+
+
+:PyukiWiki/Dev/Specification/wiki_wiki.cgi:[[@@BASEURL@@/PyukiWiki/Dev/Specification/wiki_wiki.cgi/]]&nbsp;
+:PyukiWiki CVS:[[@@CVSURL@@/PyukiWiki-Devel/lib/wiki_wiki.cgi]]&br;&br;
+
+**AUTHOR
+
+
+@@AUTHOR_NEKYO@@@@AUTHOR_NANAMI@@@@AUTHOR_PYUKI@@
+
+**LICENSE
+
+
+@@LICENSE_NEKYO@@
+
+
+
+***do_read
+
+
+
+:入力値:title - ページ名 (変更する時のみ)&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:可&nbsp;
+:概要:ページを読み込み、出力する。&br;&br;
+
+
+
+***print_content
+
+
+
+:入力値:&#x26;print_content(wiki文章, ページ名);&nbsp;
+:出力:HTML&nbsp;
+:オーバーライド:可&nbsp;
+:概要:wiki文章をHTMLに変換する。(スキン用）&br;&br;
+
+
+
+***topicpath
+
+
+
+:入力値:なし&nbsp;
+:出力:リンク文字列&nbsp;
+:オーバーライド:可&nbsp;
+:概要:タイトルのURL,またはtopicpathを表示する。&br;&br;プラグイン topicpath.inc.plがある場合、自動読み込みをする。&br;&br;
+
+
+
+***get_fullname
+
+
+
+:入力値:&#x26;get_fullname(ページ名, 参照元ページ名);&nbsp;
+:出力:アンカー名(１文字）&nbsp;
+:オーバーライド:可&nbsp;
+:概要:正しいページ名を返す。&br;&br;
+
+
+
+***get_subjectline
+
+
+
+:入力値:&#x26;get_subjectline(ページ名,行数,%オプション);&nbsp;
+:出力:Plain文字列&nbsp;
+:オーバーライド:可&nbsp;
+:概要:ページの１〜指定行を取得する。内容によっては２行目、３行目になることがある。&br;&br;
+
+
+
+***get_info
+
+
+
+:入力値:&#x26;get_info(ページ名, キー);&nbsp;
+:出力:取得した文字列&nbsp;
+:オーバーライド:可&nbsp;
+:概要:InfoBaseから情報を取得する。&br;&br;
+
+
+
+***is_frozen
+
+
+
+:入力値:&#x26;is_frozen(ページ名);&nbsp;
+:出力:0&#x3a;凍結されていない 1&#x3a;凍結されている。&nbsp;
+:オーバーライド:可&nbsp;
+:概要:指定したページが凍結されているかチェックする。&br;&br;
+
+
+
+***is_readable
+
+
+
+:入力値:&#x26;is_readable(ページ名);&nbsp;
+:出力:ページ閲覧可・不可フラグ&nbsp;
+:オーバーライド:可&nbsp;
+:概要:ページの閲覧可・不可フラグを返す。&br;&br;
+
+
+
+***is_editable
+
+
+
+:入力値:&#x26;is_editable(ページ名);&nbsp;
+:出力:編集可・不可フラグ&nbsp;
+:オーバーライド:可&nbsp;
+:概要:ページの新規作成・編集可・不可フラグを返す。&br;&br;
+
+
+
+***interwiki_convert
+
+
+
+:入力値:&#x26;interwiki_convert($type, $localname);&nbsp;
+:出力:変換後の文字列&nbsp;
+:オーバーライド:可&nbsp;
+:概要:InterWikiのURLへの変換をする。&br;&br;
+

@@ -1,0 +1,66 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+newpage.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=newpage&mypage=ページ名&refer=関連ページ
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+新しいページを作成する
+
+=head1 設定
+
+=head 2 pyukiwiki.ini.cgi
+
+=over 4
+
+=item $::new_refer
+
+新規作成の場合、関連ページのリンクを初期値として表示する画面を新規ページ名入力画面で表示する。
+
+空文字にすると表示されません。
+
+=item $::new_dirnavi
+
+新規ページ作成画面で、どのページの下層に来るか選択できるようにする 1:使用/0:未使用
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/newpage
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/newpage/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/newpage.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

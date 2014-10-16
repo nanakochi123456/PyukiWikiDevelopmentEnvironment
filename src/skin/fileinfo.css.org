@@ -1,0 +1,43 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+
+.download {
+}
+
+.download_url {
+}
+.download_mirror {
+}
+
+.download_url_mirror {
+}
+
+.download_info {
+}
+
+.download_counter {
+}
+
+
+.downloadpage {
+}
+
+.downloadpage_head {
+}
+
+.downloadpage_msg {
+}
+.downloadpage_main {
+}
+.downloadpage_info {
+}
+
+.downloadpage_hashline {
+}
+
+.downloadpage_hashtitle {
+}
+
+.downloadpage_hashvalue {
+}

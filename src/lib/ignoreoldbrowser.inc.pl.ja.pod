@@ -1,0 +1,63 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+ignoreoldbrowser.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+PyukiWikiと互換性のない古いブラウザーでアクセスされた場合、ブラウザーのアップデート促進画面を強制表示するプラグイン
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+PyukiWikiと互換性のない古いブラウザーでアクセスされた場合、ブラウザーのアップデート促進画面を強制表示するものです。
+
+=head1 備考
+
+PyukiWiki 0.2.1より、Internet Explorer 6 以前でのサポートがなくなるため、追加されました。
+
+=head1 使用方法
+
+ignoreoldbrowser.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+なし
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/ignoreoldbrowser
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/ignoreoldbrowser/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/ignoreoldbrowser.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

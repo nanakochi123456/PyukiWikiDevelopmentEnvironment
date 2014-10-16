@@ -1,0 +1,62 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+tb.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=tb&tb_id=(trackback id page) [ & __mode=(view|rss)] [ & lang=(language)]
+ #tb
+ #tb(show)
+ #tb(all)
+ #tb(showall)
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+トラックバックの処理をします。、
+
+POSTされた場合には、他サイトからのTrackbackに反応します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/tb
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/tb/>
+
+=item PyukiWiki/Plugin/Explugin/trackback
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Explugin/trackback/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/tb.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/trackback.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

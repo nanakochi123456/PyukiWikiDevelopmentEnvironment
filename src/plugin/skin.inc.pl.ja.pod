@@ -1,0 +1,50 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+skin.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #skin(main skin name,[sub sukin name])
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+表示中のページのみ指定のスキンに変更します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/skin
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/skin/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/skin.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

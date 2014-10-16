@@ -1,0 +1,82 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+img.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #img(http://example.com/image.png)
+ #img(http://example.com/image.jpg,right)
+ #img(http://example.com/image.gif,l,AlternateText)
+ #img(http://example.com/image.gif,center,AlternateText)
+ #img(,c)
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+画像を表示します。
+
+=head1 使用方法
+
+ #img(image_url,[alt],[l|left],[r|right],center,c)
+
+=over 4
+
+=item image_url
+
+画像のあるURLを指定します。
+
+=item left または l
+
+左寄せします。
+
+=item right または r
+
+右寄せします。
+
+=item center
+
+センタリングします。
+
+=item c
+
+テキストの回りこみを解除します。
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/img
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/img/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/img.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

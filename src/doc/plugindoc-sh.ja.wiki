@@ -1,0 +1,52 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*NAME
+sh.inc.pl - PyukiWiki プラグイン
+
+#contents(,1)
+
+*概要
+
+ #sh(言語名)
+ program code
+ pgoramm code
+ ...
+ #sh
+
+ #sh(言語名, スキン, EOM)
+ program code
+ pgoramm code
+ ...
+ EOM
+
+*説明
+プログラムコードを整形して表示します。
+
+*使用方法
+
+ #sh(言語名)
+ ...
+ #sh (終了定義用)
+
+ #sh(言語名, スキン, EOM)
+ ...
+ EOM
+
+-language name~
+言語名を以下から指定します。~
+applescript, actionscript3, as3, bash, shell, coldfusion, cf, cpp, c, c#, c-sharp, css, delphi, pascal, diff, patch, pas, erl, erlang, groovy, java, jfx, javafx, js, jscript, javascript, perl, pl, php, text, plain, py, python, ruby, rails, ror, rb, sass, scss, scala, sql, vb, vbnet, xml, xhtml, xslt, html
+-skin~
+スキンを以下から設定します。指定しない場合は、Defaultが選択されています。~
+Default, Django, Eclipse, Emacs, FadeToGrey, MDUltra, Midnight, RDark
+
+*動作させる前に
+*参考
+:PyukiWiki/Plugin/Nanami/sh:@@BASEURL@@/PyukiWiki/Plugin/Nanami/sh/
+:PyukiWiki CVS:@@CVSURL@@/PyukiWiki-Devel/plugin/sh.inc.pl
+:SyntaxHighlighter:http://alexgorbatchev.com/SyntaxHighlighter/
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

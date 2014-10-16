@@ -1,0 +1,59 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+convertutf8.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=convertutf8
+
+=head1 重要度
+
+☆☆☆☆☆　移行時のみ必要
+
+=head1 説明
+
+新設されたUTF-8バージョンのPyukiWiki用にwikiを変換する。
+なお、UTF-8からEUCに戻すことはできません。
+実行の前にWikiページ自体を必ずバックアップを取って下さい。
+
+従来のEUC版でのみ実行可能です。
+実行後、すぐにUTF-8版をインストールして下さい。
+
+実行後、一部のページが正常にリネームできていない事がありますので、
+listfrozen プラグインでページ名を確認後、異常があれば、
+一度、rename プラグインでリネームしなおして下さい。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/convertutf8
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/convertutf8/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/convertutf8.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

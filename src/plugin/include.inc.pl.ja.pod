@@ -1,0 +1,60 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+include.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #include(ページ名[,notitle])
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+記述した場所に指定したページを挿入する
+
+=head1 使用方法
+
+=over 4
+
+=item notitle
+
+挿入元のページ名を表示しない
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/include
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/include/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/include.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

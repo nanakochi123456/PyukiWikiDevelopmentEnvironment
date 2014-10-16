@@ -1,0 +1,52 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+opml.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=opml[&lang=lang]
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+OPMLを出力します。ページ内のRSSを全て出力することができます。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/opml
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/opml/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/opml.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/OPML.pm>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

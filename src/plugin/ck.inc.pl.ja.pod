@@ -1,0 +1,50 @@
+#$Id$
+=head1 NAME
+
+ck.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=ck&lk=HEXエンコードされたURL
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+リンクトラッキングExplugin linktrack.inc.cgi から呼び出されるプラグインです。
+
+=head1 注意
+
+各HTTPサーバー、及び、アクションにより、アクセス元が取得できない場合がありますので
+アクセス制限に関してはできませんが、16進数文字列以外が存在することにより
+チェックを行なっています。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/ck
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/ck/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/ck.inc.pl>
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

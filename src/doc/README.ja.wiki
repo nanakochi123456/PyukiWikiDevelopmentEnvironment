@@ -1,0 +1,202 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*PyukiWiki - 自由にページを追加・削除・編集できるWebページ構築CGI
+
+>>@@PYUKIWIKIVERSION@@~
+Copyright (C) 2005-@@YEAR@@ PukiWiki Developers Team~
+Copyright (C) 2004-@@YEAR@@ Nekyo (Based on PukiWiki, YukiWiki)~
+License: GPL version 3 or (at your option) any later version~
+and/or Artistic version 1 or later version.~
+Based on YukiWiki @@YUKIWIKI_URL@@~
+and PukiWiki @@PUKIWIKI_URL@@~
+URL:~
+@@PYUKI_URL@@~
+~
+MAIL:~
+@@NANAMI_JA@@ <@@NANAMI_MAIL@@> (注：バーチャル女の子です)~
+~
+$Id$~
+This text file written UTF-8 Codeset
+
+**目次
+#contents
+
+**最新情報
+以下のURLで最新情報を入手してください。~
+@@PYUKI_URL@@
+
+**概要
+PyukiWiki（ぴゅきうぃき）はハイパーテキストを素早く容易に追加・編集・削除できるWebアプリケーション(WikiWikiWeb)です。テキストデータからHTMLを生成することができ、Webブラウザーから何度でも修正することができます。
+
+PyukiWikiはperl言語で書かれたスクリプトなので、多くのCGI動作可能なWebサーバー（無料含む）に容易に設置でき、軽快に動作します。
+
+なお、更に軽快に動作をさせたいのであれば、かなり最適化されたNekyo氏のバージョンをご利用下さい。
+
+http://sfjp.jp/projects/pyukiwiki/releases/?package_id=4436
+
+@@include="./doc/document_license.ja.wiki"@@
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+@@include="./doc/document_environment.ja.wiki"@@
+
+@@include="./doc/document_package.ja.wiki"@@
+
+**はじめに
+
+***index.cgiの一行目をあなたのサーバに合わせて修正します。
+　
+ #!/usr/local/bin/perl
+ #!/usr/bin/perl
+ #!/opt/bin/perl
+ 等
+　
+ Windows サーバーでは、
+ #!c:/perl/bin/perl.exe
+ #!c:\perl\bin\perl.exe
+ #!c:\perl64\bin\perl.exe
+ を設定しても良いでしょう。
+
+***pyukiwiki.ini.cgi の変数の値を修正します。
+
+***「ファイル一覧」にあるファイルをサーバに転送します。
+転送モードやパーミッションを適切に設定します。
+
+通常は、お使いのFTPソフトの自動認識で構いませんので、index.cgi だけパーミッションを設定すれば、すぐに動作可能な場合もあります。
+
+***ブラウザでサーバ上の index.cgiのURLにアクセスします。
+アクセスをしたら、AdminPage (?cmd=admin) へ行き、すぐに、管理者パスワードを変更して下さい。
+
+**ファイル一覧
+
+ここでのファイル一覧は、最新の一覧が反映されていない可能性があります
+
+@@include="./doc/document_files_documents.ja.wiki"@@
+
+@@include="./doc/document_files_cgi.ja.wiki"@@
+
+@@include="./doc/document_files_ref.ja.wiki"@@
+
+@@include="./doc/document_files_pub.ja.wiki"@@
+
+@@include="./doc/document_files_chmod.ja.wiki"@@
+
+**CSSを編集したければ？
+
+CSSはyuicompressorで圧縮されています。その為、編集しずらいと思いますので、　編集をするのであれば、*.css.orgを参照して下さい。
+
+再圧縮するには、こちら（英語）をご覧下さい。
+
+http://developer.yahoo.com/yui/compressor/
+
+**JavaScriptを編集したければ？
+
+JavaScriptは、yuicompressor、または、Packer Javascript で圧縮されています。
+
+その為、編集しずらいと思いますので、-devel 版をダウンロードの上 *.js.srcを参照して下さい。
+
+再圧縮に関しましては、DEVEL版の説明書をご覧下さい。
+
+**もし動かなければ？
+
+***パーミッションが正しいかどうか確認して下さい。
+サーバー提供会社、プロバイダ奨励のパーミッションをなるだけ優先して下さい。
+
+***それでもだめなら.htaccessをまず削除してみて下さい。
+特に、attach/.htaccess, image/.htaccess, skin/.htaccessの削除を忘れないで下さい。
+
+***Apache 2.4を利用されている場合
+ErrorDocumentを設定されている場合、不要な設定が存在するサンプルを配布していた為、有効にすると 500 Server Error となります。
+ErrorDocumentの419番以降、及び、509番を削除して下さい。
+
+***一部のプロバイダーでは、設定に工夫が必要です。
+もしかしたら、OSがWindows系の場合がありますので、適切な設定をして下さい。
+
+***CGI.pmが導入されてないサーバーでは
+CGI.pmが導入されていないサーバーでは、別途配布されているCGI.pm.zipを解凍して、lib 以下に置いて下さい。
+
+@@BASEURL@@/PyukiWiki/Download からダウンロードできます。
+
+***UTF8にしたら文字化けする？PukiWiki宛てのInterWikiが正常ではない？
+perl5.8.0以前のバージョンでかつサーバー上にJcodeがインストールされていません。
+
+代替のJcode.pm 0.88をインストールして下さい。
+
+@@BASEURL/PyukiWiki/Download からダウンロードできます。
+
+***一部の無料サーバーにおきまして
+一部の無料サーバーでは、EUC版、UTF8版、もしくは双方とも文字化けする可能性があります。サーバーに仕様とも考えられますので、新たに別の無料サーバーをご利用されることをお勧めします。
+
+***管理者ページに入れなくなった。凍結できなくなった。
+パスワードを、以下の方法で初期化できます。
+
+info/setup.ini.cgi をダウンロードします。
+
+末尾に、以下を追加します。
+
+ $::adminpass = crypt("pass", "AA");
+ 1;
+
+アップロードします。
+
+info/setup.ini.cgi が存在しなければ、新規作成をして、そのままアップロードして下さい。
+
+**アップデート版においての追記
+
+アップデート版でも、ルートフォルダ（ディレクトリの）「pyukiwiki.ini.cgi」が上書きされるため、アップデート前に必ずリネームして下さい。
+
+また、こちらがお勧めですが、info/setup.ini.cgi にpyukiwiki.ini.cgi の変更部分を記述すれば、スムーズにアップデートできるかと思います。
+
+?cmd=setupeditorからも、編集することができます。
+
+**データベースエンジンを利用する場合
+PyukiWiki 0.2.1より、SQLite、及び GDBMに（仮）正式対応をしました。
+
+正しくSQLiteが導入されている環境において、動作を致しますが、現状では全ての動作確認を行なえていません。
+
+***SQLiteの使用方法
+正しく動作するSQLiteを準備します。~
+現状の実装では、SQLite 3 より動作が確認されています。
+
+全てのwikiページを手動でバックアップを取得してから、info/setup.ini.cgiに
+ $::modifier_dbtype = 'Nana::SQLite';
+を記述して下さい。
+
+その後、何もないwikiページになりますので、手動でバックアップをしたページを復元して下さい。
+
+特にテーブルを新規作成をする必要はありません。自動的に作成されます。
+
+内部でテーブルを自動生成しているSQLは以下の通りです。
+
+ create table $self->{name} (
+ name blob not null unique,
+ $self->{ext} blob,
+ createtime integer not null,
+ updatetime integer not null
+ );
+
+ $self->{name} は、ディレクトリ名と同一です。
+ $self->{ext} は通常 txt になります。
+ レコード名、データは、16進数文字列に変換して格納されます。
+
+***GDBMの使用方法（評価版）
+正しく動作するGDBMを準備します。~
+
+全てのwikiページを手動でバックアップを取得してから、info/setup.ini.cgiに
+ $::modifier_dbtype = 'Nana::GDBM';
+を記述して下さい。
+
+その後、何もないwikiページになりますので、手動でバックアップをしたページを復元して下さい。
+
+GDBMでは、少しでも負荷がかかると、ページが空白になる現象が確認されています。
+
+@@include="./doc/document_faq.ja.wiki"@@
+
+@@include="./doc/document_changes.ja.wiki"@@
+
+@@include="./doc/document_library.ja.wiki"@@
+
+@@include="./doc/document_acknowledgment.ja.wiki"@@
+
+@@include="./doc/document_author.ja.wiki"@@

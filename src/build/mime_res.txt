@@ -1,0 +1,289 @@
+# release file data for PyukiWiki
+# $Id$
+
+#archive files
+
+en	zip nar	ZIP Archive
+en	lzh lha	LHa Archive
+en	tgz gz	gzip compressed data
+en	tbz bz2	bzip2 compressed data
+en	txz xz	xz compressed data
+en	tar	tar archive
+en	cab	Microsoft/InstallShield Cabinet
+en	rar	RAR archive
+en	7z	7z archive
+en	bin	any data
+en	hqx	BinHex Encoded data
+en	sit	StuffIt
+
+ja	zip nar	ZIP アーカイブ
+ja	lzh lha	LHa アーカイブ
+ja	tgz gz	gzip 圧縮データ
+ja	tbz bz2	bzip2 圧縮データ
+ja	txz xz	xz 圧縮データ
+ja	tar	tar アーカイブ
+ja	cab	Microsoft/InstallShield キャビネット
+ja	rar	RAR アーカイブ
+ja	7z	7z アーカイブ
+ja	bin	any data
+ja	hqx	BinHex encoded data
+ja	sit	StuffIt
+
+# Microsoft Office files
+
+en	doc	Microsoft Word Classic
+en	dot	Microsoft Word Template Classic
+en	docx	Microsoft Word 2007 XML without Macro
+en	docm	Microsoft Word 2007 XML with Macro
+en	dotx	Microsoft Word 2007 XML Template without Macro
+en	dotm	Microsoft Word 2007 XML Template with Macro
+en	xls	Microsoft Excel Classic
+en	xlm	Microsoft Excel Classic
+en	xlc	Microsoft Excel Classic
+en	xla	Microsoft Excel Classic
+en	xlt	Microsoft Excel Template Classic
+en	xlw	Microsoft Excel Template Classic
+en	xlsx	Microsoft Excel 2007 XML without Macro
+en	xlsm	Microsoft Excel 2007 XML with Macro
+en	xlsb	Microsoft Excel 2007 Binary with Macro
+en	xltx	Microsoft Excel 2007 XML Template without Macro
+en	xltm	Microsoft Excel 2007 XML Template with Macro
+en	ppt	Microsoft PowerPoint Presentation Classic
+en	pps	Microsoft PowerPoint SlideShow Classic
+en	pot	Microsoft PowerPoint Template Classic
+en	pptx	Microsoft PowerPoint 2007 XML Presentation without Macro
+en	pptm	Microsoft PowerPoint 2007 XML Presentation with Macro
+en	ppsx	Microsoft PowerPoint 2007 XML SlideShow without Macro
+en	ppsm	Microsoft PowerPoint 2007 XML SlideShow with Macro
+en	potx	Microsoft PowerPoint 2007 XML Template without Macro
+en	potm	Microsoft PowerPoint 2007 XML Template with Macro
+en	ppam	Microsoft PowerPoint 2007 XML Addin with Macro
+en	mpp	Microsoft Project
+en	mpt	Microsoft Project Template
+en	mdb	Microsoft Access Classic
+en	mda	Microsoft Access Classic
+en	mde	Microsoft Access Classic
+en	mdn	Microsoft Access Classic
+en	mdt	Microsoft Access Classic
+en	mdw	Microsoft Access Classic
+en	mdz	Microsoft Access Classic
+en	accdb	Microsoft Access 2007
+en	vsd	Microsoft Visio
+en	vss	Microsoft Visio
+en	vst	Microsoft Visio
+en	vsw	Microsoft Visio
+en	pub	Microsoft Publisher
+en	one	Microsoft One Note
+
+ja	doc	Microsoft Word クラシック
+ja	dot	Microsoft Word テンプレート クラシック
+ja	docx	Microsoft Word 2007 XML（マクロ無効）
+ja	docm	Microsoft Word 2007 XML（マクロ有効）
+ja	dotx	Microsoft Word 2007 XML テンプレート（マクロ無効）
+ja	dotm	Microsoft Word 2007 XML テンプレート（マクロ有効）
+ja	xls	Microsoft Excel クラシック
+ja	xlm	Microsoft Excel クラシック
+ja	xlc	Microsoft Excel クラシック
+ja	xla	Microsoft Excel クラシック
+ja	xlt	Microsoft Excel テンプレート クラシック
+ja	xlw	Microsoft Excel テンプレート クラシック
+ja	xlsx	Microsoft Excel 2007 XML（マクロ無効）
+ja	xlsm	Microsoft Excel 2007 XML（マクロ有効）
+ja	xlsb	Microsoft Excel 2007 バイナリー（マクロ有効）
+ja	xltx	Microsoft Excel 2007 XML テンプレート（マクロ無効）
+ja	xltm	Microsoft Excel 2007 XML テンプレート（マクロ有効）
+ja	ppt	Microsoft PowerPoint プレゼンテーション クラシック
+ja	pps	Microsoft PowerPoint スライドショー クラシック
+ja	pot	Microsoft PowerPoint テンプレート クラシック
+ja	pptx	Microsoft PowerPoint 2007 XML プレゼンテーション（マクロ無効）
+ja	pptm	Microsoft PowerPoint 2007 XML プレゼンテーション（マクロ有効）
+ja	ppsx	Microsoft PowerPoint 2007 XML スライドショー（マクロ無効）
+ja	ppsm	Microsoft PowerPoint 2007 XML スライドショー（マクロ有効）
+ja	potx	Microsoft PowerPoint 2007 XML テンプレート（マクロ無効）
+ja	potm	Microsoft PowerPoint 2007 XML テンプレート（マクロ有効）
+ja	ppam	Microsoft PowerPoint 2007 XML アドイン（マクロ有効）
+ja	mpp	Microsoft Project
+ja	mpt	Microsoft Project テンプレート
+ja	mdb	Microsoft Access クラシック
+ja	mda	Microsoft Access クラシック
+ja	mde	Microsoft Access クラシック
+ja	mdn	Microsoft Access クラシック
+ja	mdt	Microsoft Access クラシック
+ja	mdw	Microsoft Access クラシック
+ja	mdz	Microsoft Access クラシック
+ja	accdb	Microsoft Access 2007
+ja	vsd	Microsoft Visio
+ja	vss	Microsoft Visio
+ja	vst	Microsoft Visio
+ja	vsw	Microsoft Visio
+ja	pub	Microsoft Publisher
+ja	one	Microsoft One Note
+
+# OpenOffice.org files
+
+en	odb	OpenOffice.org base
+en	odf	OpenOffice.org math
+en	odg	OpenOffice.org draw
+en	odp	OpenOffice.org impress
+en	ods	OpenOffice.org calc
+en	odt	OpenOffice.org writer
+en	otg	OpenOffice.org draw
+en	otp	OpenOffice.org impress
+en	ots	OpenOffice.org calc
+en	ott	OpenOffice.org writer
+en	stc	OpenOffice.org calc
+en	std	OpenOffice.org draw
+en	sti	OpenOffice.org impress
+en	stw	OpenOffice.org writer
+en	sxc	OpenOffice.org calc
+en	sxd	OpenOffice.org draw
+en	sxg	OpenOffice.org writer
+en	sxi	OpenOffice.org impress
+en	sxm	OpenOffice.org math
+en	sxw	OpenOffice.org writer
+
+# Common Datafiles
+en	csv	CSV File
+en	tsv	TSV File
+en	xml	XML File
+en	rdf	RDF Feeds
+en	txt	Text File
+en	htm	HTML Document
+en	html	HTML Document
+en	xhtml	XHTML Document
+en	xhtm	XHTML Document
+en	xht	XHTML Document
+en	eml	Mail Archive
+en	mht	HTML Archive
+en	mhtml	HTML Archive
+en	css	CSS Files
+
+# Web Develop File
+en	js	JavaScript File
+en	cgi	CGI Script File
+en	pl	Perl Script File
+en	pm	Perl Module File
+en	php	PHP File
+en	phps	PHP Source File
+en	rb	Ruby File
+en	asp	ASP Script File
+
+# Develop Files
+en	c	C Language Source File
+en	h	C Language Header File
+en	cpp	C++ Language Source File
+en	cc	C++ Language Source File
+en	hh	C++ Language Header File
+
+# Application Files
+en	pdf	PDF document
+ja	pdf	PDF ドキュメント
+en	swf	Adobe Flash
+en	iso	ISO9660 CD/DVD/BD Image
+ja	iso	ISO9660 CD/DVD/BD イメージ
+
+# Windows Files
+en	exe	Microsoft Execute File
+en	com	Microsoft Execute File
+en	bat	Microsoft Execute File
+en	cmd	Microsoft Execute File
+en	exp	386EXE Extender Execute File
+en	hlp	Microsoft Windows Help File
+en	chm	Microsoft Windows HTML Help File
+en	msi	Microsoft Windows Installer File
+
+ja	exe	Microsoft 実行ファイル
+ja	com	Microsoft 実行ファイル
+ja	bat	Microsoft 実行ファイル
+ja	cmd	Microsoft 実行ファイル
+ja	hlp	Microsoft Windows ヘルプファイル
+ja	chm	Microsoft Windows HTML ヘルプファイル
+ja	msi	Microsoft Windows インストーラファイル
+
+# MIDI Files
+en	mid	MIDI File
+en	midi	MIDI File
+en	kar	Karaoke MIDI File
+en	rmi	RIFF MIDI File
+
+ja	mid	MIDI ファイル
+ja	midi	MIDI ファイル
+ja	kar	Karaoke MIDI ファイル
+ja	rmi	RIFF MIDI ファイル
+
+# Audio File
+en	mpga	MPEG audio
+en	mp2	MPEG Layer 2 Audio
+en	m2a	MPEG Layer 2 Audio
+en	mp2a	MPEG Layer 2 Audio
+en	mp3	MPEG Layer 3 Audio
+en	m3a	MPEG Layer 3 Audio
+en	m3u	MPEG Layer 3 Audio URL
+en	mp4a	MPEG4 Audio
+en	mka	Matroska Audio
+en	oga	Ogg Vorbis Audio
+en	ogg	Ogg Vorbis Audio
+en	spx	Ogg Vorbis Audio
+en	ra	RealAudio
+en	ram	RealAudio
+en	aac	AAC Audio
+en	wav	RIFF Waveform Audio
+en	weba WEBM Audio
+en	wma	Microsoft Windows Media Audio
+en	aif	AIFF Audio
+en	aiff	AIFF Audio
+en	aifc	AIFF Audio
+en	au	Basic Audio
+en	snd	Basic Audio
+en	flac	FLAC Audio
+
+ja	mpga	MPEG オーディオファイル
+ja	mp2	MPEG Layer 2 オーディオファイル
+ja	m2a	MPEG Layer 2 オーディオファイル
+ja	mp2a	MPEG Layer 2 オーディオファイル
+ja	mp3	MPEG Layer 3 オーディオファイル
+ja	m3a	MPEG Layer 3 オーディオファイル
+ja	m3u	MPEG Layer 3 URL
+ja	mp4a	MPEG4 オーディオファイル
+ja	mka	Matroska オーディオファイル
+ja	oga	Ogg Vorbis オーディオファイル
+ja	ogg	Ogg Vorbis オーディオファイル
+ja	spx	Ogg Vorbis オーディオファイル
+ja	wav	RIFF Waveform オーディオファイル
+ja	weba WEBM オーディオファイル
+ja	aif	AIFF オーディオファイル
+ja	aiff	AIFF オーディオファイル
+ja	aifc	AIFF オーディオファイル
+ja	au	ベーシックオーディオファイル
+ja	snd	ベーシックオーディオファイル
+ja	flac	FLAC オーディオファイル
+
+# Video File
+en	3g2	video/3gpp2	
+en	3gp	video/3gpp	
+
+en	asf	Microsoft ASF Video
+en	asx	Microsoft ASF List
+en	avi	Microsoft AVI Video
+en	flv	Adobe Flash Video
+en	m1v	MPEG Video
+en	m2v	MPEG2 Video
+en	m4u	MPEG4 Video URL
+en	m4v	MPEG4 Video
+en	mks	Matroska Video
+en	mkv	Matroska Video
+en	mng	MNG Video
+en	mov	Apple Quicktime Video
+en	mp4	MPEG4 Video
+en	mp4v	MPEG4 Video
+en	mpe	MPEG Video
+en	mpeg	MPEG Video
+en	mpg	MPEG Video
+en	mxu	MPEG Video URL
+en	ogv	Ogg Vorbis Video
+en	qt	Apple Quicktime Video
+en	webm	WEBM Video
+en	wmv	Microsoft Windows Media Video
+en	wmx	Microsoft Windows Media List
+en	wvx	Microsoft Windows Media Video List
+

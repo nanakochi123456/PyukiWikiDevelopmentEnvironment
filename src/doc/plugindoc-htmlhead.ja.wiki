@@ -1,0 +1,38 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*NAME
+html.inc.pl - PyukiWiki プラグイン
+head.inc.pl - PyukiWiki プラグイン
+
+#contents(,1)
+
+*概要
+
+ #head(EOM)
+ <script type="text/javascript"><!--
+ alert("Hello world");
+ //--></script>
+ EOM
+
+ #html(EOM)
+ <font size="7">大きなフォント</font>
+ EOM
+
+*説明
+HTMLタグを挿入します。
+
+*制限
+凍結されたページでしか使用できません。
+
+*参考
+:PyukiWiki/Plugin/Nanami/html:@@BASEURL@@/PyukiWiki/Plugin/Nanami/html/
+
+:PyukiWiki/Plugin/Nanami/head:@@BASEURL@@/PyukiWiki/Plugin/Nanami/head/
+
+:PyukiWiki CVS:@@CVSURL@@/PyukiWiki-Devel/plugin/html.inc.pl&br;@@CVSURL@@/PyukiWiki-Devel/plugin/head.inc.pl
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

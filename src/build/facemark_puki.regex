@@ -1,0 +1,63 @@
+##################################################################
+# $Id$
+##################################################################
+# Šç•¶Žš
+##################################################################
+
+%::_facemark = (
+	' :)'		=> 'smile',
+	' (^^)'		=> 'smile',
+	' :D'		=> 'bigsmile',
+	' (^-^)'	=> 'bigsmile',
+	' :p'		=> 'huh',
+	' :d'		=> 'huh',
+	' XD'		=> 'oh',
+	' X('		=> 'oh',
+	' ;)'		=> 'oh',
+	' (;'		=> 'wink',
+	' (^_-)'	=> 'wink',
+	' ;('		=> 'sad',
+	' :('		=> 'sad',
+	' (--;)'	=> 'sad',
+	' (^^;)'	=> 'worried',
+	'&heart;'	=> 'heart',
+);
+%::_facemark_puki = (
+	'&bigsmile;'=> 'bigsmile',
+	'&huh;'		=> 'huh',
+	'&oh;'		=> 'oh',
+	'&sad;'		=> 'sad',
+	'&smile;'	=> 'smile',
+	'&wink;'	=> 'wink',
+	'&worried;' => 'worried',
+
+# ˆÈ‰º PukiWiki Plus‚æ‚è
+	'&big;'			=> 'extend_bigsmile',
+	'&big_plus;'	=> 'extend_bigsmile',
+	'&heart2;'		=> 'extend_heart',
+	'&heartplus;'	=> 'extend_heart',
+	'&oh2;'			=> 'extend_oh',
+	'&ohplus;'		=> 'extend_oh',
+	'&sad2;'		=> 'extend_sad',
+	'&sadplus;'		=> 'extend_sad',
+	'&smile2;'		=> 'extend_smile',
+	'&smileplus;'	=> 'extend_smile',
+	'&wink2;'		=> 'extend_wink',
+	'&winkplus;'	=> 'extend_wink',
+	'&worried2;'	=> 'extend_worried',
+	'&worriedplus;'	=> 'extend_worried',
+	'&ummr;'		=> 'umm',
+	'&star;'		=> 'star',
+	'&tear;'		=> 'tear',
+);
+
+$::_facemark=join('|',sort keys %::_facemark);
+$::_facemark=~s/([\.&;^;:() \_])/\\$1/g;
+$::_facemark="$::_facemark";
+$::_facemark_puki='|' . join('|',sort keys %::_facemark_puki);
+$::_facemark_puki=~s/([\.&;^;:() \_])/\\$1/g;
+$::_facemark_puki="$::_facemark_puki";
+
+#print '$::_facemark=q{' . $::_facemark . "};\n";
+#print '$::_facemark.=q{' . $::_facemark_puki . "} if(\$::usePukiWikiStyle eq 1);\n";
+print $::_facemark_puki;

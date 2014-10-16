@@ -1,0 +1,57 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+size.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &size(ピクセル数値){文字列};
+ &size(20){サイズ２０で表示};
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+文字の大きさを指定する。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 補足
+
+旧バージョンの size.inc.pl は廃止しますので、最新の size.pl をダウンロードして、削除する様にして下さい。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/size
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/size/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/size.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

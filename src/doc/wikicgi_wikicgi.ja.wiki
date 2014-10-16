@@ -1,0 +1,89 @@
+*内部モジュール仕様 - wiki.cgi
+<<$Id$>>
+#contents(,1)
+*wiki.cgi
+**NAME
+wiki.cgi - This is PyukiWiki, yet another Wiki clone.
+
+**DESCRIPTION
+
+
+PyukiWiki is yet another Wiki clone. Based on YukiWiki
+
+PyukiWiki can treat Japanese WikiNames (enclosed with [[ and ]]).PyukiWiki provides 'InterWiki' feature, RDF Site Summary (RSS),and some embedded commands (such as [[&#x23; comment]] to add comments).
+
+**SEE ALSO
+
+
+
+:PyukiWiki/Dev/Specification/wiki.cgi:[[@@BASEURL@@/PyukiWiki/Dev/Specification/wiki.cgi/]]&nbsp;
+:PyukiWiki CVS:[[@@CVSURL@@/PyukiWiki-Devel/lib/wiki.cgi]]&br;&br;
+
+**AUTHOR
+
+
+@@AUTHOR_NEKYO@@@@AUTHOR_NANAMI@@@@AUTHOR_PYUKI@@
+
+**LICENSE
+
+
+@@LICENSE_NEKYO@@
+
+
+
+**FUNCTIONS
+
+
+***main
+
+
+
+:入力値:なし&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:不可&nbsp;
+:概要:PyukiWikiの初期化をする。&br;&br;
+
+
+
+***print_error
+
+
+
+:入力値:&#x26;print_error(エラーメッセージ);&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:可&nbsp;
+:概要:エラーメッセージを出力する。&br;&br;
+
+
+
+***message
+
+
+
+:入力値:&#x26;message(表示文字列);&nbsp;
+:出力:HTML&nbsp;
+:オーバーライド:可&nbsp;
+:概要:メッセージを出力する。&br;&br;
+
+
+
+***reregist_subs
+
+
+
+:入力値:&#x26;reregist_subs("関数名", "関数名", ....);&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:可&nbsp;
+:概要:内部関数を再定義する。&br;&br;
+
+
+
+***load_wiki_module
+
+
+
+:入力値:&#x26;load_wiki_module("PyukiWiki内部モジュール名", ....);&nbsp;
+:出力:なし&nbsp;
+:オーバーライド:可&nbsp;
+:概要:分割された内部モジュールを読み込む&br;&br;
+

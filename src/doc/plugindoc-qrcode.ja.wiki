@@ -1,0 +1,55 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*QRコードを表示するプラグイン
+
+指定したASCII文字列をQRコードに変換します。
+
+#contents(,1)
+
+*概要
+
+ &qrcode(string [,ecc=L|M|Q|H]] [,version=1-15] [,size=1-5]);
+
+*説明
+指定した文字列をQRコード(R)の画像に変換します。 
+
+*動作させる前に
+
+GD::Barcodeライブラリは合計で10Mバイトになるライブラリです。~
+サーバーにインストールされている場合、極力ユーザーランドで使用しないようにして下さい。
+
+*使用方法
+
+-ascii_string~
+QRコードに変換するASCII文字列を指定します。~
+英数字・記号・日本語が指定できます。~
+文字中に \n を挿入すると、改行コードになります。
+
+-ecc=L M|Q|H~
+誤り訂正能力(データ復元能力)を指定します。~
+レベルLでは約7%、レベルMでは約15%、レベルQでは約25%、レベルHでは約30%が復元可能です。~
+指定なしの場合、レベルMになります。  
+-version=1-15~
+バージョン（モジュールの大きさ）を指定します。~
+バージョンの数値によって、入力可能な文字数に制限があります。~
+指定なしの場合、自動識別をします。  
+-size=1-5~
+画像のサイズを指定します。~
+指定なしの場合、3 になります。
+
+*参考
+:PyukiWiki/Plugin/Nanami/qrcode:@@BASEURL@@/PyukiWiki/Plugin/Nanami/qrcode/
+
+:PyukiWiki CVS:@@CVSURL@@/PyukiWiki-Devel/plugin/qrcode.inc.pl
+
+:CPAN 川合 孝典氏:http://search.cpan.org/~kwitknr/~
+このプラグインには、GD::Barcodeを同封しています。  
+
+:株式会社 デンソーウェーブ:QRコード(R)は(株)デンソーウェーブの登録商標です。~
+http://www.denso-wave.com/
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

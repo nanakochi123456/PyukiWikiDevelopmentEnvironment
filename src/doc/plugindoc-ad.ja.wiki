@@ -1,0 +1,86 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*アフィリエイト広告を表示するプラグイン ad.inc.pl + ad_edit.inc.pl
+
+wikiでお金儲けをするためのプラグインです。
+
+詳しくはこちらで・・・
+
+http://pyukiwiki.sourceforge.jp/PyukiWiki/Plugin/Nanami/ad/
+
+もしくは、podが読める方は、plugin/ad.inc.pl.ja.podを読んでみてください。
+
+#contents(,2)
+
+**特長
+
+-HTMLを記述して、それをデータベースに保存するので、ほとんどのアフィリエイトサービスで使える
+-使い方次第でアフィリエイト以外にも使える。WebRing、ページにiframeを埋め込む、etc...
+-高機能？エディタがついている
+-一応、認証してから使うことになっている
+-広告部分には、div.ad、span.adのCSSを記述できる
+-もしくは、アフィリエイト広告以外でも、HTMLを直接出力したい時に使用できる。
+-最低限ではあるが、XHTMLに自動変換できる。
+-アフィリエイトサイトへのリンクがばれないようになる。（下記オプション込で）
+-↑のついでに、リンクのカウンターが取れる。
+
+**使用前の注意
+
+-必ず、凍結パスワードを設定して下さい。~
+HTMLを直接記述できるので、何をされるかわかりません。
+-可能な限り、データベースのページ 「:AD」 から別のページ名に変更して下さい。
+
+**XHTMLで出力する場合の注意
+-一応、適当に自動認識をしますが、広告指定業者のHTMLが正常に動かない可能性がある為、適時、HTMLタグを XHTMLフォーマットに　変換してみて下さい。（完全に変換はできません）
+
+**0.2.0で使用するには
+-ad-1.07をご利用下さい
+
+**0.2.0以前で使用するには
+-ad-1.05をご利用下さい。
+
+**0.1.5以前で使用するには
+-ad-1.05をご利用下さい。
+-リソースファイルを、$::data_home と同じディレクトリに設置して下さい。
+
+**動作確認したサービス
+
+:バリューコマース:http://www.valuecommerce.ne.jp/~
+登録当初、サイトの認証が必要ですが、ものすごく簡単な、expluginを記述することで、対応可能です。0.2.0-p1以降に付属している、sampleフォルダの、stationary_explugin.inc.pl を参考にして下さい）
+:エーハチネット:http://www.a8.net/
+:JANet:http://j-a-net.jp/
+:google adsense:https://www.google.com/adsense/
+:Amazon:http://www.amazon.co.jp/exec/obidos/redirect?tag=lineagetherin-22&path=subst/associates/join/associates.html
+
+**修正履歴
+-1.09~
+一部書き換え機能を別プラグインとして、更に高機能化した
+-1.08~
+未リリース
+-1.07~
+リンク書き換え部分を修正して、全体のレスポンスを向上した。~
+広告の編集（HTML入れ替え）機能を追加した。
+-1.06~
+勝手に都合がいいように改良した。
+-1.05~
+UTF-8版を作成した。
+-1.03~
+初期化変数の変更
+-1.02~
+サブルーチンの行き先が不明になっていたのを修正
+-1.01~
+Amazon広告でサイズが自動取得できなかったのを修正
+
+**adプラグイン　拡張機能
+-バナー＆テキスト広告をもっとクリックして！~
+こちらのチケットより、同様に作成された [[ad プラグイン>http://pyukiwiki.info/PyukiWiki/Plugin/Nanami/ad/]]の拡張部分がダウンロード可能です。~
+http://www.abilie.com/tickets/2050
+
+**参考
+昔、別の所で、ad.inc.plを公開していたのですが、これとは全く別物です。
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

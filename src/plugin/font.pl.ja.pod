@@ -1,0 +1,54 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+font.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &font(font name){text};
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+文字フォントを設定します。
+
+font-family を直接指定します。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/font
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/font/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/font.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

@@ -1,0 +1,53 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+sub.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &sub(strings);
+ 011101010101&sub(2);=0x755
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+下付き文字を表示します。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/sub
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/sub/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/sub.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

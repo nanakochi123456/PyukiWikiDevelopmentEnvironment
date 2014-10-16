@@ -1,0 +1,136 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+oneclickdiary.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #oneclickdiary(ベースページ)
+ ...
+ #oneclickdiary
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+ワンクリック日記を生成するフォームを表示します。
+
+=head1 書式
+
+=head2 主要書式
+
+ #oneclickdiary(Diary)
+ 新規ページのヘッダー
+ 新規ページのフッター
+ １行のフォーマット
+ ボタン
+ ボタン
+ 
+ （空行で改行）
+ 
+ ボタン
+ ボタン
+ ...
+ 
+ date
+ time
+ #oneclickdiary
+
+=head2 １行のフォーマット
+
+=over 4
+
+=item $date
+
+日付
+
+=item $time
+
+時刻
+
+=item $action
+
+ボタンに表記されている内容
+
+=item $comment
+
+コメント欄に入力される内容（任意）
+
+=back
+
+
+=head1 サンプル
+
+ #oneclickdiary(Diary)
+ *&date(Y-m-d);\n[&backlink;]\n|日付|時刻|行動記録|コメント|
+ #comment
+ |$date|$time|$action|$comment|
+ 起きた
+ 寝る
+ 眠い
+ 寝れない
+ ごはん作り始める
+ ごはん食べ始める
+ ごはん食べ終わった
+ 出かける
+ 帰ってきた
+ 買い物に行く
+ 買い物から帰ってきた
+ 仕事に行く
+ 仕事から帰ってきた
+ 
+ 今、元気
+ ちょっと疲れた
+ すごく疲れた
+ 眠い
+ 少し眠い
+ おなか調子がいい
+ おなか調子悪い
+ 寝ちゃった
+
+ 風邪ひいた
+ 熱ひどい
+ 咳がすごい
+ 風邪なおった
+ 
+ date
+ time
+ #oneclickdiary
+ 
+ #calendar2(Diary)
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Nanami/oneclickdiary
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/oneclickdiary/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/oneclickdiary.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

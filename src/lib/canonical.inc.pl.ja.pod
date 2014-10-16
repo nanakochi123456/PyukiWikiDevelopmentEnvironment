@@ -1,0 +1,67 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+canonical.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+検索エンジンに対して重複URLのオリジナルを指定する
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+検索エンジンに対して重複URLのオリジナルを指定する
+
+=head1 使用方法
+
+canonical.inc.cgi にリネームして下さい。
+
+$::canonical::url にオリジナルのURLを指定して下さい。
+
+=head1 上書きする関数
+
+なし
+
+=head1 備考
+
+CMSエンジンとして考慮すると、同一のページの別名URLの存在を消すことは、困難なことです。
+
+その時点で表示されているURLを参考にして、代表URLを指定して、その結果を検索エンジンに送ることにより、双方にメリットがあります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/canonical
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/canonical/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/canonical.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

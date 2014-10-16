@@ -1,0 +1,66 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+iecompatiblehack.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+IEの互換表示ボタンを強制的になくすプラグイン
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+Internet Explorere 8 以降で互換表示ボタンが表示されるのを阻止します。
+
+なお、他のコンテンツやスキンのCSSの互換が悪い場合には使用しないで下さい。
+ブラウジングできるようにします。
+
+=head1 備考
+
+2011年11月に発表された、Windows 8 の Internet Explorer では、互換表示ボタンがなくなりません。
+
+=head1 使用方法
+
+iecompatiblehack.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+なし
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/iecompatiblehack
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/iecompatiblehack/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/iecompatiblehack.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

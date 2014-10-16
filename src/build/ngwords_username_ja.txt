@@ -1,0 +1,4 @@
+// release file data for PyukiWiki
+// $Id$
+
+管理者 カンリシャ 管理人 カンリニン

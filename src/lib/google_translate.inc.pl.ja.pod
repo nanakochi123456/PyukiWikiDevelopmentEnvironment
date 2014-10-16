@@ -1,0 +1,63 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+google_transrate.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 概要
+
+transrate.google.com サービスによる、自動翻訳サービス
+
+=head1 説明
+
+google翻訳による、選択式自動翻訳です。
+
+=head1 使用方法
+
+google_transrate.inc.cgi にリネームします。
+
+=head1 上書きする関数
+
+なし
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/google_transrate
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/google_transrate/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/google_transrate.inc.pl>
+
+=item transrate.google.com サービス
+
+L<http://www.transrate.google.com/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

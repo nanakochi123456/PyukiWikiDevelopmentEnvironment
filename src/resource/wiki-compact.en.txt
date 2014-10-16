@@ -1,0 +1,340 @@
+>>>>>>>>>>	$::FrontPage	auto	en	raw
+* This page is [[PyukiWiki>PyukiWiki:FrontPage]]'s FrontPage.
+
+**What is [[PyukiWiki>PyukiWiki:FrontPage]] ?
+[[PyukiWiki>PyukiWiki:FrontPage]] is wiki of based [[YukiWiki>YukiWiki:FrontPage]] and like [[PukiWiki>PukiWiki:FrontPage]].
+
+If you're an administrator, before publishing this [[PyukiWiki>PyukiWiki:FrontPage]] this, please set the administrator password via the link AdminPage. ~
+
+If the administrator password could be set, please make your own FrontPage.
+
+- The information of [[PyukiWiki> PyukiWiki FrontPage]] is in http://pyukiwiki.info/
+- [[RecentChanges]] is been recently updated list page.
+- [[SandBox]] is recommended to practice.]
+- Try [[InterWiki>PyukiWiki:PyukiWiki/Glossary/InterWiki]] will be use [[InterWikiSandBox]].
+
+** What is wiki!?
+Wiki is create and edit web pages that easily done from the browser, it is a content management system.
+
+Prototype is Mr. Ward Cunningham's the program, there are various clones. ~
+A "Wiki", there is a Hawaiian word meaning, such as "informal", "fast".
+
+** Uses and capabilities
+Essentially, it is assumed that the utilization form more than one person to build a Web site jointly viewer or easily add pages, or we can edit.~
+I think your own Wiki syntax might be confusing at first, the basic rule is that it is easier to remember than HTML tags. ~
+
+According to the site you want to make your, please edit freely :)
+
+#counter
+>>>>>>>>>>	$::MenuBar	auto	en	raw
+// By default MenuBar is not frozen.
+// Surely frozen.
+
+// Last 20
+#recent(20)
+
+// Sample of Counter
+// **Counter
+// Total : &counter(total);~
+// Today : &counter(today);~
+// Yesterday : &counter(yesterday);
+>>>>>>>>>>	$::RecentPages	auto	en	raw
+- $year-$mon-$day ($week) 12:36:00 FrontPage  - This page is PyukiWiki's FrontPage.
+- $year-$mon-$day ($week) 12:35:00 MenuBar  - MenuBar
+- $year-$mon-$day ($week) 12:34:00 SandBox  -   SandBox (Practice page)
+- $year-$mon-$day ($week) 12:33:00 InterWikiSandBox - Practice page of Practice page.
+- $year-$mon-$day ($week) 12:32:00 [[Help]]  - PyukiWiki Help
+- $year-$mon-$day ($week) 12:31:00 [[FormatRule]]  - Text Formatting Rules
+- $year-$mon-$day ($week) 12:30:00 InterWikiName  -  InterWiki ServerLIst.
+- $year-$mon-$day ($week) 12:01:00 [[The "Artistic License"]]  - The &quot;Artistic License&quot;
+- $year-$mon-$day ($week) 12:00:00 [[GNU General Public License]]  - GNU GENERAL PUBLIC LICENSE
+>>>>>>>>>>	$::resource{help}	force	en	raw
+#freeze
+#metarobots(disable)
+#title(PyukiWiki Help)
+*[[PyukiWiki>PyukiWiki:FrontPage]]Help
+
+-[[Format Rule>FormatRule]]
+-[[FAQ(PyukiWiki official)>PyukiWiki:PyukiWiki/FAQ]]
+//-[[Standard Plugin Manual(PyukiWiki official)>PyukiWiki:PyukiWiki/Plugin/Standard]]
+//-[[Extend Plugin Manual (PyukiWiki official)>PyukiWiki:PyukiWiki/Plugin/ExPlugin]]
+//-[[Administrators Plugin Manual (PyukiWiki official)>PyukiWiki:PyukiWiki/Plugin/Admin]]
+
+----
+#contents
+----
+** Navigation menu
+At the top of the screen is the navigation menu.
+:Top:Want to transition to the top menu. ~
+FrontPage is displayed by default.
+:Edit:Edit the current page.~
+In the pages that have been frozen Edit menu is not displayed.
+:Frozen:freeze the currently displayed page.~
+You can also edit a file that has been frozen, you can remove the freeze.
+:Diff:Display the differences of pages that have been modified and the previous page is currently being displayed.
+:Backup:Display the past history of the currently page, or you can view the differences.#nocompact
+:Attach:Attach file to currently page.~
+May not work properly depending on the environment.
+:Reload:Redisplay currently page.
+:New:Create new page.
+:List:Display page list.
+:Search:Display a list of pages that contain the words that you want to search.
+:History:Appears from the order list in a new page.
+:Help:Display Help.
+
+**What is [[PyukiWiki>PyukiWiki:FrontPage]] ?
+All pages can be edited by anyone.
+That page can be edited by clicking the "Edit" at the top of the page you want to change the page.
+Edits are formatted according to [[FormatRule]].
+
+SandBox is no problem so how basically be added to the hand, please try to edit without fear of consequence.((However, because it is frozen, unfrozen once please.))
+
+**How to create new page ?
+In already created page (egg SandBox and more), somewhere on the page, or type [[WikiName>PyukiWiki:PyukiWiki/Glossary/WikiName]](Mixing uppercase and lowercase letters)((However, WikiName, it may no longer be used by the administrator)) or 
+type BracketName(surrounded by [[]]) a link displayed "?" after the part that you entered is created.
+It provides a new page edit screen when you click on it, then you can modify the page the same way you usually write. ~
+
+Also create a new page from the link [[New:]]
+
+**Unlike the BBS?
+Will not know who did that change hands be added to the page. If this is a concern, I'll keep writing your name in the part that was tampered with. --hogehoge? <- like this.
+
+
+**Can someone write?
+Such is the Wiki. Anyone anywhere can add, you can fix it.
+[[PyukiWiki>PyukiWiki:FrontPage]] has backup function and has sent the send the changes for the administrator function. You can also be restored from a backup in the mail.
+
+**Could the change of people off the browser cache and proxy?
+More than you want to edit the page, the form to add the hand from the state at the time of editing.
+But I will if someone has fallen into if you are updating while editing?
+Please confidence.
+[[PyukiWiki>PyukiWiki:FrontPage]] has will check whether together to compare the modification date of the original data and the modification date of the page for updates. Reload the page, when the "collision" update occurs, please re-edit.
+
+*[[PyukiWiki>PyukiWiki:FrontPage]] Proprietary specification
+[[PyukiWiki>PyukiWiki:FrontPage]] is based on the [[YukiWiki>YukiWiki:FrontPage]], implemented as a subset of the [[PukiWiki>PukiWiki:FrontPage]].
+
+**Change from [[YukiWiki>YukiWiki:FrontPage]]
+- Changed to the top page FrontPage. frontpage.txt I do not use.
+- Changed to display as a menu MenuBar.
+- [[PyukiWiki>PyukiWiki:FrontPage]] is using
+css from [[PukiWiki>PukiWiki:FrontPage]]'s default.ja.css, print.css which customized.((In current specification, [[PukiWiki>PukiWiki:FrontPage]] using php to css.))
+- Add a menu style [[PukiWiki>PukiWiki:FrontPage]] such as [Reload]
+- Plugin functions and implemented as automatic table of contents, create, list, delta, search, site map, RSS, OPML output.
+- [[Plugins>PyukiWiki:PyukiWiki/Plugin/Standard/]], [[ExPlugins>PyukiWiki:PyukiWiki/Plugin/ExPlugin/]]
+
+Plugins that are currently supported by the standard
+alias,
+aname,
+article,
+back,
+backup,
+br,
+bugtrack,
+calender,
+calendar2,
+clear,
+color,
+comment,
+contents,
+counter,
+date,
+diff,
+help,
+hr,
+img,
+include,
+ipv6check,
+link,
+list,
+location,
+lookup,
+ls2,
+mailform,
+metarobots,
+navi,
+new,
+newpage,
+now,
+online,
+pagenavi,
+pcomment,
+perlpod,
+popular,
+recent,
+ref,
+rss10,
+rss10page,
+ruby,
+sbookmark,
+search,
+sitemap,
+setlinebreak,
+showrss,
+size,
+sub,
+sup,
+time,
+title,
+topicpath,
+twitter,
+verb,
+vote,
+yetlist
+
+Subset version Some functions are not implemented or even a.
+[[YukiWiki>YukiWiki:FrontPage]] The thing you plug directly into the function of [[YukiWiki>YukiWiki:FrontPage]].
+
+The basic formatting rules: It is compliant with [[YukiWiki>YukiWiki:FrontPage]], compliant PukiWiki, the following features have been enhanced.
+
+**[[PyukiWiki>PyukiWiki:FrontPage]] implementation Features unique
+- It will be wrapped in a single superscript and two "^"
+ 2^^2^^=4
+Display 2^^2^^=4
+
+- It will be wrapped in a single subscript and two "^"
+ 11001011__2__=0xa9
+Display 11001011__2__=0xa9
+
+Because it provides sub, sup plug-in is the person who is focused on compatibility [[YukiWiki>YukiWiki:FrontPage]], or [[PukiWiki>PukiWiki:FrontPage]], see there.
+
+ 2&sup(2);=4
+Display 2&sup(2);=4
+
+ 11001011&sub(2);=0xa9
+Display 11001011&sub(2);=0xa9
+
+-Headings, citations can be up to 5 levels.
+ ****Headling
+ >>>>>Quote
+Will be able to view the more highly expressive, by setting the style sheet to match.
+
+-Extension date and time display~
+Writing &amp;date(); and &amp;time(); in the text, the date of the display, the time is displayed.
+>>>>>>>>>>	$::InterWikiName	force	en	raw
+#freeze
+#metarobots(disable)
+*[[InterWiki>PyukiWiki:PyukiWiki/Glossary/InterWiki]] ServerList
+
+Please write in the form of
+ [URL servername] type
+
+|To become a victim of SEO SPAM bot, this page has been frozen by default.|
+
+** WikiEngines
+-[http://www.c2.com/cgi/wiki? WikiWikiWeb] raw
+-[http://openwiki.com/? OpenWiki] raw
+//-[http://www.todo.org/cgi-bin/jp/tiki.cgi?c=v&amp;p= Tiki] euc
+-[http://www.hyuki.com/yukiwiki/wiki.cgi? YukiWiki] euc
+-[http://www.jin.gr.jp/~nahi/RWiki/?cmd=view;name= RWiki] euc
+-[http://digit.que.ne.jp/work/index.cgi? WalWiki] euc
+-[http://fswiki.poi.jp/wiki.cgi? FSWiki] euc
+-[http://hikiwiki.org/ja/? Hiki] euc
+-[http://xiki.mitsuki.no-ip.com/? Xiki] utf8
+
+** PukiWiki
+-[http://pukiwiki.sourceforge.jp/? PukiWiki] utf8
+-[http://pukiwiki.sourceforge.jp/? pukiwiki.org] utf8
+-[http://pukiwiki.sourceforge.jp/dev/? pukiwiki.dev] euc
+
+** PyukiWiki
+// PyukiWiki Main Site
+-[http://pyukiwiki.info/? PyukiWiki] euc
+-[http://pyukiwiki.info/? PyukiWiki.dev] euc
+-[http://pyukiwiki.sfjp.jp/? PyukiWiki.sfjp] euc
+// domain added by papu
+-[http://pyukiwiki.info/? PyukiWiki.info] euc
+
+// Nekyo Site
+-[http://pyukiwiki.info/? PyukiWiki.org] euc
+-[http://pyukiwiki.info//? Nekyo] euc
+//-[http://nekyo.qp.land.to/? PyukiWiki.org] euc
+//-[http://nekyo.qp.land.to/? Nekyo] euc
+
+** Search Engine
+-[http://www.google.co.jp/search?ie=utf8&oe=utf8&q=$1&lr=lang_ja&hl=ja Google.jp] utf8
+-[http://www.google.co.jp/search?ie=utf8&oe=utf8&q=$1&lr=lang_en&hl=en Google] utf8
+-[http://search.yahoo.co.jp/search?p=$1 Yahoo.jp] euc
+-[http://search.yahoo.com/search?p=$1 Yahoo] utf8
+-[http://search.yahoo.co.jp/search/dir?p=$1 Yahoo.dir] euc
+-[http://search.yahoo.com/search?p=$1 Yahoo.usa] utf8
+-[http://search.yahoo.com/search?p=$1 Yahoo.en] utf8
+-[http://websearch.rakuten.co.jp/WebIS?qt=$1 Infoseek] euc
+-[http://websearch.rakuten.co.jp/WebIS?qt=$1 Rakuten] euc
+-[http://www.bing.com/search?q=$1 MSN] utf8
+-[http://www.bing.com/search?q=$1 bing] utf8
+-[http://search.goo.ne.jp/web.jsp?MT=$1 Goo] euc
+-[http://search.fresheye.com/?kw=$1 Fresheye] sjis
+
+** WikiMedia
+***WikiPedia
+-[http://en.wikipedia.org/wiki/ WikiPedia] utf8
+-[http://ja.wikipedia.org/wiki/ WikiPedia.ja] utf8
+-[http://en.wikipedia.org/wiki/ WikiPedia.en] utf8
+
+***Wiktionary
+-[http://en.wiktionary.org/wiki/ Wikitionary] utf8
+-[http://ja.wiktionary.org/wiki/ Wikitionary.ja] utf8
+-[http://en.wiktionary.org/wiki/ Wikitionary.en] utf8
+
+***WikiBooks
+-[http://en.wikibooks.org/wiki/ WikiBooks] utf8
+-[http://ja.wikibooks.org/wiki/ WikiBooks.ja] utf8
+-[http://en.wikibooks.org/wiki/ WikiBooks.en] utf8
+
+***metawiki
+-[http://meta.wikimedia.org/wiki/ MetaWiki] utf8
+-[http://meta.wikimedia.org/wiki/ MetaWiki.ja] utf8
+-[http://meta.wikimedia.org/wiki/ MetaWiki.en] utf8
+
+***wikiquote
+-[http://en.wikiquote.org/wiki/ WikiQuote] utf8
+-[http://ja.wikiquote.org/wiki/ WikiQuote.ja] utf8
+-[http://en.wikiquote.org/wiki/ WikiQuote.en] utf8
+
+***wiki news
+-[http://en.wikinews.org/wiki/ WikiNews] utf8
+-[http://ja.wikinews.org/wiki/ WikiNews.ja] utf8
+-[http://en.wikinews.org/wiki/ WikiNews.en] utf8
+
+***wiki source
+-[http://en.wikisource.org/wiki/ WikiSource] utf8
+-[http://ja.wikisource.org/wiki/ WikiSource.ja] utf8
+-[http://en.wikisource.org/wiki/ WikiSource.en] utf8
+
+***wiki species
+-[http://species.wikimedia.org/wiki/ WikiSpecies] utf8
+-[http://species.wikimedia.org/wiki/ WikiSpecies.ja] utf8
+-[http://species.wikimedia.org/wiki/ WikiSpecies.en] utf8
+
+***wikiversity
+-[http://en.wikiversity.org/wiki/ Wikiversity] utf8
+-[http://ja.wikiversity.org/wiki/ Wikiversity.ja] utf8
+-[http://en.wikiversity.org/wiki/ Wikiversity.en] utf8
+
+***incubator
+-[http://incubator.wikimedia.org/wiki/ WikiMediaIncubator] utf8
+-[http://incubator.wikimedia.org/wiki/ WikiMediaIncubator.ja] utf8
+-[http://incubator.wikimedia.org/wiki/ WikiMediaIncubator.en] utf8
+
+***wikimedia foundation
+-[http://wikimediafoundation.org/wiki/ WikiMedia] utf8
+-[http://wikimediafoundation.org/wiki/ WikiMedia.ja] utf8
+-[http://wikimediafoundation.org/wiki/ WikiMedia.en] utf8
+
+***wikimedia commons
+-[http://commons.wikimedia.org/wiki/ WikiMediaCommons] utf8
+-[http://commons.wikimedia.org/wiki/ WikiMediaCommons.ja] utf8
+-[http://commons.wikimedia.org/wiki/ WikiMediaCommons.en] utf8
+
+** Other
+-[http://docs.tdiary.org/users/? tDiaryUsers] euc
+-[http://social.msdn.microsoft.com/Search/en-US?query= msdn] utf8
+-[http://social.msdn.microsoft.com/Search/ja-JP?query= msdn.ja] utf8
+-[http://social.msdn.microsoft.com/Search/en-US?query= msdn.en] utf8
+
+** External InterWikiName
+-[./?cmd=newpage&amp;page= New]
+-[./?cmd=read&amp;page= View]
+-[./?cmd=edit&amp;page= Edit]
+-[./?cmd=list List]
+-[./?cmd=search&amp;word=$1&amp;type=OR Search]

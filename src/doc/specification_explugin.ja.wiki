@@ -1,0 +1,58 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*explugin仕様情報
+
+**初期化
+-plugin_NAME_init メソッドを起動する
+-expluginが有効になっていると、必ず起動されます。
+-引数はありませんので、$::form から読み出す必要があります。
+-グローバルに変数以外の記述を行なわないで下さい。
+
+**有効になっているexpluginの強制読み込み
+
+依存関係で、先に読み込む必要があるexpluginは、以下のようにして読み出すことができる。
+
+ &exec_explugin_sub("explugin name") ;
+
+**リソースの読み込み
+&read_resource で読み込まれます。
+
+プラグインと同じ名前のファイルであれば、指定しなくても自動読み込みをします。
+
+**JavaScript、CSSの読み込み
+
+&jscss_include で読み込まれます。
+
+プラグインと同じ名前のファイルであれば、指定しなくても自動読み込みをします。
+
+**初期化時の返り値（ハッシュ）
+
+-init~
+1を指定することで、正常終了したことを通知する。
+-func~
+上書きする関数
+-value~
+上書きする変数名
+-msg~
+タイトル
+-body~
+文書本体
+-header~
+<head>〜</head>の内容
+-http_header~
+HTTPヘッダー
+-cssheader~
+生のCSS
+-jsheader~
+JavaScriptファイル読み込み後に実行するJavaScript文
+-jsheadervalue~
+ページ表示後すぐに実行するJavaScript文
+-bodytag~
+<body> の中の文
+-last_func~
+ページを表示後に実行する関数
+-返り値サンプル~
+
+ return('init'=>1, func=>'override1,override2',
+   'jsheader'=>$javascript, 'lastfunc'=>'&lastcallback;');

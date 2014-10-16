@@ -1,0 +1,52 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+backlink.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ &backlink;
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+上層の階層のwikiへ戻るリンクを作成する。
+
+上層の階層のwikiページがありませんと、意味がありません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/backlink
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/backlink/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/backlink.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

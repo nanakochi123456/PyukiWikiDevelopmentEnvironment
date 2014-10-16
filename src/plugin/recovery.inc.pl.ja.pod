@@ -1,0 +1,52 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+recovery.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=recovery
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+デフォルトのwikiページを復元します。
+
+PyukiWiki初回起動時の初期ページ設定にも使用します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/recovery
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/recovery/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/recovery.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

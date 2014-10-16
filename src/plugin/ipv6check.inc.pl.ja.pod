@@ -1,0 +1,44 @@
+#$Id$
+=head1 NAME
+
+ipv6check.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ &ipv6check([IPV6で表示するページ],[IPV4で表示するページ]);
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+クライアントからのアクセスのIPV4か、IPV6かをチェックするプラグイン
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/ipv6check
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/ipv6check/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/ipv6check.inc.pl>
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

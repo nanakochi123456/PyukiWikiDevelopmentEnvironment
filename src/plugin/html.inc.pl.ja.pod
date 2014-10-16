@@ -1,0 +1,52 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+html.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #html(EOM)
+ <font size="7">大きなフォント</font>
+ EOM
+
+=head1 説明
+
+HTMLを表示します。
+
+=head1 参考
+
+凍結されたページでしか使用できません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Nanami/html
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/html/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/html.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

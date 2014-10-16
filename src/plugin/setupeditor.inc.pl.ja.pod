@@ -1,0 +1,50 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+setupeditor.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=setupeditor
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+info/setup.cgi の編集プラグインです。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/setupeditor
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/setupeditor/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/setupeditor.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

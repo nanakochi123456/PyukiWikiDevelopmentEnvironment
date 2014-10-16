@@ -1,0 +1,92 @@
+#$Id: qrcode.inc.pl.ja.pod,v 1.9 2011/09/01 12:36:44 papu Exp $
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+qrcode.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ &qrcode(string [,ecc=L|M|Q|H]] [,version=1-15] [,size=1-5]);
+
+=head1 説明
+
+指定した文字列をQRコード(R)の画像に変換します。
+
+=head1 使用方法
+
+=over 4
+
+=item string_string
+
+QRコードに変換する文字列を指定します。
+
+英字及び日本語のみ指定することができます。
+
+\n を文字列中に挿入すると、改行になります。
+
+=item ecc=L|M|Q|H
+
+誤り訂正能力(データ復元能力)を指定します。
+
+レベルLでは約7%、レベルMでは約15%、レベルQでは約25%、レベルHでは約30%が復元可能です。
+
+指定なしの場合、レベルMになります。
+
+=item version=1-15
+
+バージョン（モジュールの大きさ）を指定します。バージョンの数値によって、入力可能な文字数に制限があります。
+
+指定なしの場合、自動識別をします。
+
+=item size=1-5
+
+画像のサイズを指定します。
+
+指定なしの場合、3 になります。
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Nanami/qrcode
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/qrcode/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/qrcode.inc.pl>
+
+=item CPAN 川合 孝典氏
+
+このプラグインには、GD::Barcodeを同封しています。
+
+L<http://search.cpan.org/~kwitknr/>
+
+=item 株式会社 デンソーウェーブ
+
+QRコード(R)は(株)デンソーウェーブの登録商標です
+
+L<http://www.denso-wave.com/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

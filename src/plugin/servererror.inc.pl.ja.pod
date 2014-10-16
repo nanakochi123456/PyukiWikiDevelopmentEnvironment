@@ -1,0 +1,70 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+servererror.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+.htaccessファイルに
+
+ ErrorDocument 400 /index.cgi?cmd=servererror
+ ErrorDocument 401 /index.cgi?cmd=servererror
+ ErrorDocument 402 /index.cgi?cmd=servererror
+ ErrorDocument 403 /index.cgi?cmd=servererror
+ ErrorDocument 404 /index.cgi?cmd=servererror
+ ErrorDocument 500 /index.cgi?cmd=servererror
+
+もしくは
+
+ ErrorDocument 400 /nph-index.cgi?cmd=servererror
+ ErrorDocument 401 /nph-index.cgi?cmd=servererror
+ ErrorDocument 402 /nph-index.cgi?cmd=servererror
+ ErrorDocument 403 /nph-index.cgi?cmd=servererror
+ ErrorDocument 404 /nph-index.cgi?cmd=servererror
+ ErrorDocument 500 /nph-index.cgi?cmd=servererror
+
+等と記載して下さい。
+
+なお、付属の.htaccessのコメントを外せば動作します。
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+Apache等のWebサーバーからのエラーメッセージのかわりに、PyukiWikiでカスタムエラーメッセージを表示します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/servererror
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/servererror/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/servererror.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

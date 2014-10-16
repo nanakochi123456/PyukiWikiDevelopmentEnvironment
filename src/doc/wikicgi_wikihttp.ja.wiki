@@ -1,0 +1,57 @@
+*内部モジュール仕様 - wiki_http.cgi
+<<$Id$>>
+#contents(,1)
+*wiki_http.cgi
+**NAME
+wiki_http.cgi - This is PyukiWiki, yet another Wiki clone.
+
+**SEE ALSO
+
+
+
+:PyukiWiki/Dev/Specification/wiki_http.cgi:[[@@BASEURL@@/PyukiWiki/Dev/Specification/wiki_http.cgi/]]&nbsp;
+:PyukiWiki CVS:[[@@CVSURL@@/PyukiWiki-Devel/lib/wiki_http.cgi]]&br;&br;
+
+**AUTHOR
+
+
+@@AUTHOR_NEKYO@@@@AUTHOR_NANAMI@@@@AUTHOR_PYUKI@@
+
+**LICENSE
+
+
+@@LICENSE_NEKYO@@
+
+
+
+***content_output
+
+
+
+:入力値:&#x26;content_output(http_header, body of HTML);&nbsp;
+:出力:標準出力&nbsp;
+:オーバーライド:可&nbsp;
+:概要:CGIからのすべての出力をする。&br;&br;
+
+
+
+***compress_output
+
+
+
+:入力値:&#x26;compress_output(HTML or XML etc...);&nbsp;
+:出力:標準出力&nbsp;
+:オーバーライド:可&nbsp;
+:概要:圧縮出力が有効な時は、圧縮出力をする。&br;&br;
+
+
+
+***http_header
+
+
+
+:入力値:出力するhttpヘッダ（配列）&nbsp;
+:出力:httpヘッダ文字列&nbsp;
+:オーバーライド:可&nbsp;
+:概要:httpヘッダの初期化をする。&br;&br;
+

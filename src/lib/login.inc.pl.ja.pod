@@ -1,0 +1,89 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+login.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 概要
+
+認証プラグイン
+
+=head1 使用方法
+
+login.inc.cgi にリネームして下さい。
+
+./session ディレクトリを作成して下さい。
+
+./user ディレクトリを作成して下さい。
+
+=head1 設定
+
+=item $::user_dir
+
+ログインユーザーのディレクトリ。ログインのインデックス情報が保存される。
+
+=item $::session_dir
+
+セッションディレクトリ。実際のユーザー登録の内容が保存される。
+
+=item $login::oauth{twitter}{ConsumerKey}, $login::oauth{twitter}{ConsumerSecret}
+
+
+OAuthで使用するTwitter の ConsumerKey
+
+L<https://dev.twitter.com/apps>
+
+=head1 参考
+
+右クリックをした時点でも、リンクトラッキングをできるようにしてあります。その時、Status 204 でのHTTPアクセスが発生します。
+
+=head1 上書きする関数
+
+なし
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/login
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/login/>
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/login.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/login.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/OAuth.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/OpenID.pm>
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/login.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/loginsub.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

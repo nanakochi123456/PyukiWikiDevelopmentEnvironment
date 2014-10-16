@@ -1,0 +1,53 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+sup.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &sup(strings);
+ 2&sup(2);=4
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+上付き文字を表示します。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/sup
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/sup/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/sup.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

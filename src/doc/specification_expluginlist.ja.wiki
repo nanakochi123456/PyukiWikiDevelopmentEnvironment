@@ -1,0 +1,46 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*主なExplugin構成
+-lib/aguse.inc.pl~
+リンク先チェッカー
+-lib/antispam.inc.pl~
+メールアドレス簡易暗号化
+-lib/antispamwiki.inc.pl~
+簡易アンチスパム
+-lib/authadmin_cookie.inc.pl~
+管理者パスワードのcookie簡易保存
+-lib/autometarobot.inc.pl~
+自動ロボット向けキーワード抽出
+-lib/canonical.inc.pl~
+重複URL防止
+-lib/captcha.inc.pl~
+CAPTCHAスパム対策
+-lib/debug.inc.pl~
+デバッグ（develのみ）
+-lib/iecompatiblehack.inc.pl~
+IEの互換表示ボタンをなくす
+-lib/lang.inc.pl~
+国際化対応モジュール
+-lib/linktrack.inc.pl~
+外部リンク簡易トラッキングモジュール
+-lib/logs.inc.pl~
+アクセスログ取得モジュール
+-lib/ogp.inc.pl~
+Open Graph Protocol モジュール
+-lib/pathmenu.inc.pl~
+階層下に MenuBar等を作れるモジュール
+-lib/ping.inc.pl~
+Weblog ping
+-lib/punyurl.inc.pl~
+国際化ドメインURLに対応する
+-lib/setting.inc.pl~
+閲覧者設定機能
+-lib/slashpage.inc.pl~
+階層下のページ名を容易にリンクする
+-lib/trackback.inc.pl~
+トラックバック
+-lib/urlhack.inc.pl~
+URL改造
+-lib/xframe.inc.pl~
+frame、iframe等でページを表示できないようにする

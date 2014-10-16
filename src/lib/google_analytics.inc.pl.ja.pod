@@ -1,0 +1,80 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+google_analytics.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 概要
+
+google-analytics.com サービスによる、サイトトラッキングシステム
+
+=head1 説明
+
+googleアナリティスによるサイトトラッキングシステム
+
+=head1 使用方法
+
+google_analytics.inc.cgi にリネームします。
+
+info/setup.cgi に登録したアカウント (UA- で始まるもの) を
+
+$GOOGLEANALTYCS::ACCOUNT 変数にセットする。
+
+複数のサブドメインがある場合は、
+
+$GOOGLEANALTYCS::MULTISUB に 「.example.com」の形式で記載する。
+
+複数のトップレベルドメインがある場合、
+
+$GOOGLEANALTYCS::MULTITOP=1 をセットする。
+
+
+=head1 上書きする関数
+
+なし
+
+=head1 注意
+
+合計で１ヶ月500万ビューを超えると課金が発生するようです。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/google_analytics
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/google_analytics/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/google_analytics.inc.pl>
+
+=item google-analytics.com サービス
+
+L<http://www.google-analytics.com/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

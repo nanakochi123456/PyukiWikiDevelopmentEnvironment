@@ -1,0 +1,87 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+
+var	w				= window,
+	d				= w.document,
+	l				= d.location,
+	n				= navigator,
+
+	OPERA			= ua("OPERA"),
+//	FIREFOX 		= ua("FIREFOX"),
+	GECKO			= ua("GECKO"),
+//	CHROME			= ua("CHROME"),
+//	SAFARI			= ua("SAFARI"),
+	MSIE			= ua("MSIE"),
+//	WINDOWS			= ua("WINDOWS"),
+//	MACOS			= ua("MACOS"),
+//	WINDOWSPHONE 	= ua("WINDOWSPHONE"),
+//	ANDROID			= ua("ANDROID"),
+//	IPOD			= ua("IPOD"),
+//	IPAD			= ua("IPAD"),
+//	IPHONE			= ua("IPHONE"),
+//	WII				= ua("WII"),
+//	GAMEBOY			= ua("GAMEBOY"),
+//	NINTENDODS		= ua("NINTENDODS"),
+//	PSP				= ua("PSP"),
+//	PS2				= ua("PS2"),
+//	PS3				= ua("PS3"),
+//	VERSION			= ua("VERSION"),
+//	MAGERVERSION	= ua("MAGERVERSION"),
+
+	ah='<a href="',
+	ac='</a>',
+	v0="javascript:void(0);",
+	oc='" onclick="';
+
+function sinsb(obj, html) {
+	d.getElementById(obj).innerHTML=html;
+}
+
+// お気に入り
+function setbookmark(g, u, t, x){
+	u=decodeURIComponent(u);
+	t=decodeURIComponent(t);
+	x=decodeURIComponent(x);
+
+	if(OPERA) {
+		sinsb(g,
+				ah
+				+ u + '" rel="sidebar" t="' + t + '">'
+				+ x + ac);
+	} else if(MSIE) {
+		sinsb(g,
+			ah + v0 + oc
+			+ "w.external.AddFavorite('" + u + "','" + t + "');" + '">'
+			+ x + ac);
+	} else if(GECKO) {
+		sinsb(g,
+			ah + v0 + oc
+			+ "w.sidebar.addPanel('" + t + "','" + u + "','');" + '">'
+			+ x + ac);
+	}
+}
+
+// ホームページ登録
+function sethomepage(g, u, t, x, flg){
+	u=decodeURIComponent(u);
+	t=decodeURIComponent(t);
+	x=decodeURIComponent(x);
+
+	if(MSIE) {
+		var	useragent=n.userAgent.toUpperCase(),
+			msiever=n.appVersion.toUpperCase(),
+			msiever=(msiever.indexOf('MSIE')>-1)
+			? parseInt(msiever.replace(/.*MSIE[ ]/,'').match(/^[0-9]+/)) : 0;
+		if(msiever > 4 && useragent.indexOf("MSIE") > 0) {
+			sinsb(g,
+				ah + v0 + oc
+				+ "s='#default#homepage';d.body.style.behavior='u(s)';d.body.setHomePage('" + u + "')"
+				+ x + ac);
+		} else if(flg) {
+			setbookmark(g, u, t, x);
+		}
+	} else if(flg) {
+		setbookmark(g, u, t, x);
+	}
+}

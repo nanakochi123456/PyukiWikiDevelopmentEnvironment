@@ -1,0 +1,94 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+xrea.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &xrea;
+ &xrea(left)
+ &xrea(center,username.s??.xrea.com);
+
+=head1 説明
+
+xrea.com で、広告任意出力をするために、拡張子を .xcg に変更した時のための
+広告出力プラグインです。
+
+=head1 使用方法
+
+=over 4
+-item 独自ドメインを設定していない場合
+
+ &xrea([left][center][right]);
+
+ xrea.comのサーバーであれば、自動的に出力します。
+
+-item 独自ドメインを設定している場合
+
+まず、管理画面で、広告HTMLを確認して、契約サブドメインを確認します。
+
+ &xrea([left][center][right],username.s??.xrea.com);
+
+xrea.comのサーバーであれば、自動的に出力します。
+
+=back
+
+=head1 注意事項
+
+=over 4
+
+=item 広告位置は、必ず「1280x1024ピクセルの画面で見てスクロールする必要ない位置」に表示するようにして下さい。
+
+ http://sb.xrea.com/showthread.php?t=10009
+
+:Header ページ等に入れると良いでしょう。
+
+=item xrea+等、有料サーバーの場合は、広告出力が不要です。
+
+=item スキンに定義する方法もあります。
+
+skin/pyukiwiki.skin.(lang).cgi に適切なHTMLを記述します。この場合、このプラグインは不要です。
+
+=back
+
+=head1 謝辞
+
+動作チェックのためだけに無料でスペースを貸して頂いている xrea.com様に感謝致します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Nanami/xrea
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/xrea/>
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/xrea.pl>
+
+=item xrea.com
+
+L<http://xrea.com/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

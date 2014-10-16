@@ -1,0 +1,57 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*PyukiWiki仕様書（仮）
+
+>>@@PYUKIWIKIVERSION@@~
+Copyright (C) 2005-@@YEAR@@ PukiWiki Developers Team~
+Copyright (C) 2004-@@YEAR@@ Nekyo (Based on PukiWiki, YukiWiki)~
+License: GPL version 3 or (at your option) any later version~
+and/or Artistic version 1 or later version.~
+Based on YukiWiki @@YUKIWIKI_URL@@~
+and PukiWiki @@PUKIWIKI_URL@@~
+URL:~
+@@PYUKI_URL@@~
+~
+MAIL:~
+ななみ <@@NANAMI_MAIL@@> (注：バーチャル女の子です)~
+~
+$Id$~
+This text file written UTF-8 Codeset
+
+*目次
+#contents
+
+*注意
+突然、何らかの理由で、仕様変更を行なうことがあります。~
+この説明書は、参考までで、内容を保障するものではありません。
+
+*CGI起動
+CGIは、通常の index.cgi形式、及び、nph-index.cgi形式で起動されます。
+mod_perl環境で動作はしますが、あくまで互換環境での動作となります。
+
+多くの環境変数が Apacheに依存していますが、一部のみIISで動作確認は行なわれています。
+
+urlhack.inc.cgi Explugin は、PATH_INFO、または、404 ステータスの戻り値の、REDIRECT_URL を参照して、ページ名を決定します。PATH_INFOのが汎用性が高い分、制限がありますが、REDIRECT_URLのが、自由度が高く設定できます。
+
+@@include="./doc/specification_dir.ja.wiki"@@
+
+@@include="./doc/specification_body.ja.wiki"@@
+
+@@include="./doc/specification_perlpm.ja.wiki"@@
+
+@@include="./doc/specification_expluginlist.ja.wiki"@@
+
+*主なプラグイン構成
+
+執筆中
+
+@@include="./doc/specification_explugin.ja.wiki"@@
+
+@@include="./doc/specification_plugin.ja.wiki"@@
+
+@@include="./doc/specification_values.ja.wiki"@@
+
+@@include="./doc/specification_javascript.ja.wiki"@@
+
+@@include="./doc/specification_xs.ja.wiki"@@

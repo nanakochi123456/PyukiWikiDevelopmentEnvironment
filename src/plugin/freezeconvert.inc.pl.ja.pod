@@ -1,0 +1,51 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+freezeconvert.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=freezeconvert
+
+=head1 重要度
+
+★☆☆☆☆　旧バージョンより移行時のみ使用
+
+=head1 説明
+
+PukiWiki互換の凍結方法に変更する。ただし、まだ不具合がある可能性がある為、
+念のため、listfrozenで凍結を確認しなおして下さい。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/freezeconvert
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/freezeconvert/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/freezeconvert.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

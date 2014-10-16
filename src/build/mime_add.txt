@@ -1,0 +1,13 @@
+# OpenOffice.org
+application/vnd.sun.xml.base          odb
+application/vnd.sun.xml.calc          ods ots stc sxc
+application/vnd.sun.xml.draw          odg otg std sxd
+application/vnd.sun.xml.impress       odp otp sti sxi
+application/vnd.sun.xml.math          odf sxm
+application/vnd.sun.xml.writer        odt ott stw sxw
+
+# mobile melody
+text/plain                            mld
+application/vnd.smaf                  mmf
+video/3gpp2                           3g2
+video/3gpp                            3gp

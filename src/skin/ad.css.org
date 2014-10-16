@@ -1,0 +1,41 @@
+/* "PyukiWiki" ver 0.2.1-beta8 $$ */
+/* $Id: ad.css.org,v 1.203 2013/03/30 21:24:25 papu Exp $ */
+/* Code=UTF-8 */
+
+/* ad.inc.pl */
+
+.ad {
+	margin: 0px;
+	padding: 0px;
+}
+
+.addmy {
+	margin: 0px;
+	padding: 0px;
+	width: 1px;
+	height: 1px;
+	display: none;
+	font-size:1px;
+}
+
+/* ad_extra.inc.pl */
+
+.ad_contents_pre,
+.ad_ls2_pre
+ {
+	float: left;
+}
+
+.ad_contents,
+.ad_ls2
+ {
+	float: right;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+
+.ad_contents_last,
+.ad_ls2_last
+ {
+	clear: both;
+}

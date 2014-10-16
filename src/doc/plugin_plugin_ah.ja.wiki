@@ -1,0 +1,971 @@
+*PyukiWiki プラグイン (A-H)
+<<$Id$>>
+#contents(,1)
+*agent.inc.pl
+agent.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #agent(ブラウザ名、OS名、またはロボット名の正規表現、 マッチした時のページ、 [、 マッチしなかった時のページ)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+ユーザーエイジェントに基づいて、表示するページを指定する。
+
+**注意
+
+
+各ページで画像をattach等でアップロードする場合、このプラグインを設置するページにアップロードしなければなりません。
+
+**使用方法
+
+
+ #agent(msie,Internet Explorer Page,Sorry)
+ #agent(msie32,Internet Explorer 32bit Page,Sorry) on pure 32bit OS of IE
+ #agent(msiex86/9,Internet Explorer 32bit Page,Sorry) is 32bit browser on 64bit OS of IE
+ #agent(msiex64/10.0,Internet Explorer 64bit Page,Sorry) on pure 64bit browser of IE
+ #agent(firefox/3+,FireFox or later Page,Sorry)
+ #agent(win,Windows Page,Sorry)
+ #agent(mac,Mac Only!,Sorry)
+ #agent(bot,Sorry bot)
+
+
+*alias.inc.pl
+alias.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #alias(ページ名 [,pagenameflag])
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+ページを表示せずに、指定した別のWikiページへジャンプする。
+
+**使用方法
+
+
+
+:ページ名:ページを指定します。もし、ループされている場合は、その時点でエイリアスを終了し、現時点でのページを表示します。&nbsp;
+:pagenameflag:0 を指定すると、エイリアス先のページ名を表示します。&br;&br;1 を指定すると、エイリアス元のページ名を表示します。ただし、編集等のリンクはエイリアス先のページ名が指定されます。&nbsp;
+:その他:エイリアス元のページを変更するには、?cmd=adminedit&#x26;mypage=ページ名、もしくは listfrozen プラグインの編集リンクから変更して下さい。&br;&br;
+
+**設定
+
+
+***alias.inc.pl
+
+
+
+:$alias&#x3a;&#x3a;loopmax:エイリアスの最大回数を指定します。デフォルトは２です。&br;&br;
+
+*aname.inc.pl
+aname.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &aname( アンカー名 [,{[super], [full], [noid]}] ){ アンカー文字列 };
+ #aname( アンカー名 [,{[super], [full], [noid]}, アンカー文字列] )
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+指定した位置にアンカー(リンクの飛び先)を設定します。
+
+**引数
+
+
+アンカー名の値がアンカーのフラグメント指定子に使用されます。アンカー名は省略できません。アンカー名には半角英字（大文字／小文字）が使用可能です。 
+super,full,noid でアンカーの出力方式を指定します。
+
+super �・ アンカー文字列を上付き表示します。省略時は上付き表示されません。
+
+full �・ フラグメント指定子以外のURIを補ってアンカーを出力します。省略時はフラグメント指定子のみ出力されます。
+
+noid �・ アンカーにフラグメント指定子を出力しません。
+
+アンカー文字列が指定された場合、指定した文字列に対してアンカーが出力されます。アンカーの存在を利用者に明示したい場合に利用します。省略時は空文字に対するアンカーとなります。
+
+**備考
+
+
+通常はインライン型プラグインとして使用します。2つのブロック型プラグインに挟まれた部分にアンカー設定したい場合にインラインプラグインとして記述できないため、ブロック型プラグインとしても使えるようにしてあります。
+
+*article.inc.pl
+article.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #article
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+BBS風プラグイン
+
+**設定
+
+
+***pyukiwiki.ini.cgiの設定
+
+
+
+:$&#x3a;&#x3a;writefrozenplugin:１の場合、凍結されたページでも書き込めるようにする。&br;&br;
+
+***article.inc.plの設定
+
+
+
+:$article&#x3a;&#x3a;cols:テキストエリアのカラム数&nbsp;
+:$article&#x3a;&#x3a;rows:テキストエリアの行数&nbsp;
+:$article&#x3a;&#x3a;name_cols:名前テキストエリアのカラム数&nbsp;
+:$article&#x3a;&#x3a;subject_cols:題名テキストエリアのカラム数&nbsp;
+:$article&#x3a;&#x3a;name_format:名前の挿入フォーマット（リソースに記述されています）&nbsp;
+:$article&#x3a;&#x3a;subject_format:題名の挿入フォーマット&nbsp;
+:$article&#x3a;&#x3a;ins:挿入する位置 1&#x3a;欄の前 0&#x3a;欄の後&nbsp;
+:$article&#x3a;&#x3a;comment:書き込み下に一行コメントを 1&#x3a;入れる 0&#x3a;入れない&nbsp;
+:$article&#x3a;&#x3a;auto_br:改行を自動的に変換する 1&#x3a;する 0&#x3a;しない&nbsp;
+:$article&#x3a;&#x3a;noname:1 の場合、名前なしで処理しない&nbsp;
+:$article&#x3a;&#x3a;nosubject:1 の場合、題名なしで処理しない&br;&br;
+
+*attach.inc.pl
+attach.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #attach
+ ?cmd=attach&mypage=page
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+ページ上に添付ファイルのアップロードフォームを生成します。また、全体的な添付ファイルの管理を行ないます。
+
+**設定
+
+
+***pyukiwiki.ini.cgi
+
+
+
+:$&#x3a;&#x3a;file_uploads:添付を 0&#x3a;使わない/1&#x3a;使う/2&#x3a;認証付き/3&#x3a;削除のみ認証付&nbsp;
+:$&#x3a;&#x3a;max_filesize:アップロードファイルの最大容量 &br;&br;
+
+*back.inc.pl
+back.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #back( [[表示文字列] [,[left| center| right] [,[0| 1] [,[戻り先] ]]]] ) 
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+指定した位置に戻り先へのリンクを設置します。
+
+**使用方法
+
+
+
+:表示文字列:表示文字列は省略すると「戻る」になります。&nbsp;
+:left, center, right:left, center, rightで表示位置を指定します。省略時はcenterになります。&br;&br;
+ left − リンクを左寄せで表示します。
+ center − リンクを中央寄せで表示します。
+ right − リンクを右寄せで表示します。
+&nbsp;
+:0, 1:0、1で水平線の有無を指定します。省略すると1になります。&br;&br;
+ 0 − 水平線を表示しません。
+ 1 − 水平線を表示します。
+&nbsp;
+:戻り先:戻り先はリンクを選択時の移動先となるURL、ページ名のいずれかで指定します。$back&#x3a;&#x3a;allowpagelinkが1の場合のみページ名を指定可能です。ページ名は「ページ名&#x23;anchor」の記述を行う事で移動先のアンカーも指定可能です。$back&#x3a;&#x3a;allowjavascriptが0の場合は、HTTP_REFERER環境変数を参照し、内容があれば表示します。&br;&br;
+
+**設定
+
+
+***back.inc.pl
+
+
+
+:$back&#x3a;&#x3a;allowpagelink:ページ名(+アンカー名)による戻り先指定を可能とするかどうかを設定します。&nbsp;
+:$back&#x3a;&#x3a;allowjavascript:戻り先の指定にJavaScript?(history.go(-1))を利用するかどうか &br;&br;もし、JavaScriptの履歴が存在しない場合は表示しません。&br;&br;
+
+*backlink.inc.pl
+backlink.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &backlink;
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+上層の階層のwikiへ戻るリンクを作成する。
+
+上層の階層のwikiページがありませんと、意味がありません。
+
+*backup.inc.pl
+backup.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=backup&mypage=ページ名
+
+
+ ?cmd=backup
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+バックアップの作成、表示するプラグインです。
+
+compact パッケージでは wiki.cgi においてもバックアップ機能が搭載されていません。なお、変更履歴の詳細を見れば、その時点での書き込みIPアドレス、リモートホスト名がわかります。(要管理者認証)
+
+*br.pl
+br.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &br;
+ ここで&br;改行
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+指定した位置で改行します。
+
+このプラグインはYukiWikiと互換性があります。
+
+*bugtrack.inc.pl
+bugtrack.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #bugtrack(ページ名, カテゴリ1, カテゴリ2, ...);
+
+
+**重要度
+
+
+一般サイト
+
+☆☆☆☆☆
+
+ソフト開発サイト
+
+★★★★☆
+
+**説明
+
+
+指定した位置にbugtrackフォームを設置します。
+
+**バグ
+
+
+従来のバグトラック、及び、PukiWikiのbugtrackとは互換性があまりありません。
+
+*calendar.inc.pl
+calendar.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #calendar(ページ名)
+ #calendar(ページ名|*,yyyymm,date_format)
+ ?cmd=calendar[&date=yyyymm]
+
+
+**重要度
+
+
+☆☆☆☆☆
+
+**説明
+
+
+指定した位置にカレンダーを設置します。表示月のとなりに表示されたリンク(<< および >>)を選択することで先月／次月分のカレンダーを表示できます。カレンダー上でyyyy/mm/ddという日付を選択すると、ページ名/yyyy-mm-ddというページを表示できます。当日分のページが作成されていた場合、カレンダーの右隣に当日分のページ内容を表示します。
+
+**使用方法
+
+
+
+:ページ名:ページ名で表示するページの上位階層のページを指定できます。ページ名を省略すると設置したページのページとなります。ページ名に*を指定すると上位階層のページはなし（表示するページ名がyyyy-mm-dd）となります。&nbsp;
+:yyyymm:yyyymmで表示するカレンダーの西暦と月を指定できます。省略時は当日の年月となります。&nbsp;
+:date_format:date_formatは、内部関数 date の書式文字列を指定できます。&br;&br;date_formatには、半角の ( ) を使用することはできません。&br;&br;詳しくは以下のサンプルを御覧下さい&br;&br;
+
+**設定
+
+
+
+:$&#x3a;&#x3a;calendar_wiki:カレンダーの内容が存在しない時に、新規編集画面での初期値を設定します。&nbsp;
+:$&#x3a;&#x3a;calendar_menubaronly:1に設定すると、MenuBar等でカレンダーを運用することを想定したリンクをします。&br;&br;<< 及び >> をクリックしても、表示されているページは変化せず、カレンダーのみ更新されます。&br;&br;
+
+**サンプル
+
+
+書式文字列のサンプルです。
+
+
+:&#x23;calendar(pagename,,Y-n-j[D]):2006-1-1[Sun]&nbsp;
+:&#x23;calendar(pagename,,y/m/J):06/01/01&br;&br;
+
+*calendar2.inc.pl
+calendar2.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #calendar(ページ名)
+ #calendar(ページ名|*,yyyymm,date_format)
+ ?cmd=calendar[&date=yyyymm]
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+指定した位置にカレンダーを設置します。表示月のとなりに表示されたリンク(<< および >>)を選択することで先月／次月分のカレンダーを表示できます。カレンダー上でyyyy/mm/ddという日付を選択すると、ページ名/yyyy-mm-ddというページを表示できます。当日分のページが作成されていた場合、カレンダーの右隣に当日分のページ内容を表示します。
+
+**使用方法
+
+
+
+:ページ名:ページ名で表示するページの上位階層のページを指定できます。ページ名を省略すると設置したページのページとなります。ページ名に*を指定すると上位階層のページはなし（表示するページ名がyyyy-mm-dd）となります。&nbsp;
+:yyyymm:yyyymmで表示するカレンダーの西暦と月を指定できます。省略時は当日の年月となります。&nbsp;
+:date_format:date_formatは、内部関数 date の書式文字列を指定できます。&br;&br;date_formatには、半角の ( ) を使用することはできません。&br;&br;詳しくは以下のサンプルを御覧下さい&br;&br;
+
+**設定
+
+
+
+:$&#x3a;&#x3a;calendar2_wiki:カレンダーの内容が存在しない時に、新規編集画面での初期値を設定します。&nbsp;
+:$&#x3a;&#x3a;calendar2_menubaronly:1に設定すると、MenuBar等でカレンダーを運用することを想定したリンクをします。&br;&br;<< 及び >> をクリックしても、表示されているページは変化せず、カレンダーのみ更新されます。&br;&br;
+
+**サンプル
+
+
+書式文字列のサンプルです。
+
+
+:&#x23;calendar2(pagename,,Y-n-j[D]):2006-1-1[Sun]&nbsp;
+:&#x23;calendar2(pagename,,y/m/J):06/01/01&nbsp;
+:&#x23;calendar2(pagename,,SGGY年Zn月Zj日（lL） RS) with exdate:平成１８年１月１日（日） 元旦&nbsp;
+:軽量版につきましては、 calendar プラグインをご利用下さい。: 
+
+
+*captcha.inc.pl
+*ck.inc.pl
+ck.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=ck&lk=HEXエンコードされたURL
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+リンクトラッキングExplugin linktrack.inc.cgi から呼び出されるプラグインです。
+
+**注意
+
+
+各HTTPサーバー、及び、アクションにより、アクセス元が取得できない場合がありますのでアクセス制限に関してはできませんが、16進数文字列以外が存在することによりチェックを行なっています。
+
+*clear.pl
+clear.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &clear;
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+指定した位置に、CSSのクラスの'clear' (clear&#x3a;both) を挿入します。
+
+テキストの回りこみが解除できます。
+
+*color.pl
+color.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &color(color, [background-color]){text};
+ &color(red){赤で表示};
+ &color(#ff0000,#000000){文字赤、背景黒で表示};
+ &color(,white){背景白で表示};
+
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+引数で指定したインライン要素の、文字色・背景色を指定します。
+
+このプラグインはYukiWikiと互換性があります。
+
+**補足
+
+
+旧バージョンの color.inc.pl は廃止しますので、最新の color.pl をダウンロードして、削除する様にして下さい。
+
+*comment.inc.pl
+comment.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #comment
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+コメントフォームを表示して、訪問者からのコメント入力を受け付ける
+
+**使用方法
+
+
+ #comment([above], [below], [nodate], [noname])
+
+
+
+:above:コメントの上に挿入する&nbsp;
+:below:コメントの下に挿入する&nbsp;
+:nodate:日付を表示しない&nbsp;
+:noname:名前を使用しない&br;&br;
+
+**設定
+
+
+***pyukiwiki.ini.cgiの設定
+
+
+
+:$&#x3a;&#x3a;writefrozenplugin:１の場合、凍結されたページでも書き込めるようにする。&br;&br;
+
+***comment.inc.plの設定
+
+
+
+:my $comment_format:Wiki文法でコメントを挿入する書式&br;&br;\x08はセパレーターなので、削除しないで下さい。&nbsp;
+:$comment&#x3a;&#x3a;noname:1 の場合、名前なしで処理しない&nbsp;
+:$comment&#x3a;&#x3a;nodata:1 の場合、コメントなしでエラーとする&br;&br;
+
+*contents.inc.pl
+contents.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ # contents
+ # contents(他のページ名)
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+設置したページ中の見出しの一覧を表示します。
+
+*counter.inc.pl
+counter.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #counter
+ &counter(total);
+ &counter(today);
+ &counter(yesterday);
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+アクセスカウンター
+
+**使用方法
+
+
+
+:&#x23;counter:すべての内容を表示&nbsp;
+:&#x26;counter(total);:ページ参照回数の総計を表示&nbsp;
+:&#x26;counter(today);:ページ参照回数（当日分）を表示&nbsp;
+:&#x26;counter(yesterday);:ページ参照回数（昨日分）を表示&br;&br;
+
+*date.inc.pl
+date.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &date();
+ &date(date_format, [yyyy/mm/dd]);
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+現在または指定した日付を指定フォーマットで表示します。
+
+「&#x26;date;」のように、() を指定しないで指定すると、書き込み時の日付に自動的に変換され、プラグインとして実行されません。
+
+それ以外の場合は、現在の日付、または指定した日付を表示します。
+
+**使用方法
+
+
+=date_formatdate_formatは、内部関数 date の書式文字列を指定できます。date_formatには、半角の ( ) を使用することはできません。詳しくは以下のサンプルを御覧下さい
+:yyyy/mm/dd:表示する日付を指定します。省略時は当日の年月日となります。&br;&br;
+
+**サンプル
+
+
+書式文字列のサンプルです。
+
+
+:&#x26;date(Y-n-j[D],2006/1/1):2006-1-1[Sun]&nbsp;
+:&#x26;date(y/m/J,2006/1/1):06/01/01&nbsp;
+:&#x26;date(SGGY年Zn月Zj日（lL） RS,2006/1/1) with exdate:平成１８年１月１日（日） 元旦&br;&br;
+
+**書式
+
+
+***&#x26;date で使えるすべての書式です。
+
+
+ 西暦:Y:西暦(4桁)/y:西暦(2桁)
+ 
+   月:n:1-12/m:01-12/M:Jan-Dec/F:January-December
+ 
+   日:j:1-31/d:01-31
+ 
+ 曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土
+ 
+ ampm:a:am or pm/A:AM or PM/AL:午前 or 午後
+ 
+   時:g:1-12/G:0-23/h:01-12/H/00-23
+ 
+   分:k:0-59/i:00-59 
+ 
+   秒:S:0-59/s:00-59
+ 
+  t 指定した月の日数。 28 から 31 
+  O グリニッジとの時間差
+  r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200 
+  Z タイムゾーンのオフセット秒数。 -43200 から 43200 
+  L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。 
+  B Swatch インターネット時間 000 から 999 
+  U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time() 
+
+
+***拡張プラグインexdate.inc.cgi導入時に使えるすべての書式です。
+
+
+     元号:SG:明治/大正/昭和/平成 Sg:明/大/昭/平
+          SA:M/T/S/H Sa:Ｍ/Ｔ/Ｓ/Ｈ
+ 
+   元号年:SY:1-2桁(1〜10〜) Sy:0補完して2桁(01〜10〜)
+          GY:全角1-2桁(元〜２〜１０〜)
+          XY:全角1-2桁(元〜二〜十〜十一〜二十〜二十一〜)
+          Xy:全角1-2桁(元〜二〜一〇〜十一〜二〇〜二一〜)
+ 
+     年度 N4SG N4Sg N4Sa N4SY N4Sy N4GY N4XY N4Xy 上記元号年同、４月を基点
+          N9SG N9Sg N9Sa N9SY N9Sy N9GY N9XY N9Xy 上記元号年と同、９月を基点
+ 
+     西暦:Y:西暦(4桁)/y:西暦(2桁) - **
+         :ZY:全角4桁 Zy:全角2桁 KY:一七七〇〜二〇〇〇〜
+ 
+     皇暦:TY:西暦(4桁)/Ty:西暦(2桁) - **
+         :TZY:全角4桁 TZy:全角2桁 TzY:一七七〇〜二〇〇〇〜
+ 
+ 西暦年度:N4Y:西暦(4桁)/N4y:西暦(2桁)
+          N4ZY:全角2桁 N4Zy:全角2桁 N4KY:一七七〇〜二〇〇〇〜
+          N9ZY: N9Zy N9KY : ↑と同じで９月を基点
+ 
+       月:n:1-12/m:01-12/M:Jan-Dec/F:January-December - **
+          Zn:全角1-2桁(１−１２) Zm:0補完して全角2桁(０１−１２）
+          Kn:一〜十〜十二/Km:一〜一〇〜一二
+          kn:睦月,如月...
+ 
+       日:j:1-31/d:01-31 - **
+          Zj:全角1-2桁(１−３１) ZJ:0補完して全角2桁(０１−３１）
+          Kj:一〜十〜十一〜二十〜三十一/KJ:一〜一〇〜
+ 
+     曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土 - **
+ 
+     ampm:a:am or pm/A:AM or PM/AL:午前 or 午後 - **
+ 
+       時:g:1-12/G:0-23/h:01-12/H/00-23 - **
+          Zg:１−１２/ZG:０−２３/Zh:０１−１２/ZH/００−２３
+          Kg:一〜十〜十二/KG:零〜十〜十一〜二十/二十三
+          Kh:一〜一〇〜一二/KH:〇〜一〇〜一一〜二〇〜二三
+ 
+       分:k:0-59/i:00-59 - **
+          Zk:０−５９/Zi:００−５９
+          Kk:零〜五十九/Ki:〇〜五九
+ 
+       秒:S:0-59/s:00-59 - **
+          ZS:０−５９/Zs:００−５９
+          KS:零〜五十九/Ks:〇〜五九
+ 
+     祝日:RS:元旦/Rs:(元旦) 1948年より出力
+     行事:RG:七草/Rg:(七草) 1948年より出力
+   県民の:XG:都民の日/Xg:(都民の日) 1948年より出力
+     星座:SZ:おひつじ座/Sz:Aries
+   自分の:MG:.../Mg:(...) 1948年より出力
+   24節季:RK:立夏/Rk:(立夏)
+     六曜:RY:大安/赤口/先勝/友引/先負/仏滅
+   年干支:NK:甲子
+   日干支:HK:乙卵
+   日の宿:HY:角
+   旧暦年:QY:西暦(4桁)/Qy:西暦(2桁)
+         :QZY:全角4桁 QZy:全角2桁 QKY:一七七〇〜二〇〇〇〜
+ 
+     皇暦:EY:西暦(4桁)/Ey:西暦(2桁)
+         :EZY:全角4桁 EZy:全角2桁 EzY:一七七〇〜二〇〇〇〜
+ 
+       月:Qn:1-12/Qm:01-12
+          QZn:全角1-2桁(１−１２) QZm:0補完して全角2桁(０１−１２）
+          QKn:一〜十〜十二/QKm:一〜一〇〜一二
+          Qkn:睦月,如月...
+ 
+       日:Qj:1-31/QJ:01-31 - **
+          QZj:全角1-2桁(１−３１) QZJ:0補完して全角2桁(０１−３１）
+          QKj:一〜十〜十一〜二十〜三十一/QKJ:一〜一〇〜
+ 
+  t 指定した月の日数。 28 から 31 
+  O グリニッジとの時間差
+  r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200 
+  Z タイムゾーンのオフセット秒数。 -43200 から 43200 
+  L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。 
+  B Swatch インターネット時間 000 から 999 
+  U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time() 
+
+
+***以下のPHP書式は対応していません。
+
+
+ W ISO-8601 月曜日に始まる年単位の週番号 (PHP 4.1.0で追加) 例: 42 (１年の第42週目) 
+ S 英語形式の序数を表すサフィックス。2 文字。 st, nd, rd or th. Works well with j  
+ T このマシーンのタイムゾーンの設定。 Examples: EST, MDT ... 
+
+
+*diff.inc.pl
+diff.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=diff&mypage=ページ名
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+指定したページの現在の内容と最後のバックアップ状態との差分表示します。
+
+ページ名はエンコードされていなければならない。
+
+*download.inc.pl
+download.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #download(url[, url[, url]])
+ &download(url[, url[, url]]);
+
+
+**重要度
+
+
+一般サイト
+
+★★☆☆☆
+
+ソフト配布サイト
+
+★★★★★
+
+**説明
+
+
+指定した位置にダウンロードリンクを設置します。
+
+**使用方法
+
+
+ &download(url[, url[, url]]);
+
+
+URLは、ファイルとしてアップロードされているURLで、一つの構文で同じファイル名のみ指定することができます。
+
+最も最初に記載したURLに、以下のファイルをアップロードすることにより、表示可能なハッシュとしてみなすことができます。
+
+(http://example.jp/url/filename.exe).md5
+
+(http://example.jp/url/filename.exe).sha1
+
+(http://example.jp/url/filename.exe).sha256
+
+(http://example.jp/url/filename.exe).sha384
+
+(http://example.jp/url/filename.exe).sha512
+
+同じファイルを更新した場合は、キャッシュを削除して下さい。
+
+**設定
+
+
+***download.inc.plの設定
+
+
+
+:$download&#x3a;&#x3a;baseurl:ミラーサイトを作ります。書式は以下のとおり&br;&br;mirror site url|mirror site name&nbsp;
+:$download&#x3a;&#x3a;counter:1で、ダウンロードをカウントし、表示します。&nbsp;
+:$download&#x3a;&#x3a;cache_expire:キャッシュの有効期限（秒）です&nbsp;
+:$download&#x3a;&#x3a;file_icon:ファイルのアイコンのHTMLデザインです。&nbsp;
+:$download&#x3a;&#x3a;main_html:ファイルダウンロードのメインHTMLデザインです。&nbsp;
+:$download&#x3a;&#x3a;info_html:ファイルダウンロードの情報HTMLデザインです。&nbsp;
+:$download&#x3a;&#x3a;mirror_html:ファイルダウンロードの１つのミラーのHTMLデザインです。&nbsp;
+:$download&#x3a;&#x3a;counter_html:ファイルダウンロードのカウンターのHTMLデザインです。&nbsp;
+:$download&#x3a;&#x3a;downloadpage_html:ダウンロードクッションページのHTMLデザインです。&nbsp;
+:$download&#x3a;&#x3a;hashlist:ダウンロードクッションページに表示する、ハッシュの拡張子一覧と16進数の文字数一覧です。&br;&br;
+
+*edit.inc.pl
+edit.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=edit&mypage=ページ名&refer=関連ページ&under=上層にするページ
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+指定したページを編集する
+
+ページ名はエンコードされていなければならない。
+
+**設定
+
+
+=head 2 pyukiwiki.ini.cgi
+
+
+:$&#x3a;&#x3a;cols:テキストエリアのカラム数&nbsp;
+:$&#x3a;&#x3a;rows:テキストエリアの行数&nbsp;
+:$&#x3a;&#x3a;extend_edit:拡張機能(JavaScript) 1&#x3a;使用/0&#x3a;未使用&nbsp;
+:$&#x3a;&#x3a;pukilike_edit:PukiWikiライクの編集画面&br;&br;0&#x3a;PyukiWikiオリジナル&br;&br;1&#x3a;PukiWikiライク&br;&br;2&#x3a;PukiWikiライク＋テンプレート読み込み機能&br;&br;3&#x3a;PukiWikiライク＋新規作成時のみテンプレート読み込み機能&nbsp;
+:$&#x3a;&#x3a;edit_afterpreview:プレビューを 0&#x3a;編集画面の上 1&#x3a;編集画面の下&nbsp;
+:$&#x3a;&#x3a;new_refer:新規作成の場合、関連ページのリンクを初期値として表示する画面を新規ページ名入力画面で表示する。&br;&br;空文字にすると表示されません。&br;&br;この設定は、newpage.inc.pl のものです。&nbsp;
+*env.inc.pl
+env.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+**概要
+
+
+ &env(Environment, Regex, Include wiki page);
+
+
+**説明
+
+
+環境変数の状況に応じて、wikiページを挿入する。
+
+*font.inc.pl
+*googlemap.inc.pl
+googlemap.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+&#x23;googlemap(住所)
+
+**説明
+
+
+googlemapを表示します。
+
+*help.inc.pl
+help.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=help [& refer=refer page]
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+ヘルプページを表示します
+
+ヘルプページがプラグインになることで、編集・差分・添付等のリンクが、ヘルプ表示元のページを指し示すことができます。
+
+
+
+**使用方法
+
+
+=head 2 pyukiwiki.ini.cgi
+
+
+:$&#x3a;&#x3a;useHelpPlugin:1 にすると、このプラグインを使用してヘルプを表示します。&br;&br;ヘルプページを編集する場合は、以下の方法で行なってください。&br;&br;
+ ・admineditを直接呼び出す
+ 　?cmd=adminedit&mypage=%a5%d8%a5%eb%a5%d7
+ ・一度ページを表示してから、凍結ボタンで編集をする
+ 　?%a5%d8%a5%eb%a5%d7
+
+
+*hr.pl
+hr.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ #hr
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+行頭で &#x23;hr を記述すると、区切り線になります。区切り線は上位のブロック要素の幅の60%の長さの水平線がセンタリングされて引かれます。
+
+このプラグインはYukiWikiと互換性があります。
+

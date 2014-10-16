@@ -1,0 +1,99 @@
+*内部モジュール仕様 - wiki_auth.cgi
+<<$Id$>>
+#contents(,1)
+*wiki_auth.cgi
+**NAME
+wiki_auth.cgi - This is PyukiWiki, yet another Wiki clone.
+
+**SEE ALSO
+
+
+
+:PyukiWiki/Dev/Specification/wiki_auth.cgi:[[@@BASEURL@@/PyukiWiki/Dev/Specification/wiki_auth.cgi/]]&nbsp;
+:PyukiWiki CVS:[[@@CVSURL@@/PyukiWiki-Devel/lib/wiki_auth.cgi]]&br;&br;
+
+**AUTHOR
+
+
+@@AUTHOR_NEKYO@@@@AUTHOR_NANAMI@@@@AUTHOR_PYUKI@@
+
+**LICENSE
+
+
+@@LICENSE_NEKYO@@
+
+
+
+***valid_password
+
+
+
+:入力値:&#x26;valid_password(入力されたパスワード,admin|frozen|attach,暗号化されたパスワード,トークン);&nbsp;
+:出力:パスワードが一致していたら1、一致していなければ0&nbsp;
+:オーバーライド:可&nbsp;
+:概要:管理者パスワード認証をする。&br;&br;
+
+
+
+***passwordform
+
+
+
+:入力値:&#x26;passwordform(入力されるパスワード, [hidden], [フォーム名], [暗号化されたパスワード], [トークン], [サイズ], [最小文字数], [最大文字数], [スタイル], [追加文字列]);&nbsp;
+:出力:HTML&nbsp;
+:オーバーライド:可&nbsp;
+:概要:パスワードフォームを出力する。&br;&br;
+
+
+
+***authadminpassword
+
+
+
+:入力値:&#x26;authadminpassword(form|input, タイトル, attach|frozen|admin);&nbsp;
+:出力:%ret{authed}, %ret{html}, %ret{crypt}&nbsp;
+:オーバーライド:可&nbsp;
+:概要:管理者パスワード統合認証をし、必要であればパスワードフォームのHTMLを出力をする。&br;&br;
+
+***password_decode
+
+
+
+:入力値:&#x26;password_decode([生パスワード], エンコードされたパスワード, トークン);&nbsp;
+:出力:生のパスワード&nbsp;
+:オーバーライド:可&nbsp;
+:概要:パスワードをデコードする。&br;&br;
+
+
+
+***password_encode
+
+
+
+:入力値:&#x26;password_encode(エンコードされたパスワード, トークン);&nbsp;
+:出力:生のパスワード&nbsp;
+:オーバーライド:可&nbsp;
+:概要:パスワードを暗号化する。&br;&br;
+
+
+
+***iscryptpass
+
+
+
+:入力値:なし&nbsp;
+:出力:可能であれば、1 を返す。&br;&br;また、$&#x3a;&#x3a;Token にトークンを返す。&nbsp;
+:オーバーライド:可&nbsp;
+:概要:簡易暗号化が可能であれば１を返す。&br;&br;
+
+
+
+***maketoken
+
+
+
+:入力値:なし&nbsp;
+:出力:トークン&nbsp;
+:オーバーライド:可&nbsp;
+:概要:簡易暗号化及びアンチスパムメール用のトークンを出力する。&br;&br;
+

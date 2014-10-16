@@ -1,0 +1,1422 @@
+/* @@PYUKIWIKIVERSION@@ */
+/* $Id$ */
+/* Code=@@CODE@@ */
+
+#icn_lang_cn {
+	background: url(../image/lang.png) 0px 0px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_en {
+	background: url(../image/lang.png) 0px -16px;
+	height: 13px;
+	width: 14px;
+	padding-top: 1px;
+}
+
+#icn_lang_ja {
+	background: url(../image/lang.png) 0px -30px;
+	height: 13px;
+	width: 14px;
+	padding-top: 1px;
+}
+
+#icn_lang_kr {
+	background: url(../image/lang.png) 0px -44px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tw {
+	background: url(../image/lang.png) 0px -60px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ad {
+	background: url(../image/lang.png) 0px -76px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ae {
+	background: url(../image/lang.png) 0px -92px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_af {
+	background: url(../image/lang.png) 0px -108px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ag {
+	background: url(../image/lang.png) 0px -124px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ai {
+	background: url(../image/lang.png) 0px -140px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_al {
+	background: url(../image/lang.png) 0px -156px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_am {
+	background: url(../image/lang.png) 0px -172px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_an {
+	background: url(../image/lang.png) 0px -188px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ao {
+	background: url(../image/lang.png) 0px -204px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_aq {
+	background: url(../image/lang.png) 0px -220px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ar {
+	background: url(../image/lang.png) 0px -236px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_as {
+	background: url(../image/lang.png) 0px -252px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_at {
+	background: url(../image/lang.png) 0px -268px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_au {
+	background: url(../image/lang.png) 0px -284px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_aw {
+	background: url(../image/lang.png) 0px -300px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ax {
+	background: url(../image/lang.png) 0px -316px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_az {
+	background: url(../image/lang.png) 0px -332px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ba {
+	background: url(../image/lang.png) 0px -348px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bb {
+	background: url(../image/lang.png) 0px -364px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bd {
+	background: url(../image/lang.png) 0px -380px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_be {
+	background: url(../image/lang.png) 0px -396px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bf {
+	background: url(../image/lang.png) 0px -412px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bg {
+	background: url(../image/lang.png) 0px -428px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bh {
+	background: url(../image/lang.png) 0px -444px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bi {
+	background: url(../image/lang.png) 0px -460px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bj {
+	background: url(../image/lang.png) 0px -476px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bl {
+	background: url(../image/lang.png) 0px -492px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bm {
+	background: url(../image/lang.png) 0px -508px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bn {
+	background: url(../image/lang.png) 0px -524px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bo {
+	background: url(../image/lang.png) 0px -540px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_br {
+	background: url(../image/lang.png) 0px -556px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bs {
+	background: url(../image/lang.png) 0px -572px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bt {
+	background: url(../image/lang.png) 0px -588px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bw {
+	background: url(../image/lang.png) 0px -604px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_by {
+	background: url(../image/lang.png) 0px -620px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_bz {
+	background: url(../image/lang.png) 0px -636px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ca {
+	background: url(../image/lang.png) 0px -652px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cc {
+	background: url(../image/lang.png) 0px -668px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cd {
+	background: url(../image/lang.png) 0px -684px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cf {
+	background: url(../image/lang.png) 0px -700px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cg {
+	background: url(../image/lang.png) 0px -716px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ch {
+	background: url(../image/lang.png) 0px -732px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ci {
+	background: url(../image/lang.png) 0px -748px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ck {
+	background: url(../image/lang.png) 0px -764px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cl {
+	background: url(../image/lang.png) 0px -780px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cm {
+	background: url(../image/lang.png) 0px -796px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_co {
+	background: url(../image/lang.png) 0px -812px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cr {
+	background: url(../image/lang.png) 0px -828px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cu {
+	background: url(../image/lang.png) 0px -844px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cv {
+	background: url(../image/lang.png) 0px -860px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cx {
+	background: url(../image/lang.png) 0px -876px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cy {
+	background: url(../image/lang.png) 0px -892px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_cz {
+	background: url(../image/lang.png) 0px -908px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_de {
+	background: url(../image/lang.png) 0px -924px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_dj {
+	background: url(../image/lang.png) 0px -940px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_dk {
+	background: url(../image/lang.png) 0px -956px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_dm {
+	background: url(../image/lang.png) 0px -972px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_do {
+	background: url(../image/lang.png) 0px -988px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_dz {
+	background: url(../image/lang.png) 0px -1004px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ec {
+	background: url(../image/lang.png) 0px -1020px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ee {
+	background: url(../image/lang.png) 0px -1036px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_eg {
+	background: url(../image/lang.png) 0px -1052px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_eh {
+	background: url(../image/lang.png) 0px -1068px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_er {
+	background: url(../image/lang.png) 0px -1084px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_es {
+	background: url(../image/lang.png) 0px -1100px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_et {
+	background: url(../image/lang.png) 0px -1116px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_eu {
+	background: url(../image/lang.png) 0px -1132px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_fi {
+	background: url(../image/lang.png) 0px -1148px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_fj {
+	background: url(../image/lang.png) 0px -1164px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_fk {
+	background: url(../image/lang.png) 0px -1180px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_fm {
+	background: url(../image/lang.png) 0px -1196px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_fo {
+	background: url(../image/lang.png) 0px -1212px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_fr {
+	background: url(../image/lang.png) 0px -1228px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ga {
+	background: url(../image/lang.png) 0px -1244px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gb {
+	background: url(../image/lang.png) 0px -1260px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gd {
+	background: url(../image/lang.png) 0px -1276px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ge {
+	background: url(../image/lang.png) 0px -1292px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gg {
+	background: url(../image/lang.png) 0px -1308px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gh {
+	background: url(../image/lang.png) 0px -1324px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gi {
+	background: url(../image/lang.png) 0px -1340px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gl {
+	background: url(../image/lang.png) 0px -1356px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gm {
+	background: url(../image/lang.png) 0px -1372px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gn {
+	background: url(../image/lang.png) 0px -1388px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gq {
+	background: url(../image/lang.png) 0px -1404px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gr {
+	background: url(../image/lang.png) 0px -1420px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gs {
+	background: url(../image/lang.png) 0px -1436px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gt {
+	background: url(../image/lang.png) 0px -1452px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gu {
+	background: url(../image/lang.png) 0px -1468px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gw {
+	background: url(../image/lang.png) 0px -1484px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_gy {
+	background: url(../image/lang.png) 0px -1500px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_hk {
+	background: url(../image/lang.png) 0px -1516px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_hn {
+	background: url(../image/lang.png) 0px -1532px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_hr {
+	background: url(../image/lang.png) 0px -1548px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ht {
+	background: url(../image/lang.png) 0px -1564px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_hu {
+	background: url(../image/lang.png) 0px -1580px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_id {
+	background: url(../image/lang.png) 0px -1596px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ie {
+	background: url(../image/lang.png) 0px -1612px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_il {
+	background: url(../image/lang.png) 0px -1628px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_im {
+	background: url(../image/lang.png) 0px -1644px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_in {
+	background: url(../image/lang.png) 0px -1660px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_iq {
+	background: url(../image/lang.png) 0px -1676px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ir {
+	background: url(../image/lang.png) 0px -1692px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_is {
+	background: url(../image/lang.png) 0px -1708px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_it {
+	background: url(../image/lang.png) 0px -1724px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_je {
+	background: url(../image/lang.png) 0px -1740px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_jm {
+	background: url(../image/lang.png) 0px -1756px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_jo {
+	background: url(../image/lang.png) 0px -1772px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_jp {
+	background: url(../image/lang.png) 0px -1788px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ke {
+	background: url(../image/lang.png) 0px -1804px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kg {
+	background: url(../image/lang.png) 0px -1820px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kh {
+	background: url(../image/lang.png) 0px -1836px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ki {
+	background: url(../image/lang.png) 0px -1852px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_km {
+	background: url(../image/lang.png) 0px -1868px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kn {
+	background: url(../image/lang.png) 0px -1884px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kp {
+	background: url(../image/lang.png) 0px -1900px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kv {
+	background: url(../image/lang.png) 0px -1916px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kw {
+	background: url(../image/lang.png) 0px -1932px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ky {
+	background: url(../image/lang.png) 0px -1948px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_kz {
+	background: url(../image/lang.png) 0px -1964px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_la {
+	background: url(../image/lang.png) 0px -1980px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lb {
+	background: url(../image/lang.png) 0px -1996px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lc {
+	background: url(../image/lang.png) 0px -2012px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_li {
+	background: url(../image/lang.png) 0px -2028px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lk {
+	background: url(../image/lang.png) 0px -2044px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lr {
+	background: url(../image/lang.png) 0px -2060px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ls {
+	background: url(../image/lang.png) 0px -2076px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lt {
+	background: url(../image/lang.png) 0px -2092px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lu {
+	background: url(../image/lang.png) 0px -2108px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_lv {
+	background: url(../image/lang.png) 0px -2124px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ly {
+	background: url(../image/lang.png) 0px -2140px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ma {
+	background: url(../image/lang.png) 0px -2156px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mc {
+	background: url(../image/lang.png) 0px -2172px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_md {
+	background: url(../image/lang.png) 0px -2188px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_me {
+	background: url(../image/lang.png) 0px -2204px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mg {
+	background: url(../image/lang.png) 0px -2220px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mh {
+	background: url(../image/lang.png) 0px -2236px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mk {
+	background: url(../image/lang.png) 0px -2252px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ml {
+	background: url(../image/lang.png) 0px -2268px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mm {
+	background: url(../image/lang.png) 0px -2284px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mn {
+	background: url(../image/lang.png) 0px -2300px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mo {
+	background: url(../image/lang.png) 0px -2316px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mp {
+	background: url(../image/lang.png) 0px -2332px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mr {
+	background: url(../image/lang.png) 0px -2348px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ms {
+	background: url(../image/lang.png) 0px -2364px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mt {
+	background: url(../image/lang.png) 0px -2380px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mu {
+	background: url(../image/lang.png) 0px -2396px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mv {
+	background: url(../image/lang.png) 0px -2412px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mw {
+	background: url(../image/lang.png) 0px -2428px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mx {
+	background: url(../image/lang.png) 0px -2444px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_my {
+	background: url(../image/lang.png) 0px -2460px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_mz {
+	background: url(../image/lang.png) 0px -2476px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_na {
+	background: url(../image/lang.png) 0px -2492px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_nc {
+	background: url(../image/lang.png) 0px -2508px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ne {
+	background: url(../image/lang.png) 0px -2524px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_nf {
+	background: url(../image/lang.png) 0px -2540px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ng {
+	background: url(../image/lang.png) 0px -2556px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ni {
+	background: url(../image/lang.png) 0px -2572px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_nl {
+	background: url(../image/lang.png) 0px -2588px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_no {
+	background: url(../image/lang.png) 0px -2604px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_np {
+	background: url(../image/lang.png) 0px -2620px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_nr {
+	background: url(../image/lang.png) 0px -2636px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_nu {
+	background: url(../image/lang.png) 0px -2652px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_nz {
+	background: url(../image/lang.png) 0px -2668px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_om {
+	background: url(../image/lang.png) 0px -2684px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pa {
+	background: url(../image/lang.png) 0px -2700px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pe {
+	background: url(../image/lang.png) 0px -2716px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pg {
+	background: url(../image/lang.png) 0px -2732px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ph {
+	background: url(../image/lang.png) 0px -2748px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pk {
+	background: url(../image/lang.png) 0px -2764px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pl {
+	background: url(../image/lang.png) 0px -2780px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pn {
+	background: url(../image/lang.png) 0px -2796px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pr {
+	background: url(../image/lang.png) 0px -2812px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ps {
+	background: url(../image/lang.png) 0px -2828px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pt {
+	background: url(../image/lang.png) 0px -2844px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_pw {
+	background: url(../image/lang.png) 0px -2860px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_py {
+	background: url(../image/lang.png) 0px -2876px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_qa {
+	background: url(../image/lang.png) 0px -2892px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ro {
+	background: url(../image/lang.png) 0px -2908px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_rs {
+	background: url(../image/lang.png) 0px -2924px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ru {
+	background: url(../image/lang.png) 0px -2940px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_rw {
+	background: url(../image/lang.png) 0px -2956px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sa {
+	background: url(../image/lang.png) 0px -2972px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sb {
+	background: url(../image/lang.png) 0px -2988px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sc {
+	background: url(../image/lang.png) 0px -3004px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sd {
+	background: url(../image/lang.png) 0px -3020px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_se {
+	background: url(../image/lang.png) 0px -3036px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sg {
+	background: url(../image/lang.png) 0px -3052px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sh {
+	background: url(../image/lang.png) 0px -3068px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_si {
+	background: url(../image/lang.png) 0px -3084px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sk {
+	background: url(../image/lang.png) 0px -3100px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sl {
+	background: url(../image/lang.png) 0px -3116px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sm {
+	background: url(../image/lang.png) 0px -3132px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sn {
+	background: url(../image/lang.png) 0px -3148px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_so {
+	background: url(../image/lang.png) 0px -3164px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sr {
+	background: url(../image/lang.png) 0px -3180px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ss {
+	background: url(../image/lang.png) 0px -3196px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_st {
+	background: url(../image/lang.png) 0px -3212px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sv {
+	background: url(../image/lang.png) 0px -3228px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sy {
+	background: url(../image/lang.png) 0px -3244px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_sz {
+	background: url(../image/lang.png) 0px -3260px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tc {
+	background: url(../image/lang.png) 0px -3276px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_td {
+	background: url(../image/lang.png) 0px -3292px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tg {
+	background: url(../image/lang.png) 0px -3308px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_th {
+	background: url(../image/lang.png) 0px -3324px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tj {
+	background: url(../image/lang.png) 0px -3340px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tm {
+	background: url(../image/lang.png) 0px -3356px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tn {
+	background: url(../image/lang.png) 0px -3372px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_to {
+	background: url(../image/lang.png) 0px -3388px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tp {
+	background: url(../image/lang.png) 0px -3404px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tr {
+	background: url(../image/lang.png) 0px -3420px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tt {
+	background: url(../image/lang.png) 0px -3436px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tv {
+	background: url(../image/lang.png) 0px -3452px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_tz {
+	background: url(../image/lang.png) 0px -3468px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ua {
+	background: url(../image/lang.png) 0px -3484px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ug {
+	background: url(../image/lang.png) 0px -3500px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_us {
+	background: url(../image/lang.png) 0px -3516px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_uy {
+	background: url(../image/lang.png) 0px -3532px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_uz {
+	background: url(../image/lang.png) 0px -3548px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_va {
+	background: url(../image/lang.png) 0px -3564px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_vc {
+	background: url(../image/lang.png) 0px -3580px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ve {
+	background: url(../image/lang.png) 0px -3596px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_vg {
+	background: url(../image/lang.png) 0px -3612px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_vi {
+	background: url(../image/lang.png) 0px -3628px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_vn {
+	background: url(../image/lang.png) 0px -3644px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_vu {
+	background: url(../image/lang.png) 0px -3660px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ws {
+	background: url(../image/lang.png) 0px -3676px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_ye {
+	background: url(../image/lang.png) 0px -3692px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_yt {
+	background: url(../image/lang.png) 0px -3708px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_za {
+	background: url(../image/lang.png) 0px -3724px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_zm {
+	background: url(../image/lang.png) 0px -3740px;
+	height: 16px;
+	width: 16px;
+}
+
+#icn_lang_zw {
+	background: url(../image/lang.png) 0px -3756px;
+	height: 16px;
+	width: 16px;
+}
+

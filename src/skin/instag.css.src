@@ -1,0 +1,97 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+
+@import url("../image/img-exedit.css");
+
+a.exlink {
+	font-size: 17px;
+	margin: 2px;
+}
+
+img.exlink {
+	width: 18px;
+	height: 18px;
+	margin: 2px;
+	border: 0px;
+}
+
+
+/* for edit.inc.pl color picker */
+
+
+.editcolorpicker {
+    display: none;
+	position: absolute;
+	margin: 20px 0 0 -100px;
+	background-color: #ffffff;
+	border-bottom:  3px solid #DDEEFF;
+	border-top:     1px solid #DDEEFF;
+	border-left:   10px solid #DDEEFF;
+	border-right:   5px solid #DDEEFF;
+}
+
+input.colortext {
+	width: 100%;
+}
+
+.editpanel {
+	background-color: #ffffff;
+	border-bottom:  3px solid #DDEEFF;
+	border-top:     1px solid #DDEEFF;
+	border-left:   10px solid #DDEEFF;
+	border-right:   5px solid #DDEEFF;
+
+    display: none;
+	position: absolute;
+}
+
+a.exlink:link, a.exlink:visited {
+	color: #000000;
+}
+a:hover.jqmClose {
+	color: red;
+	background-color: #000000;
+}
+
+.editulpanel {
+	margin: 20px 0 0 -100px;
+	width: 270px;
+}
+
+.editolpanel {
+	margin: 20px 0 0 -100px;
+	width: 270px;
+}
+
+.edithpanel {
+	margin: 20px 0 0 -100px;
+	width: 270px;
+}
+
+.editsizepanel {
+	margin: 20px 0 0 -100px;
+	width: 270px;
+}
+
+.editfontpanel {
+	margin: 20px 0 0 -100px;
+	width: 350px;
+}
+
+.editfacepanel {
+	margin: 20px 0 0 -100px;
+	width: 200px;
+}
+
+.ulsample,		a.ulsample:link,	a.ulsample:active,		a.ulsample:visited,		a.ulsample:hover,
+.olsample,		a.olsample:link,	a.olsample:active,		a.olsample:visited,		a.olsample:hover,
+.hsample,		a.hsample:link,		a.hsample:active,		a.hsample:visited,		a.hsample:hover,
+.sizesample,	a.sizesample:link,	a.sizesample:active,	a.sizesample:visited,	a.sizesample:hover,
+.fontsample,	a.fontsample:link,	a.fontsample:active,	a.fontsample:visited,	a.fontsample:hover,
+.facesample,	a.facesample:link,	a.facesample:active,	a.facesample:visited,	a.facesample:hover {
+	color: black;
+	text-decoration:none;
+
+}
+

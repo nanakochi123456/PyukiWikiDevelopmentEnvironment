@@ -1,0 +1,56 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+nofollow.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #nofollow
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+robotsコントロールを設定します。
+
+PukiWiki互換性の為に設置されたプラグインです。
+
+#metarobots(disable) でも、同じ効果を得ることができます。
+
+なお、安全の為に凍結されたページからしか使えません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/nofollow
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/nofollow/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/nofollow.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

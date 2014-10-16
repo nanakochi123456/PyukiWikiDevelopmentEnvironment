@@ -1,0 +1,54 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+head.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #head(EOM)
+ <script type="text/javascript"><!--
+ alert("Hello world");
+ //--></script>
+ EOM
+
+=head1 説明
+
+headタグ内に挿入します。
+
+=head1 参考
+
+凍結されたページでしか使用できません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Nanami/head
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Nanami/head/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/head.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

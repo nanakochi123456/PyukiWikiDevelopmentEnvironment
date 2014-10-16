@@ -1,0 +1,41 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*NAME
+bookmark.inc.pl - PyukiWiki Plugin
+
+#contents(,1)
+
+*概要
+
+ &bookmark(Bookmark This Page);
+ &bookmark(Regist Start Page,@@PYUKI_URL@@,start,Bookmark This Page);
+
+*説明
+Windows の Internet Explorer用に、ブックマーク、またはスタートページへの登録誘導リンクを作成します。
+
+*使い方
+
+ &bookmark(text, [url], [ページ名], [start], [代替テキスト]);
+
+-text (必須)~
+リンクテキストを記述します。
+-url~
+リンク先を指定します。省略した場合は $::basehref 変数指定されている、このWikiのFrontPageのURLになります。
+-ページ名~
+ブックマークに登録するためのページ名を記述します。省略した場合は、$::wiki_title で指定されているページ名か、FrontPageのタイトルから指定されます。
+-start~
+スタートページ（ホームページ）へ登録誘導するリンクを作成します。~
+古いブラウザ(Internet Explorer 4等)で登録できない場合は、自動的にブックマークへの登録リンクを作成します。
+-代替テキスト~
+スタートページへ登録できない場合の代替テキストです。
+
+*参考
+:PyukiWiki/Plugin/Nanami/bookmark:@@BASEURL@@/PyukiWiki/Plugin/Nanami/bookmark/
+
+:PyukiWiki CVS:@@CVSURL@@/PyukiWiki-Devel/plugin/bookmark.inc.pl
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+**作者
+@@include="./doc/author_nanami.wiki"@@

@@ -1,0 +1,65 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+backup.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=backup&mypage=ページ名
+
+ ?cmd=backup
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+バックアップの作成、表示するプラグインです。
+
+compact パッケージでは wiki.cgi においてもバックアップ機能が搭載されていません。
+なお、変更履歴の詳細を見れば、その時点での書き込みIPアドレス、リモートホスト名がわかります。(要管理者認証)
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/backup
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/backup/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/backup.inc.pl>
+
+=item YukiWiki
+
+Using Yuki::DiffText
+
+L<http://www.hyuki.com/yukiwiki/>
+
+=item CPAN Algorithm::Diff
+
+L<http://search.cpan.org/dist/Algorithm-diff/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

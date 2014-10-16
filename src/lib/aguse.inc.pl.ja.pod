@@ -1,0 +1,64 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+aguse.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+クライアントのブラウザ上で、リンク先が安全であるかポップアップで確認できるプラグイン
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+リンク先の安全性について、実際に行く前に調査しポップアップで表示します。
+
+=head1 使用方法
+
+aguse.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+なし
+
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/aguse
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/aguse/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/aguse.inc.pl>
+
+=item aguse.jp サービス
+
+L<http://www.aguse.jp/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

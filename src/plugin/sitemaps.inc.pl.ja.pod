@@ -1,0 +1,67 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+sitemaps.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=sitemaps
+ #sitemaps(1.0)
+ #sitemaps(0.5)
+ #sitemaps(0.3)
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+検索エンジンに送信する、sitemaps XMLを生成するプラグインです。
+
+=head1 使用方法
+
+優先度の高いページ、または、低いページを、意図的に設定するために、各ページに、以下を記述する
+
+#sitemaps(1.0) 優先度の高い時
+
+#sitemaps(0.3) 優先度の低い時
+
+検索エンジンに、?cmd=sitemaps を送信する。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/sitemaps
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/sitemaps/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/sitemaps.inc.pl>
+
+=item sitemaps.org
+
+L<http://www.sitemaps.org/ja/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

@@ -1,0 +1,38 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*メモ
+<<$Id$>>
+#contents(,1)
+
+*Nana::Mail - gpgの導入メモ
+
+**インストール
+pinentryも導入しないと使えないかもしれない~
+cuiの場合、pinentry-curses でも可
+
+FreeBSDでは、以下で導入可能
+
+cd /usr/ports/security/gnupg; make install clean
+cd /usr/ports/security/pinentry-curses; make install clean
+
+**コマンド
+:鍵の生成:gpg --gen-key
+:鍵のインポート:gpg --import~
+または~
+gpg --import 公開鍵ファイル名
+
+**ThunderbirdでPGP公開鍵を作る
+:gpg2を導入する:http://www.gnupg.org/
+:enigmailを導入する:http://www.enigmail.net/home/index.php
+:以下の操作を行なう:OpenPGPメニューが増えているので、鍵の管理を選択する~
+生成→新しい鍵を行なう~
+生成した鍵に対して、所有者の信用を付与する（編集→所有者の信用を付与する）~
+ファイル→ファイルへ鍵を書き出す、または、編集→公開鍵をクリップボードにコピーする　を行なう~
+上記の、鍵のインポートを行なう~
+gpg --import
+
+-シークレットキーがないと、うまく動作しないことがあるので、適当なメールアドレスを使用して、gen-key を行なっておく
+-シェルの使えないアカウントを操作する時には、sudoを利用する~
+sudo -u mail -H gpg --gen-key~
+sudo -u mail -H gpg --import

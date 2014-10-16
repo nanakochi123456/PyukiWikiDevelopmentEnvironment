@@ -1,0 +1,64 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+ping.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 概要
+
+Weblog用のpingを送信する。
+
+=head1 説明
+
+指定したサーバーリストにWeblog用のpingを送信します。
+
+=head1 使用方法
+
+ping.inc.cgi にリネームして下さい。
+
+$ping::serverlist に pingサーバー一覧を1行ずつ記載します。
+
+RSSのURLが必要な場合は、パラメータ中に __RSSURIENC__ を含めて下さい。
+
+デフォルトの登録内容だけでも、使用できるようになっています。
+
+=head1 上書きする関数
+
+関数 do_write_after を上書きします。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/ping
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/ping/>
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/ping.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

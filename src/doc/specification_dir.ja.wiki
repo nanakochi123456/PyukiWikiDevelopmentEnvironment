@@ -1,0 +1,42 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*ディレクトリ構成
+-attach~
+添付ファイル（添付画像も直接参照します）
+-backup~
+バックアップ
+-blib~
+perl XSモジュール
+-cache~
+システムキャッシュ
+-counter~
+アクセスカウンター
+-diff~
+差分
+-image~
+画像
+-info~
+情報ディレクトリ
+-lib~
+本体、perlモジュール、Explugin
+-links~
+逆リンク用（拡張）
+-logs~
+アクセスログ保存用（拡張）
+-plugin~
+プラグイン
+-resource~
+リソース
+-session~
+予約
+-skin~
+スキンファイル、JavaScript、CSSファイル
+-trackback~
+トラックバック保存用（拡張）
+-user~
+予約
+-wiki~
+Wiki文書
+-wikidb~
+内部のURL短縮用（拡張）

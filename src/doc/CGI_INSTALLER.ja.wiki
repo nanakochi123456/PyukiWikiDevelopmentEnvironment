@@ -1,0 +1,171 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*PyukiWiki - 自由にページを追加・削除・編集できるWebページ構築CGI
+
+>>@@PYUKIWIKIVERSION@@~
+Copyright (C) 2005-@@YEAR@@ PukiWiki Developers Team~
+Copyright (C) 2004-@@YEAR@@ Nekyo (Based on PukiWiki, YukiWiki)~
+License: GPL version 3 or (at your option) any later version~
+and/or Artistic version 1 or later version.~
+Based on YukiWiki @@YUKIWIKI_URL@@~
+and PukiWiki @@PUKIWIKI_URL@@~
+URL:~
+@@PYUKI_URL@@~
+~
+MAIL:~
+ななみ <@@NANAMI_MAIL@@> (注：バーチャル女の子です)~
+~
+$Id$~
+This text file written UTF-8 Codeset
+
+**目次
+#contents
+
+**最新情報
+以下のURLで最新情報を入手してください。~
+@@PYUKI_URL@@
+
+** CGIインストーラについて
+PyukiWiki（ぴゅきうぃき）CGIインストーラは、単一インストーラファイルをアップロードして、簡単にパーミッション設定を行った後、実行することによりPyukiWikiを利用しやすくするものです。
+
+インストール以外の説明につきましては、README.txt をご覧下さい。
+
+@@include="./doc/document_license.ja.wiki"@@
+
+@@include="./doc/document_donation.ja.wiki"@@
+
+@@include="./doc/document_environment.ja.wiki"@@
+
+@@include="./doc/document_package.ja.wiki"@@
+
+**はじめに
+
+***１つだけある拡張子.cgi ファイルをそのまま実行します。
+　
+ #!/usr/local/bin/perl
+ #!/usr/bin/perl
+ #!/opt/bin/perl
+ 等
+　
+ Windows サーバーでは、
+ #!c:/perl/bin/perl.exe
+ #!c:\perl\bin\perl.exe
+ #!c:\perl64\bin\perl.exe
+ を設定しても良いでしょう。
+
+iの一行目をあなたのサーバに合わせて修正します。
+
+添付の１つだけあります拡張子 cgi ファイルを、そのままアップロードします。
+バイナリモードでの転送をお勧めしますが、アスキーモードでアップロードしても
+大丈夫な設計となっています。
+
+そのファイルのパーミッションを 755 または、705、701等に設定します。
+
+ブラウザー上で、サーバー上にあるインストーラのURLにアクセスします。
+
+通常、セキュアインストールを選択します。それで動作しない場合、一度サーバー上のファイルを全て削除してから、再びアップロードしなおして、通常のインストールを行なってください。
+
+index.cgi にアクセスして、問題なく動作したら、インストーラファイルを必ず削除して下さい。
+
+**インスーラファイル一覧
+
+***説明文
+
+ +-- CGI_INSTALLER.txt	解説文書（このファイル）
+ +-- README.txt			解説文書（このファイル）
+
+***インストーラファイル
+
+以下のファイルはCGIが実行できるディレクトリにFTP、またはサーバーが提供しているファイルなメージャーでアップロードします。
+
+ +-- pyukiwiki-?.?.?-????.....cgi TEXT  755 (rwxr-xr-x)  インストーラー
+
+ファイル名がそこそこ長い為、サービスによってはそのままアップロードできない為、適時ファイル名を短くしてみて下さい。
+
+**インストール内容ファイル一覧
+ここでのファイル一覧は、最新の一覧が反映されていない可能性があります
+
+@@include="./doc/document_files_documents.ja.wiki"@@
+
+@@include="./doc/document_files_cgi.ja.wiki"@@
+
+@@include="./doc/document_files_ref.ja.wiki"@@
+
+@@include="./doc/document_files_pub.ja.wiki"@@
+
+@@include="./doc/document_files_chmod.ja.wiki"@@
+
+**もし動かなければ？
+このバージョンは、まだ検証されきっていないバージョンです。~
+多くの検証事項があります。
+
+***パーミッションが正しいかどうか確認して下さい。
+プロバイダ奨励のパーミッションをなるだけ優先して下さい。通常は、755で動作しますが、705、または701の場合もあります。
+
+***それでもだめなら.htaccessをまず削除してみて下さい。
+
+特に、attach/.htaccess, image/.htaccess, skin/.htaccessの削除を忘れないで下さい。
+
+ （インストーラで削除できる機能があります）
+
+***一部のプロバイダーでは、設定に工夫が必要です。
+
+***一部のプロバイダーでは、内臓コマンドの不足により、このインストーラは実行できません。
+
+***OSがWindows系の場合は、このインストーラは実行できません。
+
+***CGI.pmが導入されてないサーバーでは
+CGI.pmが導入されていないサーバーでは、別途配布されているCGI.pm.zipを解凍して、lib 以下に置いて下さい。
+
+@@BASEURL@@/PyukiWiki/Download からダウンロードできます。
+
+***UTF8にしたら文字化けする？PukiWiki宛てのInterWikiが正常ではない？
+perl5.8.0以前のバージョンでかつサーバー上にJcodeがインストールされていません。
+
+=head2 UTF8にしたら文字化けする？PukiWiki宛てのInterWikiが正常ではない？
+
+perl5.8.0以前のバージョンでかつサーバー上にJcodeがインストールされていません。
+
+代替のJcode.pm 0.88をインストールして下さい。
+
+L<@@BASEURL/PyukiWiki/Download>
+
+からダウンロードできます。
+
+@@BASEURL/PyukiWiki/Download からダウンロードできます。
+
+***一部の無料サーバーにおきまして
+一部の無料サーバーでは、EUC版、UTF8版、もしくは双方とも文字化けする可能性があります。サーバーに仕様とも考えられますので、新たに別の無料サーバーをご利用されることをお勧めします。
+
+***管理者ページに入れなくなった。凍結できなくなった。
+パスワードを、以下の方法で初期化できます。
+
+info/setup.ini.cgi をダウンロードします。
+
+末尾に、以下を追加します。
+
+ $::adminpass = crypt("pass", "AA");
+ 1;
+
+アップロードします。
+
+info/setup.ini.cgi が存在しなければ、新規作成をして、そのままアップロードして下さい。
+
+**アップデート版においての追記
+
+アップデート版でも、ルートフォルダ（ディレクトリの）「pyukiwiki.ini.cgi」が上書きされるため、アップデート前に必ずリネームして下さい。
+
+また、こちらがお勧めですが、info/setup.ini.cgi にpyukiwiki.ini.cgi の変更部分を記述すれば、スムーズにアップデートできるかと思います。
+
+?cmd=setupeditorからも、編集することができます。
+
+@@include="./doc/document_faq.ja.wiki"@@
+
+@@include="./doc/document_changes.ja.wiki"@@
+
+@@include="./doc/document_library.ja.wiki"@@
+
+@@include="./doc/document_acknowledgment.ja.wiki"@@
+
+@@include="./doc/document_author.ja.wiki"@@

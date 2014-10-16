@@ -1,0 +1,58 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+rss10.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=rss10[&lang=lang]
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+RecentChangesをRSS(RDF Site Summary)1.0に変換して出力。
+
+互換性の為に残されています。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/rss10
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/rss10/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/rss10.inc.pl>
+
+=item YukiWiki
+
+Yuki::RSSを使用していました。
+
+L<http://www.hyuki.com/yukiwiki/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

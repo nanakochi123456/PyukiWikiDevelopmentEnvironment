@@ -1,0 +1,62 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+server.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=server
+ #server
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+サーバーの情報を表示します。
+
+プラグインを使用するには、凍結パスワードが必要です。
+
+基本的な環境変数以外に、Perlのモジュール情報、ベンチマークをとることができます。
+
+Perlのモジュール情報を収集する時は、非常に時間がかかります。
+そのため、ご使用のサーバーによっては、Server Errorで応答がない場合があります。
+
+ベンチマークは４秒間程サーバーを高負荷にさせますので、乱用しないようにしてください。
+
+ブロック型プラグインとして使用する場合は、凍結パスワードは不要ですが、最小限の情報のみの表示となります。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/server
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/server/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/server.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

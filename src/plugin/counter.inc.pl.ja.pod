@@ -1,0 +1,75 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+counter.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #counter
+ &counter(total);
+ &counter(today);
+ &counter(yesterday);
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+アクセスカウンター
+
+=head1 使用方法
+
+=over 4
+
+=item #counter
+
+すべての内容を表示
+
+=item &counter(total);
+
+ページ参照回数の総計を表示
+
+=item &counter(today);
+
+ページ参照回数（当日分）を表示
+
+=item &counter(yesterday);
+
+ページ参照回数（昨日分）を表示
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/counter
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/counter/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/counter.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

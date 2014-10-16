@@ -1,0 +1,50 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+recent.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #recent(件数[,表示しないページの正規表現])
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+最近更新されたページのうち、最新の数件を表示します。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/recent
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/recent/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/recent.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

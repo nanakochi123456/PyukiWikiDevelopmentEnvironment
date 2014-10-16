@@ -1,0 +1,68 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+deletecache.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=deletecache
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+キャッシュディレクトリの中身を削除します。
+
+ただし、以下のファイルは削除しません。
+
+=over 4
+
+=item index.html
+
+ 
+
+=item .htaccess
+
+ 
+
+=item 拡張子が３文字以下のファイル
+
+ 
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/deletecache
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/deletecache/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/deletecache.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

@@ -1,0 +1,40 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+multimailform.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #multimailform(mail=Mail address,subject=Mail title,textarea=Body)
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 説明
+
+高機能メールフォーム
+
+=head1 使用方法
+
+ #multimailform(name=name form,mail=Mail address,subject=Mail title,select=select|select|select,textarea=Body)
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

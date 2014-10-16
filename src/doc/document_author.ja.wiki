@@ -1,0 +1,24 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+**作者
+Copyright (C) 2004-2007 by Nekyo~
+http://nekyo.qp.land.to/　（リンク切れ）
+
+Copyright (C) 2002-2007 by Hiroshi Yuki~
+http://www.hyuki.com/
+
+Copyright (C) 2005-@@YEAR@@ by ななみ (ななこっち★)~
+http://nanakochi.daiba.cx/　http://www.daiba.cx/　http://chat.daiba.cx/~
+http://vpsinfo.jp/　http://eat.jp.net/　http://pyu.be/　http://power.daiba.cx/~
+http://twitter.com/nanakochi123456/~
+http://ja.wikipedia.org/wiki/%e5%88%a9%e7%94%a8%e8%80%85%3aPapu
+
+Copyright (C) 2004-2007 by やしがにもどき~
+http://hpcgi1.nifty.com/it2f/wikinger/pyukiwiki.cgi　（リンク切れ）
+
+Copyright (C) 2005-2007 by Junichi~
+http://www.re-birth.com/　（コンテンツなし）
+
+Copyright (C) 2005-@@YEAR@@ PukiWiki Developers Team~
+http://pyukiwiki.info/ http://pyukiwiki.sfjp.jp/

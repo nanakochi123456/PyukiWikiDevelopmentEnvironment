@@ -1,0 +1,52 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+admin.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=admin
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+管理プラグインの実行を支援するメニューを表示する。
+
+=head1 参考
+
+=over 4
+
+=over 4
+
+=item PyukiWiki/Plugin/Admin/admin
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/admin/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/admin.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

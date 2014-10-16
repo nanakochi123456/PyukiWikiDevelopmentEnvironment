@@ -1,0 +1,26 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+***参照ファイル
+以下のファイルは、pyukiwiki.ini.cgi 内の変数 $::data_homeで指定するディレクトリに転送します。
+
+詳しくは pyukiwiki.ini.cgi を参照して下さい。
+
+ +-- backup                        777 (rwxrwxrwx)  バックアップ保存用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- counter                       777 (rwxrwxrwx)  カウンタ値保存用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- diff                          777 (rwxrwxrwx)  差分保存用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- info                          777 (rwxrwxrwx)  情報保存用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- plugin                        777 (rwxrwxrwx)  プラグイン用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- resource                      755 (rwxr-xr-x)  リソース用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ |   +-- すべてのファイル    TEXT  644 (rw-r--r--)  リソースファイル
+ |   +-- conflict.ja.txt     TEXT  644 (rw-r--r--)  更新の衝突時のテキスト
+ +-- wiki                          777 (rwxrwxrwx)  ページデータ保存用ディレクトリ
+     +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+
+※バックアップ保持用ディレクトリは compactバージョンにはありません。

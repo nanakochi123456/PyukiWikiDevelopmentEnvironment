@@ -1,0 +1,65 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+twitter.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+#twitter(@ユーザー名 または #ハッシュタグ またはその他検索文字列 [, ヘッダーに表示する文字])
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+ツイッターのユーザーのツィート　及び、ツイッターのハッシュタグを表示します。
+
+=head1 注意
+
+同じページに２つ以上設置することはできません。
+
+@ユーザー名での検索の場合、公式RTを行なっても表示されません。@ を抜いて、検索文字列として表示を行なうと、表示されます。
+
+twitstat.us製のtwitter表示を利用するには、info/setup.ini.cgi に以下を記述します。この場合、@ユーザー名での検索は正常にヒットしない場合があります。
+
+
+$twitter::newclient=0;
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/twitter
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/twitter/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/twitter.inc.pl>
+
+=item twitstat.us
+
+L<http://twitstat.us/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

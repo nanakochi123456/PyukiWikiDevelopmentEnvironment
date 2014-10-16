@@ -1,0 +1,29 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+**パッケージについて
+- -full~
+通常はこちらをインストールします。
+- -compact~
+サーバーの容量が少ない場合、こちらを導入してみて下さい。~
+~
+以下の制限があります。
+--あいまい検索,sitemap,showrss,bugtrack,perlpod,settingがない
+--管理プラグイン(listfrozen,server,servererror,versionlist)がない
+--PukiWiki互換ダミープラグインがない
+--Explugin lang, setting, urlhack, punyurl等多数ない
+--添付ファイルは一部の圧縮ファイル、画像以外できません。
+--英語関係ファイルがない
+--バックアップができない
+--Jcode.pm、Time::Localがサーバーにインストールされている必要がある
+--その他、多くの制限事項がある
+- -update-full, -update-compact~
+アップデート用のファイルです。~
+初期wiki、及び .htaccess ファイルがありません。~
+- -devel~
+PyukiWikiプラグイン、及びコア開発に必要なツールが揃っています。ドキュメントのpodが付属しています。~
+インストール時に約7Mバイトを使用します。
+- ???-utf8~
+UTF8版です。他のコードセットは使用できません。~
+また、UTF8版ではないバージョンとは互換性がありません。~
+ただし、従来のwikiページを移行する為の管理者向けプラグイン　convertutf8 が全バージョンに付属しています。

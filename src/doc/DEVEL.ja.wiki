@@ -1,0 +1,83 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*PyukiWiki - 自由にページを追加・削除・編集できるWebページ構築CGI
+
+>>@@PYUKIWIKIVERSION@@~
+Copyright (C) 2005-@@YEAR@@ PukiWiki Developers Team~
+Copyright (C) 2004-@@YEAR@@ Nekyo (Based on PukiWiki, YukiWiki)~
+License: GPL version 3 or (at your option) any later version~
+and/or Artistic version 1 or later version.~
+Based on YukiWiki @@YUKIWIKI_URL@@~
+and PukiWiki @@PUKIWIKI_URL@@~
+URL:~
+@@PYUKI_URL@@~
+~
+MAIL:~
+@@NANAMI_JA@@ <@@NANAMI_MAIL@@> (注：バーチャル女の子です)~
+~
+$Id$~
+This text file written UTF-8 Codeset
+
+**目次
+#contents
+
+
+*devel版について
+
+このファイルは、PyukiWiki開発現場のソースをほぼそのままパッケージにしたものです。
+
+*リリース版との差異は以下のとおりです。
+-リリース版をビルドするためのツールが入っている
+-リリース版を出すためのパッチが入っている（RecentChanges, info/*）
+-デフォルトの設定が評価用になっている
+-wiki本体、プラグインに、perl の pod (ドキュメント）がついている
+-リリース版にはないコメントが存在する~
+リリース版はCGI設置時のファイルサイズ削減を考慮のため、コメントを一部削除しています。
+-ただし、大元のファイルリリースバージョンではありません。
+
+*ファイルリリースの方法
+基本的には、DEVEL版はリリース(-full)版と同じ構成ですのでバージョンがあっていれば、DEVEL版のファイルとリリース(-full)版のファイルが混在してもそのまま動作するようになっています。
+ （ただし、$::debug変数に関する物を除く）
+
+ですが、新たにリリースする場合は、以下のような操作を行なってください。
+
+ ※ 通常版でビルドしたものは通常版の物だけを、
+    UTF8版でビルドしたものはUTF8版だけを使用して下さい。
+
+**リリースする
+適当な、UNIX端末上で
+ make release
+ make pkg
+と入力して下さい。
+（gmakeでないと動作しなくなりました）
+
+**動作が遅いと思ったら
+スレッドを多く立ち上げてみて下さい。
+ make -j 30 release
+ make -j 30 pkg
+
+release/ 以下が作成され、リリース版がその中に archive/ 以下が作成され、その中にアーカイブが作成されます。
+
+**devel版のみを高速で作成したければ、
+ make releasedevel
+
+と入力して下さい。
+
+**JavaScript、CSSのみ圧縮をしたければ、
+ make build
+と入力して下さい。
+
+再圧縮をしたければ、make realclean で削除ができますので、更新できます。
+
+**アーカイブを作成するには、*IUX環境で以下のツールが必要です。
+-tar - 標準で入っているはずです。
+-p7zip 高圧縮のgzip、zipをします。~
+http://sf.net/projects/p7zip/
+-gmake (gmakeというコマンド名が存在しなければ、Makefileを書き換えて下さい）
+-yuicompressor JavaScript, CSSの圧縮に必要です。(Javaでできています）~
+http://developer.yahoo.com/yui/compressor/
+-perl モジュール HTML::Packer、JavaScript::Packer、CSS::Packer
+-w3m ドキュメントの再生成に必要です。
+
+ p.s.Makefileの書き方が更に異常にガチガチになっています。汗

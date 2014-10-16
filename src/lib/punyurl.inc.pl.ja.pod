@@ -1,0 +1,67 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+punyurl.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★★★★★
+
+=head1 概要
+
+ASCII文字以外のドメイン名を持つURLをpunycode形式に変換する
+
+=head1 説明
+
+多言語文字等のASCII文字以外のドメイン名を持つURLをpunycode形式に変換します。
+
+http://日本語.jp/ → http://xn--wgv71a119e.jp/
+
+=head1 警告
+
+perl 5.8.1 以降の環境でないと使用できません。
+
+現在のバージョンは日本語ドメインにしか対応していません。
+
+=head1 使用方法
+
+punyurl.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+関数 make_link_url を上書きします。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/punyurl
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/punyurl/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/punyurl.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

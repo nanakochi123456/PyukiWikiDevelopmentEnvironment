@@ -1,0 +1,984 @@
+*PyukiWiki プラグイン (R-Y)
+<<$Id$>>
+#contents(,1)
+*recent.inc.pl
+recent.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #recent(件数[,表示しないページの正規表現])
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+最近更新されたページのうち、最新の数件を表示します。
+
+*ref.inc.pl
+ref.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #ref(filename[,page][,parameters][,title])
+
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+ページに添付されたファイルを展開する。またはURLを展開する
+
+**使用方法
+
+
+ #ref(filename[,page][,parameters][,title])
+
+
+
+:filename:添付ファイル名、あるいはURL&br;&br;'ページ名/添付ファイル名'を指定すると、そのページの添付ファイルを参照する。指定するURLがCGIスクリプト等の場合、末尾に '&#x26;.png' 等をつけると認識できるようになります。&nbsp;
+:page:ファイルを添付したページ名&br;&br;=Left|Center|Right&br;&br;横の位置合わせ&nbsp;
+:Wrap|Nowrap:テーブルタグで囲む/囲まない&nbsp;
+:Around:テキストの回り込み&nbsp;
+:noicon:アイコンを表示しない&nbsp;
+:nolink:元ファイルへのリンクを張らない&nbsp;
+:noimg:画像を展開しない&nbsp;
+:zoom:縦横比を保持する&nbsp;
+:'999x999':サイズを指定(幅x高さ)&nbsp;
+:'999%':サイズを指定(拡大率)&nbsp;
+:その他の文字列:imgのalt/hrefのtitleとして使用&br;&br;
+
+ページ名やパラメータに見える文字列を使用するときは、&#x23;ref(hoge.png,,zoom)のようにタイトルの前にカンマを余分に入れる
+
+**設定
+
+
+
+:$ref&#x3a;&#x3a;default_align:デフォルトの画像の位置を指定します。left, center, または right&nbsp;
+:$ref&#x3a;&#x3a;summary:&#x23;refで表示した際に、Image&#x3a;&#x3a;Magick で画像サイズを縮小する場合 1 にします。&br;&br;Image&#x3a;&#x3a;Magick が存在しないと、画像が表示されません。&nbsp;
+:$ref&#x3a;&#x3a;popup:添付ファイルへのリンクのポップアップをするには 1 を指定します。&nbsp;
+:$ref&#x3a;&#x3a;popup_regex:ポップアップ対象の拡張子を正規表現で指定します。&nbsp;
+:$ref&#x3a;&#x3a;imagepopup:添付画像ファイルへのポップアップを以下のように指定します。
+ 0 デフォルトのポップアップ
+ 1 JavaScriptのwindow.openを用いた、表示サイズ指定可能なポップアップ
+ 2 同一のブラウザ画面の中央に、ポップアップする（その画像をクリックすると閉じます）
+&nbsp;
+:$ref&#x3a;&#x3a;wopen:$ref&#x3a;&#x3a;imagepopup 時の window.openのパラメータを指定します。&br;&br;
+
+**備考
+
+
+PukiWikiほど高度な指定はできません。
+
+*rss.inc.pl
+rss.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=rss[&lang=lang][ver=1.0|2.0|atom]
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+RecentChangesをRSS(RDF Site Summary)1.0、RSS2.0、ATOMに変換して出力。
+
+*rss10.inc.pl
+rss10.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=rss10[&lang=lang]
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+RecentChangesをRSS(RDF Site Summary)1.0に変換して出力。
+
+互換性の為に残されています。
+
+*rsspage.inc.pl
+rsspage.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=rsspage&page=エンコードされたページ名[&ver=1.0|2.0|atom][&lang=lang]
+ #rsspage(- or *)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+表示中のページを指定した記述をすることで、RSS(RDF Site Summary)1.0に変換して出力できるようにします。
+
+**書式例
+
+
+&#x23;rsspage(-)
+
+-2011-07-04(月) 07&#x3a;57&#x3a;00 [[FrontPage]]~更新した。-2011-07-03(日) 19&#x3a;48&#x3a;00 何もリンクしない場合~その更新履歴のページにいきます。-2011-02-22(火) 19&#x3a;00&#x3a;00 [[外部リンク>http://example.com/]]~そこにリンクされます。
+
+*rss10page.inc.pl
+rss10page.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=rss10page&page=エンコードされたページ名[&lang=lang]
+ #rss10page(- or *)
+
+
+互換性の為に残されています。
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+表示中のページを指定した記述をすることで、RSS(RDF Site Summary)1.0に変換して出力できるようにします。
+
+**書式例
+
+
+&#x23;rss10page(-)
+
+-2011-07-04(月) 07&#x3a;57&#x3a;00 [[FrontPage]]~更新した。-2011-07-03(日) 19&#x3a;48&#x3a;00 何もリンクしない場合~その更新履歴のページにいきます。-2011-02-22(火) 19&#x3a;00&#x3a;00 [[外部リンク>http://example.com/]]~そこにリンクされます。
+
+*ruby.inc.pl
+ruby.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &ruby(ルビ){ルビをふる文字列};
+ &ruby(たかなし){小鳥遊};
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+文字列にルビをふる。
+
+**備考
+
+
+YukiWiki版とは仕様が違うため、PyukiWiki専用です。そちらがお好みの方はそちらを使用して下さい。
+
+*sbookmark.inc.pl
+sbookmark.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+*search.inc.pl
+search.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=search
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+指定文字列を含むページの検索を行う。
+
+**使用方法
+
+
+ ?cmd=search[&mymsg=string][&type=OR|AND]
+
+
+
+:mymsg:検索する文字列を指定します。&nbsp;
+:type:'OR' 指定時、OR検索を行います。(省略時はAND検索)&br;&br;
+
+ #search(0 1 or 2)
+
+
+検索フォームを表示します
+
+
+:0:AND, ORの選択を表示しません。ANDで検索します。&nbsp;
+:1:選択ボックスで AND, OR の選択項目を表示します。&nbsp;
+:2:ラジオボタンで AND, OR の選択項目を表示します。&br;&br;
+
+**設定
+
+
+***pyukiwiki.ini.cgi
+
+
+
+:$&#x3a;&#x3a;use_FuzzySearch:0&#x3a;通常検索, 1&#x3a;日本語あいまい検索&br;&br;
+
+*search_fuzzy.inc.pl
+search_fuzzy.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=search
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+search.inc.plのサブモジュールです。
+
+**設定
+
+
+***pyukiwiki.ini.cgi
+
+
+
+:$&#x3a;&#x3a;use_FuzzySearch:0&#x3a;通常検索, 1&#x3a;日本語あいまい検索&br;&br;
+
+*setlinebreak.inc.pl
+setlinebreak.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #setlinebreak([0|1] or [off|on|default])
+ &*lfmode([0|1);
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+入力文章中の改行を改行とみなすかどうかの設定を行います。
+
+PyukiWikiが入力文章中の改行をどのように扱うかはpukiwiki.ini.cgi内の$&#x3a;&#x3a;line_breakの設定内容によって変わります。
+
+setlinebreakプラグインは該当ページの以降の行に関して、$&#x3a;&#x3a;line_breakの設定に因らず改行をどのように扱うかを指定できるようになります。
+
+**使用方法
+
+
+
+:引数 :パラメータには以降の改行の扱いを指定します。パラメータが省略された場合、改行とみなすかどうかについての設定を逆転させます。&br;&br;
+ onまたは1 − 以降の文章で段落内の改行を改行とみなします($::line_break=1と同様)。 
+ offまたは0 − 以降の文章で改行を無視します($::line_break=0と同様)。改行を行うためには行末にチルダを記述するか、行中でbrプラグインを使用する必要があります。 
+ default − 改行の扱いをそのサイトの$::line_break設定に戻します。
+
+
+*setting.inc.pl
+setting.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=setting
+ lib/setting.inc.pl を lib/setting.inc.cgi にリネーム
+
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+ユーザーの閲覧環境の設定をして、cookieに保存します。
+
+**設定
+
+
+***pyukiwiki.ini.cgi
+
+
+
+:$&#x3a;&#x3a;use_Setting:メニューの設定リンクを有効にします。&nbsp;
+:$&#x3a;&#x3a;cookie_expire:保存cookieの有効期限を設定します。&nbsp;
+:$&#x3a;&#x3a;cookie_refresh:保存cookieのリフレッシュ間隔を設定します。&nbsp;
+:$&#x3a;&#x3a;write_location=1:Location移動が有効になってないと使用できません。&br;&br;
+
+***resource/setting.(lang).txt
+
+
+
+:plugin_setting_(itemname):設定項目名を指定します。&nbsp;
+:plugin_setting_(itemname)_check:この設定をできるか否かを指定します。最初に sub という文字列がある場合、それ以降の perl スクリプトを実行します。&br;&br;1で設定画面は有効、0 で設定画面は無効にします。&br;&br;この設定をしない場合は、有効とみなします。&nbsp;
+:plugin_setting_(itemname)_list:設定項目のリストを設定します。&br;&br;設定値&#x3a;設定名,設定値&#x3a;設定名 のように指定します。&br;&br;また、最初に sub という文字列がある場合、それ以降の perl スクリプトを実行し、その返値の配列をリストと指定します。&nbsp;
+:plugin_setting_(itemname)_default:設定項目のデフォルト値を設定します。&br;&br;また、最初に sub という文字列がある場合、それ以降の perl スクリプトを実行し、その返値をデフォルト値と指定します。&br;&br;
+
+*showrss.inc.pl
+showrss.inc.pl - PyukiWiki プラグイン
+
+**重要度
+
+
+★☆☆☆☆
+
+**概要
+
+
+ #showrss(rdfへのURI,[recent|body|menubar],時間,時間フォーマットフラグ,詳細フラグ）
+
+
+**説明
+
+
+rdfを読込んで表示します。
+
+時間は1時間単位でキャッシュの有効時間を指定します。0を指定するとキャッシュを使用しません。
+
+指定しない場合は、デフォルトの1時間となります。
+
+cache ディレクトリを作成する必要があります。
+
+**USING
+
+
+
+:[recent|body|menubar]:表示する書式を 'recent', 'body' or 'menubar' または未指定から選択します。&nbsp;
+:時間:更新周期を指定します。&nbsp;
+:時間フォーマットフラグ:2を設定することで日付を、3を設定することで日時を表示します。&nbsp;
+:詳細フラグ:1を設定することで、descriptionタグを表示します。（ただし複数行未対応）&br;&br;
+
+*sitemap.inc.pl
+sitemap.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=sitemap
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+「明示的」訪問者をナビゲーションしやすくするプラグインです。
+
+**USAGE
+
+
+***MenuBar
+
+
+MenuBarでは以下のように記述する
+
+ ***項目名
+ [[WikiName]]
+ [[ページ]]
+
+
+(WikiNameだけでは動きません)
+
+***各ページ
+
+
+MenuBarに登録されたページでは、以下のように記述する
+
+ -[[WikiName]] (WikiNameだけでは動きません)
+ -[[ページ]]~
+ --[[ページ]]~
+ ---[[ページ]]~
+ -[[?cmd=プラグイン&.....]]~
+
+
+ [[リンク>http://www.yahoo.co.jp/]] 等外部リンクははじきます。
+
+
+
+
+**設定
+
+
+***pyukiwiki.ini.cgi
+
+
+
+:$&#x3a;&#x3a;use_SiteMap:1 にすると、サイトマップを使用します。&br;&br;
+
+*sitemaps.inc.pl
+sitemaps.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=sitemaps
+ #sitemaps(1.0)
+ #sitemaps(0.5)
+ #sitemaps(0.3)
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+検索エンジンに送信する、sitemaps XMLを生成するプラグインです。
+
+**使用方法
+
+
+優先度の高いページ、または、低いページを、意図的に設定するために、各ページに、以下を記述する
+
+&#x23;sitemaps(1.0) 優先度の高い時
+
+&#x23;sitemaps(0.3) 優先度の低い時
+
+検索エンジンに、?cmd=sitemaps を送信する。
+
+*size.pl
+size.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &size(ピクセル数値){文字列};
+ &size(20){サイズ２０で表示};
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+文字の大きさを指定する。
+
+このプラグインはYukiWikiと互換性があります。
+
+**補足
+
+
+旧バージョンの size.inc.pl は廃止しますので、最新の size.pl をダウンロードして、削除する様にして下さい。
+
+*skin.inc.pl
+skin.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #skin(main skin name,[sub sukin name])
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+表示中のページのみ指定のスキンに変更します。
+
+*smedia.inc.pl
+smedia.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #smedia([menubar|sidebar],[options=value[,options=value]])
+
+
+ &smedia([menubar|sidebar],[options=value[,options=value]]);
+
+
+**説明
+
+
+ソーシャルメディアのリンクを生成する。
+
+**重要度
+
+
+★★☆☆☆
+
+**注意
+
+
+XHTML1.1モードでは動作しません。
+
+同じページに２つ以上設置することはできません。
+
+**簡単なサービス登録方法
+
+
+
+:Twitter:以下のURLから登録する。&br;&br;[[https://twitter.com/about/resources/buttons&#x23;tweet]]&nbsp;
+:FaceBook:以下のURLから登録する。&br;&br;[[http://developers.facebook.com/docs/reference/plugins/like/]]&nbsp;
+:google+:以下のURLから登録する。&br;&br;[[http://www.google.com/intl/ja/webmasters/+1/button/index.html]]&nbsp;
+:はてなブックマーク（日本語のみ）:以下のURLから登録する。&br;&br;[[http://b.hatena.ne.jp/guide/bbutton]]&nbsp;
+:mixiチェック:以下のURLからDeveloper登録を行なう。要携帯メールアドレス&br;&br;[[https://mixi.jp/guide_developer.pl]]&br;&br;mixi Developper Center [[http://developer.mixi.co.jp/]] の mixi Developer Dashboard [[https://sap.mixi.jp/home.pl]] から チェックキーの発行を行なう。&br;&br;トップページから、mixi Plugin にアクセスする。&br;&br;左メニューから、「新規サービス追加」をクリックする。&br;&br;必要な情報を記述すると、チェックキーが発行されるので、$smedia&#x3a;&#x3a;mixi{"data-key"}=""; の中にチェックキーを代入する。&br;&br;
+
+*source.inc.pl
+source.inc.pl - PyukiWiki プラグイン
+
+**著者
+
+
+@@AUTHOR_NEKYO@@@@AUTHOR_PYUKI@@
+
+**ライセンス
+
+
+@@LICENSE_NEKYO@@
+
+*star.pl
+star.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &star(4);
+ &star(3,10);
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+★を表示します。
+
+このプラグインはYukiWikiと互換性があります。
+
+*sub.pl
+sub.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &sub(strings);
+ 011101010101&sub(2);=0x755
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+下付き文字を表示します。
+
+このプラグインはYukiWikiと互換性があります。
+
+*sup.pl
+sup.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &sup(strings);
+ 2&sup(2);=4
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+上付き文字を表示します。
+
+このプラグインはYukiWikiと互換性があります。
+
+*tb.inc.pl
+tb.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=tb&tb_id=(trackback id page) [ & __mode=(view|rss)] [ & lang=(language)]
+ #tb
+ #tb(show)
+ #tb(all)
+ #tb(showall)
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+トラックバックの処理をします。、
+
+POSTされた場合には、他サイトからのTrackbackに反応します。
+
+*time.inc.pl
+time.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ &time();
+ &time(time_format, [hh:mm:ss]);
+
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+現在または指定した時刻を指定フォーマットで表示します。
+
+「&#x26;time;」のように、() を指定しないで指定すると、書き込み時の時刻に自動的に変換され、プラグインとして実行されません。
+
+それ以外の場合は、現在の時刻、または指定した時刻を表示します。
+
+**使用方法
+
+
+=time_formattime_formatは、内部関数 time の書式文字列を指定できます。time_formatには、半角の ( ) を使用することはできません。詳しくは以下のサンプルを御覧下さい
+:hh&#x3a;mm&#x3a;ss:表示する時刻を指定します。省略時は現在の時刻となります。&br;&br;
+
+**サンプル
+
+
+書式文字列のサンプルです。
+
+
+:&#x26;time(h&#x3a;i&#x3a;s,13&#x3a;03&#x3a;25):13&#x3a;03&#x3a;25&nbsp;
+:&#x26;time(A g&#x3a;k&#x3a;S,13&#x3a;03&#x3a;25):PM 1&#x3a;3&#x3a;25&nbsp;
+:&#x26;time(AL Zg時Zk分ZS秒,13&#x3a;03&#x3a;25):午後１時３分２５秒&br;&br;
+
+**書式
+
+
+***&#x26;date で使えるすべての書式です。
+
+
+ 西暦:Y:西暦(4桁)/y:西暦(2桁)
+ 
+   月:n:1-12/m:01-12/M:Jan-Dec/F:January-December
+ 
+   日:j:1-31/J:01-31
+ 
+ 曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土
+ 
+ ampm:a:am or pm/A:AM or PM/AL:午前 or 午後
+ 
+   時:g:1-12/G:0-23/h:01-12/H/00-23
+ 
+   分:k:0-59/i:00-59 
+ 
+   秒:S:0-59/s:00-59
+ 
+  t 指定した月の日数。 28 から 31 
+  O グリニッジとの時間差
+  r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200 
+  Z タイムゾーンのオフセット秒数。 -43200 から 43200 
+  L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。 
+  B Swatch インターネット時間 000 から 999 
+  U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time() 
+
+
+***拡張プラグインexdate.inc.cgi導入時に使えるすべての書式です。
+
+
+     元号:SG:明治/大正/昭和/平成 Sg:明/大/昭/平
+          SA:M/T/S/H Sa:Ｍ/Ｔ/Ｓ/Ｈ
+ 
+   元号年:SY:1-2桁(1〜10〜) Sy:0補完して2桁(01〜10〜)
+          GY:全角1-2桁(元〜２〜１０〜)
+          XY:全角1-2桁(元〜二〜十〜十一〜二十〜二十一〜)
+          Xy:全角1-2桁(元〜二〜一〇〜十一〜二〇〜二一〜)
+ 
+     年度 N4SG N4Sg N4Sa N4SY N4Sy N4GY N4XY N4Xy 上記元号年同、４月を基点
+          N9SG N9Sg N9Sa N9SY N9Sy N9GY N9XY N9Xy 上記元号年と同、９月を基点
+ 
+     西暦:Y:西暦(4桁)/y:西暦(2桁) - **
+         :ZY:全角4桁 Zy:全角2桁 KY:一七七〇〜二〇〇〇〜
+ 
+     皇暦:TY:西暦(4桁)/Ty:西暦(2桁) - **
+         :TZY:全角4桁 TZy:全角2桁 TzY:一七七〇〜二〇〇〇〜
+ 
+ 西暦年度:N4Y:西暦(4桁)/N4y:西暦(2桁)
+          N4ZY:全角2桁 N4Zy:全角2桁 N4KY:一七七〇〜二〇〇〇〜
+          N9ZY: N9Zy N9KY : ↑と同じで９月を基点
+ 
+       月:n:1-12/m:01-12/M:Jan-Dec/F:January-December - **
+          Zn:全角1-2桁(１−１２) Zm:0補完して全角2桁(０１−１２）
+          Kn:一〜十〜十二/Km:一〜一〇〜一二
+          kn:睦月,如月...
+ 
+       日:j:1-31/J:01-31 - **
+          Zj:全角1-2桁(１−３１) ZJ:0補完して全角2桁(０１−３１）
+          Kj:一〜十〜十一〜二十〜三十一/KJ:一〜一〇〜
+ 
+     曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土 - **
+ 
+     ampm:a:am or pm/A:AM or PM/AL:午前 or 午後 - **
+ 
+       時:g:1-12/G:0-23/h:01-12/H/00-23 - **
+          Zg:１−１２/ZG:０−２３/Zh:０１−１２/ZH/００−２３
+          Kg:一〜十〜十二/KG:零〜十〜十一〜二十/二十三
+          Kh:一〜一〇〜一二/KH:〇〜一〇〜一一〜二〇〜二三
+ 
+       分:k:0-59/i:00-59 - **
+          Zk:０−５９/Zi:００−５９
+          Kk:零〜五十九/Ki:〇〜五九
+ 
+       秒:S:0-59/s:00-59 - **
+          ZS:０−５９/Zs:００−５９
+          KS:零〜五十九/Ks:〇〜五九
+ 
+     祝日:RS:元旦/Rs:(元旦) 1948年より出力
+     行事:RG:七草/Rg:(七草) 1948年より出力
+   県民の:XG:都民の日/Xg:(都民の日) 1948年より出力
+     星座:SZ:おひつじ座/Sz:Aries
+   自分の:MG:.../Mg:(...) 1948年より出力
+   24節季:RK:立夏/Rk:(立夏)
+     六曜:RY:大安/赤口/先勝/友引/先負/仏滅
+   年干支:NK:甲子
+   日干支:HK:乙卵
+   日の宿:HY:角
+   旧暦年:QY:西暦(4桁)/Qy:西暦(2桁)
+         :QZY:全角4桁 QZy:全角2桁 QKY:一七七〇〜二〇〇〇〜
+ 
+     皇暦:EY:西暦(4桁)/Ey:西暦(2桁)
+         :EZY:全角4桁 EZy:全角2桁 EzY:一七七〇〜二〇〇〇〜
+ 
+       月:Qn:1-12/Qm:01-12
+          QZn:全角1-2桁(１−１２) QZm:0補完して全角2桁(０１−１２）
+          QKn:一〜十〜十二/QKm:一〜一〇〜一二
+          Qkn:睦月,如月...
+ 
+       日:Qj:1-31/QJ:01-31 - **
+          QZj:全角1-2桁(１−３１) QZJ:0補完して全角2桁(０１−３１）
+          QKj:一〜十〜十一〜二十〜三十一/QKJ:一〜一〇〜
+ 
+  t 指定した月の日数。 28 から 31 
+  O グリニッジとの時間差
+  r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200 
+  Z タイムゾーンのオフセット秒数。 -43200 から 43200 
+  L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。 
+  B Swatch インターネット時間 000 から 999 
+  U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time() 
+
+
+***以下のPHP書式は対応していません。
+
+
+ W ISO-8601 月曜日に始まる年単位の週番号 (PHP 4.1.0で追加) 例: 42 (１年の第42週目) 
+ S 英語形式の序数を表すサフィックス。2 文字。 st, nd, rd or th. Works well with j  
+ T このマシーンのタイムゾーンの設定。 Examples: EST, MDT ... 
+
+
+*title.inc.pl
+title.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #title(titleタグ文字列)
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+titleタグを設定します。
+
+なお、安全の為に凍結されたページからしか使えません。
+
+*twitter.inc.pl
+twitter.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #twitter(=)
+ (Twitter Widget HTML)
+ #twitter
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+ツイッターのユーザーのツィート　及び、ツイッターのハッシュタグを表示します。
+
+**使用方法
+
+
+
+:新しいツィッターウィジットを作成する:https://twitter.com/settings/widgets&nbsp;
+:生成されたHTMLをwikiに設置する: #twitter(=)
+ (ツィッターウィジットで生成されたHTML)
+ #twitter
+&nbsp;
+:必要であれば、高さの調整をする: #twitter(=,height=1000)
+ (ツィッターウィジットで生成されたHTML)
+ #twitter
+
+
+*verb.pl
+verb.pl - PyukiWiki / YukiWiki プラグイン
+
+**概要
+
+
+ &verb(SamplePage);
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+PyukiWikiの整形ルールを無視するプラグイン 
+
+**サンプル
+
+
+ 私はWikiNameはリンクにしたいけれど、&verb(SamplePage);をリンクにしたくない。
+ Javaで&verb(java.net.ServerSocket);を使った。
+
+
+*vote.inc.pl
+vote.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ #vote(選択肢１,選択肢２,選択肢３[投票数],[[WikiName]][投票数]…)
+ #vote(選択肢１,選択肢２,選択肢３[投票数],[[WikiName]][投票数]…,add)
+ #vote(選択肢１,選択肢２,選択肢３[投票数],[[WikiName]][投票数]…,complete)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+選択肢と投票ボタンが並んだフォームを表示する。。
+
+**使い方
+
+
+
+:add:訪問者が自由に選択肢を入力できるようにする。&nbsp;
+:complete:投票を終了する。&br;&br;
+
+**備考
+
+
+凍結していないページであれば、第３者が投票内容を改ざんできる為、厳密な投票には向きません。
+
+ページを凍結して、設置することをお勧めします。
+
+*yetlist.inc.pl
+yetlist.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=yetlist
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+まだ作られていないページを一覧表示します。
+
+まだ作られていないページとは、既存のページでWikiNameあるいはBracketNameで指定されていて、まだ作られていないページです。
+
+**注意
+
+
+自分以外の誰かがページを書くかもしれないという点は非常にWiki的ですが、実際の運用面ではcommentに記述された一見さんの名前やWikiName同様のパラメータ名など、ページ化しにくいキーワードが大量に引っかかってしまいます。
+

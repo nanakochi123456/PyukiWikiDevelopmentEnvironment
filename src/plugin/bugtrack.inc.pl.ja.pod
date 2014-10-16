@@ -1,0 +1,60 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+bugtrack.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #bugtrack(ページ名, カテゴリ1, カテゴリ2, ...);
+
+=head1 重要度
+
+一般サイト
+
+☆☆☆☆☆
+
+ソフト開発サイト
+
+★★★★☆
+
+=head1 説明
+
+指定した位置にbugtrackフォームを設置します。
+
+=head1 バグ
+
+従来のバグトラック、及び、PukiWikiのbugtrackとは互換性があまりありません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/bugtrack
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/bugtrack/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/bugtrack.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

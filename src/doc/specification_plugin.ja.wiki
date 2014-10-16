@@ -1,0 +1,76 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*プラグイン仕様情報
+
+**初期化
+
+メソッドを用いて初期化することはできません。
+
+グローバルに記述することで、初期化することが可能です。
+
+**リソースの読み込み
+
+&read_resource で読み込まれます。
+
+プラグインと同じ名前のファイルであれば、指定しなくても自動読み込みをします。
+
+**JavaScript、CSSの読み込み
+
+&jscss_include で読み込まれます。
+
+プラグインと同じ名前のファイルであれば、指定しなくても自動読み込みをします。
+
+**inlineメソッド
+
+&plugin(...) ; で呼び出されます。
+
+引数は、上記の ... の中身のテキストが入ります。
+
+ sub plugin_NAME_inline {
+ my @arg=split(/,/,shift);
+
+戻り値は、文字列で、HTMLを返すことにより表示されます。
+
+ return $html;
+
+**convertメソッド
+#plugin (...) で呼び出されます。
+
+引数は、上記の ... の中身のテキストが入ります。
+
+ sub plugin_NAME_convert {
+ my @arg=split(/,/,shift);
+
+戻り値は、文字列で、HTMLを返すことにより表示されます。
+
+ return $html;
+
+**actionメソッド
+
+URLの cmd=pluginname で呼び出されます。
+
+引数はありませんので、$::form から読み出す必要があります。
+
+**actionメソッドの返り値（ハッシュ）
+
+-msg~
+タイトル
+-body~
+文書本体
+-header~
+<head>〜</head>の内容
+-http_header~
+HTTPヘッダー
+-cssheader~
+生のCSS
+-jsheader~
+JavaScriptファイル読み込み後に実行するJavaScript文
+-jsheadervalue~
+ページ表示後すぐに実行するJavaScript文
+-bodytag~
+<body> の中の文
+-ispage~
+ページであることを返す
+-notviewmenu~
+予約

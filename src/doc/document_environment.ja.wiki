@@ -1,0 +1,28 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+**動作環境
+PyukiWikiの動作環境は以下のとおりです。
+
+-サーバー~
+LinuxまたはFreeBSD、Solaris等 *NIX環境、MacOS X (未検証)、Windows （一部制限があります）
+
+-CGIの動作し、Perl5.8.1（なるだけ）以降が動作するWebサーバー~
+Apache等Webサーバー、perlも存在するLAMP等環境~
+なお、Perl 5.6以前に関しては現バージョンでは未サポートです。~
+最新のPerl5.10系及び5.12系、5.14系、5.16系でも動作確認済みです。
+-インストール容量~
+full版はインストール時に3Mバイト、compact版はインストール時に2Mバイト必要です。
+-必要なモジュール~
+最低でも、CGI.pmがサーバーサイドでインストールされている必要がありますが、ユーザーサイドでも導入可能です。
+- compact版の必須条件~
+Jcode.pm、Time::Localがインストールされている必要があります。
+-あると良いかもしれないperlモジュール~
+--GD
+--SORP::Lite
+--Digest::MD5
+--MeCabまたはText::MeCab
+--Compress::Zlib
+-あると良いかもしれないプログラム~
+--sendmail
+--gzipまたはpigz

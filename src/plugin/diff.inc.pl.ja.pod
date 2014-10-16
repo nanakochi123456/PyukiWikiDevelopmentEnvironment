@@ -1,0 +1,62 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+diff.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=diff&mypage=ページ名
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+指定したページの現在の内容と最後のバックアップ状態との差分表示します。
+
+ページ名はエンコードされていなければならない。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/diff
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/diff/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/diff.inc.pl>
+
+=item YukiWiki
+
+Using Yuki::DiffText
+
+L<http://www.hyuki.com/yukiwiki/>
+
+=item CPAN Algorithm::Diff
+
+L<http://search.cpan.org/dist/Algorithm-Diff/>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

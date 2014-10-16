@@ -1,0 +1,164 @@
+# system \
+lib/wiki.cgi	system	index.cgi,pyukiwiki.ini.cgi,ngwords.ini.cgi,favicon.ico,lib/wiki_auth.cgi,lib/wiki_db.cgi,lib/wiki_func.cgi,lib/wiki_html.cgi,lib/wiki_http.cgi,lib/wiki_init.cgi,lib/wiki_link.cgi,lib/wiki_plugin.cgi,lib/wiki_skin.cgi,lib/wiki_spam.cgi,lib/wiki_sub.cgi,lib/wiki_version.cgi,lib/wiki_wiki.cgi,lib/wiki_write.cgi,image/face.png,image/navi.png,image/star.gif,skin/common,skin/img,skin/loader,skin/passwd \
+\
+# explugin \
+lib/aguse	devel,release \
+lib/antispam	devel,release,compact \
+lib/antispamwiki	devel,release,compact \
+lib/authadmin_cookie	devel,release,compact \
+lib/autometarobot	devel,release,compact \
+lib/canonical	devel,release \
+lib/captcha	devel,release	skin/captcha \
+lib/debug	devel	skin/debugscript \
+lib/google_analytics	devel,release \
+lib/google_translate	devel,release \
+lib/iecompatiblehack	devel,release,compact \
+lib/ignoreoldbrowser	devel,release,compact \
+lib/lang	devel,release	plugin/lang,skin/img-lang,image/lang.png \
+lib/linktrack	devel,release	plugin/ck \
+lib/login	devel,release	plugin/login,plugin/loginsub,skin/login,skin/img-login,plugin/loginsub.inc.pl,resource/login_mail,resource/login_mailaddr,resource/login_teamofuse,resource/login_useradd,image/login16.png,image/login32.png \
+lib/logs	devel,release	plugin/logs_viewer \
+lib/ogp	devel,release \
+lib/pathmenu	devel,release \
+lib/ping	devel,release \
+lib/punyurl	devel,release \
+lib/setting	devel,release	plugin/setting,skin/setting \
+lib/slashpage	devel,release \
+lib/stdin	devel \
+lib/trackback	devel,release \
+lib/urlhack	devel,release \
+lib/xframe	devel,release,compact \
+\
+# plugin \
+plugin/adminedit	devel,release,compact \
+plugin/agent	devel,release \
+plugin/alias	devel,release,compact \
+plugin/aname	devel,release,compact \
+plugin/article	devel,release,compact \
+plugin/attach	devel,release,compact \
+plugin/back	devel,release,compact \
+plugin/backlink	devel,release \
+plugin/backup	devel,release \
+plugin/br	devel,release \
+plugin/bugtrack	devel,release \
+plugin/calendar	devel,release \
+plugin/calendar2	devel,release \
+plugin/captcha	devel,release	skin/captcha \
+plugin/ck	devel,release	lib/linktrack \
+plugin/clear	devel,release,compact \
+plugin/color	devel,release,compact \
+plugin/comment	devel,release,compact \
+plugin/contents	devel,release,compact \
+plugin/counter	devel,release,compact \
+plugin/date	devel,release,compact \
+plugin/diff	devel,release,compact \
+plugin/edit	devel,release,compact	skin/edit \
+plugin/edit_extend	devel,release	plugin/edit,skin/jquery,skin/farbtastic,skin/instag,skin/jqModal,skin/wheel.png,skin/mask.png,skin/marker.png,skin/img-exedit,image/exedit.png \
+plugin/env	devel,release \
+plugin/font	devel,release \
+plugin/frozen	devel,release,compact \
+plugin/help	devel,release,compact \
+plugin/hr	devel,release,compact \
+plugin/img	devel,release,compact \
+plugin/include	devel,release,compact \
+plugin/ipv6check	devel,release \
+plugin/lang	devel,release	lib/lang,skin/img-lang,image/lang.png \
+plugin/link	devel,release,compact \
+plugin/links	devel,release \
+plugin/list	devel,release,compact \
+plugin/location	devel,release,compact	skin/location \
+plugin/login	devel,release	lib/login,plugin/loginsub,skin/login,skin/img-login,plugin/loginsub.inc.pl,resource/login_mail,resource/login_mailaddr,resource/login_teamofuse,resource/login_useradd,image/login16.png,image/login32.png \
+plugin/lookup	devel,release,compact \
+plugin/ls2	devel,release,compact \
+plugin/mailform	devel,release \
+plugin/metarobots	devel,release,compact \
+plugin/multiarticle	devel,release \
+plugin/multicomment	devel,release \
+plugin/multimailform	devel,release \
+plugin/navi	devel,release \
+plugin/new	devel,release,compact \
+plugin/newpage	devel,release,compact \
+plugin/nofollow	devel,release,compact \
+plugin/norelated	devel,release,compact \
+plugin/now	devel,release,compact \
+plugin/online	devel,release,compact \
+plugin/opml	devel,release \
+plugin/pagenavi	devel,release \
+plugin/pcomment	devel,release,compact \
+plugin/perlpod	devel,release \
+plugin/popular	devel,release,compact \
+plugin/popup	devel,release \
+plugin/recent	devel,release,compact \
+plugin/ref	devel,release,compact \
+plugin/rss	devel,release,compact \
+plugin/rss10	devel,release \
+plugin/rss10page	devel,release \
+plugin/rsspage	devel,release,compact \
+plugin/ruby	devel,release,compact \
+plugin/sbookmark	devel,release \
+plugin/search	devel,release,compact \
+plugin/search_fuzzy	devel,release \
+plugin/server	devel,release,compact \
+plugin/servererror	devel,release,compact \
+plugin/setlinebreak	devel,release,compact \
+plugin/setting	devel,release	lib/setting,skin/setting \
+plugin/showrss	devel,release,compact \
+plugin/sitemap	devel,release \
+plugin/sitemaps	devel,release,compact \
+plugin/size	devel,release,compact \
+plugin/smedia	devel,release	skin/smedia \
+plugin/source	devel,release \
+plugin/star	devel,release \
+plugin/stdin	devel \
+plugin/sub	devel,release,compact \
+plugin/sup	devel,release,compact \
+plugin/tb	devel,release \
+plugin/time	devel,release,compact \
+plugin/title	devel,release,compact \
+plugin/topicpath	devel,release,compact \
+plugin/twitter	devel,release	skin/twitstat.skin/twitter \
+plugin/verb	devel,release,compact \
+plugin/vote	devel,release,compact \
+plugin/yetlist	devel,release,compact \
+\
+# admin plugin \
+plugin/admin	devel,release,compact \
+plugin/adminchangepassword	devel,release,compact	plugin/adminchangepassword.inc.js \
+plugin/compressbackup	devel,release,compact \
+plugin/convertutf8	devel,release,compact \
+plugin/counter_viewer	devel,release,compact \
+plugin/deletecache	devel,release,compact \
+plugin/freezeconvert	devel,release,compact \
+plugin/listfrozen	devel,release,compact	plugin/listfrozen.inc.js \
+plugin/logs_viewer	devel,release	lib/logs,skin/logs_viewer \
+plugin/rename	devel,release,compact \
+plugin/setupeditor	devel,release,compact \
+plugin/versionlist	devel,release,compact \
+\
+# ad \
+plugin/ad	ad	skin/ad,plugin/ad_edit.inc.pl,plugin/ad_edit.inc.js	plugindoc-ad \
+\
+# bookmark \
+plugin/bookmark	bookmark	skin/bookmark	plugindoc-bookmark \
+\
+# exdate \
+lib/exdate	exdate	lib/exdate,lib/exdate-qreki	plugindoc-exdate \
+\
+# playaudio \
+plugin/playaudio	playaudio	skin/audio,skin/audio.swf,skin/audio.as \
+\
+# playvideo \
+plugin/playvideo	playvideo	v.cgi,plugin/playvideo_v_cgi.pl,skin/video-js,skin/video-js.png,skin/video-js.swf,skin/video,skin/videoresize,skin/flowplayer-3.2.6.min,skin/flowplayer-3.2.7.swf,skin/flowplayer.controls-3.2.5.swf	plugindoc-playvideo \
+\
+# qrcode \
+plugin/qrcode	qrcode		plugindoc-qrcode \
+\
+# htmlhead \
+plugin/html	htmlhead	plugin/head	plugindoc-htmlhead \
+plugin/head	htmlhead	plugin/html	plugindoc-htmlhead \
+\
+# sh \
+plugin/sh	sh	skin/syntaxhighlighter/XRegExp,skin/syntaxhighlighter/shAutoloader,skin/syntaxhighlighter/shBrushAS3,skin/syntaxhighlighter/shBrushAppleScript,skin/syntaxhighlighter/shBrushBash,skin/syntaxhighlighter/shBrushCSharp,skin/syntaxhighlighter/shBrushColdFusion,skin/syntaxhighlighter/shBrushCpp,skin/syntaxhighlighter/shBrushCss,skin/syntaxhighlighter/shBrushDelphi,skin/syntaxhighlighter/shBrushDiff,skin/syntaxhighlighter/shBrushErlang,skin/syntaxhighlighter/shBrushGroovy,skin/syntaxhighlighter/shBrushJScript,skin/syntaxhighlighter/shBrushJava,skin/syntaxhighlighter/shBrushJavaFX,skin/syntaxhighlighter/shBrushPerl,skin/syntaxhighlighter/shBrushPhp,skin/syntaxhighlighter/shBrushPlain,skin/syntaxhighlighter/shBrushPowerShell,skin/syntaxhighlighter/shBrushPython,skin/syntaxhighlighter/shBrushRuby,skin/syntaxhighlighter/shBrushSass,skin/syntaxhighlighter/shBrushScala,skin/syntaxhighlighter/shBrushSql,skin/syntaxhighlighter/shBrushVb,skin/syntaxhighlighter/shBrushXml,skin/syntaxhighlighter/shCore,skin/syntaxhighlighter/shThemeDefault,skin/syntaxhighlighter/shThemeDjango,skin/syntaxhighlighter/shThemeEclipse,skin/syntaxhighlighter/shThemeEmacs,skin/syntaxhighlighter/shThemeFadeToGrey,skin/syntaxhighlighter/shThemeMDUltra,skin/syntaxhighlighter/shThemeMidnight,skin/syntaxhighlighter/shThemeRDark	plugindoc-sh \
+\
+# xrea \
+plugin/xrea	xrea \

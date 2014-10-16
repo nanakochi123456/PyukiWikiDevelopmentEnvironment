@@ -1,0 +1,33 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+**謝辞
+-本家のWikiを作ったWard Cunninghamに感謝します。
+http://c2.com/cgi/wiki
+
+-PyukiWikiを楽しんで使ってくださるみなさんに感謝します。
+
+-PukiWiki、YukiWiki等多くのWikiクローンの作者さんたちに感謝します。
+
+-YukiWiki~
+http://www.hyuki.com/yukiwiki/~
+PyukiWikiのベースとして、YukiWikiはなくてはならないものでした。
+
+-PukiWiki (PHP)~
+http://pukiwiki.sfjp.jp/~
+デザインをはじめ、多くの書式等を参考にしました。
+
+-PukiWiki Plus! (PHP)~
+http://pukiwiki.cafelounge.net/plus/~
+国際化の実装方法のアイデア、国アイコンの公開に感謝します。
+
+-「極悪」さんのwiki (Perl)~
+http://hpcgi1.nifty.com/dune/gwiki.pl
+特に、YukiWikiDBに感謝します。
+
+-塚本牧生さんのWalWiki (Perl)~
+http://digit.que.ne.jp/work/~
+テーブル機能、部分編集機能に感謝します。
+
+-その他、パッチを提供して頂いた以下の方に感謝します。~
+Mr koizumi, wadldw, pochi

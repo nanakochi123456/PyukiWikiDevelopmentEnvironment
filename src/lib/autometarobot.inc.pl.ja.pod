@@ -1,0 +1,55 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+autometarobot.inc.pl - PyukiWiki 管理者用プラグイン
+
+=head1 概要
+
+ロボット型検索エンジン向けのキーワードを自動生成する
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 使用方法
+
+autometarobot.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+関数 meta_robots を上書きします。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/autometarobot
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/autometarobot/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/autometarobot.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

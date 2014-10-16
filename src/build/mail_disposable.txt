@@ -1,0 +1,32 @@
+# release file data for PyukiWiki
+# $Id$
+
+supermailer.jp
+rmqkr.net
+nybella.com
+rtrtr.com
+dea-tokyo.com
+15qm.com
+meltmail.com
+sute.jp
+incognitomail.org
+guerrillamailblock.com
+mailmetrash.com
+thankyou2010.com
+trash2009.com
+mt2009.com
+trashymail.com
+mytrashmail.com
+trashmail.net
+trashmail.me
+trashmail.at
+rcpt.at
+kurzepost.de
+wegwerfmail.de
+wegwerfmail.net
+wegwerfmail.org
+objectmail.com
+proxymail.eu
+tekumeru.com
+dz.renraku.in
+renraku.in

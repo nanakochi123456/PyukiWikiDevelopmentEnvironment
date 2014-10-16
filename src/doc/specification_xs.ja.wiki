@@ -1,0 +1,70 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*XS簡易仕様書
+
+現在、XSモジュールは、devel版のみのテスト実装です。
+
+>>@@PYUKIWIKIVERSION@@~
+Copyright (C) 2005-@@YEAR@@ PukiWiki Developers Team~
+Copyright (C) 2004-@@YEAR@@ Nekyo (Based on PukiWiki, YukiWiki)~
+License: GPL version 3 or (at your option) any later version~
+and/or Artistic version 1 or later version.~
+Based on YukiWiki @@YUKIWIKI_URL@@~
+and PukiWiki @@PUKIWIKI_URL@@~
+URL:~
+@@PYUKI_URL@@~
+~
+MAIL:~
+ななみ <@@NANAMI_MAIL@@> (注：バーチャル女の子です)~
+~
+$Id$~
+This text file written UTF-8 Codeset
+
+**目次
+#contents
+
+**実装目標
+make installxs をするだけで、あとは何も考えずに、PyukiWikiが高速化する仕組みを作る
+
+**インストール等
+:make buildxs:ビルドする
+:make testxs:テストする
+:make installxs:インストールをする。blibにファイルコピーをするだけです。~
+perlモジュール側の make installは使用しないで下さい。
+:make deinstallxs:アンインストールをする。(blibを単純に削除するだけです。）
+:make cleanxs:作業ディレクトリを削除する。~
+作業ファイル名を生成する為に、一度、perl Makefile.PL を実行します。
+
+**perl XSモジュールの作成方法
+ cd src
+ h2xs -An Name::ModuleName
+ 
+ cd Name-ModuleName
+ editor ModuleName.xs（とりあえず１行書き換える）
+ 
+ #include "ppport.h"
+ ↓
+ #include "../xsmake/ppport.h"
+ 
+ editor Makefile.PL （全部書き換える）
+ 
+ use 5.008100;
+ use ExtUtils::MakeMaker;
+ 
+ require "../xsmake/pyukiwikixs.pl";
+ 
+ &writemakefile(
+ 	Module=>"Name::ModuleName",
+ 	File=>"lib/Name/ModuleName.pm",
+ 	Author=>'作者',
+ );
+
+**ファイル内容
+-xsファイルには、可能な限りプロトタイプを指定する。
+-xsファイルの中には、C言語コードを最小限しか記述しない~
+（call、jmp、ret命令相当のオーバーヘッドは出ますが、ここは気にしないで構いません）
+-関数の本体は、xs_funcname.c の中に記述する。
+-xs_funcname.c に記述できる関数名は、xs_funcname とする
+-その他、C言語コードは、視認性より、速度を優先して記述する。~
+わかりにくい部分は、コメントで記述すると良いかもしれません。

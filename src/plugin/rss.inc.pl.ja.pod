@@ -1,0 +1,56 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+rss.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=rss[&lang=lang][ver=1.0|2.0|atom]
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+RecentChangesをRSS(RDF Site Summary)1.0、RSS2.0、ATOMに変換して出力。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/rss
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/rss/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/rss.inc.pl>
+
+=item Nana::RSS
+
+Nana::RSSを使用しています。
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/Nana/RSS.pm>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

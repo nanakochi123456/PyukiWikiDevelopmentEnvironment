@@ -1,0 +1,54 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+mailform.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #mailform
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+メール送信フォームを表示し、管理人に匿名メールを送信します。
+
+=head1 使用方法
+
+ #mailform
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/mailform
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/mailform/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/mailform.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

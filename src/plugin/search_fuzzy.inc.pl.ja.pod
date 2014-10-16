@@ -1,0 +1,64 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+search_fuzzy.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=search
+
+=head1 重要度
+
+★★★★★
+
+=head1 説明
+
+search.inc.plのサブモジュールです。
+
+=head1 設定
+
+=head2 pyukiwiki.ini.cgi
+
+=over 4
+
+=item $::use_FuzzySearch
+
+0:通常検索, 1:日本語あいまい検索
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/search
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/search/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/search.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/search_fuzzy.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

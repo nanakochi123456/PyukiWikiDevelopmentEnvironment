@@ -1,0 +1,41 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+***外部公開ファイルファイル
+以下のファイルは、pyukiwiki.ini.cgi 内の変数 $::data_pubで指定するディレクトリに転送します。
+
+詳しくは pyukiwiki.ini.cgi を参照して下さい。
+
+                        転送モード パーミッション   説明
+ +-- attach                        777 (rwxrwxrwx)  添付保存用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- cache                         777 (rwxrwxrwx)  一時ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- image                         755 (rwxr-xr-x)  画像保存用ディレクトリ
+ |   +-- index.html          TEXT  755 (rwxr-xr-x)  一覧表示防止用
+ +-- skin                          755 (rwxr-xr-x)  スキン用ディレクトリ
+     +-- pyukiwiki.skin.ja.cgi     644 (rw-r--r--)  スキンファイル
+     +-- default.ja.css            644 (rw-r--r--)  表示用 css
+     +-- print.ja.css              644 (rw-r--r--)  印刷用 css
+     +-- blosxom.css               644 (rw-r--r--)  blosxom 用 css
+     +-- instag.js                 644 (rw-r--r--)  拡張編集用 JavaScript
+     +-- common.ja.js              644 (rw-r--r--)  共通使用JavaScript
+     +-- index.html                644 (rw-r--r--)  一覧表示防止用
+
+***パーミッション設定のTIPS
+一部ユーザー権限で動作するWebサーバーの場合、「とりあえず」index.cgiのパーミッションを 701 (rwx-----x) にすることで動作します。
+
+その他、セキュリティーを強化したい場合は、各ディレクトリを以下のように設定します。
+
+ +-- attach                        701 (rwx-----x)  添付保存用ディレクトリ
+ +-- backup                        700 (rwx------)  バックアップ保存用ディレクトリ
+ +-- cache                         701 (rwx-----x)  一時ディレクトリ
+ +-- counter                       700 (rwx------)  カウンタ値保存用ディレクトリ
+ +-- diff                          700 (rwx------)  差分保存用ディレクトリ
+ +-- image                         701 (rwx-----x)  画像保存用ディレクトリ
+ +-- info                          700 (rwx------)  情報保存用ディレクトリ
+ +-- lib                           700 (rwx------)  使用モジュール群
+ +-- plugin                        700 (rwx------)  プラグイン用ディレクトリ
+ +-- resource                      700 (rwx------)  リソース用ディレクトリ
+ +-- skin                          701 (rwx-----x)  スキン用ディレクトリ
+ +-- wiki                          700 (rwx------)  ページデータ保存用ディレクトリ

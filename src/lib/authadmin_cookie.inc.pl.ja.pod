@@ -1,0 +1,63 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+authadmin_cookie.inc.pl - PyukiWiki 管理者用プラグイン
+
+=head1 概要
+
+凍結パスワードを一時クッキーに保存するプラグイン
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+凍結パスワードを一時クッキーに保存します。一度凍結パスワードで認証されると、ブラウザを閉じるまで認証のテキストボックスが出現しなくなります。
+
+=head1 使用方法
+
+authadmin_cookie.inc.cgi にリネームして下さい。
+
+=head1 上書きする関数
+
+関数 authadminpassword を上書きします。
+
+=head1 バグ
+
+このプラグインは評価版です。1.0において、実装方法が変更される予定です。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/ExPlugin/authadmin_cookie
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/authadmin_cookie/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/authadmin_cookie.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

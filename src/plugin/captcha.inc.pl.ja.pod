@@ -1,0 +1,56 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 名前
+
+captcha.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+?cmd=captcha....
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+Explugin captcha.inc.cgi用の補助プラグイン
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/captcha
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/captcha/>
+
+=item PyukiWiki/Plugin/ExPlugin/captcha
+
+L<@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/captcha/>
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/captcha.inc.pl>
+
+L<@@CVSURL@@/PyukiWiki-Devel/lib/captcha.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NANAMI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NANAMI@@
+
+=cut

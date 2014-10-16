@@ -1,0 +1,115 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+***ライブラリ
+-@sushat4692さんのJavaScriptローダーを非常に参考にさせていただきました。~
+http://blog.sus-happy.net/201201/javascript-parallel-loader/
+
+
+**使用しているライブラリ等
+***perl
+-YukiWikiDB関連　結城浩氏、極悪氏
+http://www.hyuki.com/yukiwiki/wiki.cgi?YukiWikiDB2~
+http://www.hyuki.com/yukiwiki/wiki.cgi?YukiWikiDB%a4%ce%a5%ed%a5%c3%a5%af%b5%a1%c7%bd~
+http://www.hyuki.com/yukiwiki/wiki.cgi?YukiWikiLock
+
+-RSS.pm、Difftext.pm~
+http://www.hyuki.com/yukiwiki/
+
+-Algorithm::Diff~
+http://search.cpan.org/~tyemq/
+
+-File::MMagic~
+http://search.cpan.org/~knok/~
+なお、MMagic.pm内臓のmagicデータは、データ判別においての材料が不足している為、削除してあります。
+
+-Time::Local~
+http://search.cpan.org/~drolsky/
+
+-Digest::Perl::MD5~
+http://search.cpan.org/~delta/
+
+-Jcode.pm~
+http://openlab.jp/Jcode/index-j.html
+http://search.cpan.org/~dankogai/
+
+-IDNA::Punycode~
+http://search.cpan.org/~roburban/
+
+-迷惑メール収集業者対策＠Toshi (NINJA104)~
+http://ninja.index.ne.jp/~toshi/soft/untispam.shtml (obsolete)
+
+-Perlメモより＠大崎 博基氏~
+http://www.din.or.jp/~ohzaki/perl.htm~
+http://www.din.or.jp/~ohzaki/regex.htm
+--URL及びメールアドレスの正規表現
+--年月日から曜日を取得する
+--年月から末日を取得する
+--第Ｎ　Ｗ曜日ｎ日付を求める
+--EUC文字関係の処理
+--リネームロック
+--改行コードを統一する
+--その他
+
+- AWStats（アクセスログ解析）~
+@@AWSTATS_URL@@~
+http://www.starplatinum.jp/awstats/awstats70/~
+特に、テーブル定義は、そのまま使用させて頂きました。
+
+***JavaScript
+-jquery、jquery-migrate~
+http://jquery.com/
+
+-jqModal~
+http://dev.iceburg.net/jquery/jqModal/
+
+-Farbtastic Color Picker~
+http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/
+
+-ppblog~
+http://p2b.jp/~
+多くの有用なJavaScriptを利用させて頂いています。
+
+--FireFoxのツールチップ改造＠martin~
+http://martin.p2b.jp/index.php?date=20050201
+
+--ブラウザ内での画像ポップアップ~
+http://martin.p2b.jp/index.php?UID=1115484023
+
+- twitter取得用JavaScript~
+http://twitstat.us/~
+オリジナルソースは http://twitstat.us/twitstat.js~
+(現在、オプションとして利用できるのみです）
+
+- 高度な JavaScript 技集 by 出雲氏~
+http://www.onicos.com/staff/iz/amuse/javascript/expert/~
+http://www.onicos.com/staff/iz/~
+http://www.onicos.co.jp/c_profile/page06_003.html
+
+- niceTime~
+http://james.padolsey.com/javascript/recursive-pretty-date/
+
+-http同期/非同期クライアント~
+http://blog.livedoor.jp/aki_mana/archives/5440501.html
+
+-replaceall~
+http://www.syboos.jp/webjs/doc/string-replace-and-replaceall.html
+
+-sprintf~
+http://d.hatena.ne.jp/uupaa/20091214/1260737607
+
+**スパム禁止ワード~
+http://www.vector.co.jp/soft/data/net/se475480.html
+
+**使用している画像
+-フリー画像等に感謝します。~
+--[[2500 Flag icon Set>https://www.gosquared.com/resources/flag-icons]]
+--[[NIXUS Icon Pack>http://www.tutorial9.net/downloads/nixus-icon-pack-60-beautiful-premium-icons-free/]]
+--[[Yahoo! Japan Ymark.gif btnXSLogin.gif>http://developer.yahoo.co.jp/other/oauth/loginbuttons.html]]
+--[[Twitter bird>https://twitter.com/logo]]
+--[[mixi ballon icon>http://developer.mixi.co.jp/about-platform/policies/image_guidelines/]]
+--[[はてなロゴ>http://www.hatena.ne.jp/company/logo]]
+f_logo.png
+--[[Facebook 「f」ロゴ>http://www.facebook.com/brandpermissions/logos.php]]
+--[[Google Apps アイコン>http://deployment-ja.googleapps.com/Home/user-resources/google-icons-and-logos]]
+--[[OpenID ロゴ>http://www.openid.ne.jp/]]

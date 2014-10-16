@@ -1,0 +1,59 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+color.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &color(color, [background-color]){text};
+ &color(red){赤で表示};
+ &color(#ff0000,#000000){文字赤、背景黒で表示};
+ &color(,white){背景白で表示};
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+引数で指定したインライン要素の、文字色・背景色を指定します。
+
+このプラグインはYukiWikiと互換性があります。
+
+=head1 補足
+
+旧バージョンの color.inc.pl は廃止しますので、最新の color.pl をダウンロードして、削除する様にして下さい。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/color
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/color/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/color.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

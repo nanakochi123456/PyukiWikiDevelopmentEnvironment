@@ -1,0 +1,508 @@
+*PyukiWiki管理者向けプラグイン
+<<$Id$>>
+#contents(,1)
+*admin.inc.pl
+admin.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=admin
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+管理プラグインの実行を支援するメニューを表示する。
+
+*adminchangepassword.inc.pl
+adminchangepassword.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=adminchangepassword
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+管理パスワード（凍結・添付）を変更する。
+
+*adminedit.inc.pl
+adminedit.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=adminedit&mypage=ページ名
+
+
+**重要度
+
+
+★★★★★
+
+**説明
+
+
+指定したページを編集・凍結する
+
+編集・凍結するには、凍結パスワードが必要です。
+
+ページ名はエンコードされていなければならない。
+
+*compressbackup.inc.pl
+compressbackup.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=compressbackup
+
+
+**説明
+
+
+バックアップディレクトリを再圧縮します。
+
+*convertutf8.inc.pl
+convertutf8.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=convertutf8
+
+
+**重要度
+
+
+☆☆☆☆☆　移行時のみ必要
+
+**説明
+
+
+新設されたUTF-8バージョンのPyukiWiki用にwikiを変換する。なお、UTF-8からEUCに戻すことはできません。実行の前にWikiページ自体を必ずバックアップを取って下さい。
+
+従来のEUC版でのみ実行可能です。実行後、すぐにUTF-8版をインストールして下さい。
+
+実行後、一部のページが正常にリネームできていない事がありますので、listfrozen プラグインでページ名を確認後、異常があれば、一度、rename プラグインでリネームしなおして下さい。
+
+*counter_viewer.inc.pl
+counter_viewer.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=counter_viewer
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+カウンターの詳細履歴を表示する。
+
+*deletecache.inc.pl
+deletecache.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=deletecache
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+キャッシュディレクトリの中身を削除します。
+
+ただし、以下のファイルは削除しません。
+
+
+:index.html: 
+&nbsp;
+:.htaccess: 
+&nbsp;
+:拡張子が３文字以下のファイル: 
+
+
+*freezeconvert.inc.pl
+freezeconvert.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=freezeconvert
+
+
+**重要度
+
+
+★☆☆☆☆　旧バージョンより移行時のみ使用
+
+**説明
+
+
+PukiWiki互換の凍結方法に変更する。ただし、まだ不具合がある可能性がある為、念のため、listfrozenで凍結を確認しなおして下さい。
+
+*listfrozen.inc.pl
+listfrozen.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=listfrozen
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+すべてのページのリストを表示し、一覧形式でページの凍結・凍結解除を一度に行ないます。
+
+*logs_viewer.inc.pl
+logs_viewer.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+アクセスログ解析プラグイン（評価版）
+
+**重要度
+
+
+★☆☆☆☆
+
+**説明
+
+
+wikiのアクセスログを解析します。
+
+ただし、現状におきましては、未完成です。
+
+動作しない訳ではありませんが、動作環境を満たしていても、古いperlのバージョンですと、正常に集計動作ができない場合があります。
+
+**機能について
+
+
+このアクセスログ解析プラグインは、生ログを取得する為に開発されたもので、効率的なアクセスログ解析を行えません。
+
+その為、可能であれば、外部のアクセス解析サービスを効率的に利用することをお勧めします。
+
+google analytics は、無料（解析数により課金）で、非常に多くの情報を得ることができ、かつ、PyukiWikiでは拡張プラグインとしてインストールできますので、設置がとても容易です。場合によっては、多くの有料アクセス解析よりも、圧倒的、かつ、効率的な情報を得ることができます。
+
+[[@@BASEURL@@/PyukiWiki/Plugin/ExPlugin/google_analytics/]]
+
+他にも、他社の無料アクセス解析がありますが、日本国内ですと、これも非常に解析能力、及び、アクセスに対するレスポンスが瞬時に反応できるものとして、Ａｃｅ─ａｎａｌｙｚｅｒ があります。
+
+このアクセス解析プログラムは、広告がついてしまいますが、個人サイトには有効です。
+
+
+
+[[http://www.ace-analyzer.com/]]
+
+PyukiWiki開発者に寄付するには、こちらから（登録・解析タグ設置で収入になります）
+
+[[http://px.a8.net/svt/ejp?a8mat=1ZIHDM+3K0CGY+2HB0+639IR]]
+
+アクセス解析タグを設置するには、ad、htmlプラグインが便利です。
+
+[[@@BASEURL@@/PyukiWiki/Plugin/Nanami/ad/]]
+
+[[@@BASEURL@@/PyukiWiki/Plugin/Nanami/html/]] 
+*perlpod.inc.pl
+perlpod.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=perlpod&file=perl script file or pod file. [&notitle=true] [&source=true]
+ #perlpod(perl script file or pod file.)
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+perlスクリプトのドキュメントである pod を表示します。
+
+ディレクトリは指定できませんが、これは他のディレクトリの物を見られないようにするためのセキュリティー措置です。
+
+自動的に、pyukiwiki.ini.cgiで設定されたディレクトリを検索します。
+
+*rename.inc.pl
+rename.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=rename[&refer=encoded_page_name]
+
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+Wikiページ名を変更するためのプラグインです。
+
+カウンタ、差分(diff)、添付ファイルもあわせてリネームされます。 
+
+PukiWikiからの移植です。 
+
+PyukiWikiで実装されていない部分は省略しています。 
+
+**バグ
+
+
+recentに対して更新をかけていない。 
+
+Trackbackに対して更新をかけていない。
+
+*server.inc.pl
+server.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=server
+ #server
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+サーバーの情報を表示します。
+
+プラグインを使用するには、凍結パスワードが必要です。
+
+基本的な環境変数以外に、Perlのモジュール情報、ベンチマークをとることができます。
+
+Perlのモジュール情報を収集する時は、非常に時間がかかります。そのため、ご使用のサーバーによっては、Server Errorで応答がない場合があります。
+
+ベンチマークは４秒間程サーバーを高負荷にさせますので、乱用しないようにしてください。
+
+ブロック型プラグインとして使用する場合は、凍結パスワードは不要ですが、最小限の情報のみの表示となります。
+
+*servererror.inc.pl
+servererror.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+.htaccessファイルに
+
+ ErrorDocument 400 /index.cgi?cmd=servererror
+ ErrorDocument 401 /index.cgi?cmd=servererror
+ ErrorDocument 402 /index.cgi?cmd=servererror
+ ErrorDocument 403 /index.cgi?cmd=servererror
+ ErrorDocument 404 /index.cgi?cmd=servererror
+ ErrorDocument 500 /index.cgi?cmd=servererror
+
+
+もしくは
+
+ ErrorDocument 400 /nph-index.cgi?cmd=servererror
+ ErrorDocument 401 /nph-index.cgi?cmd=servererror
+ ErrorDocument 402 /nph-index.cgi?cmd=servererror
+ ErrorDocument 403 /nph-index.cgi?cmd=servererror
+ ErrorDocument 404 /nph-index.cgi?cmd=servererror
+ ErrorDocument 500 /nph-index.cgi?cmd=servererror
+
+
+等と記載して下さい。
+
+なお、付属の.htaccessのコメントを外せば動作します。
+
+**重要度
+
+
+★★★★☆
+
+**説明
+
+
+Apache等のWebサーバーからのエラーメッセージのかわりに、PyukiWikiでカスタムエラーメッセージを表示します。
+
+*setupeditor.inc.pl
+setupeditor.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=setupeditor
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+info/setup.cgi の編集プラグインです。
+
+*sitemaps.inc.pl
+sitemaps.inc.pl - PyukiWiki プラグイン
+
+**概要
+
+
+ ?cmd=sitemaps
+ #sitemaps(1.0)
+ #sitemaps(0.5)
+ #sitemaps(0.3)
+
+
+**重要度
+
+
+★★★☆☆
+
+**説明
+
+
+検索エンジンに送信する、sitemaps XMLを生成するプラグインです。
+
+**使用方法
+
+
+優先度の高いページ、または、低いページを、意図的に設定するために、各ページに、以下を記述する
+
+&#x23;sitemaps(1.0) 優先度の高い時
+
+&#x23;sitemaps(0.3) 優先度の低い時
+
+検索エンジンに、?cmd=sitemaps を送信する。
+
+*stdin.inc.pl
+stdin.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ REQUEST_METHOD="GET" QUERY_STRING="cmd=stdin" perl index.cgi < textfile
+
+
+ setenv REQUEST_METHOD=GET
+ setenv QUERY_STRING="cmd=stdin"
+ perl index.cgi <textfile > htmlfile
+
+
+
+
+**重要度
+
+
+☆☆☆☆☆
+
+**説明
+
+
+UNIXシェル等からの標準入力からwiki文を入力して、簡単にHTMLに整形したものを出力します。
+
+**注意
+
+
+編集画面のプレビューの相当画面が出力されます。
+
+画像や添付ファイルは認識できません。
+
+完全なHTMLが出力されるわけではありません。
+
+プラグインは、現状、&#x23;contents しか対応していません。
+
+*topicpath.inc.pl
+topicpath.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**重要度
+
+
+★★☆☆☆
+
+**概要
+
+
+ コンパクト版以外は自動で読み込まれます。
+ または、:Header 等のページにて &topicpath; と記述
+ または、スキンファイルに以下を記述
+  require 'plugin/topicpath.inc.pl';
+  &plugin_topicpath_inline;
+
+
+**説明
+
+
+パンくずリスト(topicpath)と呼ばれる、現在参照しているウェブページの階層を表現するユーザーインターフェースを提供するプラグインです。 
+例えば
+
+ [[PyukiWiki/ツアー]] というページは、以下のようにというページに表現されます。
+
+
+[[Top>FrontPage]] / [[PyukiWiki>PyukiWiki]] / [[ツアー>PyukiWiki/ツアー]]
+
+基本的には以下の２通りの使い方を想定しています。
+
+１．「ほげ/ふが/げほ」など、２�〜３階層以上の深いページでページの行き来をしやすくするために表示する
+
+２．スキンに組み込み、ページタイトル下のURLの代わりに全てのページで表示する
+
+PyukiWikiでは、compact版以外はデフォルトでスキンに組み込まれています。
+
+*versionlist.inc.pl
+versionlist.inc.pl - PyukiWiki 管理者向けプラグイン
+
+**概要
+
+
+ ?cmd=versionlist
+
+
+**重要度
+
+
+★★☆☆☆
+
+**説明
+
+
+PyukiWiki関連のすべてのファイルのファイルを検索し、バージョン表示をします。
+

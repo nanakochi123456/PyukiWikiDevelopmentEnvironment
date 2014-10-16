@@ -1,0 +1,62 @@
+// PyukiWiki Document Japanese
+// $Id$
+
+*主なperlモジュール構成
+-lib/Algorithm/Diff.pm~
+差分生成用
+-lib/AWS 以下~
+アクセスログ、ユーザーエイジェント振り分け用
+-lib/Digest/Perl/MD5.pm~
+Pure Perl MD5モジュール
+-lib/File 以下~
+ファイル判定用モジュール
+-lib/HTTP/Lite.pm~
+簡易HTTPクライアント(未使用）
+-lib/IDNA/Punycode.pm~
+国際化ドメイン用モジュール（URLでも使用）
+-lib/Jcode.pm、lib/Jocde 以下~
+Jcode.pm
+-lib/Time/Local.pm~
+Time::Local
+-lib/Nana/Cache.pm~
+キャッシュ管理モジュール
+-lib/Nana/Cookie.pm~
+クッキー管理モジュール
+-lib/Nana/Enc.pm~
+簡易暗号化モジュール
+-lib/Nana/File.pm~
+ファイルアクセスモジュール
+-lib/Nana/GZIP.pm~
+gzip圧縮、解凍モジュール
+-lib/Nana/HTMLOpt.pm~
+HTML最適化モジュール
+-lib/Nana/HTTP.pm~
+HTTPアクセスモジュール
+-lib/Nana/HTTPCompress.pm~
+HTTP gzip圧縮出力モジュール
+-lib/Nana/Lock.pm~
+ファイルロックモジュール
+-lib/Nana/Logs.pm~
+アクセスログ解析モジュール
+-lib/Nana/Mail.pm~
+メール送信モジュール
+-lib/Nana/MD5.pm~
+互換MD5生成wrapperモジュール
+-lib/Nana/Pod2Wiki.pm~
+perl pod 簡易変換モジュール
+-lib/Nana/RemoteHost.pm~
+リモートホスト取得モジュール
+-lib/Nana/Search.pm~
+あいまい検索モジュール
+-lib/Nana/ServerInfo.pm~
+サーバー情報取得モジュール
+-lib/Nana/YukiWikiDB.pm~
+ロック対策済 YukiWikiDBモジュール
+-lib/Nana/YukiWikiDB_GZIP.pm~
+↑のgzip圧縮対応版
+-lib/Yuki/DiffText.pm~
+Diff.pm を共用した差分生成モジュール
+-lib/Yuki/RSS.pm~
+RSS1.0モジュール
+-lib/Yuki/YukiWikiDB.pm~
+YukiWikiDB.pm のオリジナル

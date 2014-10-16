@@ -1,0 +1,80 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+lookup.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ #lookup(google,Googleで検索)
+ #lookup(pyukiwiki,PyukiWiki開発サイトのページ,Download)
+
+=head1 重要度
+
+★★★☆☆
+
+=head1 説明
+
+記述した位置にテキスト入力欄とボタンを表示します。任意の文字列を入力してボタンを押すと、InterWikiNameと入力値から生成したURLへ移動します。これによって、検索エンジンにクエリを送信したり、番号をタイプするだけで該当するアーカイブにアクセスすることなどが可能になります。
+
+=head1 使用方法
+
+ #lookup(InterWikiName, [ボタン名], [入力欄の初期値])
+
+=over 4
+
+=item InterWikiName
+
+InterWikiNameに設定した値の一つを指定します。
+
+=item ボタン名
+
+ボタンに表示するキャプションを指定します。省略時は'LookUp'です。
+
+=item 入力欄の初期値
+
+初期値を指定したい場合に記入します。省略時は空文字列になります。
+
+=head1 設定
+
+URLの生成にはInterWikiを利用します。
+このプラグインが生成するURLは、以下のようなInterWikiと同じです。
+InterWikiNameのページに、あらかじめURLの生成に使用するInterWikiNameを設定しておく必要があります。
+
+ [InterWikiName interwikiname]
+ [URLサフィックス InterWikiName] utf8またはsjis,euc,jis,raw
+
+=back
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/lookup
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/lookup/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/lookup.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

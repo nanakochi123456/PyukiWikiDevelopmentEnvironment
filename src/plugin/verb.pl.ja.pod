@@ -1,0 +1,56 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+verb.pl - PyukiWiki / YukiWiki プラグイン
+
+=head1 概要
+
+ &verb(SamplePage);
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+PyukiWikiの整形ルールを無視するプラグイン 
+
+=head1 サンプル
+
+ 私はWikiNameはリンクにしたいけれど、&verb(SamplePage);をリンクにしたくない。
+ Javaで&verb(java.net.ServerSocket);を使った。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/verb
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/verb/>
+
+
+=item PyukiWiki CVSレボジトリ
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/verb.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_YUKI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_YUKI@@
+
+=cut

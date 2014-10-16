@@ -1,0 +1,56 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+link.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ &link(結城浩,http://www.hyuki.com/,_blank|_top|frame name]);
+ &link(メール,<mail (at) example (dot) com>);
+ &link(メール,<mail (at) example (dot) com?cc=cc>@<example (dot) com&bcc=bcc (at) example (dot) com>);
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+リンクをします。
+
+PyukiWikiの内部パーサーの影響を受けません。
+
+メールアドレスで、? 以降に他のオプションを指定した場合、ASCII文字以外を指定することはできません。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/link
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/link/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/link.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_YUKI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_YUKI@@
+
+=cut

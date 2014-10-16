@@ -1,0 +1,42 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+sbookmark.inc.pl - PyukiWiki プラグイン
+
+=head1 重要度
+
+★☆☆☆☆
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/sbookmark
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/sbookmark/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/sbookmark.inc.pl>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

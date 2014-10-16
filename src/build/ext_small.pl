@@ -1,0 +1,1 @@
+open R,$ARGV[0];binmode R;$l=sysread R,$b,-s $ARGV[0];foreach(split(/\x0\xff\x0\xff\x0\xff\x0\xff\x0/,$b)){next if /^$/;($n,$s,$d)=split(/\x0\xff\x5\xff\x0\xff\x5\xff\x0/,$_);if($s eq"d"){system "mkdir -p $n";}else{open W,">$n"||die;binmode W;syswrite W,$d,$s;close W;}close R;}

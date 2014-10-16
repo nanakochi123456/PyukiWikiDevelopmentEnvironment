@@ -1,0 +1,70 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+rss10page.inc.pl - PyukiWiki プラグイン
+
+=head1 概要
+
+ ?cmd=rss10page&page=エンコードされたページ名[&lang=lang]
+ #rss10page(- or *)
+
+互換性の為に残されています。
+
+=head1 重要度
+
+★★☆☆☆
+
+=head1 説明
+
+表示中のページを指定した記述をすることで、RSS(RDF Site Summary)1.0に変換して出力できるようにします。
+
+=head1 書式例
+
+#rss10page(-)
+
+-2011-07-04(月) 07:57:00 [[FrontPage]]~
+更新した。
+-2011-07-03(日) 19:48:00 何もリンクしない場合~
+その更新履歴のページにいきます。
+-2011-02-22(火) 19:00:00 [[外部リンク>http://example.com/]]~
+そこにリンクされます。
+
+=head1 参考
+
+=over 4
+
+=item PyukiWiki/Plugin/Standard/rss10page
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Standard/rss10page/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/rss10page.inc.pl>
+
+=item YukiWiki
+
+Yuki::RSSを使用しています。
+
+L<http://www.hyuki.com/yukiwiki/wiki.cgi>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_NEKYO@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_NEKYO@@
+
+=cut

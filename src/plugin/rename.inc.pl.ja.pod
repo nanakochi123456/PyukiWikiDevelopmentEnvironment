@@ -1,0 +1,66 @@
+#$Id$
+
+__END__
+=encoding euc-jp
+
+=head1 NAME
+
+rename.inc.pl - PyukiWiki 管理者向けプラグイン
+
+=head1 概要
+
+ ?cmd=rename[&refer=encoded_page_name]
+
+=head1 重要度
+
+★★★★☆
+
+=head1 説明
+
+Wikiページ名を変更するためのプラグインです。
+
+カウンタ、差分(diff)、添付ファイルもあわせてリネームされます。 
+
+PukiWikiからの移植です。 
+
+PyukiWikiで実装されていない部分は省略しています。 
+
+=head1 バグ
+
+recentに対して更新をかけていない。 
+
+Trackbackに対して更新をかけていない。
+
+=head1 参考
+
+=over 4
+
+L<@@BASEURL@@/PyukiWiki/Plugin/Admin/rename/>
+
+=item PyukiWiki CVS
+
+L<@@CVSURL@@/PyukiWiki-Devel/plugin/rename.inc.pl>
+
+=item サイト制作/PyukiWiki/プラグイン/リネーム
+
+0.1.5までの対応版です。
+
+L<http://www.re-birth.com/pyuki/wiki.cgi?%a5%b5%a5%a4%a5%c8%c0%a9%ba%ee%2fPyukiWiki%2f%a5%d7%a5%e9%a5%b0%a5%a4%a5%f3%2f%a5%ea%a5%cd%a1%bc%a5%e0>
+
+=back
+
+=head1 著者
+
+=over 4
+
+@@AUTHOR_JUNICHI@@
+
+@@AUTHOR_PYUKI@@
+
+=back
+
+=head1 ライセンス
+
+@@LICENSE_JUNICHI@@
+
+=cut
