@@ -1,0 +1,12 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+FrontPage.en.wiki	$::FrontPage	developper,devel,full,compact	auto	en	raw
+MenuBar.en.wiki	$::MenuBar	developper,devel,full,compact	auto	en	raw
+RecentPages.en.wiki	$::RecentPages	developper,devel,full,compact	auto	en	raw
+Help.en.wiki	$::resource{help}	developper,devel,full,compact	force	en	raw
+InterWikiName.en.wiki	$::InterWikiName	developper,devel,full,compact	force	en	raw
+InterWikiSandBox.en.wiki	$::InterWikiSandBox	developper,devel,full	default	en	raw
+SandBox.en.wiki	$::SandBox	developper,devel,full	default	en	raw
+license_art.en.wiki	The Artistic License	developper,devel,full	default	en	raw
+license_gpl.en.wiki	GNU General Public License	developper,devel,full	default	en	raw

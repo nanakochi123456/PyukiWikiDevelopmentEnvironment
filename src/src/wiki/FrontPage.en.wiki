@@ -1,0 +1,30 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+* This page is [[PyukiWiki>PyukiWiki:FrontPage]]'s FrontPage.
+
+**What is [[PyukiWiki>PyukiWiki:FrontPage]] ?
+[[PyukiWiki>PyukiWiki:FrontPage]] is wiki of based [[YukiWiki>YukiWiki:FrontPage]] and like [[PukiWiki>PukiWiki:FrontPage]].
+
+If you're an administrator, before publishing this [[PyukiWiki>PyukiWiki:FrontPage]] this, please set the administrator password via the link AdminPage. ~
+
+If the administrator password could be set, please make your own FrontPage.
+
+- The information of [[PyukiWiki> PyukiWiki FrontPage]] is in @@PYUKI_URL@@
+- [[RecentChanges]] is been recently updated list page.
+- [[SandBox]] is recommended to practice.]
+- Try [[InterWiki>PyukiWiki:PyukiWiki/Glossary/InterWiki]] will be use [[InterWikiSandBox]].
+
+** What is wiki!?
+Wiki is create and edit web pages that easily done from the browser, it is a content management system.
+
+Prototype is Mr. Ward Cunningham's the program, there are various clones. ~
+A "Wiki", there is a Hawaiian word meaning, such as "informal", "fast".
+
+** Uses and capabilities
+Essentially, it is assumed that the utilization form more than one person to build a Web site jointly viewer or easily add pages, or we can edit.~
+I think your own Wiki syntax might be confusing at first, the basic rule is that it is easier to remember than HTML tags. ~
+
+According to the site you want to make your, please edit freely :)
+
+#counter

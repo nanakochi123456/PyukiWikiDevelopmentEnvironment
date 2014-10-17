@@ -1,0 +1,14 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+// デフォルトではMenuBarは凍結されていません
+// 必ず凍結して下さい。
+
+// 最新の２０件
+#recent(20)
+
+// カウンターのサンプル
+// **訪問者
+// 合計 : &counter(total);~
+// 今日 : &counter(today);~
+// 昨日 : &counter(yesterday);

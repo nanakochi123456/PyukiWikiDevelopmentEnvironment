@@ -1,0 +1,14 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+// By default MenuBar is not frozen.
+// Surely frozen.
+
+// Last 20
+#recent(20)
+
+// Sample of Counter
+// **Counter
+// Total : &counter(total);~
+// Today : &counter(today);~
+// Yesterday : &counter(yesterday);

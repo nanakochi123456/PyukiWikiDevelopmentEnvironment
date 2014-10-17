@@ -1,0 +1,36 @@
+/* @@PYUKIWIKIVERSION@@ */
+/* $Id$ */
+/* Code=@@CODE@@ */
+
+@import url("pyukiwiki.default.css");
+
+a:link, a:visited {
+	text-decoration: underline;
+}
+/*
+{
+	display:none;
+}
+*/
+/*
+img#logo
+{
+	display:none;
+}
+*/
+
+div#navigator,
+td.menubar, td.sidebar, 
+div#menubar, div#sidebar,
+div#headerbody, div#footerbody,
+div#bodyheaderbody, div#bodyfooterbody,
+div#headerbody,
+div#attach,
+div#toolbar,
+div#lastmodified,
+div#related,
+div.jumpmenu,
+div.partinfo,a.partedit
+{
+	display:none;
+}

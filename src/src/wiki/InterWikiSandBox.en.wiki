@@ -1,0 +1,33 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+#freeze
+#metarobots(disable)
+*It is a practice page for [[InterWiki>PyukiWiki:PyukiWiki/Glossary/InterWiki]].
+|To become a victim of SEO SPAM bot, this page has been frozen by default.|
+
+**Let's jump to other pages of the Wiki.
+-[[WikiWikiWeb:FrontPage]]
+-[[WalWiki:WalWiki]]
+-[[Tiki:WelcomeVisitors]]
+-[[YukiWiki:FrontPage]]
+-[[RWiki:top]]
+-[[PukiWiki:FrontPage]]
+-[[pukiwiki.dev:FrontPage]]
+
+**Let's jump to other pages of PyukiWiki.
+-[[pyukiwiki:FrontPage]]
+-[[pyukiwiki:PyukiWiki/Plugin]]
+
+**I can even search.
+:Search in google "PyukiWiki"|
+[[Google:PyukiWiki]]
+:Search in yahoo "PyukiWiki"|
+[[Yahoo:PyukiWiki]]
+:Search in MSN (bing) "PyukiWiki"|
+[[MSN:PyukiWiki]]
+
+**Also put out the search form.
+#lookup(Google,Search,PyukiWiki)
+#lookup(Yahoo,Search,PyukiWiki)
+#lookup(MSN,Search,PyukiWiki)

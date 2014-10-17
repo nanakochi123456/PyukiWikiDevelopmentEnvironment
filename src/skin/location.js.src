@@ -1,0 +1,120 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+
+var _u, _t, _f, _o, _m,_c, _jm, _l, _fu, _mf, _g=0;
+
+function jslocation(obj, url, time, fakeurl) {
+	if(time < 0) {
+		jslocationstop();
+		return;
+	}
+	_u=url;
+	_t=time;
+	_o=obj;
+	_f=0;
+	_fu=fakeurl;
+	_mf=0;
+	_j(_o, _t, 0);
+	_l=window.setTimeout("_jsl();", 1000);
+}
+
+function jsdownload(obj, url, time, fakeurl) {
+	if(time < 0) {
+		jslocationstop();
+		return;
+	}
+	_u=url;
+	_t=time;
+	_o=obj;
+	_f=0;
+	_fu=fakeurl;
+	_mf=1;
+	_j(_o, _t, 1);
+	_l=window.setTimeout("_jsl();", 1000);
+}
+
+function jslocationstop() {
+	_t=-1;
+	_f=1;
+	_j(_o, _t, _mf);
+	window.clearTimeout(_l);
+}
+
+function _jsl() {
+	window.clearTimeout(_l);
+
+	if(_f+0 > 0)
+		return;
+
+	if(_t > 0) {
+		_t = _t - 1;
+		_l=window.setTimeout("_jsl();", 1000);
+	}
+	_j(_o, _t, _mf);
+	if(_t < 1 && !_g) {
+		window.location=_u;
+		_g=1;
+	}
+}
+
+function _j(obj, sec, msgflag) {
+	var msg, clickmsg, jumpmsg;
+
+	if(msgflag) {
+		msg=ln(
+			'en','Start the download of <a href="\$url" onclick="jslocationstop();">\$dispurl</a> in \$sec seconds.'
+			,
+			'ja','\$sec秒後に<a href="\$url" onclick="jslocationstop();">\$dispurl</a>のダウンロードが開始されます。'
+		),
+		clickmsg=ln(
+			'en','Starting Download <a href="\$url">\$dispurl</a>.'
+			,
+			'ja','<a href="\$url">\$dispurl</a>のダウンロードを開始中です。'
+		);
+		jumpmsg=ln(
+			'en','Starting Download <a href="\$url">\$dispurl</a>.'
+			,
+			'ja','<a href="\$url">\$dispurl</a>のダウンロードを開始中です。'
+		);
+	} else {
+		msg=ln(
+			'en','Go to <a href="\$url" onmouseover="jslocationstop();">\$dispurl</a> after \$sec seconds'
+			,
+			'ja','\$sec秒後に<a href="\$url" onmouseover="jslocationstop();">\$dispurl</a>にジャンプします'
+		),
+		clickmsg=ln(
+			'en','When click <a href="\$url">\$dispurl</a> go to <a href="\$url">\$dispurl</a>'
+			,
+			'ja','クリックすると<a href="\$url">\$dispurl</a>にジャンプします'
+		),
+		jumpmsg=ln(
+			'en','Moving to <a href="\$url">\$dispurl</a>'
+			,
+			'ja','<a href="\$url">\$dispurl</a>へ移動中です'
+		);
+	}
+
+	var _displayurl=_fu !== void 0 && _fu != "" ? _fu : _u,
+		url=_u,
+		displayurl=_displayurl.substr(0,40);
+
+	if(displayurl != _displayurl) {
+		displayurl+="...";
+	}
+
+	msg=msg.replaceAll('\$sec', sec);
+	msg=msg.replaceAll('\$url', url);
+	msg=msg.replaceAll('\$dispurl', displayurl);
+	clickmsg=clickmsg.replaceAll('\$url', url);
+	clickmsg=clickmsg.replaceAll('\$dispurl', displayurl);
+	jumpmsg=jumpmsg.replaceAll('\$url', url);
+	jumpmsg=jumpmsg.replaceAll('\$dispurl', displayurl);
+	if(sec + 0 < 0) {
+		sinss(obj, clickmsg);
+	} else if(sec + 0 < 1) {
+		sinss(obj, jumpmsg);
+	} else {
+		sinss(obj, msg);
+	}
+}

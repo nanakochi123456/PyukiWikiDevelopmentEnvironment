@@ -1,0 +1,5 @@
+/* @@PYUKIWIKIVERSIONSHORT@@
+ * $Id$
+ */
+
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(8(){5(h)!="d"?2=h("Z").2:4;8 a(){7 b="Y X W V U T S R Q  P 8 O N M 6 4 L K J 3 I H G 5 7 F E";7 c=2.D;3.C=[{1:c.B,0:"g"},{1:c.A,0:"g"},{1:c.z,0:"f"},{1:c.y,0:"f"},{1:/\\s*#.*/e,0:"x"},{1:6 w(3.v(b),"e"),0:"u"}];3.t(c.r)}a.q=6 2.p();a.o=["n","m","l"];2.k.j=a;5(9)!="d"?9.i=a:4})();',62,62,'css|regex|SyntaxHighlighter|this|null|typeof|new|var|function|exports||||undefined|gm|comments|string|require|Brush|JScript|brushes|javascript|jscript|js|aliases|Highlighter|prototype|scriptScriptTags||forHtmlScript|keyword|getKeywords|RegExp|preprocessor|multiLineCComments|singleLineCComments|multiLineSingleQuotedString|multiLineDoubleQuotedString|regexList|regexLib|with|while|try|true|throw|switch|super|return|instanceof|in|if|for|false|else|do|delete|default|continue|catch|case|break|shCore'.split('|')))

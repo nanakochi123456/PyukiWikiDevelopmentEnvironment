@@ -1,0 +1,5 @@
+/* @@PYUKIWIKIVERSIONSHORT@@
+ * $Id$
+ */
+
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(j(){c(k)!="9"?2=k("1b").2:7;j a(){1a b="19 18 17 16 15 14 13 12 11 10 Y X W V U T S R Q P O N M L K J I H G F E D";e.C=[{1:3 4("[A-Z][A-i-6-5]+","g"),0:"B"},{1:3 4("\\\\%.+","d"),0:"z"},{1:3 4("\\\\?[A-i-6-5]+","g"),0:"y"},{1:3 4("[a-6-5]+:[a-6-5]+","g"),0:"x"},{1:2.h.w,0:"f"},{1:2.h.v,0:"f"},{1:3 4(e.u(b),"d"),0:"t"}]}a.s=3 2.r();a.q=["p","o"];2.n.m=a;c(8)!="9"?8.l=a:7})();',62,74,'css|regex|SyntaxHighlighter|new|RegExp|9_|z0|null|exports|undefined|||typeof|gm|this|string||regexLib|Za|function|require|Brush|Erland|brushes|erlang|erl|aliases|Highlighter|prototype|keyword|getKeywords|singleQuotedString|doubleQuotedString|functions|preprocessor|comments||constants|regexList|define|import|export|module|xor|when|try|rem|receive|query|orelse|or|of|not|let|if|fun|end|div|cond|catch|case||bxor|bsr|bsl|bor|bnot|begin|band|andalso|and|after|var|shCore'.split('|')))

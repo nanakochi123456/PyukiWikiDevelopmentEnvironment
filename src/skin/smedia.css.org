@@ -1,0 +1,188 @@
+/*
+ * @@PYUKIWIKIVERSION@@
+ * $Id$ *
+ * Code=@@CODE@@
+ */
+
+#smedia_share,
+#smedia_bookmark,
+#smedia_subscribe {
+/*	display: none;*/
+/*	position: absolute;
+	top: 40px;
+	margin: 0px;
+	padding: 0px;
+*/
+	width: 500px;
+	color:black;
+/*	background-color: transport;*/
+	background-color: #ffffff;
+
+/*
+	border-bottom:  1px solid #DDEEFF;
+	border-top:     1px solid #DDEEFF;
+	border-left:    1px solid #DDEEFF;
+	border-right:   1px solid #DDEEFF;
+*/
+}
+
+#smediamenubar_share,
+#smediamenubar_bookmark,
+#smediamenubar_subscribe {
+/*	display: none;*/
+	position: relative;
+	left: 40px;
+/*
+	top: 40px;
+	margin: 0px;
+	padding: 0px;
+*/
+	width: 80px;
+	color:black;
+/*	background-color: transport;*/
+	background-color: #ffffff;
+
+/*
+	border-bottom:  1px solid #DDEEFF;
+	border-top:     1px solid #DDEEFF;
+	border-left:    1px solid #DDEEFF;
+	border-right:   1px solid #DDEEFF;
+*/
+}
+
+ul.smediabodybutton li {
+	list-style: none;
+	text-decoration:none;
+	float: left;
+	position: relative;
+	top: 1px;
+}
+
+ul.smediamenubarbutton li {
+	list-style: none;
+	text-decoration:none;
+	line-height: 50px;
+	position: relative;
+	top: 10px;
+	font-size: 15px;
+	height: 30px;
+}
+
+.smediabutton,
+a.smediabutton {
+	font-weight:bold;
+	text-decoration:none;
+	color: #000000;
+	border: 1px solid #ddeeff;
+	padding: 1px 5px 1px 5px;
+	margin: 1px 15px 1px 15px;
+	background-color: #ffffff;
+}
+
+.smediaclose,
+.smediamenubarclose {
+	color: #000000;
+	text-align: right;
+}
+
+.smediaclosebutton,
+a.smediaclosebutton {
+	font-weight:bold;
+	text-decoration:none;
+	color: #000000;
+	background-color: #e0e0e0;
+	border: 1px solid #000000;
+}
+
+ul.smedia li {
+	list-style: none;
+	float: left;
+}
+
+.bookmarkbutton,
+a.bookmarkbutton {
+	background-color:#dddddd;
+	border:2px groove black;
+	padding: 0px 5px 0px 2px;
+	color:black;
+	font-family:sans-serif;
+	text-decoration:none;
+	font-size:12px;
+	margin-top:5px;
+	margin-bottom:5px;
+	line-height:16px;
+}
+
+/* menubar */
+ul.smediamenubar li{
+	list-style: none;
+	margin-left: -40px;
+	width: 120px;
+	font-size: 10px;
+}
+
+.twitter_tweet {
+	width: 90px;
+}
+.twitter_follow0 {
+	width: 90px;
+}
+.twitter_follow1 {
+	width: 200px;
+}
+.twitter_follow2 {
+	width: 180px;
+}
+.twitter_follow3 {
+	width: 300px;
+}
+
+.facebook_like,
+.facebook_share {
+	position: relative;
+	top: 1px;
+	width: 100px;
+}
+
+.google_plusone {
+	width: 67px;
+}
+
+.mixi_favorite {
+	width: 80px;
+}
+
+.hatena_bookmark {
+	width: 60px;
+}
+
+.gree {
+	width: 80px;
+}
+
+.livedoor_clip {
+	position: relative;
+	top: -1px;
+	width: 50px;
+}
+
+.yahoo_bookmark {
+	position: relative;
+	left: -3px;
+}
+
+.yahoo_rss {
+	position: relative;
+	left: -8px;
+	width: 80px;
+}
+
+.google_rss {
+	position: relative;
+	top: 2px;
+}
+
+.livedoor_rss {
+	position: relative;
+	top: 2px;
+}

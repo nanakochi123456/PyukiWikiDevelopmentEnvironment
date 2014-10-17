@@ -1,0 +1,674 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////
+# マルチアカウント対応 twitter Javascript 表示スクリプト
+# 2013/03/26 twitter API 1.1 対応
+/////////////////////////////////////////////////////////////////////*/
+
+/* 単体で動かす時は、コメントをつける */
+
+function twitwindow(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width, popup, track) {
+	tw.twitwindow(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width, popup, track);
+}
+
+/* ここまで */
+
+/* 単体で動かす時はコメントを外す */
+/*
+function twitwindow(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width) {
+	tw.twitwindow(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width);
+}
+*/
+
+var d=document,
+	w=window,
+	h="";
+
+/* twオブジェクト */
+var	tw = {
+	consumerKey: null,
+	consumerSecret: null,
+	accessToken: null,
+	tokenSecret: null,
+	cbid:0,
+	subid:0,
+	subarray:h,
+	idarray:h,
+	dtarray:h,
+	urlarray:h,
+	lc:0,
+	counts:500,
+	maxurl:40,
+	d_text_color:"333",
+	d_link_color:"307ace",
+	d_back_color:"e1e1e1",
+	n_font:13,
+	n_color:"000",
+	s_font:13,
+	s_color:"555",
+	i_font:11,
+	i_color:"555",
+	t_font:12,
+
+	border_color: "434343",
+	header_background: "434343",
+	header_font_color:"fff",
+	header_link_color:"fff",
+	content_background_color: "e1e1e1",
+	content_font_color: "333",
+	link_color: "307ace",
+
+	ch:"__C__",
+	uh:"__UH__",
+	target:0,
+	track:0,
+	url:h,
+	http:"http://",
+	https:"https://",
+	tw:"twitter.com",
+	api:"api.twitter.com",
+	entities:"include_entities=true",
+	am:"&amp;",
+	flg:0,
+	mode:h,
+	/* HTMLカラーの正規表現 */
+	cRE:/__C__([0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef]|[0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef])/gm,
+//	cRE:/__C__([0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f]|[0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f])/gm,
+
+	/* コールバック */
+	cb1 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[1];
+		obj.method(data, 1);
+	},
+	cb2 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[2];
+		obj.method(data, 2);
+	},
+	cb3 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[3];
+		obj.method(data, 3);
+	},
+	cb4 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[4];
+		obj.method(data, 4);
+	},
+/*
+	cb5 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[5];
+		obj.method(data, 5);
+	},
+	cb6 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[6];
+		obj.method(data, 6);
+	},
+	cb7 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[7];
+		obj.method(data, 7);
+	},
+	cb8 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[8];
+		obj.method(data, 8);
+	},
+	cb9 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[9];
+		obj.method(data, 9);
+	},
+*/
+	cb0 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[0];
+		obj.method(data, 0);
+	},
+
+	/* 色の存在チェック */
+	chk: function(c1, c2) {
+		return (defined(c1) && c1 != "" ? c1 : c2);
+	},
+
+	/* メイン */
+	twitwindow: function(token, id, keywordargs, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width, popup, track) {
+		var exttoken=token.split('|'),
+			tokens=ae(exttoken[0], exttoken[1]);
+			newtoken=tokens.split('|');
+
+		tw.consumerKey=newtoken[0];
+		tw.consumerSecret=newtoken[1];
+		tw.accessToken=newtoken[2];
+		tw.tokenSecret=newtoken[3];
+
+		var keywords=keywordargs.split('|');
+		if(popup == 1) tw.target=1;
+		if(track == 1) tw.track=1;
+
+		border_color = tw.chk(border_color, tw.border_color);
+		header_background = tw.chk(header_background, tw.header_background);
+		header_font_color = tw.chk(header_font_color, tw.header_font_color);
+		header_link_color = tw.chk(header_link_color, tw.header_link_color);
+		content_background_color = tw.chk(content_background_color, tw.content_background_color);
+		content_font_color = tw.chk(content_font_color, tw.content_font_color);
+		link_color = tw.chk(link_color, tw.link_color);
+
+		/* １オブジェクトに１つ表示 */
+		if(keywords.length < 2) {
+			tw.twa(token, id, keywords[0], title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width);
+			tw.subid++;
+
+		/* １オブジェクトに複数表示 */
+		} else {
+			var shtml=h, th=h,
+				hhtml='<table width="' + width + '" style="background-color:' + tw.mkclr(content_background_color) + '; border:1px solid ' + tw.mkclr(border_color) + ';"><tr>';
+			var firstid=tw.subid, ss=firstid;
+			for (var i=0; i < keywords.length; i++) {
+				if(!ss) {
+					tw.subarray=ar();
+				}
+				tw.subarray[ss]="twsub_" + ss;
+				if(i == 0) {
+					shtml += '<span style="display: block;" id="' + tw.subarray[ss] + '"></span>';
+				} else {
+					shtml += '<span style="display: none;" id="' + tw.subarray[ss] + '"></span>';
+				}
+				ss++;
+			}
+			for(var i=firstid; i < ss; i++) {
+				hhtml += '<th width="100%" style="background-color:' + tw.mkclr(header_background) + '; color:' + tw.mkclr(header_font_color) + ';">'
+				  + '<a href="#" style="color: '+ tw.mkclr(header_link_color) + '" onclick="';
+
+				for(var j=firstid; j < ss; j++) {
+					hhtml += 'gid(\'' + tw.subarray[j] + '\').style.display=\'';
+					if(i == j) {
+						hhtml += 'block\';';
+					} else {
+						hhtml += 'none\';';
+					}
+				}
+				hhtml += 'return false;">' + keywords[i - firstid] + '</a></th>';
+			}
+
+			shtml = shtml.replace(tw.cRE, '#$1');
+			shtml = shtml.replace(tw.cRE, '#$1');
+			shtml = shtml.replace(tw.cRE, '#$1');
+			hhtml = hhtml.replace(tw.cRE, '#$1');
+			hhtml = hhtml.replace(tw.cRE, '#$1');
+			hhtml = hhtml.replace(tw.cRE, '#$1');
+			sinss(token, id,
+				hhtml
+				+ '</tr><tr><td colspan="' + (ss - firstid) + '">'
+				+ shtml
+				+ '</td></tr></table>'
+			);
+			for (var i=firstid; i < ss; i++) {
+				tw.twa(tw.subarray[i], keywords[i-firstid], "", max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width);
+				tw.subid++;
+			}
+		}
+	},
+
+	/* 旧メイン */
+	twa: function(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width) {
+		if(!tw.cbid) {
+			tw.idarray=ar();
+			tw.cbarray=ar();
+			tw.urlarray=ar();
+		}
+		if(tw.cbid > 5 && tw.cbid < 99) {
+			alert(ln(
+				"en","Can't place #twitter on this"
+				,
+					"ja","これ以上 #twitter を設置できません"
+			));
+			tw.cbid=99;
+			return;
+		}
+		tw.idarray[tw.cbid]="tw_" + id;
+		var html;
+		html='<table width="' + width + '" style="background-color:' + tw.mkclr(content_background_color) + ';'
+			+ (title == '' ? 'border:0px;' : 'border:1px solid ' + tw.mkclr(border_color) + ';')
+			+ '">';
+		if(title != "") {
+			html += '<tr><th width="100%" style="background-color:' + tw.mkclr(header_background) + '; color:' + tw.mkclr(header_font_color) + ';">' + title + '</th></tr>';
+		}
+		html += '<tr><td width="100%" style="background-color:' + tw.mkclr(content_background_color) + '; color:' + tw.mkclr(content_font_color) + ';"><span id="' + tw.idarray[tw.cbid] + '"></span></td></tr>';
+		+ '</table>';
+		html = html.replace(tw.cRE, '#$1');
+		tw.counts=max;
+
+		if(keyword.match(/^@/)) {
+			keyword=keyword.replace(/^@/, '');
+			tw.getuser(keyword, tw.cbid);
+		} else {
+			tw.getsearch(keyword, tw.cbid);
+		}
+		sinss(id, html);
+		tw.cbid++;
+	},
+
+	/* ハッシュタグ検索用のURLを生成 */
+	mksearchurl: function(str, callback, id) {
+		var url=tw.http + "search." + tw.tw + "/search.json?" + tw.entities + tw.am + "rpp=" + tw.counts + tw.am + "q=" + encodeURIComponent(str);
+		if(callback === void 0) {
+			url = url + tw.am + "callback=?";
+		} else {
+			url = url + tw.am + "callback=" + callback;
+		}
+		return url;
+	},
+
+	/* ハッシュタグ */
+	getsearch: function(str, cbid) {
+		tw.cbarray[cbid]=tw.getsearchhtml;
+		tw.urlarray[cbid]=tw.mksearchurl(str, "tw.cb" + cbid);
+		tw.dtarray[cbid]=tw.getjson(tw.urlarray[cbid], function(data, cbid) {
+			tw.getsearchhtml(data, cbid);
+		});
+		tw.attach("search" + cbid);
+	},
+
+	/* ハッシュのHTML生成 */
+	getsearchhtml: function(data, cbid) {
+		var a, html=h,
+			p_text_color=tw.d_text_color,
+			profile_link_color=tw.d_link_color,
+			profile_sidebar_fill_color=tw.d_back_color,
+			result=0;
+
+//		if(text_color) p_text_color=text_color;
+//		if(link_color) profile_link_color=link_color;
+//		if(sidebar_color) profile_sidebar_fill_color=sidebar_color;
+
+		for(var i=0; i< tw.counts;i++) {
+			try {
+				a=data.results[i];
+				var	text=a.text,
+					user=a.from_user,
+					user_name=a.from_user_name,
+					image=a.profile_image_url,
+					time=a.created_at,
+					source=a.source,
+					entities=a.entities;
+
+				html += tw.twline(
+					user, user_name, image, text,
+					p_text_color,
+					profile_link_color,
+					profile_sidebar_fill_color,
+					time,source,entities
+				);
+				result++;
+			} catch (e) {}
+		}
+		if(!result)
+			html=tw.nodata();
+
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+		sinss(tw.idarray[cbid], html);
+	},
+
+	/* ユーザー検索用のURL生成 */
+	mkuserurl: function(str, callback, id) {
+//		var url=tw.http + tw.tw + "/statuses/user_timeline/" + str + ".json?" + tw.entities;
+//		var url=tw.http + tw.api + "/1/statuses/user_timeline/" + str + ".json?" + tw.entities;
+// ホームのタイムライン
+//		var url=tw.https + tw.api + "/1.1/statuses/home_timeline.json?count=50";
+// 　１ユーザーのタイムライン
+		var url=tw.https + tw.api + "/1.1/statuses/user_timeline.json?count=50";
+//+ tw.entities;
+// + tw.am + "screen_name=" + str + tw.am + "count=20";
+// https://api.twitter.com/1.1/statuses/home_timeline.json?count=2 
+///1.1/statuses/user_timeline/" + str + ".json?" + tw.entities;
+		if(callback === void 0) {
+			url = url + tw.am + "callback=?";
+		} else {
+			url = url + tw.am + "callback=" + callback;
+		}
+		return url;
+	},
+
+	/* ユーザー */
+	getuser: function(str, cbid) {
+		tw.cbarray[cbid]=tw.getuserhtml;
+ 		tw.urlarray[cbid]=tw.mkuserurl(str, "tw.cb" + cbid);
+		tw.dtarray[cbid]=tw.getjson(tw.urlarray[cbid], function(data, cbid) {
+			tw.getuserhtml(data, cbid);
+		});
+		tw.attach("user" + cbid);
+	},
+
+	/* ユーザーのHTML生成 */
+	getuserhtml: function(data, cbid) {
+		var html=h,
+			p_text_color=h,
+			profile_link_color=h,
+			profile_sidebar_fill_color=h,
+			result=0
+
+
+		for(var i=0; i< tw.counts;i++) {
+			try {
+				var a=data[i];
+				html=html + tw.twline(
+					a.user.screen_name,
+					a.user.name,
+					a.user.profile_image_url,
+					a.text,
+					p_text_color ? p_text_color : data[i].user.p_text_color,
+					profile_link_color ? profile_link_color : data[i].user.profile_link_color,
+					profile_sidebar_fill_color ? profile_sidebar_fill_collor : data[i].user.profile_sidebar_fill_color,
+					a.created_at,
+					a.source,
+					a.entities
+				);
+				result++;
+			} catch (e) {}
+
+		}
+		if(!result)
+			html=tw.nodata();
+
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+//		html = html.replace(tw.cRE, '#$1');
+		sinss(tw.idarray[cbid], html);
+	},
+
+	/* ツィートがない時のメッセージ */
+	nodata: function() {
+		return ln(
+			"en", "No recent tweet",
+			"ja", "最近のツィートがありません"
+		);
+	},
+
+	/* イベントのアタッチ */
+	attach: function(mode) {
+		tw.mode=mode;
+		if(w.attachEvent !== void 0)
+			w.attachEvent('onload', tw.update);
+		else if(d.addEventListener !== void 0)
+			d.addEventListener("DOMContentLoaded", tw.update, false);
+        else d.write(unescape('%3Cscript src="' + tw.update + '" type="text/javascript"%3E%3C/script%3E'));
+
+	},
+
+	/* 更新 */
+	update: function() {
+		if(tw.subid > 2)
+			return;
+
+		setTimeout(tw.update, 1000*60);
+		if(tw.flg == 0) {
+			tw.flg=1;
+		} else {
+			var data=tw.getjson(tw.url, function(data) {
+				var html;
+				if(tw.mode == "user") {
+//					html=tw.getuserhtml(data);
+				} else {
+//					html=tw.getsearchhtml(]data);
+				}
+			});
+		}
+	},
+
+	/* JSONの取得 */
+	getjson: function(url, data) {
+		var tmp=url.split("?");
+		var tmp2=tmp[1].replaceAll("&amp;", "&");
+	    var accessor = {
+	        consumerSecret: tw.consumerSecret,
+	        tokenSecret: tw.tokenSecret
+	    },	message = {
+	        method: "GET",
+	        action: tmp[0],
+	        parameters: {
+	            oauth_version: "1.0",
+	            oauth_signature_method: "HMAC-SHA1",
+	            oauth_consumer_key: tw.consumerKey,
+	            oauth_token: tw.accessToken
+	        }
+	    }, content;
+		var content=tmp2.split("&");
+
+		for (var i=0; i < content.length; i++) {
+			var onecontent=content[i].split("=");
+			message.parameters[onecontent[0]] = onecontent[1];
+		 }
+
+		OAuth.setTimestampAndNonce(message);
+		OAuth.SignatureMethod.sign(message, accessor);
+		var target = OAuth.addToURL(message.action, message.parameters);
+		target=target.replaceAll("&amp;", "&");
+
+/*
+	    var options = {
+	        type: message.method,
+	        url: target,
+	        dataType: "jsonp",    //ここでjsonpを指定する
+	        jsonp: false,        //jQueryによるcallback関数名の埋め込みはしない
+	        cache: true            //リクエストパラメータに時刻を埋め込まない
+	    };
+	    $.ajax(options);
+*/
+
+		var element = d.createElement("script");
+
+//		console.log(Http.get( target, tw.cc ));
+
+//		http("GET", target, "", tw.cc, tw.cc);
+		Http.get(target, tw.cc);
+		element.src=target;
+		element.id = "twitter_callback";
+		d.body.appendChild(element);
+
+	},
+
+		/* タイムライン１行のHTML生成 */
+	twline: function(screen_name, name, image, text
+		, text_color, link_color, sidebar_fill_color, time, source, entities) {
+		var
+			twitterUsernameRE= /@(\w+)/gm,
+//			twitterHashRE= /\#([A-Za-z0-9\-\_]+)/gm,
+			twitterHashi18nRE= /(\#|\$)([^\s]+)/gm,
+			urlRE= /((((ht|f){1}(tp:[/][/]){1})|((www.){1}))[-a-zA-Z0-9@:;%_\+.~#?\&\/\/=]+)/gm;
+
+		tw.lc=link_color;
+
+		for(var i=0; entities.urls[i] !== void 0 && i < tw.counts; i++) {
+			text=text.split(entities.urls[i].url).join(entities.urls[i].expanded_url);
+
+		}
+		text = text.replace(
+			urlRE, function(t) {
+				return tw.replaceUrl(t);
+			}
+		);
+
+		text= text.replace(
+			twitterUsernameRE,
+//				tw.mklink("http://twitter.com/$1","@$1","@$1")
+				tw.mklink(tw.http + tw.tw + "/$1","@$1","@$1")
+		);
+
+		text= text.replace(
+			twitterHashi18nRE, function(t) {
+				return tw.mkhash(t);
+			}
+		);
+
+		text = tw.replaceAll(text, tw.uh, '#');
+
+		var html="<div style='background-color:" + tw.mkclr(sidebar_fill_color) + "';>" +
+			"<table><tr><td valign='top' style='background-color:" + tw.mkclr(sidebar_fill_color) + "';>" +
+			tw.mklink(tw.http + tw.tw + "/" + screen_name, name) +
+			"<img border='0' src=\'" +
+			image +
+			"\' /></a>" +
+			"</td><td valign='top' width='100%' style='background-color:" + tw.mkclr(sidebar_fill_color) + "';>" +
+			"<strong style='font-size:" + tw.n_font + "px; color:" + tw.mkclr(tw.n_color) + ";'>" +
+			tw.mklink(tw.http + tw.tw + "/" + screen_name, name, name) +
+			"</a></strong>" +
+			"<span style='font-size:" + tw.s_font + "px; color:" + tw.mkclr(tw.s_color) + "'>" +
+			"&nbsp;" + 
+			tw.mklink(tw.http + tw.tw + "/" + screen_name, "@" + screen_name, "@" + screen_name) +
+			"</a>" +
+			"&nbsp;</span>" +
+			"<span style='position:relative; right:0px; font-size:" + tw.i_font + "px; color:" + tw.mkclr(tw.i_color) + "'>(" +
+//			" on " + data[i].source + " , " +
+			tw.timeformat(time) +
+			")</span><br />" +
+			"<span style='font-size:" + tw.t_font + "px; color:" + tw.mkclr(text_color) +"'>" +
+			text +
+			"</td></tr></table></div>";
+
+		html = html.replace(tw.cRE, '#$1');
+		return html;
+	},
+
+	replaceAll: function(s, o, n) {
+		return s.split(o).join(n);
+	},
+
+	/* ハッシュタグのURL展開 */
+	mkhash: function(keyword) {
+		return tw.mklink(
+			tw.http + tw.tw + "/search/"
+			 + encodeURIComponent(keyword) , keyword, keyword)
+	},
+
+	/* URL展開 */
+	replaceUrl:function(t) {
+		var t=tw.replaceAll(t, '#', tw.uh);
+		return tw.mklink(t, t, ((t.length > tw.maxurl) ? (t.substring(0, tw.maxurl - 4) + '&hellip;') : t));
+	},
+
+	/* リンクの生成 */
+	mklink: function(url, title, title2) {
+		var c;
+
+/* 単体で動かす時は、コメントをする。 */
+
+/* ここから */
+		if(tw.track == 1) {
+			if(tw.target == 1) {
+				c="<a class=\"tlink\" href=\"" + url + "\" onclick=\"return Ck(this,this.href,\'b\');\" oncontextmenu=\"return Ck(this,this.href,'r');\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+			} else {
+				c="<a class=\"tlink\" href=\"" + url + "\" oncontextmenu=\"return Ck(this,this.href,'r');\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+			}
+		} else {
+			if(tw.target == 1) {
+//				c="<a class=\"tlink\" href=\"" + url + "\" onclick=\"return ou(this.href,\'_blank\');\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+				c="<a class=\"tlink\" href=\"" + url + "\" onclick=\"return window.open(this.href,\'_blank\');return false;\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+			} else {
+
+/* ここまで */
+				c="<a class=\"tlink\" href=\"" + url + "\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+
+/* ここから */
+			}
+		}
+
+/* ここまで */
+
+		if(title2) {
+			return c + title2 + "</a>";
+		}
+		return c;
+	},
+
+	/* 色の生成 */
+	mkclr: function(t, u) {
+		if(t == u) return "transport";
+		t = t.replace(/#/, '');
+		t = t.toLowerCase()
+
+		if(t.match(/^[0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef]/)) {
+	 		return tw.ch + t;
+		}
+
+		if(t.match(/^[0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef]$/)) {
+			return tw.ch + t;
+		}
+		return t;
+	},
+
+	/* 時刻文字列の生成 */
+	timeformat: function(t) {
+		if(t.match(',')) {
+			t=new Date(t);
+
+		} else {
+			t=t.replace(/(\d\d:\d\d:\d\d)\s\+0000\s(\d\d\d\d)$/,"$2 $1 +0000");
+			t=new Date(t);
+		}
+		return		("000" + t.getFullYear()).slice(-4)
+			+ '/' + ("0" + (t.getMonth() + 1)).slice(-2)
+			+ '/' + ("0" + t.getDate()).slice(-2)
+			+ ' ' + ("0" + t.getHours()).slice(-2)
+			+ ':' + ("0" + t.getMinutes()).slice(-2)
+			+ '  ' +niceTime(t);
+
+	}
+}
+
+/* niceTime http://james.padolsey.com/javascript/recursive-pretty-date/ */
+
+var niceTime = (function() {
+	var ints = {
+		second: 1,
+		minute: 60,
+		hour: 3600,
+		day: 86400,
+		week: 604800,
+		month: 2592000,
+		year: 31536000
+	};
+
+	var ints_ja = {
+		second: "秒",
+		minute: "分",
+		hour: "時間",
+		day: "日",
+		week: "週間",
+		month: "ヶ月",
+		year: "年"
+	};
+
+	return function(time) {
+		time = +new Date(time);
+
+		var gap = ((+new Date()) - time) / 1000,
+			amount, measure;
+
+		for (var i in ints) {
+			if (gap > ints[i]) { measure = i; }
+		}
+
+		amount = gap / ints[measure];
+//		amount = gap > ints.day
+//			? (Math.round(amount * 100) / 100)
+//			 : Math.round(amount);
+		amount = Math.round(amount);
+		measure = ln("en", measure, "ja", ints_ja[measure]);
+		amount += ln(
+			"en", ' ' + measure + (amount > 1 ? 's' : '') + ' ago',
+			"ja", measure + "経過");
+
+		return amount;
+	};
+})();

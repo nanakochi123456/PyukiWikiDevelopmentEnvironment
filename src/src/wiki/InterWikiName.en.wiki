@@ -1,0 +1,130 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+#freeze
+#metarobots(disable)
+*[[InterWiki>PyukiWiki:PyukiWiki/Glossary/InterWiki]] ServerList
+
+Please write in the form of
+ [URL servername] type
+
+|To become a victim of SEO SPAM bot, this page has been frozen by default.|
+
+** WikiEngines
+-[http://www.c2.com/cgi/wiki? WikiWikiWeb] raw
+-[http://openwiki.com/? OpenWiki] raw
+//-[http://www.todo.org/cgi-bin/jp/tiki.cgi?c=v&amp;p= Tiki] euc
+-[http://www.hyuki.com/yukiwiki/wiki.cgi? YukiWiki] euc
+-[http://www.jin.gr.jp/~nahi/RWiki/?cmd=view;name= RWiki] euc
+-[http://digit.que.ne.jp/work/index.cgi? WalWiki] euc
+-[http://fswiki.poi.jp/wiki.cgi? FSWiki] euc
+-[http://hikiwiki.org/ja/? Hiki] euc
+-[http://xiki.mitsuki.no-ip.com/? Xiki] utf8
+
+** PukiWiki
+-[http://pukiwiki.sourceforge.jp/? PukiWiki] utf8
+-[http://pukiwiki.sourceforge.jp/? pukiwiki.org] utf8
+-[http://pukiwiki.sourceforge.jp/dev/? pukiwiki.dev] euc
+
+** PyukiWiki
+// PyukiWiki Main Site
+-[http://pyukiwiki.info/? PyukiWiki] euc
+-[http://pyukiwiki.info/? PyukiWiki.dev] euc
+-[http://pyukiwiki.sfjp.jp/? PyukiWiki.sfjp] euc
+// domain added by papu
+-[http://pyukiwiki.info/? PyukiWiki.info] euc
+
+// Nekyo Site
+-[http://pyukiwiki.info/? PyukiWiki.org] euc
+-[http://pyukiwiki.info//? Nekyo] euc
+//-[http://nekyo.qp.land.to/? PyukiWiki.org] euc
+//-[http://nekyo.qp.land.to/? Nekyo] euc
+
+** Search Engine
+-[http://www.google.co.jp/search?ie=utf8&oe=utf8&q=$1&lr=lang_ja&hl=ja Google.jp] utf8
+-[http://www.google.co.jp/search?ie=utf8&oe=utf8&q=$1&lr=lang_en&hl=en Google] utf8
+-[http://search.yahoo.co.jp/search?p=$1 Yahoo.jp] euc
+-[http://search.yahoo.com/search?p=$1 Yahoo] utf8
+-[http://search.yahoo.co.jp/search/dir?p=$1 Yahoo.dir] euc
+-[http://search.yahoo.com/search?p=$1 Yahoo.usa] utf8
+-[http://search.yahoo.com/search?p=$1 Yahoo.en] utf8
+-[http://websearch.rakuten.co.jp/WebIS?qt=$1 Infoseek] euc
+-[http://websearch.rakuten.co.jp/WebIS?qt=$1 Rakuten] euc
+-[http://www.bing.com/search?q=$1 MSN] utf8
+-[http://www.bing.com/search?q=$1 bing] utf8
+-[http://search.goo.ne.jp/web.jsp?MT=$1 Goo] euc
+-[http://search.fresheye.com/?kw=$1 Fresheye] sjis
+
+** WikiMedia
+***WikiPedia
+-[http://en.wikipedia.org/wiki/ WikiPedia] utf8
+-[http://ja.wikipedia.org/wiki/ WikiPedia.ja] utf8
+-[http://en.wikipedia.org/wiki/ WikiPedia.en] utf8
+
+***Wiktionary
+-[http://en.wiktionary.org/wiki/ Wikitionary] utf8
+-[http://ja.wiktionary.org/wiki/ Wikitionary.ja] utf8
+-[http://en.wiktionary.org/wiki/ Wikitionary.en] utf8
+
+***WikiBooks
+-[http://en.wikibooks.org/wiki/ WikiBooks] utf8
+-[http://ja.wikibooks.org/wiki/ WikiBooks.ja] utf8
+-[http://en.wikibooks.org/wiki/ WikiBooks.en] utf8
+
+***metawiki
+-[http://meta.wikimedia.org/wiki/ MetaWiki] utf8
+-[http://meta.wikimedia.org/wiki/ MetaWiki.ja] utf8
+-[http://meta.wikimedia.org/wiki/ MetaWiki.en] utf8
+
+***wikiquote
+-[http://en.wikiquote.org/wiki/ WikiQuote] utf8
+-[http://ja.wikiquote.org/wiki/ WikiQuote.ja] utf8
+-[http://en.wikiquote.org/wiki/ WikiQuote.en] utf8
+
+***wiki news
+-[http://en.wikinews.org/wiki/ WikiNews] utf8
+-[http://ja.wikinews.org/wiki/ WikiNews.ja] utf8
+-[http://en.wikinews.org/wiki/ WikiNews.en] utf8
+
+***wiki source
+-[http://en.wikisource.org/wiki/ WikiSource] utf8
+-[http://ja.wikisource.org/wiki/ WikiSource.ja] utf8
+-[http://en.wikisource.org/wiki/ WikiSource.en] utf8
+
+***wiki species
+-[http://species.wikimedia.org/wiki/ WikiSpecies] utf8
+-[http://species.wikimedia.org/wiki/ WikiSpecies.ja] utf8
+-[http://species.wikimedia.org/wiki/ WikiSpecies.en] utf8
+
+***wikiversity
+-[http://en.wikiversity.org/wiki/ Wikiversity] utf8
+-[http://ja.wikiversity.org/wiki/ Wikiversity.ja] utf8
+-[http://en.wikiversity.org/wiki/ Wikiversity.en] utf8
+
+***incubator
+-[http://incubator.wikimedia.org/wiki/ WikiMediaIncubator] utf8
+-[http://incubator.wikimedia.org/wiki/ WikiMediaIncubator.ja] utf8
+-[http://incubator.wikimedia.org/wiki/ WikiMediaIncubator.en] utf8
+
+***wikimedia foundation
+-[http://wikimediafoundation.org/wiki/ WikiMedia] utf8
+-[http://wikimediafoundation.org/wiki/ WikiMedia.ja] utf8
+-[http://wikimediafoundation.org/wiki/ WikiMedia.en] utf8
+
+***wikimedia commons
+-[http://commons.wikimedia.org/wiki/ WikiMediaCommons] utf8
+-[http://commons.wikimedia.org/wiki/ WikiMediaCommons.ja] utf8
+-[http://commons.wikimedia.org/wiki/ WikiMediaCommons.en] utf8
+
+** Other
+-[http://docs.tdiary.org/users/? tDiaryUsers] euc
+-[http://social.msdn.microsoft.com/Search/en-US?query= msdn] utf8
+-[http://social.msdn.microsoft.com/Search/ja-JP?query= msdn.ja] utf8
+-[http://social.msdn.microsoft.com/Search/en-US?query= msdn.en] utf8
+
+** External InterWikiName
+-[./?cmd=newpage&amp;page= New]
+-[./?cmd=read&amp;page= View]
+-[./?cmd=edit&amp;page= Edit]
+-[./?cmd=list List]
+-[./?cmd=search&amp;word=$1&amp;type=OR Search]

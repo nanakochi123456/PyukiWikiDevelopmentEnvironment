@@ -1,0 +1,215 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+
+var
+//	OPERA			= ua("OPERA"),
+//	FIREFOX 		= ua("FIREFOX"),
+//	GECKO			= ua("GECKO"),
+//	CHROME			= ua("CHROME"),
+//	SAFARI			= ua("SAFARI"),
+//	MSIE			= ua("MSIE"),
+//	WINDOWS			= ua("WINDOWS"),
+//	MACOS			= ua("MACOS"),
+//	WINDOWSPHONE 	= ua("WINDOWSPHONE"),
+//	ANDROID			= ua("ANDROID"),
+//	IPOD			= ua("IPOD"),
+//	IPAD			= ua("IPAD"),
+//	IPHONE			= ua("IPHONE"),
+//	WII				= ua("WII"),
+//	GAMEBOY			= ua("GAMEBOY"),
+//	NINTENDODS		= ua("NINTENDODS"),
+//	PSP				= ua("PSP"),
+//	PS2				= ua("PS2"),
+//	PS3				= ua("PS3"),
+//	VERSION			= ua("VERSION"),
+//	MAGERVERSION	= ua("MAGERVERSION"),
+
+	ef="editform", fid,
+	w				= window,
+	d				= w.document,
+	l				= d.location,
+	n				= navigator;
+
+function pencf(pass_form,enc_form,token_form) {
+	var out;
+
+	if(pass_form == null || token_form == null)
+		return;
+
+	if(pass_form.value == '' || token_form.value == null)
+		return;
+
+	enc_form.value = penc(utf16to8(pass_form.value) ,utf16to8(token_form.value));
+	pass_form.value = '';
+}
+
+/* reverse code of http://ninja.index.ne.jp/~toshi/soft/untispam.shtml (obsolete)
+ */
+
+function penc(str, enc_list) {
+	var i, dd, res,dif;
+	res=h;
+	str += "\t" + ~~(new Date/1000);
+	for (i = 0; i < str.length; i++) {
+		dif = (Math.floor( Math.random() * 127 ) + i) % 127;
+		res = res + enc_list.substr(dif / 0x10,1) + enc_list.substr(dif % 0x10, 1);
+		dd = str.charCodeAt(i) + dif;
+		res = res + enc_list.substr(dd / 0x10,1) + enc_list.substr(dd % 0x10, 1);
+	}
+	return res;
+}
+
+/* from http://www.programming-magic.com/file/20080205232140/keycode_table.html
+ */
+
+function keyCode(e){
+	var e=eve(e);
+
+	if(d.all)
+          return e.keyCode;
+     else if(d.getElementById)
+         return e.keyCode ? e.keyCode : e.charCode;
+     else if(d.layers)
+         return e.which;
+}
+
+function keypress(e) {
+	if(e == null) return true;
+	var key=keyCode(e);
+	if(key == 32 || key == 13) return true;
+	return false;
+}
+
+function fsubmit(id,type,ev) {
+	if(keypress(ev) == false) return;
+
+	var mypassword="mypassword_";
+	pencf(
+		  gid(mypassword + type)
+		, gid(mypassword + type + "_enc")
+		, gid(mypassword + type + "_token")
+	);
+	fsubmitdelay(id,ev);
+}
+
+function fsubmitdelay(id,e) {
+	if(keypress(e) == false) return;
+
+	fid=id;
+	setTimeout("fsub();", 30);
+}
+
+function fsub() {
+	gid(fid).submit();
+}
+
+function ep(form, mode, value) {
+	if(form) {
+		form.value=h;
+		if(mode == value) {
+			form.value="1";
+		}
+	}
+}
+
+function editpost(mode, e) {
+	var form=gid(ef);
+
+	ep(form.mypreviewjs_adminedit, mode, 0);
+	ep(form.mypreviewjs_edit, mode, 0);
+	ep(form.mypreviewjs_write, mode, 1);
+	ep(form.mypreviewjs_cancel, mode, 2);
+	ep(form.mypreviewjs_blog_adminedit, mode, 0);
+	ep(form.mypreviewjs_blog_edit, mode, 0);
+	ep(form.mypreviewjs_blog_write, mode, 1);
+	ep(form.mypreviewjs_blog_cancel, mode, 2);
+
+	fsubmit(ef,"frozen",e);
+}
+
+/* from http://www.onicos.com/staff/iz/amuse/javascript/expert/ */
+
+/* utf.js - UTF-8 <=> UTF-16 convertion
+ *
+ * Copyright (C) 1999 Masanao Izumo <iz (at) onicos (dot) co (dot) jp>
+ * Version: 1.0
+ * LastModified: Dec 25 1999
+ * This library is free.  You can redistribute it and/or modify it.
+ */
+
+/*
+ * Interfaces:
+ * utf8 = utf16to8(utf16);
+ * utf16 = utf16to8(utf8) - deleted;
+ */
+
+/* utf.js - UTF-8 <=> UTF-16 convertion
+ *
+ * Copyright (C) 1999 Masanao Izumo <iz (at) onicos (dot) co (dot) jp>
+ * Version: 1.0
+ * LastModified: Dec 25 1999
+ * This library is free.  You can redistribute it and/or modify it.
+ */
+
+/*
+ * Interfaces:
+ * utf8 = utf16to8(utf16);
+ * utf16 = utf16to8(utf8);
+ */
+
+function utf16to8(str) {
+	var out, i, len, c;
+
+	out = h;
+	len = str.length;
+	for(i = 0; i < len; i++) {
+		c = str.charCodeAt(i);
+		if ((c >= 0x0001) && (c <= 0x007F)) {
+			out += str.charAt(i);
+		} else if (c > 0x07FF) {
+			out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+			out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));
+			out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+		} else {
+			out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));
+			out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+		}
+	}
+	return out;
+}
+
+/*
+function utf8to16(str) {
+	var out, i, len, c;
+	var char2, char3;
+
+	out = h;
+	len = str.length;
+	i = 0;
+	while(i < len) {
+		c = str.charCodeAt(i++);
+		switch(c >> 4) {
+			case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
+				// 0xxxxxxx
+				out += str.charAt(i-1);
+				break;
+			case 12: case 13:
+				// 110x xxxx   10xx xxxx
+				char2 = str.charCodeAt(i++);
+				out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F));
+				break;
+			case 14:
+				// 1110 xxxx  10xx xxxx  10xx xxxx
+				char2 = str.charCodeAt(i++);
+				char3 = str.charCodeAt(i++);
+				out += String.fromCharCode(((c & 0x0F) << 12) |
+						((char2 & 0x3F) << 6) |
+						((char3 & 0x3F) << 0));
+				break;
+		}
+	}
+
+	return out;
+}
+*/

@@ -1,0 +1,216 @@
+/*/////////////////////////////////////////////////////////////////////
+# @@HEADER2_NANAMI@@
+/////////////////////////////////////////////////////////////////////*/
+
+/* JavaScript Loader */
+/* http://blog.sus-happy.net/201201/javascript-parallel-loader/
+/* https://github.com/sus-happy/parallel-zer.js */
+
+/* http://nightmare.sourceforge.jp/wstl/hacks/javascript.html */
+/* http://archiva.jp/web/javascript/writing_style.html */
+
+var
+	$I = "indexOf",
+	$R = "replace",
+	$L = "length",
+	x=-1, h="",
+	W=window, D=W.document,
+	T=true, S="script",
+//	F="function",
+	U=navigator.appVersion;
+	I=U[$I]('MSIE') > x ? (
+		U[$I]('Opera') > x ? 0
+	  : parseInt(U[$R](/.*MSIE[ ]/,'').match(/^[0-9]+/))
+	) : 0;
+
+/*!START_DEBUG*/
+/*
+function _dl(s) {
+	var c="console";
+	if(W[c] || D[c]) {
+		eval(c + ".log('=>' + s)");
+	}
+	var f=D.getElementById("db_js");
+	if(f) {
+		f.value += s + "\n";
+	}
+}
+*/
+/*!END_DEBUG*/
+
+var z={
+	l: [],
+	s: {},
+	d: {},
+	m: 1,
+	n: 0,
+	a: 0,
+	c: h,
+//	cs: h,
+	t: 50,
+	s: function() {
+		/*!START_DEBUG*/
+		//_dl("Start z.script");
+		/*!END_DEBUG*/
+
+/*		z.cs = (function (e) {
+			if(e.nodeName.toLowerCase() == E)
+				return e;
+			return arguments.callee(e.lastChild);
+		 })(D);
+*/
+		z.c = arguments[0];
+		for(var i = 1, j = 0; i < arguments[$L]; i++) {
+			var arg1=arguments[i],
+				arg2=arg1,
+				JQ="jquery",
+				JQUERY=JQ + ".",
+				JQUERYMIGRATE=JQ + "-migrate.";
+
+//			if(typeof arg1 != F && arg1[$I](JQUERY) > x) {
+			if(arg1[$I](JQUERY) > x) {
+				if(!I || I > 8) {
+					arg1=arg1[$R](JQUERY, JQUERY);
+				}
+				z.l[j++] = arg1;
+				arg2=arg2[$R](JQUERY, JQUERYMIGRATE);
+			}
+			z.l[j++]=arg2;
+		}
+		z.z();
+	},
+	/* load main */
+	z: function() {
+		/*!START_DEBUG*/
+		//_dl("Start z.z");
+		/*!END_DEBUG*/
+
+		for(var i = z.m; i <  z.l[$L]; i++) {
+			var ScriptURL=z.l[i], objInterval;
+//			if(typeof ScriptURL == F) {
+//				z.c=ScriptURL;
+//				break;
+//			}
+			//_dl("z loop m=" + z.m + " + no=" + i + " ma=" + z.l[$L]);
+			z.n++;
+			//_dl("z.l[" + i + "]=" + z.l[i]);
+
+			if(ScriptURL == h) {
+				z.a = i;
+				////_dl("loop wait check start m=" + z.m + " no=" + i + " a=" + z.a)
+
+				objInterval=setInterval(function() {
+					/*!START_DEBUG*/
+					//_dl("Start setInterval");
+					/*!END_DEBUG*/
+
+					var chk=z.n - z.m, j;
+					/*!START_DEBUG*/
+					//_dl("Check setTimeout " + chk + "(" + z.no + "-" + z.m + ")");
+					/*!END_DEBUG*/
+					for(j = z.m; j < z.n; j++) {
+						if(z.s[j] == T)
+							/*!START_DEBUG*/
+							//			 {
+							//_dl("Checked setTimeout check " + j + " = true");
+							/*!END_DEBUG*/
+							chk--;
+						/*!START_DEBUG*/
+						//} else {
+							//_dl("Checked setTimeout check " + j + " = wait");
+						//}
+						/*!END_DEBUG*/
+
+						/*!START_DEBUG*/
+						//_dl("Check setTimeout end " + chk);
+						/*!END_DEBUG*/
+					}
+					if(chk < 1 || z.t-- < x) {
+						/*!START_DEBUG*/
+						//_dl("Call clearTimeout " + chk);
+						/*!END_DEBUG*/
+						clearInterval(objInterval);
+						z.m = z.n + 1;
+						z.z();
+						if(i > z.l[$L] - 2)
+							z.c();
+					}
+				}, z.t);
+				break;
+			} else
+				z.j(i);
+		}
+	},
+	/* load js */
+	j: function(ScriptArray) {
+
+		/*!START_DEBUG*/
+		//_dl("Start z.j " + c + "(" + z.l[c] + ")");
+		/*!END_DEBUG*/
+
+		var ScriptURL=z.l[ScriptArray];
+		if(ScriptURL == h)
+			z.s[ScriptArray]=T;
+		else {
+			var xhr,
+				xhrOpenCallback = function(e) {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					/*!START_DEBUG*/
+					//_dl("Start g " + c);
+					/*!END_DEBUG*/
+					z.d[ScriptURL] = xhr.responseText;
+					z.i(ScriptArray);
+				}
+			};
+
+			xhr = z.X( xhrOpenCallback );
+			if (xhr) {
+				/*!START_DEBUG*/
+				//_dl("Start z.j sendreq " + c + "(" + z.l[c] + ")");
+				/*!END_DEBUG*/
+		 		xhr.open("GET", ScriptURL, T);
+				xhr.send(null);
+			}
+		}
+	}
+	/* insert js */,
+	i: function(ScriptArray) {
+		var Element = D.createElement(S), defer="defer";
+		Element.type="text/java" + S;
+		Element.charset="utf-8";
+		Element.setAttribute(defer, defer);
+		Element.src=z.l[ScriptArray];
+		D.getElementsByTagName("head")[0].appendChild(Element);
+/*
+//		if( ie && ie < 10 && D.uniqueID ) {
+
+
+		if( z.ie && z.ie < 10 ) {
+			var s = D.createElement("span");
+			s.innerHTML = "&nbsp;<" + s + " defer='defer' type='" + j + "'>" + d + "</" + s + ">";
+			D.body.appendChild(s);
+		} else {
+
+			var S = D.createElement(s);
+			S.type = "text/java" + S;
+			S.charset = 'utf-8';
+			S.src=z.l[c];
+			S.appendChild(D.createTextNode(z.d));
+/			S.setAttribute('defer', 'defer');
+			z.cs.parentNode.insertBefore(S, z.cs);
+
+		}
+*/
+		z.s[ScriptArray]=T;
+	},
+	X: function(xhrOpenCallback, undefined) {
+		var xhr =
+			typeof XMLHttpRequest != undefined
+			? new XMLHttpRequest() : 
+				(  new ActiveXObject("Msxml2.XMLHTTP")
+				|| new ActiveXObject("Microsoft.XMLHTTP")
+				);
+		if (xhr) xhr.onreadystatechange = xhrOpenCallback;
+		return xhr;
+	},
+}, ld=z.s;

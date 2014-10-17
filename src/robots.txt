@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /*?md=attach
+Disallow: /*?cmd=attach
+Disallow: /*?cmd=adminedit
+Disallow: /*?cmd=edit
+Disallow: /*?cmd=diff
+Disallow: /*?cmd=backup
+Disallow: /*?cmd=newpage
+Disallow: /*?cmd=search
+Disallow: /*?cmd=setting
+Disallow: /*?cmd=help

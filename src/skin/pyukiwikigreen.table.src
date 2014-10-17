@@ -1,0 +1,186 @@
+# @@PYUKIWIKIVERSION@@
+# $Id$
+# Code=@@CODE@@ 
+
+#body,td
+	color:#000001=#000000
+	color:#000002=#ffffff
+
+#a.link
+#	color:#000003=#215dc6
+	color:#000003=#21c65d
+
+#a.active
+#	color:#000004=#215dc6
+	color:#000004=#21c65d
+
+#a.visited
+#	color:#000005=#a63d21
+	color:#000005=#21a63d
+
+#a.hover
+#	color:#000006=#215dc6
+#	color:#000007=#ccddee
+	color:#000006=#21c65d
+	color:#000007=#cceedd
+
+#h1,h2
+ 	color:#000008=#ddffee
+
+#h3
+	color:#000601=#ddffee
+	color:#000602=#ddffee
+	color:#000603=#ddffee
+	color:#000604=#ddffee
+
+	color:#000009=#ffffff
+
+#h4
+	color:#00000a=#ddffee
+	color:#00000b=#ffffff
+
+#h5,h6
+	color:#00000c=#ddffee
+
+#h1.error
+	color:#00000d=#ff0000	#red
+
+#pre
+	color:#000605=#ddeedd
+	color:#000606=#889988
+	color:#000607=#ddeedd
+	color:#000608=#889988
+	color:#00000e=#000000	#black
+	color:#00000f=#f0fff8
+
+#thead td.style_td
+#tfoot td.style_td
+	color:#000101=#d0e0d8
+
+#thead th.style_th
+#tfoot th.style_th
+	color:#000102=#e0f0e8
+
+#.style_table
+	color:#000103=#ccddd5
+
+#.style_th
+	color:#000104=#eeeeee
+
+#.style_td
+	color:#000105=#eefff5
+
+#.noexists
+	color:#000106=#eeffcc
+
+#.super_index, a.note_super
+	color:#000107=#33dd33
+
+#.full_hr
+	color:#000108=#333333
+
+#.note_hr
+	color:#000109=#333333
+
+
+#.word0
+	color:#000201=#ffff66
+	color:#000202=#000000
+#.word1
+	color:#000203=#a0ffff
+	color:#000204=#000000
+#.word2
+	color:#000205=#99ff99
+	color:#000206=#000000
+#.word3
+	color:#000207=#ff9999
+	color:#000208=#000000
+#.word4
+	color:#000209=#ff66ff
+	color:#00020a=#000000
+#.word5
+	color:#00020b=#880000
+	color:#00020c=#ffffff
+#.word6
+	color:#00020d=#00aa00
+	color:#00020e=#ffffff
+#.word7
+	color:#000301=#886800
+	color:#000302=ffffff
+#.word8
+	color:#000303=#004699
+	color:#000304=#ffffff
+#.word9
+	color:#000305=#990099
+	color:#000306=#ffffff
+
+#div#preview
+	color:#000307=#f5fff8
+
+#.style_calendar
+	color:#000308=#ccd5dd
+
+#.style_td_caltop
+	color:#000309=#eef5ff
+
+#.style_td_today
+	color:#00030a=#ffffdd
+
+
+#.style_td_sat
+	color:#00030b=#dde5ff
+#.style_td_sun
+	color:#00030c=#ffeeee
+#.style_td_blank
+	color:#00030d=#eef5ff
+#.style_td_day
+	color:#00030e=#eef5ff
+#.style_td_week
+	color:#000401=#dde5ee
+
+#.diff_added
+	color:#000402=#0000ff	#blue
+
+#.diff_removed
+	color:#000403=#ff0000	#red
+
+#hr.short_line
+	color:#000404=#333333
+
+#span.new1
+	color:#000405=#ff0000	#red
+#span.new5
+	color:#000406=#00ff00	#green
+
+#.ref_info
+	color:#000407=#222222
+
+#td.vote_label
+	color:#000408=#ffcccc
+#td.vote_td1
+	color:#000409=#dde5ff
+#td.vote_td2
+	color:#00040a=#eef5ff
+
+#.error
+	color:#00040b=#ff0000	# red
+
+#div.partinfo {
+	color:#00040c=#5555ff
+
+#a.partedit
+	color:#00040d=#aaaaff
+#.mail
+	color:#00040e=#21c65d
+
+#a:link.trackback,
+#a:active.trackback,
+#a:visited.trackback,
+#a:hover.trackback
+	color:#000501=#21c65d
+
+#span.trackback {
+	color:#000502=#666666
+
+#.half {
+	color:#000503=#000000

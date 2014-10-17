@@ -1,0 +1,5 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+ja
+en

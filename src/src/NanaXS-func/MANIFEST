@@ -1,0 +1,10 @@
+func.xs
+Makefile.PL
+MANIFEST
+t/dbmname.t
+t/undbmname.t
+func.pm
+xs_dbmname.c
+xs_decode.c
+xs_encode.c
+xs_undbmname.c

@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+7zip または p7zip をインストールする。(あれば不要）
+展開する
+cd する
+make release をする。
+cd .. をする。
+rm -rf CVS をする。
+mkdir CVS をする。
+cd CVS をする。
+cvs -d:ext:そーすふぉーずのユーザー名@cvs.sourceforge.jp:/cvsroot/pyukiwiki co . をする。
+cp -pR ../pyukiwiki-develop/release/pyukiwiki-ばーじょん-devel/* PyukiWiki-Devel をする。
+必要に応じて、cvs add PyukiWiki-Devel/dir/filename または
+rm PyukiWiki-Devel/dir/filename と cvs rm PyukiWiki-Devel/dir/filename をする。
+cvs update をする。
+cvs commit をする。
+cd PyukiWiki-Devel をする。
+make pkg をする。
+archive/pyukiwiki-ばーじょん/ 以下に全パッケージがリリースされる。
+
+coreutilsは、cvsを重複アップロード防止する為に、cpコマンドが入っているので
+cp に -u オプションのない環境であれば、ビルドが必要
+
+sh configure --disable-threads
+makle
+（失敗してもいい）
+cp src/cp (target)/bin
+
+ /usr/binとか/binにいれないように
+
+</pre>
+</body>
+</html>

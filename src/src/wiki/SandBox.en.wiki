@@ -1,0 +1,120 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+#freeze
+#metarobots(disable)
+#title(SandBox Practice page)
+* SandBox: This is Practice page
+
+|To become a victim of SEO SPAM bot, this page has been frozen by default.|
+
+#contents
+
+* ''Head''
+
+* Headline 1
+
+** Heding 1-1
+
+*** Subhead 1-1-1
+- Item 1
+- Item 2
+- Item 3
+
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 段落''強調''1Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+
+Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 
+Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 
+Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2
+
+** Heading 1-2
+:Term 1|Explanatory text 1 that I wrote many, and ''emphasized''((Annotation 1 : WikiName))
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 
+:Term 2|Explanatory text 2 that I wrote many. ((Annotation 2 : [[BracketName]]))
+:Term 3|Explanatory text 3 that I wrote many. ((Annotation 3 : [[BracketName]]))
+
+:用語2|いろいろ書いた解説文2 ((注釈2: [[ブラケットネーム]]))
+:用語3|いろいろ書いた解説文3 ((注釈3: You can create ((annotation annotations)) also in the comments))
+
+-----------------------------------------
+* Headline 2
+
+** Subhead 2-1
+
+** Subhead 2-2
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph'''Italic'''1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+Paragraph 1 Paragraph 1 Paragraph 1 Paragraph'''''ItalicBold'''''1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+> Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 
+> Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 
+> Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2
+
+Level 0 Level 0 Level 0 Level 0 Level 0 Level 0
+> Level 1
+> Level 1
+> Level 1
+>> Level 2
+>> Level 2
+>> Level 2
+>>> Level 3
+- Papu 1
+-- Papu 2
+Papu 2
+--- Papu 3
+-- Papu 2
+--- Papu 3
+-- Papu 2
+--- Papu 3
+>>> Level 3
+>>> Level 3
+>>> Level 3
+
+* ''Date''
+&date;
+- Date 2004-08-16
+
+&date;
+- 2004-08-16
+
+&time;
+- Time 07:29:03
+
+&time;
+- 07:29:03
+
+&now;
+- Now2004-08-16 (Mon) 07:30:27
+
+&now;
+- 2004-08-16 (Mon) 07:29:03
+
+
+* ''Link''
+
+URL or e-mail address will be automatically linked.
+- URL -- http://example.org/
+- E-mail -- <foo (at) example (dot) org>
+- I displayed as an image file URL if various.
+-- @@BASEURL@@/image/pyukibanner.gif
+
+
+* ''Other text decoration''
+
+ Preformatted text Preformatted text Preformatted text
+ Preformatted text Preformatted text Preformatted text
+
+COLOR(#993333){ Rules can also change the color (COLOR(#993333)) }
+
+SIZE(10){ Rules can also change the size (SIZE(10)) }
+
+SIZE(20){ COLOR(#333399){ Specify both (SIZE(20)COLOR(#333399)) } }
+
+%%Strikethrough%%
+
+Flush left
+CENTER:Centering
+RIGHT:Right alignment

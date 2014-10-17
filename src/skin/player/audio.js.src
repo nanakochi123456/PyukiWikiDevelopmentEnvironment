@@ -1,0 +1,488 @@
+/*/////////////////////////////////////////////////////////////////////
+# audio.js.src - This is PyukiWiki, yet another Wiki clone.
+# $Id: audio.js.src,v 1.13 2012/09/04 11:44:50 papu Exp $
+# Build on 2012-09-04 19:57:07
+#
+# "PyukiWiki" ver 0.2.1-beta2-dev1 $$
+# Author: Nanami http://nanakochi.daiba.cx/
+# Copyright (C) 2004-2007 Nekyo
+# Copyright (C) 2005-2012 PyukiWiki Developers Team
+# http://pyukiwiki.info/
+# Based on YukiWiki http://www.hyuki.com/yukiwiki/
+# Powerd by PukiWiki http://pukiwiki.sfjp.jp/
+# License: GPL3 and/or Artistic or each later version
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the same terms as Perl itself.
+# Return:CRLF Code=UTF-8 1TAB=4Spaces
+/////////////////////////////////////////////////////////////////////*/
+/*
+ * http://codezine.jp/article/detail/995
+ *
+ */
+
+// +--------------+-------------+---------------+----------------+----------+
+// |   Browser    | uu("Audio") |   HTML5Audio  |SilverlightAudio|FlashAudio|
+// +--------------+-------------+---------------+----------------+----------+
+// |Firefox3.0    | mp3         |       -       |      mp3       |   mp3    |
+// |Firefox3.5+   | mp3,ogg,wav |      ogg  wav |      mp3       |   mp3    |
+// |Safari3.x     | mp3         |       -       |      mp3       |   mp3    |
+// |Safari4+      | mp3,    wav |(mp3)      wav |      mp3       |   mp3    |
+// |Chrome4+      | mp3,ogg,    |(mp3) ogg      |      mp3       |   mp3    |
+// |Opera9x-10.10 | mp3         |       -       |       -        |   mp3    |
+// |Opera10.50+   | mp3,ogg,wav |      ogg  wav |       -        |   mp3    |
+// |iPhone3       |     -       |       -       |       -        |    -     |
+// |IE6,IE7,IE8   | mp3         |       -       |      mp3       |   mp3    |
+// |IE9 preview   | mp3         |       -       |      mp3       |   mp3    |
+// +--------------+-------------+---------------+----------------+----------+
+
+var ptimer,
+	w				= window,
+	d				= w.document,
+	l				= d.location,
+	n				= navigator,
+
+	OPERA			= ua("OPERA"),
+	FIREFOX 		= ua("FIREFOX"),
+	GECKO			= ua("GECKO"),
+	CHROME			= ua("CHROME"),
+	SAFARI			= ua("SAFARI"),
+	MSIE			= ua("MSIE"),
+	WINDOWS			= ua("WINDOWS"),
+//	MACOS			= ua("MACOS"),
+//	WINDOWSPHONE 	= ua("WINDOWSPHONE"),
+//	ANDROID			= ua("ANDROID"),
+//	IPOD			= ua("IPOD"),
+//	IPAD			= ua("IPAD"),
+//	IPHONE			= ua("IPHONE"),
+//	WII				= ua("WII"),
+//	GAMEBOY			= ua("GAMEBOY"),
+//	NINTENDODS		= ua("NINTENDODS"),
+//	PSP				= ua("PSP"),
+//	PS2				= ua("PS2"),
+//	PS3				= ua("PS3"),
+	VERSION			= ua("VERSION"),
+	MAGERVERSION	= ua("MAGERVERSION"),
+
+	p='0px',
+	h=""
+	;
+
+var FlashAudio = {
+	ready : false,
+	swf	: null,
+	obj : p,
+	play : function(src) {
+		debug("FlashAudio:play(" + src + "); start");
+		var f = FlashAudio.getObj();
+		if (f && f.playFile) {
+			playaudio.vol(playaudio._volume);
+			try {
+				f.playFile(src);
+				debug("FlashAudio:play(" + src + "); complete");
+			} catch(e){}
+			return true;
+		}
+		return false;
+	},
+
+	stop : function() {
+		debug("FlashAudio:stop(); start");
+		var f = FlashAudio.getObj();
+		if (f && f.stop) {
+			try {
+				f.stop();
+				debug("FlashAudio:stop(); completed");
+			} catch(e){}
+			return true;
+		}
+		return false;
+	},
+
+	vol : function(v) {
+		debug("FlashAudio:vol(" + v + "); start");
+		var f = FlashAudio.getObj();
+		if (f && f.vol) {
+			try {
+				f.vol(v);
+				debug("FlashAudio:vol(" + v + "); complete");
+			} catch(e){}
+			return true;
+		}
+		return false;
+	},
+
+	getvol : function() {
+		debug("FlashAudio:getvol(); start");
+		var f = FlashAudio.getObj();
+		if (f && f.getvol) {
+			var v=100;
+			try {
+				v=f.getvol();
+				debug("FlashAudio:getvol(); complete value=" + v);
+			} catch(e){}
+			return v;
+		}
+	},
+
+	isReady : function() {
+		return FlashAudio.ready;
+	},
+
+	isSupport : function(tst) {
+		return /\.MP3$/i.test(tst);
+	},
+
+	getObj : function() {
+		return document.getElementById(FlashAudio.obj);
+	},
+
+	init : function(skin) {
+		if(FlashAudio.ready == true) {
+			return;
+		}
+		FlashAudio.swf=skin + '/audio.swf';
+		debug("FlashAudio:init(" + skin + "); start");
+
+		var element = document.createElement('div');
+		element.id = FlashAudio.obj;
+		var objBody = document.getElementsByTagName("html").item(0);
+		objBody.appendChild(element);
+
+		swfobject.embedSWF(FlashAudio.swf, FlashAudio.obj, p, p, "8.0.0", "");
+		FlashAudio.ready=true;
+		debug("FlashAudio:init(" + skin + "); complete");
+	}
+}
+
+var HTML5Audio = {
+	audioclass : null,
+
+	play : function(src) {
+		debug("HTML5Audio:play(" + src + "); start");
+		var tmp=false;
+		try {
+			HTML5Audio.audioclass = new Audio(src);
+			HTML5Audio.audioclass.play();
+			tmp=true;
+			debug("HTML5Audio:play(" + src + "); complete");
+		} catch(e){}
+		return tmp;
+	},
+
+	stop : function() {
+		debug("HTML5Audio:stop(); start");
+		if(HTML5Audio.audioclass != null) {
+			try {
+				HTML5Audio.audioclass.pause();
+				debug("HTML5Audio:stop(); complete");
+				return true;
+			} catch(e){}
+		}
+		return false;
+	},
+
+	vol : function(v) {
+		debug("HTML5Audio:vol(" + v + "); start");
+		try {
+			HTML5Audio.audioclass.volume = v / 256;
+			debug("HTML5Audio:vol(" + v + "); complete");
+		} catch(e){}
+	},
+
+	getvol : function() {
+		var v=1;
+		debug("HTML5Audio:getvol(); start");
+		try {
+			v=HTML5Audio.audioclass.volume;
+			debug("HTML5Audio:getvol(); complete value=" + v);
+		} catch(e){}
+		return Math.floor(v * 256);
+	},
+
+	isReady : function() {
+		return w.HTMLAudioElement;
+	},
+
+	isSupport : function(tst) {
+		if(
+			FIREFOX && MAGERVERSION < 4
+		 || MSIE && MAGERVERSION < 9 + 1
+		 || OPERA && MAGERVERSION < 11
+		 || SAFARI && MAGERVERSION < 4
+			) {
+			return false;
+		}
+		if (/\.MP3$/i.test(tst)) {
+			if(MSIE || WINDOWS && SAFARI || CHROME) {
+				return true;
+			}
+		}
+		if (/\.OG\w+$/i.test(tst)) {
+			if(GECKO || CHROME || OPERA) {
+				return true;
+			}
+		}
+		if (/\.WAV$/i.test(tst)) { // wav
+			if(GECKO || WINDOWS && SAFARI || OPERA) {
+				return true;
+			}
+		}
+		return false;
+	}
+}
+var NoAudio = {
+	play: function(src) {
+		if(confirm(ln(
+				"ja", "このブラウザーでは再生できません。\nHTML Audioが無効になっていないか、Adobe Flashがインストールされているか確認して下さい。",
+				"en", "Can't play on this browser.\nPlease check HTML Audio is disabled or Adobe Flash installed.",
+				h))) {
+			return false;
+		}
+	},
+
+	stop : function() {
+		return false;
+	},
+
+	vol : function() {
+		return false;
+	},
+
+	getvol : function() {
+		return false;
+	},
+
+	isReady : function() {
+		return true;
+	},
+
+	isSupport: function(src) {
+		return true;
+	},
+}
+
+// クラスの作成
+var playaudio = {
+	ver			: '1.0',
+	feedouttime	: 0,
+	volume		: 100,
+	sp			: 0,
+	_volume		: 100,
+	_dupplay	: 0,
+	_isplay		: 0,
+	_timeout	: null,
+	_flash		: 0,
+	_html5		: 1,
+	name		: null,
+	backend		: null,
+	backendName	: h,
+	backendOrder: new Array("HTML5Audio", "FlashAudio", "NoAudio"),
+	Class : {
+		"HTML5Audio":	HTML5Audio,
+		"FlashAudio":	FlashAudio,
+		"NoAudio":		NoAudio
+	},
+
+	play : function(src1, src2, src3, src4, src5) {
+		if(playaudio._dupplay == 1) return;
+		if(playaudio.feedouttime > 0 && playaudio._isplay == 1) {
+			playaudio.feedout(
+				playaudio.feedouttime,
+				"playaudio.stop();playaudio._play(\""
+				+ src1 + "\",\""
+				+ src2 + "\",\""
+				+ src3 + "\",\""
+				+ src4 + "\",\""
+				+ src5 + "\");");
+		} else {
+			playaudio._play(src1, src2, src3, src4, src5);
+		}
+	},
+
+	_play : function(src1, src2, src3, src4, src5) {
+		if(playaudio._isplay==0) {
+			var flag=false;
+
+			for(var i=0; i < playaudio.backendOrder.length; i++) {
+				var backendName=playaudio.backendOrder[i];
+/*
+			playaudio.backendOrder.split(",").some(function(backendName) {
+*/
+				var Class = playaudio.Class[backendName];
+				if(flag == false && Class) {
+					if(Class.isReady) {
+						if(Class.isReady()) {
+							if(Class.isSupport) {
+								if(Class.isSupport(src1)) {
+									flag=true;
+									playaudio.name=src1;
+								}
+								if(Class.isSupport(src2)) {
+									flag=true;
+									playaudio.name=src2;
+								}
+								if(Class.isSupport(src3)) {
+									flag=true;
+									playaudio.name=src3;
+								}
+								if(Class.isSupport(src4)) {
+									flag=true;
+									playaudio.name=src4;
+								}
+ 								if(Class.isSupport(src5)) {
+									flag=true;
+									playaudio.name=src5;
+								}
+								if(flag == true) {
+									playaudio.backend=Class;
+									playaudio.backendName=backendName;
+								}
+							}
+						}
+					}
+				}
+/*
+			});
+*/
+			}
+
+			if(playaudio.backend.play(playaudio.name)) {
+				playaudio._dupplay=0;
+				playaudio._isplay=1;
+			}
+		}
+	},
+
+	stop : function () {
+		playaudio._stop();
+	},
+
+	_stop : function () {
+		if(playaudio.backend) {
+			if(playaudio.backend.stop()) {
+				playaudio._isplay=0;
+				return true;
+			}
+		}
+		return false;
+	},
+
+	feed: function(sec, start, end, now, callback) {
+		playaudio._dupplay=1;
+		start=parseInt(start);
+		end=parseInt(end);
+		var interval=
+			Math.floor
+				(
+					sec * 1000
+					/ (now < end ? end - now : now - end)
+				);
+		if(start == end) {
+			clearTimeout(ptimer);
+			eval(callback);
+			return;
+		} else if(start < end) {
+			start++;
+			playaudio.vol(start);
+		} else if(end < start) {
+			start--;
+			playaudio.vol(start);
+		}
+		clearTimeout(ptimer);
+		ptimer=setTimeout(
+			"playaudio.feed("
+				+ sec + ","
+				+ start + ","
+				+ end + ","
+				+ now + ","
+				+ "'" + callback + "');"
+			, interval);
+	},
+
+	feedout: function(sec, callback) {
+		playaudio._volume=playaudio.getvol();
+		playaudio.volume=playaudio._volume;
+		playaudio.feed(sec, playaudio.volume, 0, playaudio.volume, callback);
+	},
+
+	vol : function (v) {
+		if(v === void 0) {
+			return playaudio._getvol();
+		}
+		playaudio._vol(v);
+	},
+
+	_vol : function (v) {
+		if(playaudio.backend) {
+			if(playaudio.backend.vol(v)) {
+				playaudio.volume=v;
+				return true;
+			}
+		}
+		return false;
+	},
+
+	getvol : function () {
+		return playaudio._getvol();
+	},
+
+	_getvol : function () {
+		var tmp;
+		if(playaudio.backend) {
+			tmp=playaudio.backend.getvol();
+		}
+		if(tmp) {
+ 			playaudio.volume=tmp;
+		}
+		return playaudio.volume;
+	},
+
+	setfeed : function(v) {
+		playaudio.feed=v;
+	},
+
+	init : function (skin, feedouttime) {
+		debug("playaudio:init();");
+
+//		ev.add("onkeydown", "playaudio.key");
+		ev.add("onkeypress", "playaudiokey", playaudiokey);
+		playaudio.feedouttime=feedouttime;
+		for(var i=0; i < playaudio.backendOrder.length; i++) {
+			var backendName=playaudio.backendOrder[i];
+/*
+		playaudio.backendOrder.split(",").some(function(backendName) {
+*/
+			var Class = playaudio.Class[backendName];
+			if (Class && Class.init) {
+				Class.init(skin);
+			}
+/*
+		});
+*/
+		}
+	},
+	key : function(e) {
+		if(this._isplay == 0) return true;
+		if(keyCode(e) == 27) {
+			if(confirm(ln(
+					"ja", "停止しますか？",
+					"en", "Stop Sound ?",
+					h))) {
+				playaudio.stop();
+			}
+		}
+		if(keyCode(e) == 37) {
+			var vol=playaudio.getvol() - 1;
+			playaudio.vol(vol > 0 ? vol : 0);
+		}
+		if(keyCode(e) == 39) {
+			var vol=playaudio.getvol() + 1;
+			playaudio.vol(vol < 255 ? vol : 255);
+		}
+	}
+}
+
+function playaudiokey {
+	playaudio.key(event);
+}

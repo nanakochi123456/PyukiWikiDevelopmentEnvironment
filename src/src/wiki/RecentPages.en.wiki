@@ -1,0 +1,12 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+- $year-$mon-$day ($week) 12:36:00 FrontPage  - This page is PyukiWiki's FrontPage.
+- $year-$mon-$day ($week) 12:35:00 MenuBar  - MenuBar
+- $year-$mon-$day ($week) 12:34:00 SandBox  -   SandBox (Practice page)
+- $year-$mon-$day ($week) 12:33:00 InterWikiSandBox - Practice page of Practice page.
+- $year-$mon-$day ($week) 12:32:00 [[Help]]  - PyukiWiki Help
+- $year-$mon-$day ($week) 12:31:00 [[FormatRule]]  - Text Formatting Rules
+- $year-$mon-$day ($week) 12:30:00 InterWikiName  -  InterWiki ServerLIst.
+- $year-$mon-$day ($week) 12:01:00 [[The "Artistic License"]]  - The &quot;Artistic License&quot;
+- $year-$mon-$day ($week) 12:00:00 [[GNU General Public License]]  - GNU GENERAL PUBLIC LICENSE

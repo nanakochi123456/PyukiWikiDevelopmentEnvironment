@@ -1,0 +1,23 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+FrontPage.ja.wiki	$::FrontPage	developper,devel,full,compact	auto	ja	euc
+MenuBar.ja.wiki	$::MenuBar	developper,devel,full,compact	auto	ja	euc
+RecentPages.ja.wiki	$::RecentChanges	developper,devel,full,compact	auto	ja	euc
+FormatRule.ja.wiki	$::resource{rulepage}	developper,devel,full,compact	force	ja	euc
+Help.ja.wiki	$::resource{help}	developper,devel,full,compact	force	ja	euc
+InterWikiName.ja.wiki	$::InterWikiName	developper,devel,full,compact	force	ja	euc
+InterWikiSandBox.ja.wiki	$::InterWikiSandBox	developper,devel,full	default	ja	euc
+SandBox.ja.wiki	$::SandBox	developper,devel,full	default	ja	euc
+license_art.en.wiki	The Artistic License	developper,devel,full	default	en	raw
+license_gpl.en.wiki	GNU General Public License	developper,devel,full	default	en	raw
+license_art.ja.wiki	The Artistic License 日本語訳	developper,devel,full	default	ja	euc
+license_gpl.ja.wiki	GNU 一般公衆利用許諾書 (GNU General Public License）	developper,devel,full	default	ja	euc
+plugin_admin.ja.wiki	プラグイン(Admin)	developper,devel,full	opt	ja	euc
+plugin_explugin.ja.wiki	プラグイン(Explugin)	developper,devel,full	opt	ja	euc
+plugin_plugin_ah.ja.wiki	プラグイン(A-H)	developper,devel,full	opt	ja	euc
+plugin_plugin_ip.ja.wiki	プラグイン(I-P)	developper,devel,full	opt	ja	euc
+plugin_plugin_rz.ja.wiki	プラグイン(R-Z)	developper,devel,full	opt	ja	euc
+specification.ja.wiki	内部仕様書	developper,devel	opt	ja	euc
+specification_wikicgi.ja.wiki	wiki.cgi 仕様書	developper,devel	opt	ja	euc
+specification_xs.ja.wiki	XSモジュール仕様書	developper,devel	opt	ja	euc

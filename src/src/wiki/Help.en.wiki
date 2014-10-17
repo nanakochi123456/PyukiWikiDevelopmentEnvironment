@@ -1,0 +1,164 @@
+// PyukiWiki wiki defined file
+// $Id$
+
+#freeze
+#metarobots(disable)
+#title(PyukiWiki Help)
+*[[PyukiWiki>PyukiWiki:FrontPage]]Help
+
+-[[Format Rule>FormatRule]]
+-[[FAQ(PyukiWiki official)>PyukiWiki:PyukiWiki/FAQ]]
+//-[[Standard Plugin Manual(PyukiWiki official)>PyukiWiki:PyukiWiki/Plugin/Standard]]
+//-[[Extend Plugin Manual (PyukiWiki official)>PyukiWiki:PyukiWiki/Plugin/ExPlugin]]
+//-[[Administrators Plugin Manual (PyukiWiki official)>PyukiWiki:PyukiWiki/Plugin/Admin]]
+
+----
+#contents
+----
+** Navigation menu
+At the top of the screen is the navigation menu.
+:Top:Want to transition to the top menu. ~
+FrontPage is displayed by default.
+:Edit:Edit the current page.~
+In the pages that have been frozen Edit menu is not displayed.
+:Frozen:freeze the currently displayed page.~
+You can also edit a file that has been frozen, you can remove the freeze.
+:Diff:Display the differences of pages that have been modified and the previous page is currently being displayed.
+:Backup:Display the past history of the currently page, or you can view the differences.#nocompact
+:Attach:Attach file to currently page.~
+May not work properly depending on the environment.
+:Reload:Redisplay currently page.
+:New:Create new page.
+:List:Display page list.
+:Search:Display a list of pages that contain the words that you want to search.
+:History:Appears from the order list in a new page.
+:Help:Display Help.
+
+**What is [[PyukiWiki>PyukiWiki:FrontPage]] ?
+All pages can be edited by anyone.
+That page can be edited by clicking the "Edit" at the top of the page you want to change the page.
+Edits are formatted according to [[FormatRule]].
+
+SandBox is no problem so how basically be added to the hand, please try to edit without fear of consequence.((However, because it is frozen, unfrozen once please.))
+
+**How to create new page ?
+In already created page (egg SandBox and more), somewhere on the page, or type [[WikiName>PyukiWiki:PyukiWiki/Glossary/WikiName]](Mixing uppercase and lowercase letters)((However, WikiName, it may no longer be used by the administrator)) or 
+type BracketName(surrounded by [[]]) a link displayed "?" after the part that you entered is created.
+It provides a new page edit screen when you click on it, then you can modify the page the same way you usually write. ~
+
+Also create a new page from the link [[New:]]
+
+**Unlike the BBS?
+Will not know who did that change hands be added to the page. If this is a concern, I'll keep writing your name in the part that was tampered with. --hogehoge? <- like this.
+
+
+**Can someone write?
+Such is the Wiki. Anyone anywhere can add, you can fix it.
+[[PyukiWiki>PyukiWiki:FrontPage]] has backup function and has sent the send the changes for the administrator function. You can also be restored from a backup in the mail.
+
+**Could the change of people off the browser cache and proxy?
+More than you want to edit the page, the form to add the hand from the state at the time of editing.
+But I will if someone has fallen into if you are updating while editing?
+Please confidence.
+[[PyukiWiki>PyukiWiki:FrontPage]] has will check whether together to compare the modification date of the original data and the modification date of the page for updates. Reload the page, when the "collision" update occurs, please re-edit.
+
+*[[PyukiWiki>PyukiWiki:FrontPage]] Proprietary specification
+[[PyukiWiki>PyukiWiki:FrontPage]] is based on the [[YukiWiki>YukiWiki:FrontPage]], implemented as a subset of the [[PukiWiki>PukiWiki:FrontPage]].
+
+**Change from [[YukiWiki>YukiWiki:FrontPage]]
+- Changed to the top page FrontPage. frontpage.txt I do not use.
+- Changed to display as a menu MenuBar.
+- [[PyukiWiki>PyukiWiki:FrontPage]] is using
+css from [[PukiWiki>PukiWiki:FrontPage]]'s default.ja.css, print.css which customized.((In current specification, [[PukiWiki>PukiWiki:FrontPage]] using php to css.))
+- Add a menu style [[PukiWiki>PukiWiki:FrontPage]] such as [Reload]
+- Plugin functions and implemented as automatic table of contents, create, list, delta, search, site map, RSS, OPML output.
+- [[Plugins>PyukiWiki:PyukiWiki/Plugin/Standard/]], [[ExPlugins>PyukiWiki:PyukiWiki/Plugin/ExPlugin/]]
+
+Plugins that are currently supported by the standard
+alias,
+aname,
+article,
+back,
+backup,
+br,
+bugtrack,
+calender,
+calendar2,
+clear,
+color,
+comment,
+contents,
+counter,
+date,
+diff,
+help,
+hr,
+img,
+include,
+ipv6check,
+link,
+list,
+location,
+lookup,
+ls2,
+mailform,
+metarobots,
+navi,
+new,
+newpage,
+now,
+online,
+pagenavi,
+pcomment,
+perlpod,
+popular,
+recent,
+ref,
+rss10,
+rss10page,
+ruby,
+sbookmark,
+search,
+sitemap,
+setlinebreak,
+showrss,
+size,
+sub,
+sup,
+time,
+title,
+topicpath,
+twitter,
+verb,
+vote,
+yetlist
+
+Subset version Some functions are not implemented or even a.
+[[YukiWiki>YukiWiki:FrontPage]] The thing you plug directly into the function of [[YukiWiki>YukiWiki:FrontPage]].
+
+The basic formatting rules: It is compliant with [[YukiWiki>YukiWiki:FrontPage]], compliant PukiWiki, the following features have been enhanced.
+
+**[[PyukiWiki>PyukiWiki:FrontPage]] implementation Features unique
+- It will be wrapped in a single superscript and two "^"
+ 2^^2^^=4
+Display 2^^2^^=4
+
+- It will be wrapped in a single subscript and two "^"
+ 11001011__2__=0xa9
+Display 11001011__2__=0xa9
+
+Because it provides sub, sup plug-in is the person who is focused on compatibility [[YukiWiki>YukiWiki:FrontPage]], or [[PukiWiki>PukiWiki:FrontPage]], see there.
+
+ 2&sup(2);=4
+Display 2&sup(2);=4
+
+ 11001011&sub(2);=0xa9
+Display 11001011&sub(2);=0xa9
+
+-Headings, citations can be up to 5 levels.
+ ****Headling
+ >>>>>Quote
+Will be able to view the more highly expressive, by setting the style sheet to match.
+
+-Extension date and time display~
+Writing &amp;date(); and &amp;time(); in the text, the date of the display, the time is displayed.

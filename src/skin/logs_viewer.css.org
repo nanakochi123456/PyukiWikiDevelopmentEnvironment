@@ -1,0 +1,49 @@
+/* @@PYUKIWIKIVERSION@@ */
+/* $Id$ */
+/* Code=@@CODE@@ */
+
+/* logs_viewer graph bar */
+/* graph CSS sample */
+/* http://papermashup.com/using-php-and-css-to-make-a-simple-graph/ */
+.graphcont {
+	color:#000;
+	font-weight:700;
+	float:left
+}
+
+.graph {
+	float:left;
+/*	background-color:#cecece;	*/
+	position:relative;
+	width:600px;				/* ìKìñÇ»êîéöÅBäæ */
+	border:#80a0ff 1px solid;	/* í«â¡ */
+	padding:0
+}
+
+.graph .bar {
+	display:block;
+	position:relative;
+	background-color:#1080ff;
+/*	background-image:url(http://papermashup.com/demos/php-graph/images/bargraph.gif);	*/
+	background-position:right center;
+	background-repeat:repeat-x;
+	border-right:#538e02 1px solid;
+	text-align:center;
+	color:#ffffff;
+	height:25px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:1.9em
+}
+
+.graph .bar span {
+	position:absolute;
+	left:1em
+}
+
+.style_th,
+.style_td {
+	padding:5px;
+	white-space: nowrap;
+}
+
