@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+multicomment_plugin_btn=コメント追加
+multicomment_plugin_clear=クリア
+multicomment_plugin_err=記載事項が不足しています
+multicomment_plugin_dmymsg=↑ここに入力フォームが表示されても、絶対に入力しないで下さい。

@@ -1,0 +1,37 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+playvideo_wmp_play=Windows Media Player
+playvideo_html5video_play=HTML5 Video
+playvideo_flashvideo_play=Flash Video
+playvideo_youtube_play=Youtube
+playvideo_nicovideio_play=NicoVideo
+playvideo_download=Download
+
+playvideo_err_noie=playvideo:Please using Internet Explorer.
+playvideo_err_notfound=playvideo : File not found $1 (type: $2)
+playvideo_err_notsupport=playvideo : This browser is not suppoted.
+
+playvideo_ext_wmv=Windows Media Video
+playvideo_ext_html=HTML Video
+
+playvideo_youtube_url=http://youtu.be/
+#playvideo_youtube_url="http://www.youtube.com/watch?v=
+#playvideo_youtube_fakeniconico_url=http://video.niconico.com/watch/http://www.youtube.com/watch?v=
+playvideo_youtube_fakeniconico_url=http://video.niconico.com/watch/ut
+playvideo_niconico_url=http://video.niconico.com/watch/
+
+playvideo_youtube_object=<iframe width="560" height="315" src="http://www.youtube.com/embed/##ID##" frameborder="0" allowfullscreen="allowfullscreen"><a href="http://youtu.be/##ID##">Jump to Youtube video of ID ##ID##</a></iframe>
+playvideo_niconico_object=<script type="text/javascript" src="http://ext.nicovideo.com/thumb_watch/##ID##"></script><noscript><a href="http://video.nicovideo.jp/watch/##ID##">Jump to niconico video of ID ##ID##</a></noscript>
+playvideo_niconico_object<iframe width="312" height="176" src="http://ext.nicovideo.com/thumb/##ID##" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://video.nicovideo.jp/watch/##ID##">Jump to niconico video of ID ##ID##</a></iframe>
+
+playvideo_total=TOTAL
+playvideo_today=TODAY
+playvideo_yesterday=YERSTERDAY
+
+playvideo_wmv_chrome=You have to have previously installed the Windows Media Player plugin, please follow the instructions to install it <a target="_blank" href="http://support.google.com/chrome/bin/answer.py?answer=95697">here</a>.
+
+playvideo_vcgi_author=Author:&nbsp;
+playvideo_vcgi_copyright=Copyright:&nbsp;
+playvideo_vcgi_closebutton=Close Window

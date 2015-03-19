@@ -1,0 +1,31 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+ignoreoldbrowser_plugin_title_ignoreos=ご利用の端末には対応していません。
+ignoreoldbrowser_plugin_title_notsupportbrowser=ご利用のブラウザーには対応していません。
+
+
+ignoreoldbrowser_plugin_ignoreos=ご利用の端末では、$wiki_title は対応していません。<br />別の端末、または、最新のオペレーティングシステムをインストールして、ご利用下さい。
+
+ignoreoldbrowser_plugin_nosupportbrowser=ご利用のブラウザーでは、$wiki_title は対応していま せん。<br />以下より、最新のブラウザーをダウンロードして、ご利用下さい。<br />
+
+ignoreoldbrowser_plugin_msie8=<a href="http://www.microsoft.com/ja-jp/windows/products/winfamily/ie/function/default.aspx">Internet Explorer 8</a>
+ignoreoldbrowser_plugin_msie9=<a href="http://windows.microsoft.com/ja-jp/internet-explorer/downloads/ie-9/worldwide-languages">Internet Explorer 9</a>
+ignoreoldbrowser_plugin_firefox=<a href="http://www.mozilla.jp/firefox/">FireFox</a>
+ignoreoldbrowser_plugin_opera=<a href="http://jp.opera.com/">Opera</a>
+ignoreoldbrowser_plugin_chrome=<a href="http://www.google.co.jp/intl/ja/chrome/browser/">Google Chrome</a>
+#ignoreoldbrowser_plugin_safariwin=<a href="http://support.apple.com/kb/DL1531?viewlocale=ja_JP&locale=ja_JP">Safari</a>
+ignoreoldbrowser_plugin_safari=<a href="http://www.apple.com/jp/safari/">Safari</a>
+
+ignoreoldbrowser_plugin_html=\
+<html> \
+<head> \
+<title>$title</title> \
+</head> \
+<body> \
+<h1>$title</h1> \
+$text \
+</body> \
+</html>
+

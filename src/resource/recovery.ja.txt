@@ -1,0 +1,12 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+recovery_plugin_title=PyukiWiki リカバリー
+recovery_plugin_msg=デフォルトに復元するページ、アップデートするページはチェックを入れて下さい。<br >リンクのあるページにチェックを行なうと、元のページに上書きされます。
+recovery_plugin_confirm=以下のページを復元します。
+recovery_plugin_btn_submit=実行
+recovery_plugin_btn_checkon=すべてチェック
+recovery_plugin_btn_checkoff=すべて解除
+recovery_plugin_btn_reset=元に戻す
+recovery_plugin_btn_write=リカバリーしました。

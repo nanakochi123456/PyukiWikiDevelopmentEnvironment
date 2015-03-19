@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+adminedit_plugin_title=の編集・凍結
+adminedit_plugin_passwordneeded=ページを凍結するにはパスワードが必要です。

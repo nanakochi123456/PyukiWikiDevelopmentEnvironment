@@ -1,0 +1,13 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+pcomment_plugin_yourname=Name:
+pcomment_plugin_pcommentbutton=Post Comment
+pcomment_plugin_err=Items mentioned are insufficient.
+pcomment_plugin_msg_recent=Show recent %d comments.
+pcomment_plugin_msg_all=Go to the comment page.
+pcomment_plugin_msg_none=No comment.
+pcomment_plugin_commentpage_title=*%s's comment
+pcomment_plugin_commentpage_backlink=[[Back to %s]]
+pcomment_plugin_dmymsg=If you see an input form on this immediately, please do not enter into the absolute.

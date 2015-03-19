@@ -1,0 +1,37 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+edit_plugin_instag_bold=Bold
+edit_plugin_instag_italic=Italic
+edit_plugin_instag_underline=Underline
+edit_plugin_instag_delline=Strikethrough
+edit_plugin_instag_list_ul=List
+edit_plugin_instag_list_ol=Sequential number list
+edit_plugin_instag_list_center=Centering
+edit_plugin_instag_list_left=Left justification
+edit_plugin_instag_list_right=Right justification
+edit_plugin_instag_list_head=Head
+edit_plugin_instag_list_wikipage=Wiki Page
+edit_plugin_instag_list_link=Link
+edit_plugin_instag_list_break=New Line
+edit_plugin_instag_list_hr=Horizontal line
+edit_plugin_instag_list_ref=Image & Attach file
+
+edit_plugin_instag_color_title=A
+edit_plugin_instag_color_result=Color
+edit_plugin_instag_color_default=#000000
+edit_plugin_instag_backgroundcolor_result=Background Colod
+edit_plugin_instag_backgroundcolor_default=#ffffff
+
+edit_plugin_instag_size_title=Size
+edit_plugin_instag_size_teststring=ABCDE
+
+edit_plugin_instag_sizelist=10,12,14,16,18,20,24,28,32
+
+edit_plugin_instag_font_title=Font
+edit_plugin_instag_fontlist=serif,sans-seri,cursive,fantasy,monospace,MS UI Gothic,Arial,Arial Black,Comic Sans MS,Courier New,Times New Roman,Verdana
+edit_plugin_instag_fontlist_samplesize=25
+
+edit_plugin_instag_face_title=Pictogram
+edit_plugin_instag_face_list=&bigsmile;,&huh;,&oh;,&sad;,&smile;,&wink;,&worried;,&big_plus;,&heart;,,&ohplus;,&sadplus;,&smileplus;,&winkplus;,&worriedplus;,&ummr;,&star;,&tear;,&heartplus;

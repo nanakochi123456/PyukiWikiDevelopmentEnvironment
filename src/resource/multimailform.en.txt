@@ -1,0 +1,48 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+multimailform_plugin_mailsend=Sented
+multimailform_plugin_mailconfirm=Mail Sending
+multimailform_plugin_msg_title=Please confirm the content
+multimailform_plugin_msg_edit=Edit of content
+multimailform_plugin_btn_mailconfirm=Confirm
+multimailform_plugin_btn_mailsend=Sent this
+multimailform_plugin_btn_back=Back
+multimailform_plugin_info_from=E-Mail:
+multimailform_plugin_info_name=Your Name:
+multimailform_plugin_info_subject=Subject:
+multimailform_plugin_info_data=Content:
+multimailform_plugin_copy_check=Send a copy to you
+multimailform_plugin_copy_notcheck=Don't send a copy of email
+multimailform_plugin_copy_notice=(Receipt to be sent is not encrypted)
+
+multimailform_plugin_err_to=The $::modifier_mail variable is not set. This plugin is not executed.
+multimailform_plugin_err_title=Please confirm a necessary matter.
+multimailform_plugin_err_from_nostr=Mail address has not been described.
+multimailform_plugin_err_from_err=Mail address is illegal.
+multimailform_plugin_err_url_err=URL is illegal.
+multimailform_plugin_err_noname=Name has not been described.
+multimailform_plugin_err_nosubject=Name has not been described.
+multimailform_plugin_err_nodata=Content has not been described.
+
+multimailform_plugin_mail_copy_from_name=Dear $name
+multimailform_plugin_mail_copy_subject=Ahead Contact $wiki_title
+multimailform_plugin_mail_copy_before=\
+------------------------------------------------------------------------\n\
+            <<<<<<<<<< Thank you for your inquiry >>>>>>>>>>\n\
+------------------------------------------------------------------------\n\
+This email is an automated email from $wiki_title.\n\
+If there is no any idea to this email, please delete as this time slot.\n\
+------------------------------------------------------------------------\n\
+
+
+multimailform_plugin_mail_copy_after=\
+------------------------------------------------------------------------\n\
+Site   $wiki_title\n\
+URL    $url\n\
+EMail  $modifier_mail\n\
+Admin  $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+

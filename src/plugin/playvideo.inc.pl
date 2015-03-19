@@ -174,6 +174,7 @@ $::playvideo_plugin_vjs_skin="vjs-default-skin"
 @HTML5_VIDEO_TARGETS_MP4=(
 	"Safari 522",
 	"MSIE 9",
+	"Trident",
 	"iPod",
 	"iPad",
 	"iPhone",

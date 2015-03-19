@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+sitemap_plugin_title=Site Map

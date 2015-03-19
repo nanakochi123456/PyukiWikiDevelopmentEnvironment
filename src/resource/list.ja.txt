@@ -1,0 +1,11 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+list_plugin_title=ページの一覧
+list_plugin_otherchara=日本語
+
+list_firstpage=最初
+list_prevpage=前へ
+list_nextpage=次へ
+list_lastpage=最後

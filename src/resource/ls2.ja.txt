@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+ls2_plugin_notpage=には、下位層のページがありません。

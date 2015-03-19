@@ -1,0 +1,14 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+multiarticle_plugin_btn=Submit
+multiarticle_plugin_clear=Clear
+multiarticle_plugin_err=Items mentioned are insufficient.
+multiarticle_plugin_star0=Not evaluated
+multiarticle_plugin_star1=&#9733;
+multiarticle_plugin_star2=&#9733;&#9733;
+multiarticle_plugin_star3=&#9733;&#9733;&#9733;
+multiarticle_plugin_star4=&#9733;&#9733;&#9733;&#9733;
+multiarticle_plugin_star5=&#9733;&#9733;&#9733;&#9733;&#9733;
+multiarticle_plugin_dmymsg=If you see an input form on this immediately, please do not enter into the absolute.

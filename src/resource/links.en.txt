@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+links_msg=<h5 class="links">Source</h5><span class="links">$LINK</span>
+links_nodata=No source of $PAGE.

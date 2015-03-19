@@ -1,0 +1,31 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+ignoreoldbrowser_plugin_title_ignoreos=It does not correspond to the terminal you are using.
+ignoreoldbrowser_plugin_title_notsupportbrowser=It does not correspond to the browser you use.
+
+ignoreoldbrowser_plugin_ignoreos=In the terminal you are using, $wiki_title is not supported.<br />Install latest operating system or using another terminal.
+
+ignoreoldbrowser_plugin_nosupportbrowser=
+In the browser you are using, $wiki_title will not support it.<br />Download more latest browser.
+
+ignoreoldbrowser_plugin_msie8=<a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie-8">Internet Explorer 8</a>
+ignoreoldbrowser_plugin_msie9=<a href="http://windows.microsoft.com/en-US/internet-explorer/download-ie">Internet Explorer 9</a>
+ignoreoldbrowser_plugin_firefox=<a href="http://www.mozilla.org/en-US/firefox/">FireFox</a>
+ignoreoldbrowser_plugin_opera=<a href="http://www.opera.com/">Opera</a>
+ignoreoldbrowser_plugin_chrome=<a href="http://www.google.com/chrome">Google Chrome</a>
+#ignoreoldbrowser_plugin_safariwin=<a href="http://support.apple.com/kb/DL1531">Safari</a>
+ignoreoldbrowser_plugin_safari=<a href="http://www.apple.com/safari/>Safari</a>
+
+ignoreoldbrowser_plugin_html=\
+<html> \
+<head> \
+<title>$title</title> \
+</head> \
+<body> \
+<h1>$title</h1> \
+$text \
+</body> \
+</html>
+

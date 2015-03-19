@@ -1,0 +1,10 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+freezeconvert_plugin_title=freezen page convert for v0.2.0
+freezeconvert_plugin_btn_submit=Execute
+freezeconvert_plugin_execmsg=It performed. Please check an execution result in the following log.
+freezeconvert_plugin_execed=Execed.
+freezeconvert_plugin_freeze=Freezed.
+freezeconvert_plugin_nofreeze=No freeze

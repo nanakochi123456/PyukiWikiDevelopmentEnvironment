@@ -34,35 +34,32 @@ EOM
 
 if($TYPE=~/compact/) {
 $text{BASEHEAD2}=<<EOM;
-Copyright(C) 2005-$year PyukiWiki Developers Team/2004-2007 Nekyo
+(C)2005-$year PyukiWiki Developers Team/2004-2007 Nekyo
 # \@\@PYUKI_URL\@\@
 # @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and/or Artistic License
 EOM
 $text{BASEHEAD4}=<<EOM;
-Copyright(C)2000-$year - Laurent Destailleur - eldy@users.sourceforge.net
+(C)2000-$year - Laurent Destailleur - eldy@users.sourceforge.net
 # \@\@AWSTATS_URL\@\@
-# Copyright(C) 2005-$year PyukiWiki Developers Team/2004-2007 Nekyo
+# (C)2005-$year PyukiWiki Developers Team/2004-2007 Nekyo
 # \@\@PYUKI_URL\@\@
 # @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and/or Artistic License
 EOM
 } else {
 $text{BASEHEAD2}=<<EOM;
-Copyright(C) 2004-2007 Nekyo
-# Copyright(C) 2005-$year PyukiWiki Developers Team
+(C)2004-2007 Nekyo
+# (C)2005-$year PyukiWiki Developers Team
 # \@\@PYUKI_URL\@\@
 # Based on YukiWiki \@\@YUKIWIKI_URL\@\@
 # Powerd by PukiWiki \@\@PUKIWIKI_URL\@\@
 # License GPL3 and/or Artistic or each later version
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl itself.
-# Return=\@\@CRLF\@\@ Code=\@\@CODE\@\@ 1TAB=4Spaces
+# @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and/or Artistic License
 EOM
 $text{BASEHEAD4}=<<EOM;
-Copyright(C) 2000-$year - Laurent Destailleur - eldy@users.sourceforge.net
+(C)2000-$year - Laurent Destailleur - eldy@users.sourceforge.net
 # \@\@AWSTATS_URL\@\@
-# Copyright(C) 2004-2007 Nekyo
-# Copyright(C) 2005-$year PyukiWiki Developers Team
+# (C)2004-2007 Nekyo
+# (C)2005-$year PyukiWiki Developers Team
 # \@\@PYUKI_URL\@\@
 # Based on YukiWiki \@\@YUKIWIKI_URL\@\@
 # Powerd by PukiWiki \@\@PUKIWIKI_URL\@\@
@@ -271,11 +268,11 @@ $text{HEADERPLUGIN_SYNTAXHIGHLIGHTER_NANAMI}=<<EOM;
 # http://alexgorbatchev.com/SyntaxHighlighter/donate.html
 #
 # Version 3.0.83 (July 02 2010)
-# Copyright(C) 2004-2010 Alex Gorbatchev.
+# (C)2004-2010 Alex Gorbatchev.
 #
 # Author: \@\@NANAMI\@\@ \@\@NANAMI_URL\@\@
-# Copyright(C) 2004-2007 Nekyo
-# Copyright(C) 2005-$year PyukiWiki Developers Team
+# (C)2004-2007 Nekyo
+# (C)2005-$year PyukiWiki Developers Team
 # \@\@PYUKI_URL\@\@
 # Based on YukiWiki \@\@YUKIWIKI_URL\@\@
 # Powerd by PukiWiki \@\@PUKIWIKI_URL\@\@
@@ -290,7 +287,7 @@ EOM
 # podのライセンス
 
 $text{LICENSE_BASE}=<<EOM;
-Copyright(C) 2005-$year by PyukiWiki Developers Team
+(C)2005-$year by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -299,7 +296,7 @@ modify it under the same terms as Perl itself.
 EOM
 
 $text{LICENSE}=<<EOM;
-Copyright(C) 2004-2007 by \@\@NEKYO\@\@.
+(C)2004-2007 by \@\@NEKYO\@\@.
 
 \@\@LICENSE_BASE\@\@
 EOM
@@ -307,25 +304,25 @@ EOM
 $text{LICENSE_NEKYO}=$text{LICENSE};
 
 $text{LICENSE_NANAMI}=<<EOM;
-Copyright(C) 2005-$year by \@\@NANAMI\@\@.
+(C)2005-$year by \@\@NANAMI\@\@.
 
 \@\@LICENSE_BASE\@\@
 EOM
 
 $text{LICENSE_JUNICHI}=<<EOM;
-Copyright(C) 2005 by \@\@JUNICHI\@\@.
+(C)2005 by \@\@JUNICHI\@\@.
 
 \@\@LICENSE_BASE\@\@
 EOM
 
 $text{LICENSE_YASHIGANIMODOKI}=<<EOM;
-Copyright(C) 2004 by \@\@YASHIGANIMODOKI\@\@.
+(C)2004 by \@\@YASHIGANIMODOKI\@\@.
 
 \@\@LICENSE_BASE\@\@
 EOM
 
 $text{LICENSE_YUKI}=<<EOM;
-Copyright(C) 2002-$year by \@\@YUKI\@\@.
+(C)2002-$year by \@\@YUKI\@\@.
 
 \@\@LICENSE_BASE\@\@
 EOM

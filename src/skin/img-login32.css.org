@@ -2,13 +2,13 @@
 /* $Id$ */
 /* Code=@@CODE@@ */
 
-#icn_google32 {
+#icn_facebook32 {
 	background: url(../image/login32.png) 0px 0px;
 	height: 32px;
 	width: 32px;
 }
 
-#icn_facebook32 {
+#icn_google32 {
 	background: url(../image/login32.png) 0px -32px;
 	height: 32px;
 	width: 32px;
@@ -21,29 +21,29 @@
 	padding-top: 2px;
 }
 
-#icn_twitter32 {
+#icn_mixi32 {
 	background: url(../image/login32.png) 0px -91px;
+	height: 31px;
+	width: 32px;
+}
+
+#icn_openid32 {
+	background: url(../image/login32.png) 0px -122px;
+	height: 31px;
+	width: 32px;
+}
+
+#icn_twitter32 {
+	background: url(../image/login32.png) 0px -153px;
 	height: 29px;
 	width: 32px;
 	padding-top: 1px;
 }
 
 #icn_yahooj32 {
-	background: url(../image/login32.png) 0px -121px;
+	background: url(../image/login32.png) 0px -183px;
 	height: 7px;
 	width: 32px;
 	padding-top: 8px;
-}
-
-#icn_openid32 {
-	background: url(../image/login32.png) 0px -136px;
-	height: 31px;
-	width: 32px;
-}
-
-#icn_mixi32 {
-	background: url(../image/login32.png) 0px -167px;
-	height: 31px;
-	width: 32px;
 }
 

@@ -2,4 +2,1235 @@
  * $Id$
  */
 
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('F I;H(I==M){I={}}I.1T=J 1T(a,c){H(a!=M&&c!=M){K(F b 1G c){a[b]=c[b]}}G a};I.1T(I,{U:J U(b){H(b==M){G""}H(b 1V 1a){F c="";K(F a=0;a<b.L;++b){H(c!=""){c+="&"}c+=I.U(b[a])}G c}b=2Q(b);b=b.P(/\\!/g,"%21");b=b.P(/\\*/g,"%2A");b=b.P(/\\\'/g,"%27");b=b.P(/\\(/g,"%28");b=b.P(/\\)/g,"%29");G b},1W:J 1W(a){H(a!=M){a=a.P(/\\+/g," ")}G 7Q(a)},1t:J 1t(a){H(a==M){G[]}H(5d a!="5c"){G I.1E(a+"")}H(a 1V 1a){G a}F b=[];K(F c 1G a){b.1D([c,a[c]])}G b},1m:J 1m(b){H(b==M){G{}}H(5d b!="5c"){G I.1m(I.1E(b+""))}H(b 1V 1a){F f={};K(F c=0;c<b.L;++c){F a=b[c][0];H(f[a]===2H){f[a]=b[c][1]}}G f}G b},5b:J 5b(b,a){H(b 1V 1a){K(F c=0;c<b.L;++c){H(b[c][0]==a){G b[c][1]}}}N{G I.1m(b)[a]}G M},2D:J 2D(b){F a="";F f=I.1t(b);K(F g=0;g<f.L;++g){F c=f[g][1];H(c==M){c=""}H(a!=""){a+="&"}a+=I.U(f[g][0])+"="+I.U(c)}G a},1E:J 1E(f){F i=[];F k=f.1e("&");K(F j=0;j<k.L;++j){F a=k[j];H(a==""){7P}F c=a.1R("=");F b;F g;H(c<0){b=I.1W(a);g=M}N{b=I.1W(a.1h(0,c));g=I.1W(a.1h(c+1))}i.1D([b,g])}G i},Z:J Z(c,a,f){F b=c.17;H(b 1V 1a){K(F g=0;g<b.L;++g){H(b[g][0]==a){H(f===2H){b.7O(g,1)}N{b[g][1]=f;f=2H}}}H(f!==2H){b.1D([a,f])}}N{b=I.1m(b);b[a]=f;c.17=b}},5a:J 5a(c,b){F f=I.1t(b);K(F a=0;a<f.L;++a){I.Z(c,f[a][0],f[a][1])}},59:J 59(b,a){H(b.W==M){b.W="4e"}F c=I.1m(b.17);H(c.33==M){I.Z(b,"33",a.2m||"")}H(c.31==M&&a.58!=M){I.Z(b,"31",a.58)}H(c.35==M){I.Z(b,"35","1.0")}H(c.2G==M){I.Z(b,"2G",I.2F())}H(c.3G==M){I.Z(b,"3G",I.1F(6))}I.T.1p(b,a)},2Y:J 2Y(a){I.Z(a,"2G",I.2F());I.Z(a,"3G",I.1F(6))},2X:J 2X(a,c){1U=a;H(c!=M){F b=I.2D(c);H(b.L>0){F f=a.1R("?");H(f<0){1U+="?"}N{1U+="&"}1U+=b}}G 1U},57:J 57(a,c){F j=\'I 7N="\'+I.U(a)+\'"\';F f=I.1t(c);K(F g=0;g<f.L;++g){F i=f[g];F b=i[0];H(b.1R("7M")==0){j+=","+I.U(b)+\'="\'+I.U(i[1])+\'"\'}}G j},3s:J 3s(b){b=b||"2G";F a=4O.7L("2U");H(a==M||!a.L){G}F g=a[a.L-1].2i;H(!g){G}F f=g.1R("?");H(f<0){G}17=I.1m(I.1E(g.1h(f+1)));F c=17[b];H(c==M){G}I.3F(c)},3F:J 3F(a){I.3D=(a*22)-(V 1u()).56()},3D:0,2F:J 2F(){F a=(V 1u()).56()+I.3D;G~~(a/22)},1F:J 1F(g){F f=I.1F.55;F a="";K(F c=0;c<g;++c){F b=~~(3H.7K()*f.L);a+=f.1h(b,b+1)}G a}});I.1F.55="7J";I.3B=J 3B(f,a,c){F g=f[a];f[a]=c;H(c!=M&&g!=M){K(F b 1G g){H(b!="1S"){c[b]=g[b]}}}G c};I.3B(I,"T",J 7I(){});I.1T(I.T.1S,{1p:J 1p(c){F b=I.T.3y(c);F a=Y.2z(b);I.Z(c,"4X",a);G a},3z:J 3z(c,a){F b;H(a.54!=M&&c.L>9&&c.1h(c.L-9)=="-3t"){b=a.54}N{b=a.1L}Y.1Q=I.U(b)+"&"+I.U(a.1K)}});I.1T(I.T,{1p:J 1p(c,a){F b=I.1m(c.17).34;H(b==M||b==""){b="2o-2n";I.Z(c,"34",b)}I.T.3A(b,a).1p(c)},3A:J 3A(f,a){F c=I.T.2E[f];H(c!=M){F j=V c();j.3z(f,a);G j}F i=V 7H("7G");F b="";K(F g 1G I.T.2E){H(b!=""){b+="&"}b+=I.U(g)}i.7F=b;7E i},2E:{},2C:J 2C(b,a){K(F c=0;c<b.L;++c){I.T.2E[b[c]]=a}},2B:J 2B(a){F b=I.T;F c=J(){b.7D(Y)};c.1S=V b();c.1S.2z=a;c.1S.7C=c;G c},3y:J 3y(i){F b=i.2W;F j=b.1R("?");F g;H(j<0){g=i.17}N{g=I.1E(b.1h(j+1));F f=I.1t(i.17);K(F c=0;c<f.L;++c){g.1D(f[c])}}G I.U(i.W.7B())+"&"+I.U(I.T.3x(b))+"&"+I.U(I.T.3u(g))},3x:J 3x(c){F f=I.T.3w(c);F a=f.53.2J();F i=f.52.2J();F j=(a=="1d"&&f.3v==3r)||(a=="2t"&&f.3v==7A);H(j){F b=i.7z(":");H(b>=0){i=i.1h(0,b)}}F g=f.51;H(!g){g="/"}G a+"://"+i+g},3w:J 3w(g){F f={1Q:["3b","53","52","7y","1g","7x","7w","3v","45","51","7v","7u","7t","7s"],4Z:{4Y:/^(?:([^:\\/?#]+):)?(?:\\/\\/((?:(([^:@\\/]*):?([^:@\\/]*))?@)?([^:\\/?#]*)(?::(\\d*))?))?((((?:[^?#\\/]*\\/)*)([^?#]*))(?:\\?([^#]*))?(?:#(.*))?)/}};F a=f.4Z.4Y.7r(g);F c={};F b=14;7q(b--){c[f.1Q[b]]=a[b]||""}G c},3u:J 3u(f){H(f==M){G""}F g=I.1t(f);F j=[];K(F i=0;i<g.L;++i){F b=g[i];H(b[0]!="4X"){j.1D([I.U(b[0])+" "+I.U(b[1]),b])}}j.7p(J(l,k){H(l[0]<k[0]){G-1}H(l[0]>k[0]){G 1}G 0});F a=[];K(F c=0;c<j.L;++c){a.1D(j[c][1])}G I.2D(a)}});I.T.2C(["4W","4W-3t"],I.T.2B(J 2z(a){G Y.1Q}));I.T.2C(["2o-2n","2o-2n-3t"],I.T.2B(J 2z(b){3l="=";F a=4V(Y.1Q,b);G a}));3c{I.3s()}3a(e){}F 4P=0;F 3l="";F X=8;J 4U(a){G 3o(1s(1C(a),a.L*X))}J 7o(a){G 3n(1s(1C(a),a.L*X))}J 7n(a){G 3p(1s(1C(a),a.L*X))}J 7m(a,b){G 3o(2y(a,b))}J 4V(a,b){G 3n(2y(a,b))}J 7l(a,b){G 3p(2y(a,b))}J 7k(){G 4U("7j")=="7i"}J 1s(y,p){y[p>>5]|=7h<<(24-p%32);y[((p+64>>9)<<4)+15]=p;F z=1a(3r);F v=7g;F u=-7f;F s=-7e;F r=7d;F q=-7c;K(F m=0;m<y.L;m+=16){F o=v;F n=u;F l=s;F k=r;F f=q;K(F g=0;g<3r;g++){H(g<16){z[g]=y[m+g]}N{z[g]=2x(z[g-3]^z[g-8]^z[g-14]^z[g-16],1)}F A=1b(1b(2x(v,5),4T(g,u,s,r)),1b(1b(q,z[g]),4S(g)));q=r;r=s;s=2x(u,30);u=v;v=A}v=1b(v,o);u=1b(u,n);s=1b(s,l);r=1b(r,k);q=1b(q,f)}G 1a(v,u,s,r,q)}J 4T(f,a,i,g){H(f<20){G(a&i)|((~a)&g)}H(f<40){G a^i^g}H(f<60){G(a&i)|(a&g)|(i&g)}G a^i^g}J 4S(a){G(a<20)?7b:(a<40)?7a:(a<60)?-79:-78}J 2y(c,j){F g=1C(c);H(g.L>16){g=1s(g,c.L*X)}F a=1a(16),f=1a(16);K(F b=0;b<16;b++){a[b]=g[b]^77;f[b]=g[b]^76}F k=1s(a.4R(1C(j)),4Q+j.L*X);G 1s(f.4R(k),4Q+75)}J 1b(a,f){F c=(a&3q)+(f&3q);F b=(a>>16)+(f>>16)+(c>>16);G(b<<16)|(c&3q)}J 2x(a,b){G(a<<b)|(a>>>(32-b))}J 1C(f){F c=1a();F a=(1<<X)-1;K(F b=0;b<f.L*X;b+=X){c[b>>5]|=(f.74(b/X)&a)<<(32-X-b%32)}G c}J 3p(c){F f="";F a=(1<<X)-1;K(F b=0;b<c.L*32;b+=X){f+=73.72((c[b>>5]>>>(32-X-b%32))&a)}G f}J 3o(c){F b=4P?"71":"70";F f="";K(F a=0;a<c.L*4;a++){f+=b.3k((c[a>>2]>>((3-a%4)*8+4))&15)+b.3k((c[a>>2]>>((3-a%4)*8))&15)}G f}J 3n(f){F c="6Z+/";F k="";K(F b=0;b<f.L*4;b+=3){F g=(((f[b>>2]>>8*(3-b%4))&3m)<<16)|(((f[b+1>>2]>>8*(3-(b+1)%4))&3m)<<8)|((f[b+2>>2]>>8*(3-(b+2)%4))&3m);K(F a=0;a<4;a++){H(b*8+a*6>f.L*32){k+=3l}N{k+=c.3k((g>>6*(3-a))&63)}}}G k}J 3j(j,c,m,q,p,r,g,n,o,i,k,l,b,a,f){7.3j(j,c,m,q,p,r,g,n,o,i,k,l,b,a,f)}F d=4O,w=3U,h="";F 7={2m:M,1L:M,2Z:M,1K:M,19:0,1N:0,1r:h,1A:h,3e:h,1B:h,1v:0,1z:6Y,2O:40,4s:"4J",4r:"4I",4q:"4K",4b:13,4a:"3R",48:13,47:"4N",43:11,42:"4N",41:12,4F:"4M",4E:"4M",4D:"4L",4C:"4L",4B:"4K",4A:"4J",4z:"4I",2I:"4G",2P:"6X",2c:0,2N:0,2S:h,1d:"1d://",2t:"2t://",7:"2v.4H",3f:"3f.2v.4H",2r:"6W=6V",1q:"&2V;",37:0,36:h,1f:/4G([S][S][S]|[S][S][S][S][S][S])/2k,6U:J(a){F b=V 1P();b.W=7.1k[1];b.W(a,1)},6T:J(a){F b=V 1P();b.W=7.1k[2];b.W(a,2)},6S:J(a){F b=V 1P();b.W=7.1k[3];b.W(a,3)},6R:J(a){F b=V 1P();b.W=7.1k[4];b.W(a,4)},6Q:J(a){F b=V 1P();b.W=7.1k[0];b.W(a,0)},1l:J(b,a){G(6P(b)&&b!=""?b:a)},3j:J(l,s,v,E,D,k,o,a,x,f,r,b,y,c,u){F C=l.1e("|"),q=6O(C[0],C[1]);1O=q.1e("|");7.2m=1O[0];7.1L=1O[1];7.2Z=1O[2];7.1K=1O[3];F m=v.1e("|");H(c==1){7.2c=1}H(u==1){7.2N=1}k=7.1l(k,7.4F);o=7.1l(o,7.4E);a=7.1l(a,7.4D);x=7.1l(x,7.4C);f=7.1l(f,7.4B);r=7.1l(r,7.4A);b=7.1l(b,7.4z);H(m.L<2){7.3h(l,s,m[0],E,D,k,o,a,x,f,r,b,y);7.1N++}N{F n=h,g=h,t=\'<1x 1y="\'+y+\'" R="1j-Q:\'+7.O(f)+"; 2j:4w 4v "+7.O(k)+\';"><18>\';F p=7.1N,z=p;K(F B=0;B<m.L;B++){H(!z){7.1r=2w()}7.1r[z]="6N"+z;H(B==0){n+=\'<10 R="3i: 4y;" 2l="\'+7.1r[z]+\'"></10>\'}N{n+=\'<10 R="3i: 1w;" 2l="\'+7.1r[z]+\'"></10>\'}z++}K(F B=p;B<z;B++){t+=\'<2u 1y="2h%" R="1j-Q:\'+7.O(o)+"; Q:"+7.O(a)+\';"><a 1c="#" R="Q: \'+7.O(x)+\'" 2L="\';K(F A=p;A<z;A++){t+="6M(\'"+7.1r[A]+"\').R.3i=\'";H(B==A){t+="4y\';"}N{t+="1w\';"}}t+=\'G 2K;">\'+m[B-p]+"</a></2u>"}n=n.P(7.1f,"#$1");n=n.P(7.1f,"#$1");n=n.P(7.1f,"#$1");t=t.P(7.1f,"#$1");t=t.P(7.1f,"#$1");t=t.P(7.1f,"#$1");2q(l,s,t+\'</18><18><1i 6L="\'+(z-p)+\'">\'+n+"</1i></18></1x>");K(F B=p;B<z;B++){7.3h(7.1r[B],m[B-p],"",D,k,o,a,x,f,r,b,y);7.1N++}}},3h:J(g,b,l,p,o,q,c,m,n,f,i,k,a){H(!7.19){7.1A=2w();7.1k=2w();7.1B=2w()}H(7.19>5&&7.19<4x){6K(1Z("1Y","6J\'t 6I #2v 6H Y","1X","\\6G\\6F\\6E\\6D #2v \\6C\\6B\\6A\\6z\\6y\\4j\\4i\\4h"));7.19=4x;G}7.1A[7.19]="6x"+b;F j;j=\'<1x 1y="\'+a+\'" R="1j-Q:\'+7.O(f)+";"+(p==""?"2j:44;":"2j:4w 4v "+7.O(q)+";")+\'">\';H(p!=""){j+=\'<18><2u 1y="2h%" R="1j-Q:\'+7.O(c)+"; Q:"+7.O(m)+\';">\'+p+"</2u></18>"}j+=\'<18><1i 1y="2h%" R="1j-Q:\'+7.O(f)+"; Q:"+7.O(i)+\';"><10 2l="\'+7.1A[7.19]+\'"></10></1i></18>\';+"</1x>";j=j.P(7.1f,"#$1");7.1z=o;H(l.23(/^@/)){l=l.P(/^@/,"");7.4o(l,7.19)}N{7.4u(l,7.19)}2q(b,j);7.19++},4t:J(b,f,c){F a=7.1d+"2d."+7.7+"/2d.4p?"+7.2r+7.1q+"6w="+7.1z+7.1q+"q="+2Q(b);H(f===1J 0){a=a+7.1q+"2s=?"}N{a=a+7.1q+"2s="+f}G a},4u:J(b,a){7.1k[a]=7.3g;7.1B[a]=7.4t(b,"7.4m"+a);7.3e[a]=7.2p(7.1B[a],J(f,c){7.3g(f,c)});7.38("2d"+a)},3g:J(l,q){F t,m=h,o=7.4s,c=7.4r,s=7.4q,v=0;K(F k=0;k<7.1z;k++){3c{t=l.6v[k];F u=t.1n,j=t.6u,r=t.6t,g=t.4l,f=t.4k,b=t.3b,n=t.2r;m+=7.2T(j,r,g,u,o,c,s,f,b,n);v++}3a(p){}}H(!v){m=7.39()}2q(7.1A[q],m)},4n:J(b,f,c){F a=7.2t+7.3f+"/1.1/6s/6r.4p?6q=50";H(f===1J 0){a=a+7.1q+"2s=?"}N{a=a+7.1q+"2s="+f}G a},4o:J(b,a){7.1k[a]=7.3d;7.1B[a]=7.4n(b,"7.4m"+a);7.3e[a]=7.2p(7.1B[a],J(f,c){7.3d(f,c)});7.38("1g"+a)},3d:J(c,l){F g=h,j=h,b=h,m=h,o=0;K(F f=0;f<7.1z;f++){3c{F n=c[f];g=g+7.2T(n.1g.6p,n.1g.6o,n.1g.4l,n.1n,j?j:c[f].1g.6n,b?b:c[f].1g.6m,m?6l:c[f].1g.6k,n.4k,n.3b,n.2r);o++}3a(k){}}H(!o){g=7.39()}2q(7.1A[l],g)},39:J(){G 1Z("1Y","6j 6i 6h","1X","\\6g\\6f\\6e\\6d\\6c\\6b\\6a\\69\\68\\67\\4j\\4i\\4h")},38:J(a){7.36=a;H(w.4g!==1J 0){w.4g("66",7.1M)}N{H(d.4f!==1J 0){d.4f("65",7.1M,2K)}N{d.62(61(\'%5Z 2i="\'+7.1M+\'" 5Y="1n/5X"%3E%3C/2U%3E\'))}}},1M:J(){H(7.1N>2){G}5W(7.1M,22*60);H(7.37==0){7.37=1}N{F a=7.2p(7.2S,J(c){F b;H(7.36=="1g"){}N{}})}},2p:J(a,f){F g=a.1e("?");F b=g[1].1I("&2V;","&");F k={1L:7.1L,1K:7.1K},o={W:"4e",2W:g[0],17:{35:"1.0",34:"2o-2n",33:7.2m,31:7.2Z}},n;F n=b.1e("&");K(F j=0;j<n.L;j++){F m=n[j].1e("=");o.17[m[0]]=m[1]}I.2Y(o);I.T.1p(o,k);F l=I.2X(o.2W,o.17);l=l.1I("&2V;","&");F c=d.5V("2U");5U.5T(l,7.5S);c.2i=l;c.2l="5R";d.5Q.5P(c)},2T:J(s,f,l,r,m,q,k,j,c,p){F b=/@(\\w+)/2k,g=/(\\#|\\$)([^\\s]+)/2k,a=/((((5O|f){1}(5N:[/][/]){1})|((5M.){1}))[-a-5L-5K-9@:;%5J\\+.~#?\\&\\/\\/=]+)/2k;7.1v=q;K(F n=0;p.2R[n]!==1J 0&&n<7.1z;n++){r=r.1e(p.2R[n].2S).3Y(p.2R[n].5I)}r=r.P(a,J(i){G 7.3W(i)});r=r.P(b,7.1o(7.1d+7.7+"/$1","@$1","@$1"));r=r.P(g,J(i){G 7.3X(i)});r=7.1I(r,7.2P,"#");F o="<3Z R=\'1j-Q:"+7.O(k)+"\';><1x><18><1i 4d=\'4c\' R=\'1j-Q:"+7.O(k)+"\';>"+7.1o(7.1d+7.7+"/"+s,f)+"<5H 2j=\'0\' 2i=\'"+l+"\' /></a></1i><1i 4d=\'4c\' 1y=\'2h%\' R=\'1j-Q:"+7.O(k)+"\';><49 R=\'2g-2f:"+7.4b+"2e; Q:"+7.O(7.4a)+";\'>"+7.1o(7.1d+7.7+"/"+s,f,f)+"</a></49><10 R=\'2g-2f:"+7.48+"2e; Q:"+7.O(7.47)+"\'>&46;"+7.1o(7.1d+7.7+"/"+s,"@"+s,"@"+s)+"</a>&46;</10><10 R=\'5G:45; 5F:44; 2g-2f:"+7.43+"2e; Q:"+7.O(7.42)+"\'>("+7.3T(j)+")</10><5E /><10 R=\'2g-2f:"+7.41+"2e; Q:"+7.O(m)+"\'>"+r+"</1i></18></1x></3Z>";o=o.P(7.1f,"#$1");G o},1I:J(a,b,c){G a.1e(b).3Y(c)},3X:J(a){G 7.1o(7.1d+7.7+"/2d/"+2Q(a),a,a)},3W:J(a){F a=7.1I(a,"#",7.2P);G 7.1o(a,a,((a.L>7.2O)?(a.1h(0,7.2O-4)+"&5D;"):a))},1o:J(a,f,b){F g;H(7.2N==1){H(7.2c==1){g=\'<a 2b="2a" 1c="\'+a+\'" 2L="G 2M(Y,Y.1c,\\\'b\\\');" 3V="G 2M(Y,Y.1c,\\\'r\\\');" 26="\'+f+\'" R="1n-25:1w;Q:\'+7.O(7.1v)+\'";>\'}N{g=\'<a 2b="2a" 1c="\'+a+\'" 3V="G 2M(Y,Y.1c,\\\'r\\\');" 26="\'+f+\'" R="1n-25:1w;Q:\'+7.O(7.1v)+\'";>\'}}N{H(7.2c==1){g=\'<a 2b="2a" 1c="\'+a+\'" 2L="G 3U.5C(Y.1c,\\\'5B\\\');G 2K;" 26="\'+f+\'" R="1n-25:1w;Q:\'+7.O(7.1v)+\'";>\'}N{g=\'<a 2b="2a" 1c="\'+a+\'" 26="\'+f+\'" R="1n-25:1w;Q:\'+7.O(7.1v)+\'";>\'}}H(b){G g+b+"</a>"}G g},O:J(b,a){H(b==a){G"5A"}b=b.P(/#/,"");b=b.2J();H(b.23(/^[S][S][S]/)){G 7.2I+b}H(b.23(/^[S][S][S][S][S][S]$/)){G 7.2I+b}G b},3T:J(a){H(a.23(",")){a=V 1u(a)}N{a=a.P(/(\\d\\d:\\d\\d:\\d\\d)\\s\\+3S\\s(\\d\\d\\d\\d)$/,"$2 $1 +3S");a=V 1u(a)}G("3R"+a.5z()).1H(-4)+"/"+("0"+(a.5y()+1)).1H(-2)+"/"+("0"+a.5x()).1H(-2)+" "+("0"+a.5w()).1H(-2)+":"+("0"+a.5v()).1H(-2)+"  "+3Q(a)}};F 3Q=(J(){F b={3P:1,3O:60,3N:5u,3M:5t,3L:5s,3J:5r,3I:5q};F a={3P:"\\5p",3O:"\\5o",3N:"\\5n\\3K",3M:"\\5m",3L:"\\5l\\3K",3J:"\\5k\\5j",3I:"\\5i"};G J(j){j=+V 1u(j);F k=((+V 1u())-j)/22,f,g;K(F c 1G b){H(k>b[c]){g=c}}f=k/b[g];f=3H.5h(f);g=1Z("1Y",g,"1X",a[g]);f+=1Z("1Y"," "+g+(f>1?"s":"")+" 5g","1X",g+"\\5f\\5e");G f}})();',62,487,'|||||||tw||||||||||||||||||||||||||||||||||var|return|if|OAuth|function|for|length|null|else|mkclr|replace|color|style|0123456789ABCDEFabcdef|SignatureMethod|percentEncode|new|method|chrsz|this|setParameter|span|||||||parameters|tr|cbid|Array|safe_add|href|http|split|cRE|user|substring|td|background|cbarray|chk|getParameterMap|text|mklink|sign|am|subarray|core_sha1|getParameterList|Date|lc|none|table|width|counts|idarray|urlarray|str2binb|push|decodeForm|nonce|in|slice|replaceAll|void|tokenSecret|consumerSecret|update|subid|newtoken|Object|key|indexOf|prototype|setProperties|newURL|instanceof|decodePercent|ja|en|ln|||1000|match||decoration|title||||tlink|class|target|search|px|size|font|100|src|border|gm|id|consumerKey|SHA1|HMAC|getjson|sinss|entities|callback|https|th|twitter|ar|rol|core_hmac_sha1|getSignature||makeSubclass|registerMethodClass|formEncode|REGISTERED|timestamp|oauth_timestamp|undefined|ch|toLowerCase|false|onclick|Ck|track|maxurl|uh|encodeURIComponent|urls|url|twline|script|amp|action|addToURL|setTimestampAndNonce|accessToken||oauth_token||oauth_consumer_key|oauth_signature_method|oauth_version|mode|flg|attach|nodata|catch|source|try|getuserhtml|dtarray|api|getsearchhtml|twa|display|twitwindow|charAt|b64pad|255|binb2b64|binb2hex|binb2str|65535|80|correctTimestampFromSrc|Accessor|normalizeParameters|port|parseUri|normalizeUrl|getBaseString|initialize|newMethod|declareClass||timeCorrectionMsec||correctTimestamp|oauth_nonce|Math|year|month|u9593|week|day|hour|minute|second|niceTime|000|0000|timeformat|window|oncontextmenu|replaceUrl|mkhash|join|div||t_font|i_color|i_font|0px|relative|nbsp|s_color|s_font|strong|n_color|n_font|top|valign|GET|addEventListener|attachEvent|u3093|u305b|u307e|created_at|profile_image_url|cb|mkuserurl|getuser|json|d_back_color|d_link_color|d_text_color|mksearchurl|getsearch|solid|1px|99|block|link_color|content_font_color|content_background_color|header_link_color|header_font_color|header_background|border_color|__C__|com|307ace|333|e1e1e1|fff|434343|555|document|hexcase|512|concat|sha1_kt|sha1_ft|hex_sha1|b64_hmac_sha1|PLAINTEXT|oauth_signature|strict|parser||path|authority|protocol|accessorSecret|CHARS|getTime|getAuthorizationHeader|token|completeRequest|setParameters|getParameter|object|typeof|u904e|u7d4c|ago|round|u5e74|u6708|u30f6|u9031|u65e5|u6642|u5206|u79d2|31536000|2592000|604800|86400|3600|getMinutes|getHours|getDate|getMonth|getFullYear|transport|_blank|open|hellip|br|right|position|img|expanded_url|_|Z0|zA|www|tp|ht|appendChild|body|twitter_callback|cc|get|Http|createElement|setTimeout|javascript|type|3Cscript||unescape|write|||DOMContentLoaded|onload|u308a|u3042|u304c|u30c8|u30fc|u30a3|u30c4|u306e|u8fd1|u6700|tweet|recent|No|profile_sidebar_fill_color|profile_sidebar_fill_collor|profile_link_color|p_text_color|name|screen_name|count|user_timeline|statuses|from_user_name|from_user|results|rpp|tw_|u304d|u3067|u7f6e|u8a2d|u3092|u4e0a|u4ee5|u308c|u3053|on|place|Can|alert|colspan|gid|twsub_|ae|defined|cb0|cb4|cb3|cb2|cb1|true|include_entities|__UH__|500|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789|0123456789abcdef|0123456789ABCDEF|fromCharCode|String|charCodeAt|160|1549556828|909522486|899497514|1894007588|1859775393|1518500249|1009589776|271733878|1732584194|271733879|1732584193|128|a9993e364706816aba3e25717850c26c9cd0d89d|abc|sha1_vm_test|str_hmac_sha1|hex_hmac_sha1|str_sha1|b64_sha1|sort|while|exec|anchor|query|file|directory|host|password|userInfo|lastIndexOf|443|toUpperCase|constructor|call|throw|oauth_acceptable_signature_methods|signature_method_rejected|Error|OAuthSignatureMethod|0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz|random|getElementsByTagName|oauth_|realm|splice|continue|decodeURIComponent'.split('|')))
+
+
+
+
+
+
+
+
+
+var OAuth; if (OAuth == null) OAuth = {};
+
+OAuth.setProperties = function setProperties(into, from) {
+    if (into != null && from != null) {
+        for (var key in from) {
+            into[key] = from[key];
+        }
+    }
+    return into;
+}
+
+OAuth.setProperties(OAuth, // utility functions
+{
+    percentEncode: function percentEncode(s) {
+        if (s == null) {
+            return "";
+        }
+        if (s instanceof Array) {
+            var e = "";
+            for (var i = 0; i < s.length; ++s) {
+                if (e != "") e += '&';
+                e += OAuth.percentEncode(s[i]);
+            }
+            return e;
+        }
+        s = encodeURIComponent(s);
+        // Now replace the values which encodeURIComponent doesn't do
+        // encodeURIComponent ignores: - _ . ! ~ * ' ( )
+        // OAuth dictates the only ones you can ignore are: - _ . ~
+        // Source: http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent
+        s = s.replace(/\!/g, "%21");
+        s = s.replace(/\*/g, "%2A");
+        s = s.replace(/\'/g, "%27");
+        s = s.replace(/\(/g, "%28");
+        s = s.replace(/\)/g, "%29");
+        return s;
+    }
+,
+    decodePercent: function decodePercent(s) {
+        if (s != null) {
+            // Handle application/x-www-form-urlencoded, which is defined by
+            // http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.1
+            s = s.replace(/\+/g, " ");
+        }
+        return decodeURIComponent(s);
+    }
+,
+    
+    getParameterList: function getParameterList(parameters) {
+        if (parameters == null) {
+            return [];
+        }
+        if (typeof parameters != "object") {
+            return OAuth.decodeForm(parameters + "");
+        }
+        if (parameters instanceof Array) {
+            return parameters;
+        }
+        var list = [];
+        for (var p in parameters) {
+            list.push([p, parameters[p]]);
+        }
+        return list;
+    }
+,
+    
+    getParameterMap: function getParameterMap(parameters) {
+        if (parameters == null) {
+            return {};
+        }
+        if (typeof parameters != "object") {
+            return OAuth.getParameterMap(OAuth.decodeForm(parameters + ""));
+        }
+        if (parameters instanceof Array) {
+            var map = {};
+            for (var p = 0; p < parameters.length; ++p) {
+                var key = parameters[p][0];
+                if (map[key] === undefined) { // first value wins
+                    map[key] = parameters[p][1];
+                }
+            }
+            return map;
+        }
+        return parameters;
+    }
+,
+    getParameter: function getParameter(parameters, name) {
+        if (parameters instanceof Array) {
+            for (var p = 0; p < parameters.length; ++p) {
+                if (parameters[p][0] == name) {
+                    return parameters[p][1]; // first value wins
+                }
+            }
+        } else {
+            return OAuth.getParameterMap(parameters)[name];
+        }
+        return null;
+    }
+,
+    formEncode: function formEncode(parameters) {
+        var form = "";
+        var list = OAuth.getParameterList(parameters);
+        for (var p = 0; p < list.length; ++p) {
+            var value = list[p][1];
+            if (value == null) value = "";
+            if (form != "") form += '&';
+            form += OAuth.percentEncode(list[p][0])
+              +'='+ OAuth.percentEncode(value);
+        }
+        return form;
+    }
+,
+    decodeForm: function decodeForm(form) {
+        var list = [];
+        var nvps = form.split('&');
+        for (var n = 0; n < nvps.length; ++n) {
+            var nvp = nvps[n];
+            if (nvp == "") {
+                continue;
+            }
+            var equals = nvp.indexOf('=');
+            var name;
+            var value;
+            if (equals < 0) {
+                name = OAuth.decodePercent(nvp);
+                value = null;
+            } else {
+                name = OAuth.decodePercent(nvp.substring(0, equals));
+                value = OAuth.decodePercent(nvp.substring(equals + 1));
+            }
+            list.push([name, value]);
+        }
+        return list;
+    }
+,
+    setParameter: function setParameter(message, name, value) {
+        var parameters = message.parameters;
+        if (parameters instanceof Array) {
+            for (var p = 0; p < parameters.length; ++p) {
+                if (parameters[p][0] == name) {
+                    if (value === undefined) {
+                        parameters.splice(p, 1);
+                    } else {
+                        parameters[p][1] = value;
+                        value = undefined;
+                    }
+                }
+            }
+            if (value !== undefined) {
+                parameters.push([name, value]);
+            }
+        } else {
+            parameters = OAuth.getParameterMap(parameters);
+            parameters[name] = value;
+            message.parameters = parameters;
+        }
+    }
+,
+    setParameters: function setParameters(message, parameters) {
+        var list = OAuth.getParameterList(parameters);
+        for (var i = 0; i < list.length; ++i) {
+            OAuth.setParameter(message, list[i][0], list[i][1]);
+        }
+    }
+,
+    
+    completeRequest: function completeRequest(message, accessor) {
+        if (message.method == null) {
+            message.method = "GET";
+        }
+        var map = OAuth.getParameterMap(message.parameters);
+        if (map.oauth_consumer_key == null) {
+            OAuth.setParameter(message, "oauth_consumer_key", accessor.consumerKey || "");
+        }
+        if (map.oauth_token == null && accessor.token != null) {
+            OAuth.setParameter(message, "oauth_token", accessor.token);
+        }
+        if (map.oauth_version == null) {
+            OAuth.setParameter(message, "oauth_version", "1.0");
+        }
+        if (map.oauth_timestamp == null) {
+            OAuth.setParameter(message, "oauth_timestamp", OAuth.timestamp());
+        }
+        if (map.oauth_nonce == null) {
+            OAuth.setParameter(message, "oauth_nonce", OAuth.nonce(6));
+        }
+        OAuth.SignatureMethod.sign(message, accessor);
+    }
+,
+    setTimestampAndNonce: function setTimestampAndNonce(message) {
+        OAuth.setParameter(message, "oauth_timestamp", OAuth.timestamp());
+        OAuth.setParameter(message, "oauth_nonce", OAuth.nonce(6));
+    }
+,
+    addToURL: function addToURL(url, parameters) {
+        newURL = url;
+        if (parameters != null) {
+            var toAdd = OAuth.formEncode(parameters);
+            if (toAdd.length > 0) {
+                var q = url.indexOf('?');
+                if (q < 0) newURL += '?';
+                else       newURL += '&';
+                newURL += toAdd;
+            }
+        }
+        return newURL;
+    }
+,
+    
+    getAuthorizationHeader: function getAuthorizationHeader(realm, parameters) {
+        var header = 'OAuth realm="' + OAuth.percentEncode(realm) + '"';
+        var list = OAuth.getParameterList(parameters);
+        for (var p = 0; p < list.length; ++p) {
+            var parameter = list[p];
+            var name = parameter[0];
+            if (name.indexOf("oauth_") == 0) {
+                header += ',' + OAuth.percentEncode(name) + '="' + OAuth.percentEncode(parameter[1]) + '"';
+            }
+        }
+        return header;
+    }
+,
+    
+    correctTimestampFromSrc: function correctTimestampFromSrc(parameterName) {
+        parameterName = parameterName || "oauth_timestamp";
+        var scripts = document.getElementsByTagName('script');
+        if (scripts == null || !scripts.length) return;
+        var src = scripts[scripts.length-1].src;
+        if (!src) return;
+        var q = src.indexOf("?");
+        if (q < 0) return;
+        parameters = OAuth.getParameterMap(OAuth.decodeForm(src.substring(q+1)));
+        var t = parameters[parameterName];
+        if (t == null) return;
+        OAuth.correctTimestamp(t);
+    }
+,
+    
+    correctTimestamp: function correctTimestamp(timestamp) {
+        OAuth.timeCorrectionMsec = (timestamp * 1000) - (new Date()).getTime();
+    }
+,
+    
+    timeCorrectionMsec: 0
+,
+    timestamp: function timestamp() {
+        var t = (new Date()).getTime() + OAuth.timeCorrectionMsec;
+        return ~~(t / 1000);
+    }
+,
+    nonce: function nonce(length) {
+        var chars = OAuth.nonce.CHARS;
+        var result = "";
+        for (var i = 0; i < length; ++i) {
+            var rnum = ~~(Math.random() * chars.length);
+            result += chars.substring(rnum, rnum+1);
+        }
+        return result;
+    }
+});
+
+OAuth.nonce.CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+
+
+OAuth.declareClass = function declareClass(parent, name, newConstructor) {
+    var previous = parent[name];
+    parent[name] = newConstructor;
+    if (newConstructor != null && previous != null) {
+        for (var key in previous) {
+            if (key != "prototype") {
+                newConstructor[key] = previous[key];
+            }
+        }
+    }
+    return newConstructor;
+}
+
+
+OAuth.declareClass(OAuth, "SignatureMethod", function OAuthSignatureMethod(){});
+
+OAuth.setProperties(OAuth.SignatureMethod.prototype, // instance members
+{
+    
+    sign: function sign(message) {
+        var baseString = OAuth.SignatureMethod.getBaseString(message);
+        var signature = this.getSignature(baseString);
+        OAuth.setParameter(message, "oauth_signature", signature);
+        return signature; // just in case someone's interested
+    }
+,
+    
+    initialize: function initialize(name, accessor) {
+        var consumerSecret;
+        if (accessor.accessorSecret != null
+            && name.length > 9
+            && name.substring(name.length-9) == "-Accessor")
+        {
+            consumerSecret = accessor.accessorSecret;
+        } else {
+            consumerSecret = accessor.consumerSecret;
+        }
+        this.key = OAuth.percentEncode(consumerSecret)
+             +"&"+ OAuth.percentEncode(accessor.tokenSecret);
+    }
+});
+
+
+OAuth.setProperties(OAuth.SignatureMethod, // class members
+{
+    sign: function sign(message, accessor) {
+        var name = OAuth.getParameterMap(message.parameters).oauth_signature_method;
+        if (name == null || name == "") {
+            name = "HMAC-SHA1";
+            OAuth.setParameter(message, "oauth_signature_method", name);
+        }
+        OAuth.SignatureMethod.newMethod(name, accessor).sign(message);
+    }
+,
+    
+    newMethod: function newMethod(name, accessor) {
+        var impl = OAuth.SignatureMethod.REGISTERED[name];
+        if (impl != null) {
+            var method = new impl();
+            method.initialize(name, accessor);
+            return method;
+        }
+        var err = new Error("signature_method_rejected");
+        var acceptable = "";
+        for (var r in OAuth.SignatureMethod.REGISTERED) {
+            if (acceptable != "") acceptable += '&';
+            acceptable += OAuth.percentEncode(r);
+        }
+        err.oauth_acceptable_signature_methods = acceptable;
+        throw err;
+    }
+,
+    
+    REGISTERED : {}
+,
+    
+    registerMethodClass: function registerMethodClass(names, classConstructor) {
+        for (var n = 0; n < names.length; ++n) {
+            OAuth.SignatureMethod.REGISTERED[names[n]] = classConstructor;
+        }
+    }
+,
+    
+    makeSubclass: function makeSubclass(getSignatureFunction) {
+        var superClass = OAuth.SignatureMethod;
+        var subClass = function() {
+            superClass.call(this);
+        };
+        subClass.prototype = new superClass();
+        // Delete instance variables from prototype:
+        // delete subclass.prototype... There aren't any.
+        subClass.prototype.getSignature = getSignatureFunction;
+        subClass.prototype.constructor = subClass;
+        return subClass;
+    }
+,
+    getBaseString: function getBaseString(message) {
+        var URL = message.action;
+        var q = URL.indexOf('?');
+        var parameters;
+        if (q < 0) {
+            parameters = message.parameters;
+        } else {
+            // Combine the URL query string with the other parameters:
+            parameters = OAuth.decodeForm(URL.substring(q + 1));
+            var toAdd = OAuth.getParameterList(message.parameters);
+            for (var a = 0; a < toAdd.length; ++a) {
+                parameters.push(toAdd[a]);
+            }
+        }
+        return OAuth.percentEncode(message.method.toUpperCase())
+         +'&'+ OAuth.percentEncode(OAuth.SignatureMethod.normalizeUrl(URL))
+         +'&'+ OAuth.percentEncode(OAuth.SignatureMethod.normalizeParameters(parameters));
+    }
+,
+    normalizeUrl: function normalizeUrl(url) {
+        var uri = OAuth.SignatureMethod.parseUri(url);
+        var scheme = uri.protocol.toLowerCase();
+        var authority = uri.authority.toLowerCase();
+        var dropPort = (scheme == "http" && uri.port == 80)
+                    || (scheme == "https" && uri.port == 443);
+        if (dropPort) {
+            // find the last : in the authority
+            var index = authority.lastIndexOf(":");
+            if (index >= 0) {
+                authority = authority.substring(0, index);
+            }
+        }
+        var path = uri.path;
+        if (!path) {
+            path = "/"; // conforms to RFC 2616 section 3.2.2
+        }
+        // we know that there is no query and no fragment here.
+        return scheme + "://" + authority + path;
+    }
+,
+    parseUri: function parseUri (str) {
+        
+        var o = {key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+                 parser: {strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@\/]*):?([^:@\/]*))?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/ }};
+        var m = o.parser.strict.exec(str);
+        var uri = {};
+        var i = 14;
+        while (i--) uri[o.key[i]] = m[i] || "";
+        return uri;
+    }
+,
+    normalizeParameters: function normalizeParameters(parameters) {
+        if (parameters == null) {
+            return "";
+        }
+        var list = OAuth.getParameterList(parameters);
+        var sortable = [];
+        for (var p = 0; p < list.length; ++p) {
+            var nvp = list[p];
+            if (nvp[0] != "oauth_signature") {
+                sortable.push([ OAuth.percentEncode(nvp[0])
+                              + " " // because it comes before any character that can appear in a percentEncoded string.
+                              + OAuth.percentEncode(nvp[1])
+                              , nvp]);
+            }
+        }
+        sortable.sort(function(a,b) {
+                          if (a[0] < b[0]) return  -1;
+                          if (a[0] > b[0]) return 1;
+                          return 0;
+                      });
+        var sorted = [];
+        for (var s = 0; s < sortable.length; ++s) {
+            sorted.push(sortable[s][1]);
+        }
+        return OAuth.formEncode(sorted);
+    }
+});
+
+OAuth.SignatureMethod.registerMethodClass(["PLAINTEXT", "PLAINTEXT-Accessor"],
+    OAuth.SignatureMethod.makeSubclass(
+        function getSignature(baseString) {
+            return this.key;
+        }
+    ));
+
+OAuth.SignatureMethod.registerMethodClass(["HMAC-SHA1", "HMAC-SHA1-Accessor"],
+    OAuth.SignatureMethod.makeSubclass(
+        function getSignature(baseString) {
+            b64pad = '=';
+            var signature = b64_hmac_sha1(this.key, baseString);
+            return signature;
+        }
+    ));
+
+try {
+    OAuth.correctTimestampFromSrc();
+} catch(e) {
+}
+
+
+
+var hexcase = 0;  
+var b64pad  = ""; 
+var chrsz   = 8;  
+
+
+function hex_sha1(s){return binb2hex(core_sha1(str2binb(s),s.length * chrsz));}
+function b64_sha1(s){return binb2b64(core_sha1(str2binb(s),s.length * chrsz));}
+function str_sha1(s){return binb2str(core_sha1(str2binb(s),s.length * chrsz));}
+function hex_hmac_sha1(key, data){ return binb2hex(core_hmac_sha1(key, data));}
+function b64_hmac_sha1(key, data){ return binb2b64(core_hmac_sha1(key, data));}
+function str_hmac_sha1(key, data){ return binb2str(core_hmac_sha1(key, data));}
+
+
+function sha1_vm_test()
+{
+  return hex_sha1("abc") == "a9993e364706816aba3e25717850c26c9cd0d89d";
+}
+
+
+function core_sha1(x, len)
+{
+  
+  x[len >> 5] |= 0x80 << (24 - len % 32);
+  x[((len + 64 >> 9) << 4) + 15] = len;
+
+  var w = Array(80);
+  var a =  1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d =  271733878;
+  var e = -1009589776;
+
+  for(var i = 0; i < x.length; i += 16)
+  {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+    var olde = e;
+
+    for(var j = 0; j < 80; j++)
+    {
+      if(j < 16) w[j] = x[i + j];
+      else w[j] = rol(w[j-3] ^ w[j-8] ^ w[j-14] ^ w[j-16], 1);
+      var t = safe_add(safe_add(rol(a, 5), sha1_ft(j, b, c, d)),
+                       safe_add(safe_add(e, w[j]), sha1_kt(j)));
+      e = d;
+      d = c;
+      c = rol(b, 30);
+      b = a;
+      a = t;
+    }
+
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+    e = safe_add(e, olde);
+  }
+  return Array(a, b, c, d, e);
+
+}
+
+
+function sha1_ft(t, b, c, d)
+{
+  if(t < 20) return (b & c) | ((~b) & d);
+  if(t < 40) return b ^ c ^ d;
+  if(t < 60) return (b & c) | (b & d) | (c & d);
+  return b ^ c ^ d;
+}
+
+
+function sha1_kt(t)
+{
+  return (t < 20) ?  1518500249 : (t < 40) ?  1859775393 :
+         (t < 60) ? -1894007588 : -899497514;
+}
+
+
+function core_hmac_sha1(key, data)
+{
+  var bkey = str2binb(key);
+  if(bkey.length > 16) bkey = core_sha1(bkey, key.length * chrsz);
+
+  var ipad = Array(16), opad = Array(16);
+  for(var i = 0; i < 16; i++)
+  {
+    ipad[i] = bkey[i] ^ 0x36363636;
+    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+  }
+
+  var hash = core_sha1(ipad.concat(str2binb(data)), 512 + data.length * chrsz);
+  return core_sha1(opad.concat(hash), 512 + 160);
+}
+
+
+function safe_add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+}
+
+
+function rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+
+
+function str2binb(str)
+{
+  var bin = Array();
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < str.length * chrsz; i += chrsz)
+    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (32 - chrsz - i%32);
+  return bin;
+}
+
+
+function binb2str(bin)
+{
+  var str = "";
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < bin.length * 32; i += chrsz)
+    str += String.fromCharCode((bin[i>>5] >>> (32 - chrsz - i%32)) & mask);
+  return str;
+}
+
+
+function binb2hex(binarray)
+{
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i++)
+  {
+    str += hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8+4)) & 0xF) +
+           hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8  )) & 0xF);
+  }
+  return str;
+}
+
+
+function binb2b64(binarray)
+{
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i += 3)
+  {
+    var triplet = (((binarray[i   >> 2] >> 8 * (3 -  i   %4)) & 0xFF) << 16)
+                | (((binarray[i+1 >> 2] >> 8 * (3 - (i+1)%4)) & 0xFF) << 8 )
+                |  ((binarray[i+2 >> 2] >> 8 * (3 - (i+2)%4)) & 0xFF);
+    for(var j = 0; j < 4; j++)
+    {
+      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
+      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+    }
+  }
+  return str;
+}
+
+
+
+
+
+function twitwindow(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width, popup, track) {
+	tw.twitwindow(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width, popup, track);
+}
+
+
+
+
+
+
+var d=document,
+	w=window,
+	h="";
+
+
+var	tw = {
+	consumerKey: null,
+	consumerSecret: null,
+	accessToken: null,
+	tokenSecret: null,
+	cbid:0,
+	subid:0,
+	subarray:h,
+	idarray:h,
+	dtarray:h,
+	urlarray:h,
+	lc:0,
+	counts:500,
+	maxurl:40,
+	d_text_color:"333",
+	d_link_color:"307ace",
+	d_back_color:"e1e1e1",
+	n_font:13,
+	n_color:"000",
+	s_font:13,
+	s_color:"555",
+	i_font:11,
+	i_color:"555",
+	t_font:12,
+
+	border_color: "434343",
+	header_background: "434343",
+	header_font_color:"fff",
+	header_link_color:"fff",
+	content_background_color: "e1e1e1",
+	content_font_color: "333",
+	link_color: "307ace",
+
+	ch:"__C__",
+	uh:"__UH__",
+	target:0,
+	track:0,
+	url:h,
+	http:"http://",
+	https:"https://",
+	tw:"twitter.com",
+	api:"api.twitter.com",
+	entities:"include_entities=true",
+	am:"&amp;",
+	flg:0,
+	mode:h,
+	
+	cRE:/__C__([0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef]|[0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef])/gm,
+
+	
+	cb1 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[1];
+		obj.method(data, 1);
+	},
+	cb2 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[2];
+		obj.method(data, 2);
+	},
+	cb3 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[3];
+		obj.method(data, 3);
+	},
+	cb4 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[4];
+		obj.method(data, 4);
+	},
+
+	cb0 : function(data) {
+		var obj=new Object();
+		obj.method=tw.cbarray[0];
+		obj.method(data, 0);
+	},
+
+	
+	chk: function(c1, c2) {
+		return (defined(c1) && c1 != "" ? c1 : c2);
+	},
+
+	
+	twitwindow: function(token, id, keywordargs, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width, popup, track) {
+		var exttoken=token.split('|'),
+			tokens=ae(exttoken[0], exttoken[1]);
+			newtoken=tokens.split('|');
+
+		tw.consumerKey=newtoken[0];
+		tw.consumerSecret=newtoken[1];
+		tw.accessToken=newtoken[2];
+		tw.tokenSecret=newtoken[3];
+
+		var keywords=keywordargs.split('|');
+		if(popup == 1) tw.target=1;
+		if(track == 1) tw.track=1;
+
+		border_color = tw.chk(border_color, tw.border_color);
+		header_background = tw.chk(header_background, tw.header_background);
+		header_font_color = tw.chk(header_font_color, tw.header_font_color);
+		header_link_color = tw.chk(header_link_color, tw.header_link_color);
+		content_background_color = tw.chk(content_background_color, tw.content_background_color);
+		content_font_color = tw.chk(content_font_color, tw.content_font_color);
+		link_color = tw.chk(link_color, tw.link_color);
+
+		
+		if(keywords.length < 2) {
+			tw.twa(token, id, keywords[0], title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width);
+			tw.subid++;
+
+		
+		} else {
+			var shtml=h, th=h,
+				hhtml='<table width="' + width + '" style="background-color:' + tw.mkclr(content_background_color) + '; border:1px solid ' + tw.mkclr(border_color) + ';"><tr>';
+			var firstid=tw.subid, ss=firstid;
+			for (var i=0; i < keywords.length; i++) {
+				if(!ss) {
+					tw.subarray=ar();
+				}
+				tw.subarray[ss]="twsub_" + ss;
+				if(i == 0) {
+					shtml += '<span style="display: block;" id="' + tw.subarray[ss] + '"></span>';
+				} else {
+					shtml += '<span style="display: none;" id="' + tw.subarray[ss] + '"></span>';
+				}
+				ss++;
+			}
+			for(var i=firstid; i < ss; i++) {
+				hhtml += '<th width="100%" style="background-color:' + tw.mkclr(header_background) + '; color:' + tw.mkclr(header_font_color) + ';">'
+				  + '<a href="#" style="color: '+ tw.mkclr(header_link_color) + '" onclick="';
+
+				for(var j=firstid; j < ss; j++) {
+					hhtml += 'gid(\'' + tw.subarray[j] + '\').style.display=\'';
+					if(i == j) {
+						hhtml += 'block\';';
+					} else {
+						hhtml += 'none\';';
+					}
+				}
+				hhtml += 'return false;">' + keywords[i - firstid] + '</a></th>';
+			}
+
+			shtml = shtml.replace(tw.cRE, '#$1');
+			shtml = shtml.replace(tw.cRE, '#$1');
+			shtml = shtml.replace(tw.cRE, '#$1');
+			hhtml = hhtml.replace(tw.cRE, '#$1');
+			hhtml = hhtml.replace(tw.cRE, '#$1');
+			hhtml = hhtml.replace(tw.cRE, '#$1');
+			sinss(token, id,
+				hhtml
+				+ '</tr><tr><td colspan="' + (ss - firstid) + '">'
+				+ shtml
+				+ '</td></tr></table>'
+			);
+			for (var i=firstid; i < ss; i++) {
+				tw.twa(tw.subarray[i], keywords[i-firstid], "", max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width);
+				tw.subid++;
+			}
+		}
+	},
+
+	
+	twa: function(token, id, keyword, title, max, border_color, header_background, header_font_color, header_link_color, content_background_color, content_font_color, link_color, width) {
+		if(!tw.cbid) {
+			tw.idarray=ar();
+			tw.cbarray=ar();
+			tw.urlarray=ar();
+		}
+		if(tw.cbid > 5 && tw.cbid < 99) {
+			alert(ln(
+				"en","Can't place #twitter on this"
+				,
+					"ja","\u3053\u308c\u4ee5\u4e0a #twitter \u3092\u8a2d\u7f6e\u3067\u304d\u307e\u305b\u3093"
+			));
+			tw.cbid=99;
+			return;
+		}
+		tw.idarray[tw.cbid]="tw_" + id;
+		var html;
+		html='<table width="' + width + '" style="background-color:' + tw.mkclr(content_background_color) + ';'
+			+ (title == '' ? 'border:0px;' : 'border:1px solid ' + tw.mkclr(border_color) + ';')
+			+ '">';
+		if(title != "") {
+			html += '<tr><th width="100%" style="background-color:' + tw.mkclr(header_background) + '; color:' + tw.mkclr(header_font_color) + ';">' + title + '</th></tr>';
+		}
+		html += '<tr><td width="100%" style="background-color:' + tw.mkclr(content_background_color) + '; color:' + tw.mkclr(content_font_color) + ';"><span id="' + tw.idarray[tw.cbid] + '"></span></td></tr>';
+		+ '</table>';
+		html = html.replace(tw.cRE, '#$1');
+		tw.counts=max;
+
+		if(keyword.match(/^@/)) {
+			keyword=keyword.replace(/^@/, '');
+			tw.getuser(keyword, tw.cbid);
+		} else {
+			tw.getsearch(keyword, tw.cbid);
+		}
+		sinss(id, html);
+		tw.cbid++;
+	},
+
+	
+	mksearchurl: function(str, callback, id) {
+		var url=tw.http + "search." + tw.tw + "/search.json?" + tw.entities + tw.am + "rpp=" + tw.counts + tw.am + "q=" + encodeURIComponent(str);
+		if(callback === void 0) {
+			url = url + tw.am + "callback=?";
+		} else {
+			url = url + tw.am + "callback=" + callback;
+		}
+		return url;
+	},
+
+	
+	getsearch: function(str, cbid) {
+		tw.cbarray[cbid]=tw.getsearchhtml;
+		tw.urlarray[cbid]=tw.mksearchurl(str, "tw.cb" + cbid);
+		tw.dtarray[cbid]=tw.getjson(tw.urlarray[cbid], function(data, cbid) {
+			tw.getsearchhtml(data, cbid);
+		});
+		tw.attach("search" + cbid);
+	},
+
+	
+	getsearchhtml: function(data, cbid) {
+		var a, html=h,
+			p_text_color=tw.d_text_color,
+			profile_link_color=tw.d_link_color,
+			profile_sidebar_fill_color=tw.d_back_color,
+			result=0;
+
+
+		for(var i=0; i< tw.counts;i++) {
+			try {
+				a=data.results[i];
+				var	text=a.text,
+					user=a.from_user,
+					user_name=a.from_user_name,
+					image=a.profile_image_url,
+					time=a.created_at,
+					source=a.source,
+					entities=a.entities;
+
+				html += tw.twline(
+					user, user_name, image, text,
+					p_text_color,
+					profile_link_color,
+					profile_sidebar_fill_color,
+					time,source,entities
+				);
+				result++;
+			} catch (e) {}
+		}
+		if(!result)
+			html=tw.nodata();
+
+//		html = html.replace(tw.cRE, '#$1');
+		sinss(tw.idarray[cbid], html);
+	},
+
+	
+	mkuserurl: function(str, callback, id) {
+//		var url=tw.https + tw.api + "/1.1/statuses/home_timeline.json?count=50";
+		var url=tw.https + tw.api + "/1.1/statuses/user_timeline.json?count=50";
+///1.1/statuses/user_timeline/" + str + ".json?" + tw.entities;
+		if(callback === void 0) {
+			url = url + tw.am + "callback=?";
+		} else {
+			url = url + tw.am + "callback=" + callback;
+		}
+		return url;
+	},
+
+	
+	getuser: function(str, cbid) {
+		tw.cbarray[cbid]=tw.getuserhtml;
+ 		tw.urlarray[cbid]=tw.mkuserurl(str, "tw.cb" + cbid);
+		tw.dtarray[cbid]=tw.getjson(tw.urlarray[cbid], function(data, cbid) {
+			tw.getuserhtml(data, cbid);
+		});
+		tw.attach("user" + cbid);
+	},
+
+	
+	getuserhtml: function(data, cbid) {
+		var html=h,
+			p_text_color=h,
+			profile_link_color=h,
+			profile_sidebar_fill_color=h,
+			result=0
+
+
+		for(var i=0; i< tw.counts;i++) {
+			try {
+				var a=data[i];
+				html=html + tw.twline(
+					a.user.screen_name,
+					a.user.name,
+					a.user.profile_image_url,
+					a.text,
+					p_text_color ? p_text_color : data[i].user.p_text_color,
+					profile_link_color ? profile_link_color : data[i].user.profile_link_color,
+					profile_sidebar_fill_color ? profile_sidebar_fill_collor : data[i].user.profile_sidebar_fill_color,
+					a.created_at,
+					a.source,
+					a.entities
+				);
+				result++;
+			} catch (e) {}
+
+		}
+		if(!result)
+			html=tw.nodata();
+
+//		html = html.replace(tw.cRE, '#$1');
+		sinss(tw.idarray[cbid], html);
+	},
+
+	
+	nodata: function() {
+		return ln(
+			"en", "No recent tweet",
+			"ja", "\u6700\u8fd1\u306e\u30c4\u30a3\u30fc\u30c8\u304c\u3042\u308a\u307e\u305b\u3093"
+		);
+	},
+
+	
+	attach: function(mode) {
+		tw.mode=mode;
+		if(w.attachEvent !== void 0)
+			w.attachEvent('onload', tw.update);
+		else if(d.addEventListener !== void 0)
+			d.addEventListener("DOMContentLoaded", tw.update, false);
+        else d.write(unescape('%3Cscript src="' + tw.update + '" type="text/javascript"%3E%3C/script%3E'));
+
+	},
+
+	
+	update: function() {
+		if(tw.subid > 2)
+			return;
+
+		setTimeout(tw.update, 1000*60);
+		if(tw.flg == 0) {
+			tw.flg=1;
+		} else {
+			var data=tw.getjson(tw.url, function(data) {
+				var html;
+				if(tw.mode == "user") {
+				} else {
+				}
+			});
+		}
+	},
+
+	
+	getjson: function(url, data) {
+		var tmp=url.split("?");
+		var tmp2=tmp[1].replaceAll("&amp;", "&");
+	    var accessor = {
+	        consumerSecret: tw.consumerSecret,
+	        tokenSecret: tw.tokenSecret
+	    },	message = {
+	        method: "GET",
+	        action: tmp[0],
+	        parameters: {
+	            oauth_version: "1.0",
+	            oauth_signature_method: "HMAC-SHA1",
+	            oauth_consumer_key: tw.consumerKey,
+	            oauth_token: tw.accessToken
+	        }
+	    }, content;
+		var content=tmp2.split("&");
+
+		for (var i=0; i < content.length; i++) {
+			var onecontent=content[i].split("=");
+			message.parameters[onecontent[0]] = onecontent[1];
+		 }
+
+		OAuth.setTimestampAndNonce(message);
+		OAuth.SignatureMethod.sign(message, accessor);
+		var target = OAuth.addToURL(message.action, message.parameters);
+		target=target.replaceAll("&amp;", "&");
+
+
+
+		var element = d.createElement("script");
+
+
+		Http.get(target, tw.cc);
+		element.src=target;
+		element.id = "twitter_callback";
+		d.body.appendChild(element);
+
+	},
+
+		
+	twline: function(screen_name, name, image, text
+		, text_color, link_color, sidebar_fill_color, time, source, entities) {
+		var
+			twitterUsernameRE= /@(\w+)/gm,
+			twitterHashi18nRE= /(\#|\$)([^\s]+)/gm,
+			urlRE= /((((ht|f){1}(tp:[/][/]){1})|((www.){1}))[-a-zA-Z0-9@:;%_\+.~#?\&\/\/=]+)/gm;
+
+		tw.lc=link_color;
+
+		for(var i=0; entities.urls[i] !== void 0 && i < tw.counts; i++) {
+			text=text.split(entities.urls[i].url).join(entities.urls[i].expanded_url);
+
+		}
+		text = text.replace(
+			urlRE, function(t) {
+				return tw.replaceUrl(t);
+			}
+		);
+
+		text= text.replace(
+			twitterUsernameRE,
+				tw.mklink(tw.http + tw.tw + "/$1","@$1","@$1")
+		);
+
+		text= text.replace(
+			twitterHashi18nRE, function(t) {
+				return tw.mkhash(t);
+			}
+		);
+
+		text = tw.replaceAll(text, tw.uh, '#');
+
+		var html="<div style='background-color:" + tw.mkclr(sidebar_fill_color) + "';>" +
+			"<table><tr><td valign='top' style='background-color:" + tw.mkclr(sidebar_fill_color) + "';>" +
+			tw.mklink(tw.http + tw.tw + "/" + screen_name, name) +
+			"<img border='0' src=\'" +
+			image +
+			"\' /></a>" +
+			"</td><td valign='top' width='100%' style='background-color:" + tw.mkclr(sidebar_fill_color) + "';>" +
+			"<strong style='font-size:" + tw.n_font + "px; color:" + tw.mkclr(tw.n_color) + ";'>" +
+			tw.mklink(tw.http + tw.tw + "/" + screen_name, name, name) +
+			"</a></strong>" +
+			"<span style='font-size:" + tw.s_font + "px; color:" + tw.mkclr(tw.s_color) + "'>" +
+			"&nbsp;" + 
+			tw.mklink(tw.http + tw.tw + "/" + screen_name, "@" + screen_name, "@" + screen_name) +
+			"</a>" +
+			"&nbsp;</span>" +
+			"<span style='position:relative; right:0px; font-size:" + tw.i_font + "px; color:" + tw.mkclr(tw.i_color) + "'>(" +
+			tw.timeformat(time) +
+			")</span><br />" +
+			"<span style='font-size:" + tw.t_font + "px; color:" + tw.mkclr(text_color) +"'>" +
+			text +
+			"</td></tr></table></div>";
+
+		html = html.replace(tw.cRE, '#$1');
+		return html;
+	},
+
+	replaceAll: function(s, o, n) {
+		return s.split(o).join(n);
+	},
+
+	
+	mkhash: function(keyword) {
+		return tw.mklink(
+			tw.http + tw.tw + "/search/"
+			 + encodeURIComponent(keyword) , keyword, keyword)
+	},
+
+	
+	replaceUrl:function(t) {
+		var t=tw.replaceAll(t, '#', tw.uh);
+		return tw.mklink(t, t, ((t.length > tw.maxurl) ? (t.substring(0, tw.maxurl - 4) + '&hellip;') : t));
+	},
+
+	
+	mklink: function(url, title, title2) {
+		var c;
+
+
+
+
+		if(tw.track == 1) {
+			if(tw.target == 1) {
+				c="<a class=\"tlink\" href=\"" + url + "\" onclick=\"return Ck(this,this.href,\'b\');\" oncontextmenu=\"return Ck(this,this.href,'r');\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+			} else {
+				c="<a class=\"tlink\" href=\"" + url + "\" oncontextmenu=\"return Ck(this,this.href,'r');\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+			}
+		} else {
+			if(tw.target == 1) {
+				c="<a class=\"tlink\" href=\"" + url + "\" onclick=\"return window.open(this.href,\'_blank\');return false;\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+			} else {
+
+
+				c="<a class=\"tlink\" href=\"" + url + "\" title=\"" + title + "\" style=\"text-decoration:none;color:" + tw.mkclr(tw.lc) + "\";>";
+
+
+			}
+		}
+
+
+
+		if(title2) {
+			return c + title2 + "</a>";
+		}
+		return c;
+	},
+
+	
+	mkclr: function(t, u) {
+		if(t == u) return "transport";
+		t = t.replace(/#/, '');
+		t = t.toLowerCase()
+
+		if(t.match(/^[0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef]/)) {
+	 		return tw.ch + t;
+		}
+
+		if(t.match(/^[0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef][0123456789ABCDEFabcdef]$/)) {
+			return tw.ch + t;
+		}
+		return t;
+	},
+
+	
+	timeformat: function(t) {
+		if(t.match(',')) {
+			t=new Date(t);
+
+		} else {
+			t=t.replace(/(\d\d:\d\d:\d\d)\s\+0000\s(\d\d\d\d)$/,"$2 $1 +0000");
+			t=new Date(t);
+		}
+		return		("000" + t.getFullYear()).slice(-4)
+			+ '/' + ("0" + (t.getMonth() + 1)).slice(-2)
+			+ '/' + ("0" + t.getDate()).slice(-2)
+			+ ' ' + ("0" + t.getHours()).slice(-2)
+			+ ':' + ("0" + t.getMinutes()).slice(-2)
+			+ '  ' +niceTime(t);
+
+	}
+}
+
+
+
+var niceTime = (function() {
+	var ints = {
+		second: 1,
+		minute: 60,
+		hour: 3600,
+		day: 86400,
+		week: 604800,
+		month: 2592000,
+		year: 31536000
+	};
+
+	var ints_ja = {
+		second: "\u79d2",
+		minute: "\u5206",
+		hour: "\u6642\u9593",
+		day: "\u65e5",
+		week: "\u9031\u9593",
+		month: "\u30f6\u6708",
+		year: "\u5e74"
+	};
+
+	return function(time) {
+		time = +new Date(time);
+
+		var gap = ((+new Date()) - time) / 1000,
+			amount, measure;
+
+		for (var i in ints) {
+			if (gap > ints[i]) { measure = i; }
+		}
+
+		amount = gap / ints[measure];
+		amount = Math.round(amount);
+		measure = ln("en", measure, "ja", ints_ja[measure]);
+		amount += ln(
+			"en", ' ' + measure + (amount > 1 ? 's' : '') + ' ago',
+			"ja", measure + "\u7d4c\u904e");
+
+		return amount;
+	};
+})();

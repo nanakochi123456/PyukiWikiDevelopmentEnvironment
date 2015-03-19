@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+playaudio_play=Play
+playaudio_stop=Stop
+playaudio_download=Download
+playaudio_notfound=No files that can be play.

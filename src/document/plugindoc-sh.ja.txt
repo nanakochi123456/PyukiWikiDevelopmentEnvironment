@@ -1,75 +1,146 @@
-Status: 503 Service unavailable Content-type: text/html
+NAME
 
-PyukiWiki Runtime Error
+sh.inc.pl - PyukiWiki プラグイン
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+ ・ NAME
+ ・ 概要
+ ・ 説明
+ ・ 使用方法
+ ・ 動作させる前に
+ ・ 参考
+
+概要
+
+#sh(言語名)
+program code
+pgoramm code
+...
+#sh
+
+#sh(言語名, スキン, EOM)
+program code
+pgoramm code
+...
+EOM
+
+説明
+
+プログラムコードを整形して表示します。
+
+使用方法
+
+#sh(言語名)
+...
+#sh (終了定義用)
+
+#sh(言語名, スキン, EOM)
+...
+EOM
+
+ ・ language name
+    言語名を以下から指定します。
+    applescript, actionscript3, as3, bash, shell, coldfusion, cf, cpp, c, c#,
+    c-sharp, css, delphi, pascal, diff, patch, pas, erl, erlang, groovy, java,
+    jfx, javafx, js, jscript, javascript, perl, pl, php, text, plain, py,
+    python, ruby, rails, ror, rb, sass, scss, scala, sql, vb, vbnet, xml,
+    xhtml, xslt, html
+ ・ skin
+    スキンを以下から設定します。指定しない場合は、Defaultが選択されています。
+    Default, Django, Eclipse, Emacs, FadeToGrey, MDUltra, Midnight, RDark
+
+動作させる前に
+
+参考
+
+PyukiWiki/Plugin/Nanami/sh
+    http://pyukiwiki.info/PyukiWiki/Plugin/Nanami/sh/
+PyukiWiki CVS
+    http://sfjp.jp/cvs/view/pyukiwiki/PyukiWiki-Devel/plugin/sh.inc.pl
+
+PyukiWiki CVS
+    http://sfjp.jp/cvs/view/pyukiwiki/PyukiWiki-Devel-UTF8/plugin/sh.inc.pl
+
+PyukiWiki CVS
+    http://cvs.pyukiwiki.info/cgi-bin/cvsweb.cgi/PyukiWiki-Devel/plugin/
+    sh.inc.pl
+
+PyukiWiki CVS
+    http://cvs.pyukiwiki.info/cgi-bin/cvsweb.cgi/PyukiWiki-Devel-UTF8/plugin/
+    sh.inc.pl
+SyntaxHighlighter
+    http://alexgorbatchev.com/SyntaxHighlighter/
+
+寄付のお願い
+
+開発環境強化、継続的な開発の為に、寄付をお願いしています。
+vector シェアレジ、銀行振り込みに対応しています。
+
+Paypal
+    http://pyukiwiki.info/Paypal/
+
+Vector シェアレジ (1,155円)
+    http://www.vector.co.jp/soft/unix/net/se496490.html
+
+Vector シェアレジ (3,255円)
+    http://www.vector.co.jp/soft/unix/net/se496491.html
+
+銀行振り込み、その他
+    銀行振り込み等は以下のお振込に対応しています。
+    住信SBIネット銀行　ミカン支店　普通　2786854
+    三菱東京UFJ銀行　大久保支店　普通　3980703
+    三井住友銀行　柏支店　普通　7638195
+    りそな銀行　北小金支店　普通　1167353
+    楽天銀行　メルマネ (<papu (at) users (dot) sourceforge (dot) jp> または <o
+    (at) daiba (dot) cx>) ゆうちょ銀行　10540-54047051
+
+寄付をしたくないが、安いものを買い物したい
+    [激安問屋！かいもの.jp] http://shop.daiba.cx/
+
+真似をして、VPSを使ってみたい
+    [VPS比較] http://vpsinfo.jp/
+
+-パソコンのパーツを買いたい
+    [自作PC最新情報] http://jisaku-pc.info/
+
+vectorのPCソフトのダウンロード
+    [サテライトサイトですみません http://down.jp.net/]
+
+VPS、または専用サーバーの導入相談を受け付けています
+    [VPSサーバー・専用サーバーの導入相談（個人向け）] http://www.abilie.com/
+    tickets/1585
+
+ネタかもしれませんが、これでもセキュリティーを守れます。
+    [できる限りタダでインターネットを安全に] （初心者〜中級者向けオンラインPDF
+    書籍） http://www.abilie.com/tickets/1595
+
+バナー＆テキスト広告をもっとクリックして！
+    こちらのチケットより、同様に作成された ad プラグインの拡張部分がダウンロー
+    ド可能です。
+    http://www.abilie.com/tickets/2050
+
+CGIスクリプトをインストールします。
+    http://www.abilie.com/tickets/8828
+
+誰でも必ずあり得る！介護を受けずに一人で車いすを活用する方法完全版
+    http://www.abilie.com/tickets/8827
+
+amazonから寄付をする
+    http://www.amazon.co.jp/registry/wishlist/1HJXA69R6EYZZ
+
+有料着メロのダウンロード
+    １曲ダウンロードに付、１円相当　大した曲はありませんが
+    http://j-ken.com/creator/4730/
+
+その他、寄付に関しまして
+    寄付に関してのURLは、以下となります。
+    http://www.daiba.cx/
+    %3a%e5%af%84%e4%bb%98%e3%81%8a%e6%8c%af%e8%be%bc%e5%85%88/
+
+作者
+
+Copyright (C) 2005-2015 by ななみ (ななこっち★)
+http://nanakochi.daiba.cx/　http://www.daiba.cx/　http://chat.daiba.cx/
+http://vpsinfo.jp/　http://eat.jp.net/　http://pyu.be/　http://power.daiba.cx/
+http://twitter.com/nanakochi123456/
+http://ja.wikipedia.org/wiki/%e5%88%a9%e7%94%a8%e8%80%85%3aPapu
+

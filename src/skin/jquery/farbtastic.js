@@ -2,4 +2,312 @@
  * $Id$
  */
 
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('14.2m.G=r(a){$.G(t,a);u t};14.G=r(a,b){9 a=$(a).O(0);u a.G||(a.G=2l 14.1I(a,b))};14.1I=r(a,d){9 b=t;$(a).1o(\'<z P="G"><z P="v"></z><z P="11"></z><z P="2k"></z><z P="h-L L"></z><z P="1B-L L"></z></z>\');9 c=$(".G",a);b.11=$(".11",a).O(0);b.1g=2j;b.K=2i;b.F=2h;8(2g.2f.2e(/2d [0-6]\\./)){$("*",c).1x(r(){8(t.1s.13!="1H"){9 e=t.1s.13;e=t.1s.13.D(5,e.19-2);$(t).T({13:"1H",2c:"2b:2a.29.27(26=1E, 25=24, 23=\'"+e+"\')"})}})}b.1t=r(e){8(B b.w=="1f"){$(b.w).1k("1G",b.1r)}b.v=22;8(B e=="r"){b.w=e}R{8(B e=="1f"||B e=="21"){b.w=$(e);b.w.1n("1G",b.1r);8(b.w.O(0).C){b.V(b.w.O(0).C)}}}u t};b.1r=r(e){8(t.C&&t.C!=b.v){b.V(t.C)}};b.V=r(e){9 f=b.1w(e);8(b.v!=e&&f){b.v=e;b.12=f;b.A=b.1u(b.12);b.1h()}u t};b.1l=r(e){b.A=e;b.12=b.18(e);b.v=b.1b(b.12);b.1h();u t};b.1m=r(i){9 g,m;9 h=i.20||i.1Z;9 f=b.11;8(B i.1F!="Z"){9 l={x:i.1F,y:i.1Y};9 j=h;1q(j){j.10=l.x;j.1p=l.y;l.x+=j.1e;l.y+=j.1d;j=j.S}9 j=f;9 k={x:0,y:0};1q(j){8(B j.10!="Z"){g=j.10-k.x;m=j.1p-k.y;1X}k.x+=j.1e;k.y+=j.1d;j=j.S}j=h;1q(j){j.10=Z;j.1p=Z;j=j.S}}R{9 l=b.1c(f);g=(i.1W||0*(i.1V+$("1o").O(0).1U))-l.x;m=(i.1T||0*(i.1S+$("1o").O(0).1R))-l.y}u{x:g-b.F/2,y:m-b.F/2}};b.17=r(e){8(!M.1j){$(M).1n("N",b.N).1n("U",b.U);M.1j=1E}9 f=b.1m(e);b.1C=s.Q(s.1D(f.x),s.1D(f.y))*2>b.K;b.N(e);u 1i};b.N=r(h){9 i=b.1m(h);8(b.1C){9 g=s.1Q(i.x,-i.y)/6.28;8(g<0){g+=1}b.1l([g,b.A[1],b.A[2]])}R{9 f=s.Q(0,s.W(1,-(i.x/b.K)+0.5));9 e=s.Q(0,s.W(1,-(i.y/b.K)+0.5));b.1l([b.A[0],f,e])}u 1i};b.U=r(){$(M).1k("N",b.N);$(M).1k("U",b.U);M.1j=1i};b.1h=r(){9 e=b.A[0]*6.28;$(".h-L",c).T({1A:s.E(s.1P(e)*b.1g+b.F/2)+"Y",1z:s.E(-s.1O(e)*b.1g+b.F/2)+"Y"});$(".1B-L",c).T({1A:s.E(b.K*(0.5-b.A[1])+b.F/2)+"Y",1z:s.E(b.K*(0.5-b.A[2])+b.F/2)+"Y"});$(".v",c).T("1y",b.1b(b.18([b.A[0],1,0.5])));8(B b.w=="1f"){$(b.w).T({1y:b.v,v:b.A[2]>0.5?"#1N":"#1M"});$(b.w).1x(r(){8(t.C&&t.C!=b.v){t.C=b.v}})}R{8(B b.w=="r"){b.w.1L(b,b.v)}}};b.1c=r(f){9 g={x:f.1e,y:f.1d};8(f.S){9 e=b.1c(f.S);g.x+=e.x;g.y+=e.y}u g};b.1b=r(f){9 i=s.E(f[0]*J);9 h=s.E(f[1]*J);9 e=s.E(f[2]*J);u"#"+(i<16?"0":"")+i.1a(16)+(h<16?"0":"")+h.1a(16)+(e<16?"0":"")+e.1a(16)};b.1w=r(e){8(e.19==7){u[I("H"+e.D(1,3))/J,I("H"+e.D(3,5))/J,I("H"+e.D(5,7))/J]}R{8(e.19==4){u[I("H"+e.D(1,2))/15,I("H"+e.D(2,3))/15,I("H"+e.D(3,4))/15]}}};b.18=r(m){9 o,n,e,j,k;9 i=m[0],p=m[1],f=m[2];n=(f<=0.5)?f*(p+1):f+p-f*p;o=f*2-n;u[t.X(o,n,i+0.1v),t.X(o,n,i),t.X(o,n,i-0.1v)]};b.X=r(f,e,g){g=(g<0)?g+1:((g>1)?g-1:g);8(g*6<1){u f+(e-f)*g*6}8(g*2<1){u e}8(g*3<2){u f+(e-f)*(0.1K-g)*6}u f};b.1u=r(m){9 i,o,p,j,q,f;9 e=m[0],k=m[1],n=m[2];i=s.W(e,s.W(k,n));o=s.Q(e,s.Q(k,n));p=o-i;f=(i+o)/2;q=0;8(f>0&&f<1){q=p/(f<0.5?(2*f):(2-2*f))}j=0;8(p>0){8(o==e&&o!=k){j+=(k-n)/p}8(o==k&&o!=n){j+=(2+(n-e)/p)}8(o==n&&o!=e){j+=(4+(e-k)/p)}j/=6}u[j,q,f]};$("*",c).17(b.17);b.V("#1J");8(d){b.1t(d)}};',62,147,'||||||||if|var||||||||||||||||||function|Math|this|return|color|callback|||div|hsl|typeof|value|substring|round|width|farbtastic|0x|parseInt|255|square|marker|document|mousemove|get|class|max|else|offsetParent|css|mouseup|setColor|min|hueToRGB|px|undefined|mouseX|wheel|rgb|backgroundImage|jQuery|||mousedown|HSLToRGB|length|toString|pack|absolutePosition|offsetTop|offsetLeft|object|radius|updateDisplay|false|dragging|unbind|setHSL|widgetCoords|bind|html|mouseY|while|updateValue|currentStyle|linkTo|RGBToHSL|33333|unpack|each|backgroundColor|top|left|sl|circleDrag|abs|true|offsetX|keyup|none|_farbtastic|000000|66666|call|fff|000|cos|sin|atan2|scrollTop|clientY|pageY|scrollLeft|clientX|pageX|break|offsetY|srcElement|target|string|null|src|crop|sizingMethod|enabled|AlphaImageLoader||Microsoft|DXImageTransform|progid|filter|MSIE|match|appVersion|navigator|194|100|84|overlay|new|fn'.split('|')))
+
+
+jQuery.fn.farbtastic = function (callback) {
+  $.farbtastic(this, callback);
+  return this;
+};
+
+jQuery.farbtastic = function (container, callback) {
+  var container = $(container).get(0);
+  return container.farbtastic || (container.farbtastic = new jQuery._farbtastic(container, callback));
+}
+
+jQuery._farbtastic = function (container, callback) {
+  // Store farbtastic object
+  var fb = this;
+
+  // Insert markup
+  $(container).html('<div class="farbtastic"><div class="color"></div><div class="wheel"></div><div class="overlay"></div><div class="h-marker marker"></div><div class="sl-marker marker"></div></div>');
+  var e = $('.farbtastic', container);
+  fb.wheel = $('.wheel', container).get(0);
+  // Dimensions
+  fb.radius = 84;
+  fb.square = 100;
+  fb.width = 194;
+
+  // Fix background PNGs in IE6
+  if (navigator.appVersion.match(/MSIE [0-6]\./)) {
+    $('*', e).each(function () {
+      if (this.currentStyle.backgroundImage != 'none') {
+        var image = this.currentStyle.backgroundImage;
+        image = this.currentStyle.backgroundImage.substring(5, image.length - 2);
+        $(this).css({
+          'backgroundImage': 'none',
+          'filter': "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='" + image + "')"
+        });
+      }
+    });
+  }
+
+  
+  fb.linkTo = function (callback) {
+    // Unbind previous nodes
+    if (typeof fb.callback == 'object') {
+      $(fb.callback).unbind('keyup', fb.updateValue);
+    }
+
+    // Reset color
+    fb.color = null;
+
+    // Bind callback or elements
+    if (typeof callback == 'function') {
+      fb.callback = callback;
+    }
+    else if (typeof callback == 'object' || typeof callback == 'string') {
+      fb.callback = $(callback);
+      fb.callback.bind('keyup', fb.updateValue);
+      if (fb.callback.get(0).value) {
+        fb.setColor(fb.callback.get(0).value);
+      }
+    }
+    return this;
+  }
+  fb.updateValue = function (event) {
+    if (this.value && this.value != fb.color) {
+      fb.setColor(this.value);
+    }
+  }
+
+  
+  fb.setColor = function (color) {
+    var unpack = fb.unpack(color);
+    if (fb.color != color && unpack) {
+      fb.color = color;
+      fb.rgb = unpack;
+      fb.hsl = fb.RGBToHSL(fb.rgb);
+      fb.updateDisplay();
+    }
+    return this;
+  }
+
+  
+  fb.setHSL = function (hsl) {
+    fb.hsl = hsl;
+    fb.rgb = fb.HSLToRGB(hsl);
+    fb.color = fb.pack(fb.rgb);
+    fb.updateDisplay();
+    return this;
+  }
+
+  /////////////////////////////////////////////////////
+
+  
+  fb.widgetCoords = function (event) {
+    var x, y;
+    var el = event.target || event.srcElement;
+    var reference = fb.wheel;
+
+    if (typeof event.offsetX != 'undefined') {
+      // Use offset coordinates and find common offsetParent
+      var pos = { x: event.offsetX, y: event.offsetY };
+
+      // Send the coordinates upwards through the offsetParent chain.
+      var e = el;
+      while (e) {
+        e.mouseX = pos.x;
+        e.mouseY = pos.y;
+        pos.x += e.offsetLeft;
+        pos.y += e.offsetTop;
+        e = e.offsetParent;
+      }
+
+      // Look for the coordinates starting from the wheel widget.
+      var e = reference;
+      var offset = { x: 0, y: 0 }
+      while (e) {
+        if (typeof e.mouseX != 'undefined') {
+          x = e.mouseX - offset.x;
+          y = e.mouseY - offset.y;
+          break;
+        }
+        offset.x += e.offsetLeft;
+        offset.y += e.offsetTop;
+        e = e.offsetParent;
+      }
+
+      // Reset stored coordinates
+      e = el;
+      while (e) {
+        e.mouseX = undefined;
+        e.mouseY = undefined;
+        e = e.offsetParent;
+      }
+    }
+    else {
+      // Use absolute coordinates
+      var pos = fb.absolutePosition(reference);
+      x = (event.pageX || 0*(event.clientX + $('html').get(0).scrollLeft)) - pos.x;
+      y = (event.pageY || 0*(event.clientY + $('html').get(0).scrollTop)) - pos.y;
+    }
+    // Subtract distance to middle
+    return { x: x - fb.width / 2, y: y - fb.width / 2 };
+  }
+
+  
+  fb.mousedown = function (event) {
+    // Capture mouse
+    if (!document.dragging) {
+      $(document).bind('mousemove', fb.mousemove).bind('mouseup', fb.mouseup);
+      document.dragging = true;
+    }
+
+    // Check which area is being dragged
+    var pos = fb.widgetCoords(event);
+    fb.circleDrag = Math.max(Math.abs(pos.x), Math.abs(pos.y)) * 2 > fb.square;
+
+    // Process
+    fb.mousemove(event);
+    return false;
+  }
+
+  
+  fb.mousemove = function (event) {
+    // Get coordinates relative to color picker center
+    var pos = fb.widgetCoords(event);
+
+    // Set new HSL parameters
+    if (fb.circleDrag) {
+      var hue = Math.atan2(pos.x, -pos.y) / 6.28;
+      if (hue < 0) hue += 1;
+      fb.setHSL([hue, fb.hsl[1], fb.hsl[2]]);
+    }
+    else {
+      var sat = Math.max(0, Math.min(1, -(pos.x / fb.square) + .5));
+      var lum = Math.max(0, Math.min(1, -(pos.y / fb.square) + .5));
+      fb.setHSL([fb.hsl[0], sat, lum]);
+    }
+    return false;
+  }
+
+  
+  fb.mouseup = function () {
+    // Uncapture mouse
+    $(document).unbind('mousemove', fb.mousemove);
+    $(document).unbind('mouseup', fb.mouseup);
+    document.dragging = false;
+  }
+
+  
+  fb.updateDisplay = function () {
+    // Markers
+    var angle = fb.hsl[0] * 6.28;
+    $('.h-marker', e).css({
+      left: Math.round(Math.sin(angle) * fb.radius + fb.width / 2) + 'px',
+      top: Math.round(-Math.cos(angle) * fb.radius + fb.width / 2) + 'px'
+    });
+
+    $('.sl-marker', e).css({
+      left: Math.round(fb.square * (.5 - fb.hsl[1]) + fb.width / 2) + 'px',
+      top: Math.round(fb.square * (.5 - fb.hsl[2]) + fb.width / 2) + 'px'
+    });
+
+    // Saturation/Luminance gradient
+    $('.color', e).css('backgroundColor', fb.pack(fb.HSLToRGB([fb.hsl[0], 1, 0.5])));
+
+    // Linked elements or callback
+    if (typeof fb.callback == 'object') {
+      // Set background/foreground color
+      $(fb.callback).css({
+        backgroundColor: fb.color,
+        color: fb.hsl[2] > 0.5 ? '#000' : '#fff'
+      });
+
+      // Change linked value
+      $(fb.callback).each(function() {
+        if (this.value && this.value != fb.color) {
+          this.value = fb.color;
+        }
+      });
+    }
+    else if (typeof fb.callback == 'function') {
+      fb.callback.call(fb, fb.color);
+    }
+  }
+
+  
+  fb.absolutePosition = function (el) {
+    var r = { x: el.offsetLeft, y: el.offsetTop };
+    // Resolve relative to offsetParent
+    if (el.offsetParent) {
+      var tmp = fb.absolutePosition(el.offsetParent);
+      r.x += tmp.x;
+      r.y += tmp.y;
+    }
+    return r;
+  };
+
+  
+  fb.pack = function (rgb) {
+    var r = Math.round(rgb[0] * 255);
+    var g = Math.round(rgb[1] * 255);
+    var b = Math.round(rgb[2] * 255);
+    return '#' + (r < 16 ? '0' : '') + r.toString(16) +
+           (g < 16 ? '0' : '') + g.toString(16) +
+           (b < 16 ? '0' : '') + b.toString(16);
+  }
+
+  fb.unpack = function (color) {
+    if (color.length == 7) {
+      return [parseInt('0x' + color.substring(1, 3)) / 255,
+        parseInt('0x' + color.substring(3, 5)) / 255,
+        parseInt('0x' + color.substring(5, 7)) / 255];
+    }
+    else if (color.length == 4) {
+      return [parseInt('0x' + color.substring(1, 2)) / 15,
+        parseInt('0x' + color.substring(2, 3)) / 15,
+        parseInt('0x' + color.substring(3, 4)) / 15];
+    }
+  }
+
+  fb.HSLToRGB = function (hsl) {
+    var m1, m2, r, g, b;
+    var h = hsl[0], s = hsl[1], l = hsl[2];
+    m2 = (l <= 0.5) ? l * (s + 1) : l + s - l*s;
+    m1 = l * 2 - m2;
+    return [this.hueToRGB(m1, m2, h+0.33333),
+        this.hueToRGB(m1, m2, h),
+        this.hueToRGB(m1, m2, h-0.33333)];
+  }
+
+  fb.hueToRGB = function (m1, m2, h) {
+    h = (h < 0) ? h + 1 : ((h > 1) ? h - 1 : h);
+    if (h * 6 < 1) return m1 + (m2 - m1) * h * 6;
+    if (h * 2 < 1) return m2;
+    if (h * 3 < 2) return m1 + (m2 - m1) * (0.66666 - h) * 6;
+    return m1;
+  }
+
+  fb.RGBToHSL = function (rgb) {
+    var min, max, delta, h, s, l;
+    var r = rgb[0], g = rgb[1], b = rgb[2];
+    min = Math.min(r, Math.min(g, b));
+    max = Math.max(r, Math.max(g, b));
+    delta = max - min;
+    l = (min + max) / 2;
+    s = 0;
+    if (l > 0 && l < 1) {
+      s = delta / (l < 0.5 ? (2 * l) : (2 - 2 * l));
+    }
+    h = 0;
+    if (delta > 0) {
+      if (max == r && max != g) h += (g - b) / delta;
+      if (max == g && max != b) h += (2 + (b - r) / delta);
+      if (max == b && max != r) h += (4 + (r - g) / delta);
+      h /= 6;
+    }
+    return [h, s, l];
+  }
+
+  // Install mousedown handler (the others are set on the document on-demand)
+  $('*', e).mousedown(fb.mousedown);
+
+    // Init color
+  fb.setColor('#000000');
+
+  // Set linked elements/callback
+  if (callback) {
+    fb.linkTo(callback);
+  }
+}

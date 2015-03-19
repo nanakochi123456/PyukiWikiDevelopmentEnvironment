@@ -1,0 +1,12 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+captcha_plugin_ok=画像認証に成功しました。
+captcha_plugin_ng=画面上の文字を正しく入力して下さい。
+captcha_plugin_before=上の画像で表示されている文字を入力して下さい。
+captcha_plugin_reload=文字を変更する。
+captcha_plugin_error=<span class="error">画像認証が利用できない為、ポストできません。</span>
+captcha_plugin_authed=管理者認証済のため、画像認証は省略されました。
+captcha_plugin_authedip=許可されたIPアドレスからのアクセスのため、画像認証は省略されました。
+captcha_plugin_fobidden=画像認証に失敗しました。戻るボタンを押してもう一度入力して下さい。

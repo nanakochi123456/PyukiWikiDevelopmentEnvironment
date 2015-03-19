@@ -86,6 +86,12 @@
 	width: 15px;
 }
 
+#icn_star {
+	background: url(../image/face.png) 0px 0px;
+	height: 15px;
+	width: 15px;
+}
+
 #icn_tear {
 	background: url(../image/face.png) 0px -210px;
 	height: 15px;
@@ -106,12 +112,6 @@
 
 #icn_worried {
 	background: url(../image/face.png) 0px -255px;
-	height: 15px;
-	width: 15px;
-}
-
-#icn_star {
-	background: url(../image/face.png) 0px 0px;
 	height: 15px;
 	width: 15px;
 }

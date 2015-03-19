@@ -1,0 +1,46 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+bugtrack_priority_list=emergency,important,usually,low
+bugtrack_priority_emergency=Emergency
+bugtrack_priority_important=Important
+bugtrack_priority_usually=Usually
+bugtrack_priority_low=Low
+
+bugtrack_state_list=proposal,start,commit,finish,hold,rejection
+bugtrack_state_proposal=Proposal
+bugtrack_state_start=Start
+bugtrack_state_commit=Wait commit
+bugtrack_state_finish=Finish
+bugtrack_state_hold=Hold
+bugtrack_state_rejection=Rejection
+
+bugtrack_statebgcolor_proposal=#ffccff
+bugtrack_statebgcolor_start=#ccccff
+bugtrack_statebgcolor_commit=#ffcc99
+bugtrack_statebgcolor_finish=#ccffcc
+bugtrack_statebgcolor_hold=#ccddcc
+bugtrack_statebgcolor_rejection=#cccccc
+bugtrack_statebgcolor_other=#cccccc
+
+bugtrack_headbgcolor=#ffffcc
+
+bugtrack_inputline=pagename,name,priority,state,category,date,summary,version
+bugtrack_line=pagename,state,priority,category,name,summary
+
+bugtrack_title=Tracking bug plugin
+bugtrack_base=Pagename
+bugtrack_summary=Summary
+bugtrack_priority=Priority
+bugtrack_state=State
+bugtrack_name=Name
+bugtrack_date=Date
+bugtrack_body=Message
+bugtrack_category=Category
+bugtrack_pagename=Pagename
+bugtrack_pagename_comment=Is swung automatically name and remains a blank page.
+bugtrack_version=Version
+bugtrack_version_comment=Can be blank.
+bugtrack_submit=Add bugtrack
+bugtrack_body=Message

@@ -1,75 +1,483 @@
-Status: 503 Service unavailable Content-type: text/html
+PyukiWiki管理者向けプラグイン
 
-PyukiWiki Runtime Error
+<<$Id$>>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+ ・ PyukiWiki管理者向けプラグイン
+ ・ admin.inc.pl
+ ・ adminchangepassword.inc.pl
+ ・ adminedit.inc.pl
+ ・ compressbackup.inc.pl
+ ・ convertutf8.inc.pl
+ ・ counter_viewer.inc.pl
+ ・ deletecache.inc.pl
+ ・ freezeconvert.inc.pl
+ ・ listfrozen.inc.pl
+ ・ logs_viewer.inc.pl
+ ・ perlpod.inc.pl
+ ・ rename.inc.pl
+ ・ server.inc.pl
+ ・ servererror.inc.pl
+ ・ setupeditor.inc.pl
+ ・ sitemaps.inc.pl
+ ・ stdin.inc.pl
+ ・ topicpath.inc.pl
+ ・ versionlist.inc.pl
+
+admin.inc.pl
+
+admin.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=admin
+
+重要度
+
+?????
+
+説明
+
+管理プラグインの実行を支援するメニューを表示する。
+
+adminchangepassword.inc.pl
+
+adminchangepassword.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=adminchangepassword
+
+重要度
+
+?????
+
+説明
+
+管理パスワード（凍結・添付）を変更する。
+
+adminedit.inc.pl
+
+adminedit.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=adminedit&mypage=ページ名
+
+重要度
+
+?????
+
+説明
+
+指定したページを編集・凍結する
+
+編集・凍結するには、凍結パスワードが必要です。
+
+ページ名はエンコードされていなければならない。
+
+compressbackup.inc.pl
+
+compressbackup.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=compressbackup
+
+説明
+
+バックアップディレクトリを再圧縮します。
+
+convertutf8.inc.pl
+
+convertutf8.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=convertutf8
+
+重要度
+
+?????　移行時のみ必要
+
+説明
+
+新設されたUTF-8バージョンのPyukiWiki用にwikiを変換する。なお、UTF-8からEUCに戻
+すことはできません。実行の前にWikiページ自体を必ずバックアップを取って下さい。
+
+従来のEUC版でのみ実行可能です。実行後、すぐにUTF-8版をインストールして下さい。
+
+実行後、一部のページが正常にリネームできていない事がありますので、listfrozen プ
+ラグインでページ名を確認後、異常があれば、一度、rename プラグインでリネームしな
+おして下さい。
+
+counter_viewer.inc.pl
+
+counter_viewer.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=counter_viewer
+
+重要度
+
+?????
+
+説明
+
+カウンターの詳細履歴を表示する。
+
+deletecache.inc.pl
+
+deletecache.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=deletecache
+
+重要度
+
+?????
+
+説明
+
+キャッシュディレクトリの中身を削除します。
+
+ただし、以下のファイルは削除しません。
+
+index.html
+     
+.htaccess
+     
+拡張子が３文字以下のファイル
+    *freezeconvert.inc.pl freezeconvert.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=freezeconvert
+
+重要度
+
+?????　旧バージョンより移行時のみ使用
+
+説明
+
+PukiWiki互換の凍結方法に変更する。ただし、まだ不具合がある可能性がある為、念の
+ため、listfrozenで凍結を確認しなおして下さい。
+
+listfrozen.inc.pl
+
+listfrozen.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=listfrozen
+
+重要度
+
+?????
+
+説明
+
+すべてのページのリストを表示し、一覧形式でページの凍結・凍結解除を一度に行ない
+ます。
+
+logs_viewer.inc.pl
+
+logs_viewer.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+アクセスログ解析プラグイン（評価版）
+
+重要度
+
+?????
+
+説明
+
+wikiのアクセスログを解析します。
+
+ただし、現状におきましては、未完成です。
+
+動作しない訳ではありませんが、動作環境を満たしていても、古いperlのバージョンで
+すと、正常に集計動作ができない場合があります。
+
+機能について
+
+このアクセスログ解析プラグインは、生ログを取得する為に開発されたもので、効率的
+なアクセスログ解析を行えません。
+
+その為、可能であれば、外部のアクセス解析サービスを効率的に利用することをお勧め
+します。
+
+google analytics は、無料（解析数により課金）で、非常に多くの情報を得ることがで
+き、かつ、PyukiWikiでは拡張プラグインとしてインストールできますので、設置がとて
+も容易です。場合によっては、多くの有料アクセス解析よりも、圧倒的、かつ、効率的
+な情報を得ることができます。
+
+http://pyukiwiki.info/PyukiWiki/Plugin/ExPlugin/google_analytics/
+
+他にも、他社の無料アクセス解析がありますが、日本国内ですと、これも非常に解析能
+力、及び、アクセスに対するレスポンスが瞬時に反応できるものとして、Ａｃｅ?ａｎａ
+ｌｙｚｅｒがあります。
+
+このアクセス解析プログラムは、広告がついてしまいますが、個人サイトには有効です
+。
+
+http://www.ace-analyzer.com/
+
+PyukiWiki開発者に寄付するには、こちらから（登録・解析タグ設置で収入になります）
+
+http://px.a8.net/svt/ejp?a8mat=1ZIHDM+3K0CGY+2HB0+639IR
+
+アクセス解析タグを設置するには、ad、htmlプラグインが便利です。
+
+http://pyukiwiki.info/PyukiWiki/Plugin/Nanami/ad/
+
+http://pyukiwiki.info/PyukiWiki/Plugin/Nanami/html/
+
+perlpod.inc.pl
+
+perlpod.inc.pl - PyukiWiki プラグイン
+
+概要
+
+?cmd=perlpod&file=perl script file or pod file. [&notitle=true] [&source=true]
+#perlpod(perl script file or pod file.)
+
+重要度
+
+?????
+
+説明
+
+perlスクリプトのドキュメントである pod を表示します。
+
+ディレクトリは指定できませんが、これは他のディレクトリの物を見られないようにす
+るためのセキュリティー措置です。
+
+自動的に、pyukiwiki.ini.cgiで設定されたディレクトリを検索します。
+
+rename.inc.pl
+
+rename.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=rename[&refer=encoded_page_name]
+
+重要度
+
+?????
+
+説明
+
+Wikiページ名を変更するためのプラグインです。
+
+カウンタ、差分(diff)、添付ファイルもあわせてリネームされます。
+
+PukiWikiからの移植です。
+
+PyukiWikiで実装されていない部分は省略しています。
+
+バグ
+
+recentに対して更新をかけていない。
+
+Trackbackに対して更新をかけていない。
+
+server.inc.pl
+
+server.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=server
+#server
+
+重要度
+
+?????
+
+説明
+
+サーバーの情報を表示します。
+
+プラグインを使用するには、凍結パスワードが必要です。
+
+基本的な環境変数以外に、Perlのモジュール情報、ベンチマークをとることができます
+。
+
+Perlのモジュール情報を収集する時は、非常に時間がかかります。そのため、ご使用の
+サーバーによっては、Server Errorで応答がない場合があります。
+
+ベンチマークは４秒間程サーバーを高負荷にさせますので、乱用しないようにしてくだ
+さい。
+
+ブロック型プラグインとして使用する場合は、凍結パスワードは不要ですが、最小限の
+情報のみの表示となります。
+
+servererror.inc.pl
+
+servererror.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+.htaccessファイルに
+
+ErrorDocument 400 /index.cgi?cmd=servererror
+ErrorDocument 401 /index.cgi?cmd=servererror
+ErrorDocument 402 /index.cgi?cmd=servererror
+ErrorDocument 403 /index.cgi?cmd=servererror
+ErrorDocument 404 /index.cgi?cmd=servererror
+ErrorDocument 500 /index.cgi?cmd=servererror
+
+もしくは
+
+ErrorDocument 400 /nph-index.cgi?cmd=servererror
+ErrorDocument 401 /nph-index.cgi?cmd=servererror
+ErrorDocument 402 /nph-index.cgi?cmd=servererror
+ErrorDocument 403 /nph-index.cgi?cmd=servererror
+ErrorDocument 404 /nph-index.cgi?cmd=servererror
+ErrorDocument 500 /nph-index.cgi?cmd=servererror
+
+等と記載して下さい。
+
+なお、付属の.htaccessのコメントを外せば動作します。
+
+重要度
+
+?????
+
+説明
+
+Apache等のWebサーバーからのエラーメッセージのかわりに、PyukiWikiでカスタムエラ
+ーメッセージを表示します。
+
+setupeditor.inc.pl
+
+setupeditor.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=setupeditor
+
+重要度
+
+?????
+
+説明
+
+info/setup.cgi の編集プラグインです。
+
+sitemaps.inc.pl
+
+sitemaps.inc.pl - PyukiWiki プラグイン
+
+概要
+
+?cmd=sitemaps
+#sitemaps(1.0)
+#sitemaps(0.5)
+#sitemaps(0.3)
+
+重要度
+
+?????
+
+説明
+
+検索エンジンに送信する、sitemaps XMLを生成するプラグインです。
+
+使用方法
+
+優先度の高いページ、または、低いページを、意図的に設定するために、各ページに、
+以下を記述する
+
+#sitemaps(1.0) 優先度の高い時
+
+#sitemaps(0.3) 優先度の低い時
+
+検索エンジンに、?cmd=sitemaps を送信する。
+
+stdin.inc.pl
+
+stdin.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+REQUEST_METHOD="GET" QUERY_STRING="" perl index.cgi < textfile
+
+setenv REQUEST_METHOD=GET
+setenv QUERY_STRING=""
+perl index.cgi <textfile > htmlfile
+
+重要度
+
+?????
+
+説明
+
+UNIXシェル等からの標準入力からwiki文を入力して、簡単にHTMLに整形したものを出力
+します。
+
+注意
+
+編集画面のプレビューの相当画面が出力されます。
+
+画像や添付ファイルは認識できません。
+
+完全なHTMLが出力されるわけではありません。
+
+プラグインは、現状、#contents しか対応していません。
+
+topicpath.inc.pl
+
+topicpath.inc.pl - PyukiWiki 管理者向けプラグイン
+
+重要度
+
+?????
+
+概要
+
+コンパクト版以外は自動で読み込まれます。
+または、:Header 等のページにて &topicpath; と記述
+または、スキンファイルに以下を記述
+ require 'plugin/topicpath.inc.pl';
+ &plugin_topicpath_inline;
+
+説明
+
+パンくずリスト(topicpath)と呼ばれる、現在参照しているウェブページの階層を表現す
+るユーザーインターフェースを提供するプラグインです。例えば
+
+PyukiWiki/ツアー? というページは、以下のようにというページに表現されます。
+
+Top? / PyukiWiki? / ツアー?
+
+基本的には以下の２通りの使い方を想定しています。
+
+１．「ほげ/ふが/げほ」など、２３階層以上の深いページでページの行き来をしやすく
+するために表示する
+
+２．スキンに組み込み、ページタイトル下のURLの代わりに全てのページで表示する
+
+PyukiWikiでは、compact版以外はデフォルトでスキンに組み込まれています。
+
+versionlist.inc.pl
+
+versionlist.inc.pl - PyukiWiki 管理者向けプラグイン
+
+概要
+
+?cmd=versionlist
+
+重要度
+
+?????
+
+説明
+
+PyukiWiki関連のすべてのファイルのファイルを検索し、バージョン表示をします。
+

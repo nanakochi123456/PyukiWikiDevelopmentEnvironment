@@ -1,0 +1,197 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+# useradd message
+login_plugin_useradd_title=Register new account
+login_plugin_useradd_msg_days=Can be available $DAYS days after the account registration is complete.<br />
+login_plugin_useradd_msg_admin=Use will be possible after registration account, from the janitor to approve.<br />
+login_plugin_useradd_msg_writeuser=To edit the $TITLE is required to sign up for an account. (free)<br /><a target="_blank" href="$script?cmd=login&mode=teamofuse">Team of use</a>
+
+login_plugin_useradd_msg_readuser=$TITLE is a membership site. To view, you need a account registration (free).<br /><a target="_blank" href="$script?cmd=login&mode=teamofuse">Team of use</a>
+
+login_plugin_useradd_msg_readwriteuser=$TITLE is a membership site. You need a account registration for view and edit. (free)<br /><a target="_blank" href="$script?cmd=login&mode=teamofuse">Team of use</a>
+
+login_plugin_useradd_msg2=Temporary registration is complete, you will receive registration confirmation e-mail notification.<br />If the mail is not delivered, may have been incorrectly entered email address. Please register again in that case.
+
+# useradd titles
+login_plugin_useradd_userid_title=Account name
+login_plugin_useradd_openid_title=OpenID service name
+login_plugin_useradd_oauth_title=OAuth service name
+login_plugin_useradd_pass1_title=Password
+login_plugin_useradd_pass2_title=Once again
+login_plugin_useradd_nickname_title=Nickname
+login_plugin_useradd_email_title=E-Mail address
+login_plugin_useradd_emailchk_title=Once again
+login_plugin_useradd_captcha_title=Captcha
+login_plugin_useradd_button=Register
+login_plugin_useradd_button_back=Again
+login_plugin_useradd_sex_title=Sex
+login_plugin_useradd_sex_value=man|Man,woman|Woman
+login_plugin_useradd_birthday_title=Birthday
+
+# useradd nickname
+login_plugin_useradd_nickname_default=Nickname ($MIN-$MAX characters)
+login_plugin_useradd_nickname_found=This nickname can not be registered.
+login_plugin_useradd_nickname_disable=This nickname can not be registered.
+login_plugin_useradd_nickname_noinput=Nickname has not been entered.
+login_plugin_useradd_nickname_length=Nickname is $MIN-$MAX characters.
+
+# useradd userid
+login_plugin_useradd_userid_default=Account name ($MIN-$MAX characters)
+login_plugin_useradd_userid_found=The account name can not be registered.
+login_plugin_useradd_userid_disable=The account name can not be registered.
+login_plugin_useradd_userid_noinput=Account name has not been entered.
+login_plugin_useradd_userid_length=Account name is $MIN-$MAX characters.
+
+# useradd pass1
+login_plugin_useradd_pass1_length=Password is $MIN-$MAX characters.
+login_plugin_useradd_pass1_noinput=The password has not been entered.
+login_plugin_useradd_pass1_err=Not same the password.
+login_plugin_useradd_pass1_ignorestr=There is a character that can not be used in the password.
+login_plugin_useradd_pass1_char=Please include letters, digits for the password.
+
+# useradd pass2
+login_plugin_useradd_pass2_length=Password is $MIN-$MAX characters.
+login_plugin_useradd_pass2_noinput=The confirm password has not been entered.
+login_plugin_useradd_pass2_err=Not same the password.
+login_plugin_useradd_pass2_ignorestr=There is a character that can not be used in the password.
+login_plugin_useradd_pass2_char=Please include letters, digits for the password.
+login_plugin_useradd_hiddenpasswd=********
+
+# useradd email
+login_plugin_useradd_email_default=username&#x40;example&#x2e;com
+login_plugin_useradd_email_diff=E-mail address is different.
+login_plugin_useradd_email_err=E-mail address is invalid.
+login_plugin_useradd_email_noinput=Please enter your email address.
+login_plugin_useradd_email_length=E-Mmail address is $MIN-$MAX characters.
+login_plugin_useradd_email_found=This e-mail address and I can not use.
+login_plugin_useradd_email_disable=I will not be able to register your email address.
+login_plugin_useradd_email_notdomain=This e-mail address does not exist.
+
+login_plugin_useradd_emailchk1_default=username
+login_plugin_useradd_emailchk2_default=example.ne.jp
+
+login_plugin_useradd_email_mobile_match_pc=I can not register the email address of the mobile from the PC.
+login_plugin_useradd_email_mobile_match_sp=
+login_plugin_useradd_email_mobile_match_mobile=
+login_plugin_useradd_email_mobile_match_pc=You can not register at This e-mail address from the PC.
+login_plugin_useradd_email_mobile_match_sp=
+login_plugin_useradd_email_mobile_match_mobile=This e-mail address must be registered from the smartphone.
+login_plugin_useradd_email_msnlive_match_pc=This e-mail address and I can not be registered.
+login_plugin_useradd_email_msnlive_match_sp=
+login_plugin_useradd_email_msnlive_match_mobile=This e-mail address must be registered from the smartphone.
+login_plugin_useradd_email_freemail_match_pc=This e-mail address and I can not be registered.
+login_plugin_useradd_email_freemail_match_sp=This e-mail address and I can not be registered.
+login_plugin_useradd_email_freemail_match_mobile=This e-mail address and I can not be registered.
+
+
+login_plugin_confirm_mail_title=$TITLE 仮登録のお知らせ
+login_plugin_confirm_mail_to=$NAMEさん
+login_plugin_confirm_mail_from=$TITLE 管理人
+
+login_plugin_confirm_title=確認キー入力
+login_plugin_confirm_msg=$MAIL 宛に登録確認用のメールを送付しています。<br />メールの到着には数分〜数十分かかります。<br />仮登録完了した同じブラウザーでメール内のURLをクリック、またはタップして下さい。<br />もし数時間たっても届かないようであれば、メールアドレスの記述ミスと思われますので、もう一度登録してみて下さい。
+login_plugin_confirm_confirm=確認キー
+login_plugin_confirm_error=確認キーが無効です。
+login_plugin_confirm_cookieerror=クッキーが無効です。
+login_plugin_confirm_expire=有効期限が切れました。
+login_plugin_confirm_usererror=このアカウント名では登録できません。
+login_plugin_confirm_button=確認
+
+login_plugin_complete_title=アカウント登録完了
+login_plugin_complete_msg=利用者登録が完了しました。<br />以下のログインフォームから今すぐログインしてみましょう。
+
+login_plugin_complete_mail_title=$TITLE 本登録のお知らせ
+login_plugin_complete_mail_to=$NAMEさん
+login_plugin_complete_mail_from=$TITLE 管理人
+
+
+login_plugin_forget_title=アカウント名、パスワード再発行
+login_plugin_forget_femail_default=username&#x40;example&#x2e;ne&#x2e;jp
+login_plugin_forget_femailchk1_default=username
+login_plugin_forget_femailchk2_default=example.ne.jp
+
+login_plugin_forget_femail_title=メールアドレス
+login_plugin_forget_femailchk_title=もう一度
+login_plugin_forget_captcha_title=文字認証
+login_plugin_forget_button=パスワード再発行
+login_plugin_forget_birthday_title=誕生日
+
+login_plugin_forget_msg=アカウント名、パスワードを忘れてしまった場合は、以下のフォームに登録時のメールアドレスを入力して下さい。<br />アカウント名とパスワード再発行リンクが送信されます。
+login_plugin_forget_sent=$MAIL 宛にアカウント名、パスワードを記載したメールを送付致しました。
+login_plugin_forget_error=該当するメールアドレスが存在しません。
+
+login_plugin_forget_mail_title=ユーザ名、パスワード再発行のお知らせ
+login_plugin_forget_mail_to=$NAMEさん
+login_plugin_forget_mail_from=$TITLE 管理人
+
+login_plugin_mypage_button=$NAMEさん マイページ
+login_plugin_logout_button=ログアウト
+
+login_plugin_mypage_title=$NAMEさんのマイページ
+login_plugin_mypage_writelist=【過去の書き込み一覧】
+login_plugin_mypage_loginlist=【ログイン履歴】
+login_plugin_mypage_passchange=【パスワード変更】
+login_plugin_mypage_mailchange=【メールアドレス変更】
+login_plugin_mypage_mailsent=【メール設定】
+login_plugin_mypage_unregist=【退会】
+login_plugin_mypage_unregist_msg=本当に退会しますか？
+login_plugin_mypage_return=【戻る】
+
+login_plugin_mailchg_title=メールアドレス変更
+login_plugin_mailchg_nowpass=現在のパスワード
+login_plugin_mailchg_email=新しいメールアドレス
+login_plugin_mailchg_button=変更する
+login_plugin_mailchg_finish=メールアドレスを「$OLDMAIL」から「$MAIL」に変更しました。<br /><br />新しいメールアドレスに変更通知が送信されます。
+login_plugin_mailchg_nopass=パスワードが入力されていません。
+login_plugin_mailchg_passerr=現在のパスワードが違います。
+login_plugin_mailchg_mailerr=メールアドレスが不正です。
+login_plugin_mailchg_mailsame=メールアドレスが同一です。
+login_plugin_mailchg_otheruse=メールアドレスが他で使われています。
+login_plugin_mailchg_return=【戻る】
+
+login_plugin_mailchg_mail_title=メールアドレス変更のお知らせ
+login_plugin_mailchg_mail_to=$NAMEさん
+login_plugin_mailchg_mail_from=$TITLE 管理人
+
+login_plugin_passchg_title=パスワード変更
+login_plugin_passchg_nowpass=現在のパスワード
+login_plugin_passchg_newpass=新しいパスワード
+login_plugin_passchg_confirm=もう一度
+login_plugin_passchg_button=変更する
+login_plugin_passchg_finish=$NAMEさんのパスワードを変更しました。<br /><br />現在のメールアドレスに変更通知が送信されます。
+login_plugin_passchg_nonowpass=現在のパスワードが入力されていません。
+login_plugin_passchg_nonewpass=新しいパスワードが入力されていません。
+login_plugin_passchg_passerr=現在のパスワードが違います。
+login_plugin_passchg_passlength=パスワードは６文字〜１６文字です。
+login_plugin_passchg_newpasserr=新しいパスワードが違います。
+login_plugin_passchg_samepass=古いパスワードと新しいパスワードが同一です。
+login_plugin_passchg_return=【戻る】
+
+login_plugin_passchg_mail_title=パスワード変更のお知らせ
+login_plugin_passchg_mail_to=$NAMEさん
+login_plugin_passchg_mail_from=$TITLE 管理人
+
+login_plugin_unregist_title=退会
+login_plugin_unregist_msg=$NAMEさんの退会
+login_plugin_unregist_nowpass=パスワード
+login_plugin_unregist_passerr=パスワードが違います。
+login_plugin_unregist_nopass=パスワードが入力されていません。
+login_plugin_unregist_enq=よろしければ、ご意見がありましたら、入力をお願いします。（任意）
+login_plugin_unregist_button=退会する
+login_plugin_unregist_confirm_msg=本当に退会しますか？
+
+login_plugin_unregist_finish=$NAMEさん、ご利用頂きありがとうございました。またのご利用をお待ちしております。
+login_plugin_unregist_return=【戻る】
+
+login_plugin_unregist_mail_title=$TITLE 退会のお知らせ
+login_plugin_unregist_mail_to=$NAMEさん
+login_plugin_unregist_mail_from=$TITLE 管理人
+
+# date
+login_plugin_date_year=年
+login_plugin_date_mon=月
+login_plugin_date_day=日
+login_plugin_date_gannen=元
+login_plugin_date_wareki=1868|1912|明治,1912|1926|大正,1926|1989|昭和,1989|999999|平成

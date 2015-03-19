@@ -1,0 +1,12 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+captcha_plugin_ok=Captcha authentication was successful.
+captcha_plugin_ng=Type correctly the characters image above.
+captcha_plugin_before=Type the characters image above.
+captcha_plugin_reload=Change characters.
+captcha_plugin_error=<span class="error">Captcha authentication is not available, you can not post.</span>
+captcha_plugin_authed=For authenticated administrator, captcha authentication has been omitted.
+captcha_plugin_authedip=For access from allowed IP address, captcha authentication has been omitted.
+captcha_plugin_fobidden=Failed to authenticate captcha. Please try again press back button.

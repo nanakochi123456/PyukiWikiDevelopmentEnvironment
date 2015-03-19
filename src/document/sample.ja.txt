@@ -1,75 +1,67 @@
-Status: 503 Service unavailable Content-type: text/html
+sample ディレクトリ
 
-PyukiWiki Runtime Error
+<< $Id$ >>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+ ・ sample ディレクトリ
+     □ .htaccess sample
+     □ Wrapper Sample
+     □ 軽快な動作をするpukiwiki.ini.cgiのサンプル
+     □ regex.src
+     □ Webフォントのインポートができるようになるスキンのサンプル
+     □ stationary.inc.pl プラグインのサンプル
+     □ stationary_explugin.inc.pl Exプラグインのサンプル
+
+.htaccess sample
+
+日本語での説明を追記した .htaccessサンプルファイルです。
+
+外部サイトからの制限を行なう場合や、urlhack.inc.cgiを用いる時、
+
+または、JavaScript、CSSを圧縮送信する場合に、参考にして下さい。
+
+Wrapper Sample
+
+無料サーバーで外部からCGIのコールができない等の理由で、InterWikiが使えない場合
+のために、PHPやHTML+JavaScriptで外部からのInterWikiを有効にするためのWrapperペ
+ージのサンプルです。
+
+他のWikiでも使用可能です。
+
+Public Domain で公開します。著作権明示は不要です。
+
+軽快な動作をするpukiwiki.ini.cgiのサンプル
+
+PyukiWiki 0.1.6で多くの機能が追加されたため、幾分スクリプトの動作が重くなってい
+ます。
+
+以前のPyukiWiki並みの軽さにするためのサンプルとしてご利用下さい。
+
+regex.src
+
+現在使用しているのは、punyurl.inc.cgi用とメールアドレス抽出、インラインプラグイ
+ンのみですが、実際にPyukiWikiのソースに埋め込まれているのは、punyurl.inc.cgiは
+UTF8向けに、メールアドレス抽出はイントラネット等の dot なしのドメインのメールア
+ドレス向けに少しいじられた物です。
+
+Webフォントのインポートができるようになるスキンのサンプル
+
+例として、オリジナルフォント　みかちゃん (L<http://mikachan.sourceforge.jp/>)を
+使用しましたが、このフォントの実態のファイルはパッケージに含まれていません。
+
+Windows用のTTF、及び OTFファイルをダウンロードして、下記のサイトを参考にして変
+換するか、
+http://www.adobe.com/jp/joc/devnet/dreamweaver/articles/
+html5pack_css3_part4.html
+以下からダウンロードして下さい。
+http://sfjp.jp/cvs/view/pyukiwiki/WebFontSample/mikachanfont.zip?view=log
+
+なお、TTF及びOTFファイルはオリジナルそのものです。
+
+stationary.inc.pl プラグインのサンプル
+
+プラグインの雛形です。
+
+stationary_explugin.inc.pl Exプラグインのサンプル
+
+Exプラグインの雛形です。
+

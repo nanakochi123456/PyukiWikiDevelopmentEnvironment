@@ -1,0 +1,14 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+multiarticle_plugin_btn=記事の投稿
+multiarticle_plugin_clear=クリア
+multiarticle_plugin_err=記載事項が不足しています
+multiarticle_plugin_star0=評価しない
+multiarticle_plugin_star1=&#9733;
+multiarticle_plugin_star2=&#9733;&#9733;
+multiarticle_plugin_star3=&#9733;&#9733;&#9733;
+multiarticle_plugin_star4=&#9733;&#9733;&#9733;&#9733;
+multiarticle_plugin_star5=&#9733;&#9733;&#9733;&#9733;&#9733;
+multiarticle_plugin_dmymsg=↑ここに入力フォームが表示されても、絶対に入力しないで下さい。

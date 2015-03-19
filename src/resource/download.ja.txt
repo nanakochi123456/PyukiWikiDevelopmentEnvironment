@@ -1,0 +1,14 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+download_plugin_master=マスター
+download_plugin_mirror=ミラー%d
+
+download_plugin_download_title=<span class="downloadpage"><span class="downloadpage_title">ファイル 「<a href="$url">$filename</a>」のダウンロード</span>
+download_plugin_download_titletag=$filenameのダウンロード
+download_plugin_download_msg=<span class="downloadpage_msg">ダウンロードが開始されない場合、<a class="downloadpage_msg" href="$url">$filename</a>をクリックして下さい。</span>
+download_plugin_download_info=<span class="downloadpage_main"><a class="downloadpage_main" href="$url">$filename</a></span> <span class="downloadpage_info">($sizeバイト $timestamp)</span>
+download_plugin_download_hash=<tr class="downloadpage_hash"><td class="downloadpage_title">$nameハッシュ値:</td><td class="downloadpage_hashvalue">$value</td></tr>
+download_plugin_download_count=<span id="sec"></span>
+download_plugin_download_back=<a href="$url">$pagenameへ戻る</a>

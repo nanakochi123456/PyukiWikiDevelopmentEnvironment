@@ -1,0 +1,16 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+conflict=\
+*On updating, a collision has occurred.\n\
+\n\
+It seems that someone has already updated this page while you were editing it.\n\
+\n\
+To the following...\n\
+Since there is a text which you edited,\n\
+Your contents of edit are not lost,\n\
+Please copy & paste to a notepad etc. immediately now.\n\
+\n\
+Since copy & paste ends,\n\
+Contents newest by looking RecentChanges and please reedit again.\n\

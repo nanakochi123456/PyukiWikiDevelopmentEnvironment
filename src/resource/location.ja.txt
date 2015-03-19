@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+location_plugin_message=このページは移動しました。もし移動をしなければ<strong><a href="$URL">こちら</a></strong>をクリックして下さい。

@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+twitter_plugin_widget_tweet=@$username からのツイート
+twitter_plugin_widget_favorites=@$username のお気に入りに登録されたツイート
+twitter_plugin_widget_list=@$username/$listname からのツイート
+twitter_plugin_widget_search=$keyword に関するツイート

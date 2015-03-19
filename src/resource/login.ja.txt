@@ -1,0 +1,44 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+login_plugin_title_msg=ユーザー登録・ログイン
+
+# navi
+login_plugin_navi_login=ユーザー登録・ログイン
+login_plugin_navi_logout=ログアウト
+login_plugin_navi_mypage=$NAMEさん マイページ
+
+# login
+login_plugin_title=ユーザー登録・ログイン
+login_plugin_login_title=ログイン
+login_plugin_login_id_title=メールアドレスまたはアカウント名
+login_plugin_login_password_title=パスワード
+login_plugin_login_captcha_title=文字認証
+login_plugin_login_expire=now|今だけログイン,long|ずっとログイン
+login_plugin_login_button=ログイン
+login_plugin_login_err_nouser=アカウント名、またはパスワードが違います。
+login_plugin_login_err_nosession=セッションが異常です。管理者に連絡をお願いします。
+login_plugin_login_err_nopasswd=アカウント名、またはパスワードが違います。
+
+login_plugin_login_id_length=アカウント名は$MIN文字〜$MAX文字です。
+login_plugin_login_password_length=パスワードの文字数は$MIN文字〜$MAX文字です。
+
+login_plugin_login_msg=ネットカフェや家族で共用するPCからログインする場合は「今だけログイン」でログインし、アカウント名、パスワードの盗用を防止してください。<br />ずっとログインは最終アクセスから約半年間有効です。<br />cookieを消去したりPCを再インストールされた場合は、こちらからログインしなおしてください。<br />ずっとログインの状態でも別のPCやスマートフォン、携帯電話や、別のブラウザーからログインするとログイン状態が解除されます。
+
+# openid login
+login_plugin_openid_autherr=$1での認証に失敗しました。<br />$2
+login_plugin_openid_cancel=$1での認証がキャンセルされました。
+login_plugin_openid_error=$1での認証でエラーが発生しました。<br />エラーコード：$2<br />エラーメッセージ：$3
+
+login_plugin_openid_service_hatena=はてな
+login_plugin_openid_service_livedoor=Livedoor auth
+login_plugin_openid_service_excite=Excite
+login_plugin_openid_service_mixi=mixi
+login_plugin_openid_service_yahoojapan=Yahoo! Japan
+login_plugin_openid_service_openid=OpenID
+
+login_plugin_oauth_service_twitter=Twitter
+
+login_plugin_loginsub_title=アカウント登録
+login_plugin_loginsub_msg=$1のアカウント登録がまだの場合、<a href="$2">アカウントを作成して下さい。</a><br /><br /><a href="$3">ログイン情報をお忘れですか？</a>

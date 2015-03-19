@@ -1,0 +1,13 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+deletecache_plugin_title=Delete Cache Directory
+deletecache_plugin_deleted=Deleted
+deletecache_plugin_error=Can't delete
+
+deletecache_plugin_listmsg=Please choose the extension to delete.
+deletecache_plugin_files=File
+deletecache_plugin_btn_delete=Delete
+deletecache_plugin_msg_deleted=The following files were deleted.
+deletecache_plugin_btn_back=Return

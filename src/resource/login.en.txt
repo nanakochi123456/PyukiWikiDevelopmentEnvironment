@@ -1,0 +1,42 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+login_plugin_title_msg=Login, Register ID
+
+# navi
+login_plugin_navi_login=Login, Register ID
+login_plugin_navi_logout=Logint
+login_plugin_navi_mypage=$NAME's Mypage
+
+# login
+login_plugin_title=Login, Register ID
+login_plugin_login_title=Login
+login_plugin_login_id_title=E-mail address or account name
+login_plugin_login_password_title=Password
+login_plugin_login_captcha_title=Captcha
+login_plugin_login_expire=now|Just now,long|Much
+login_plugin_login_button=Login
+login_plugin_login_err_nouser=Account name or password is incorrect.
+login_plugin_login_err_nosession=Session I is abnormal. Please contact the administrator.
+login_plugin_login_err_nopasswd=Account name or password is incorrect.
+
+login_plugin_login_id_length=Account name is $MIN characters - $MAX characters.
+login_plugin_login_password_length=Password is $MIN characters - $MAX characters.
+
+login_plugin_login_msg=If you log in from a PC to be shared by the family, and internet cafes are logged in the "login only" Now, please to prevent theft account name and password.<br />I logged in about six months from the last access is available for a long time.<br />If you re-install the PC or erase the cookie, please log back here.<br />Login status will be canceled when you log smartphones and PC, mobile phones and another, from a different browser even when much of the login.
+
+# openid login
+login_plugin_openid_autherr=Failed to authenticate with the $1.
+login_plugin_openid_cancel=Authentication in the $1 has been canceled.
+login_plugin_openid_error=
+An error occurred in the authentication on the $1.<br />Error code: $2<br />Error message: $3
+
+login_plugin_openid_service_hatena=Hatena
+login_plugin_openid_service_livedoor=Livedoor auth
+login_plugin_openid_service_excite=Excite
+login_plugin_openid_service_mixi=mixi
+login_plugin_openid_service_yahoojapan=Yahoo! Japan
+login_plugin_openid_service_openid=OpenID
+
+login_plugin_oauth_service_twitter=Twitter

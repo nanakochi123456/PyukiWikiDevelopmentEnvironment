@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+newpage_plugin_title=Create Page
+newpage_plugin_msg=New Page Name:
+newpage_plugin_under=Choice upper page:
+newpage_plugin_none=-- No specification --

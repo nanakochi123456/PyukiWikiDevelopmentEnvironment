@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+sitemap_plugin_title=サイトマップ

@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+ls2_plugin_notpage=have not child page.

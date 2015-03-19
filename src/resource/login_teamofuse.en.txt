@@ -1,0 +1,43 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+login_teamofuse_title=Terms of use
+login_teamofuse_msg=\
+*Terms and use $TITLE\n\
+Considered so if you are using the $TITLE is what you've accept the Terms and Conditions of content (terms below), if it is to become available, please use observe the following terms and conditions. \n\
+\n\
+The contents of this Agreement, may be changed if necessary, please check the terms of the latest in the case of use.\n\
+#contents\n\
+**Use of the wiki $TITLE\n\
+$TITLE (below, wiki) Administrator (hereinafter, administrators) are not done writing you can browse the contents of the user, the content in advance and speak. To that end, with the state of the wiki content and say (check the accuracy, authenticity, and infringement) is not guaranteed at all.\n\
+Use of the wiki service you at your own risk user.\n\
+**Rewrite the page, with the right to speak\n\
++Use limited language is the English.
++I considered copyright page content, to speak, shall belong to this wiki.\n\
++Rewriting of the page that was done, the remarks are responsible for all applicable created by the act.\n\
+**Prohibited acts\n\
+Regarding our wiki, prohibit the following acts.\n\
++Writing that may be offensive to public order and morals or national law\n\
++Infringe the intellectual property rights of third parties, such as copyright infringement or encourage\n\
++Links to sites that conflict with national law\n\
++Write to invade the privacy of a third party, such as a compromised or secret\n\
++Slander or defamation against the third party, writing that may cause discomfort or disadvantage to others or\n\
++Misleading statement or intentionally false\n\
++Writing lead to ethnic and racial discrimination, write problematic from an ethical point of view\n\
++Activities for a specific political party or political organization except when approved by the manager, saying that the purpose of profit or exclusively religious activities, bulletins and other content for the purpose of solicitation, advertising, ads\n\
++Or that falsely claim to be someone other than yourself or, claiming the organization, such as cultural organizations even though there is no right of representation and delegated authority, in partnership with any other person or organization, or to be in partnership\n\
++To accumulate collect personal information of other users, you can try to these acts or\n\
++Links to sites that inhibit the use of equipment that takes advantage of other users\n\
++It can interfere with the servers or networks connected to the bulletin board or bulletin board, or confuse\n\
++Was established with the objectives and themes of this wiki non sequitur\n\
++Statement whose contents the same as or similar to remarks such as speech or deleted by the administrator explicitly ban\n\
+**Administrator rights and obligations\n\
++The administrator shall write, etc. which are deemed to have been a violation of this Agreement, can be removed without the consent of the user.\n\
++The administrator shall have the obligation to the request of the public authorities, for writing contrary to international law, the disclosure of information access is performed.\n\
++Unless the above request, the administrator has a duty not to disclose personal information that has reaped.\n\
+**Disclaimer\n\
++For all complaints and claims which arise in relation to the user that violates the rights of third parties through the use of our wiki, or caused damage to a third party, the administrator responsible for damages and other I will not be held.\n\
++Not be held responsible for the things you did not save, or delete the contents of such statement to the board by the user, the administrator, we are under no obligation to explain why.\n\
+**Other\n\
+Violations, violation of law, there was a problem, such as action, I would ask that you let us know your administrator.

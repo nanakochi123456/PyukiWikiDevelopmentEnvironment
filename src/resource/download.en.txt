@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+download_plugin_master=Master
+download_plugin_mirror=Mirror %d

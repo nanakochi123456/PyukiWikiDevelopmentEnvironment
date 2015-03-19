@@ -1,0 +1,285 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+# useradd message
+login_plugin_useradd_title=新規アカウント登録
+login_plugin_useradd_msg_days=アカウント登録が完了してから$DAYS日後にご利用が可能となります。<br />
+login_plugin_useradd_msg_admin=アカウント登録後、管理人が承認してからご利用が可能となります。<br />
+login_plugin_useradd_msg_writeuser=$TITLEを編集するには、アカウント登録（無料）が必要です。<br />$login_plugin_useradd_msg登録された情報は公的機関の要請等の事態がない限り一切外部に公開することはありません。<br /><a target="_blank" href="$script?cmd=login&mode=teamofuse">ご利用規約</a>
+
+login_plugin_useradd_msg_readuser=$TITLEは会員制サイトです。閲覧するには、アカウント登録（無料）が必要です。<br />$login_plugin_useradd_msg登録された情報は公的機関の要請等の事態がない限り一切外部に公開することはありません。<br /><a target="_blank" href="$script?cmd=login&mode=teamofuse">ご利用規約</a>
+
+login_plugin_useradd_msg_readwriteuser=$TITLEは会員制サイトです。閲覧、書き込みするにはアカウント登録（無料）が必要です。<br />$login_plugin_useradd_msg登録された情報は公的機関の要請等の事態がない限り一切外部に公開することはありません。<br /><a target="_blank" href="$script?cmd=login&mode=teamofuse">ご利用規約</a>
+
+login_plugin_useradd_msg2=仮登録が完了しますと、登録確認通知のメールが届きます。メールに記載してあるURLをクリックし、登録を完了してください。<br />メールが届かない場合は、メールアドレスが間違って入力されている可能性があります。その際は再度登録を行って下さい。
+
+# useradd titles
+login_plugin_useradd_userid_title=アカウント名
+login_plugin_useradd_openid_title=OpenIDサービス名
+login_plugin_useradd_oauth_title=OAuthサービス名
+login_plugin_useradd_pass1_title=パスワード
+login_plugin_useradd_pass2_title=もう一度
+login_plugin_useradd_nickname_title=ニックネーム
+login_plugin_useradd_email_title=メールアドレス
+login_plugin_useradd_emailchk_title=もう一度
+login_plugin_useradd_captcha_title=文字認証
+login_plugin_useradd_button=登録する
+login_plugin_useradd_button_back=やりなおす
+login_plugin_useradd_sex_title=性別
+login_plugin_useradd_sex_value=man|男,woman|女
+login_plugin_useradd_birthday_title=誕生日
+
+# useradd nickname
+login_plugin_useradd_nickname_default=ニックネーム（$MIN〜$MAX文字）
+login_plugin_useradd_nickname_found=このニックネームは登録できません。
+login_plugin_useradd_nickname_disable=このニックネームは登録できません。
+login_plugin_useradd_nickname_noinput=ニックネームが入力されていません。
+login_plugin_useradd_nickname_length=ニックネームは$MIN文字〜$MAX文字です。
+
+# useradd userid
+login_plugin_useradd_userid_default=ユーザーID（半角英数字、$MIN〜$MAX文字）
+login_plugin_useradd_userid_found=このアカウント名は登録できません。
+login_plugin_useradd_userid_disable=このアカウント名は登録できません。
+login_plugin_useradd_userid_noinput=アカウント名が入力されていません。
+login_plugin_useradd_userid_length=アカウント名は$MIN文字〜$MAX文字です。
+
+# useradd pass1
+login_plugin_useradd_pass1_length=パスワードは$MIN文字〜$MAX文字です。
+login_plugin_useradd_pass1_noinput=パスワードが入力されていません。
+login_plugin_useradd_pass1_err=パスワードが違います。
+login_plugin_useradd_pass1_ignorestr=パスワードに使用できない文字があります。
+login_plugin_useradd_pass1_char=パスワードには英文字、数字を含めて下さい。
+
+# useradd pass2
+login_plugin_useradd_pass2_length=パスワードは$MIN文字〜$MAX文字です。
+login_plugin_useradd_pass2_noinput=確認用パスワードが入力されていません。
+login_plugin_useradd_pass2_err=パスワードが違います。
+login_plugin_useradd_pass2_ignorestr=パスワードに使用できない文字があります。
+login_plugin_useradd_pass2_char=パスワードには英文字、数字を含めて下さい。
+
+login_plugin_useradd_hiddenpasswd=●●●●●●●●
+
+# useradd email
+login_plugin_useradd_email_default=username&#x40;example&#x2e;ne&#x2e;jp
+login_plugin_useradd_email_diff=メールアドレスが違います。
+login_plugin_useradd_email_err=メールアドレスが不正です。
+login_plugin_useradd_email_noinput=メールアドレスを入力して下さい。
+login_plugin_useradd_email_length=メールアドレスは$MIN文字〜$MAX文字までです。
+login_plugin_useradd_email_found=このメールアドレスは使用できません。
+login_plugin_useradd_email_disable=このメールアドレスで登録することはできません。
+login_plugin_useradd_email_notdomain=このメールアドレスは存在しません。
+
+login_plugin_useradd_emailchk1_default=username
+login_plugin_useradd_emailchk2_default=example.ne.jp
+
+login_plugin_useradd_email_mobile_match_pc=モバイルのメールアドレスをPCから登録できません。
+login_plugin_useradd_email_mobile_match_sp=
+login_plugin_useradd_email_mobile_match_mobile=
+login_plugin_useradd_email_mobile_match_pc=このメールアドレスはPCから登録できません。
+login_plugin_useradd_email_mobile_match_sp=
+login_plugin_useradd_email_mobile_match_mobile=このメールアドレスはスマートフォンから登録して下さい。
+login_plugin_useradd_email_msnlive_match_pc=このメールアドレスは登録できません。
+login_plugin_useradd_email_msnlive_match_sp=
+login_plugin_useradd_email_msnlive_match_mobile=このメールアドレスはスマートフォンから登録して下さい。
+login_plugin_useradd_email_freemail_match_pc=このメールアドレスは登録できません。
+login_plugin_useradd_email_freemail_match_sp=このメールアドレスは登録できません。
+login_plugin_useradd_email_freemail_match_mobile=このメールアドレスは登録できません。
+
+
+login_plugin_confirm_mail_title=$TITLE 仮登録のお知らせ
+login_plugin_confirm_mail_to=$NAMEさん
+login_plugin_confirm_mail_from=$TITLE 管理人
+
+login_plugin_confirm_title=確認キー入力
+login_plugin_confirm_msg=$MAIL 宛に登録確認用のメールを送付しています。<br />メールの到着には数分〜数十分かかります。<br />仮登録完了した同じブラウザーでメール内のURLをクリック、またはタップして下さい。<br />もし数時間たっても届かないようであれば、メールアドレスの記述ミスと思われますので、もう一度登録してみて下さい。
+login_plugin_confirm_confirm=確認キー
+login_plugin_confirm_error=確認キーが無効です。
+login_plugin_confirm_cookieerror=クッキーが無効です。
+login_plugin_confirm_expire=有効期限が切れました。
+login_plugin_confirm_usererror=このアカウント名では登録できません。
+login_plugin_confirm_button=確認
+
+login_plugin_complete_title=アカウント登録完了
+login_plugin_complete_msg=利用者登録が完了しました。<br />以下のログインフォームから今すぐログインしてみましょう。
+
+login_plugin_complete_mail_title=$TITLE 本登録のお知らせ
+login_plugin_complete_mail_to=$NAMEさん
+login_plugin_complete_mail_from=$TITLE 管理人
+
+login_plugin_forget_title=アカウント名、パスワード再発行
+login_plugin_forget_femail_default=username&#x40;example&#x2e;ne&#x2e;jp
+login_plugin_forget_femailchk1_default=username
+login_plugin_forget_femailchk2_default=example.ne.jp
+
+login_plugin_forget_femail_title=メールアドレス
+login_plugin_forget_femailchk_title=もう一度
+login_plugin_forget_captcha_title=文字認証
+login_plugin_forget_button=パスワード再発行
+login_plugin_forget_birthday_title=誕生日
+
+login_plugin_forget_msg=アカウント名、パスワードを忘れてしまった場合は、以下のフォームに登録時のメールアドレスを入力して下さい。<br />アカウント名とパスワード再発行リンクが送信されます。
+login_plugin_forget_sent=$MAIL 宛にアカウント名、パスワードを記載したメールを送付致しました。
+login_plugin_forget_error=該当するメールアドレスが存在しません。
+
+login_plugin_forget_mail_title=ユーザ名、パスワード再発行のお知らせ
+login_plugin_forget_mail_to=$NAMEさん
+login_plugin_forget_mail_from=$TITLE 管理人
+
+login_plugin_mypage_button=$NAMEさん マイページ
+login_plugin_logout_button=ログアウト
+
+login_plugin_mypage_title=$NAMEさんのマイページ
+login_plugin_mypage_writelist=【過去の書き込み一覧】
+login_plugin_mypage_loginlist=【ログイン履歴】
+login_plugin_mypage_passchange=【パスワード変更】
+login_plugin_mypage_mailchange=【メールアドレス変更】
+login_plugin_mypage_mailsent=【メール設定】
+login_plugin_mypage_unregist=【退会】
+login_plugin_mypage_unregist_msg=本当に退会しますか？
+login_plugin_mypage_return=【戻る】
+
+login_plugin_mailchg_title=メールアドレス変更
+login_plugin_mailchg_nowpass=現在のパスワード
+login_plugin_mailchg_email=新しいメールアドレス
+login_plugin_mailchg_button=変更する
+login_plugin_mailchg_finish=メールアドレスを「$OLDMAIL」から「$MAIL」に変更しました。<br /><br />新しいメールアドレスに変更通知が送信されます。
+login_plugin_mailchg_nopass=パスワードが入力されていません。
+login_plugin_mailchg_passerr=現在のパスワードが違います。
+login_plugin_mailchg_mailerr=メールアドレスが不正です。
+login_plugin_mailchg_mailsame=メールアドレスが同一です。
+login_plugin_mailchg_otheruse=メールアドレスが他で使われています。
+login_plugin_mailchg_return=【戻る】
+
+login_plugin_mailchg_mail_title=メールアドレス変更のお知らせ
+login_plugin_mailchg_mail_to=$NAMEさん
+login_plugin_mailchg_mail_from=$TITLE 管理人
+
+login_plugin_passchg_title=パスワード変更
+login_plugin_passchg_nowpass=現在のパスワード
+login_plugin_passchg_newpass=新しいパスワード
+login_plugin_passchg_confirm=もう一度
+login_plugin_passchg_button=変更する
+login_plugin_passchg_finish=$NAMEさんのパスワードを変更しました。<br /><br />現在のメールアドレスに変更通知が送信されます。
+login_plugin_passchg_nonowpass=現在のパスワードが入力されていません。
+login_plugin_passchg_nonewpass=新しいパスワードが入力されていません。
+login_plugin_passchg_passerr=現在のパスワードが違います。
+login_plugin_passchg_passlength=パスワードは６文字〜１６文字です。
+login_plugin_passchg_newpasserr=新しいパスワードが違います。
+login_plugin_passchg_samepass=古いパスワードと新しいパスワードが同一です。
+login_plugin_passchg_return=【戻る】
+
+login_plugin_passchg_mail_title=パスワード変更のお知らせ
+login_plugin_passchg_mail_to=$NAMEさん
+login_plugin_passchg_mail_from=$TITLE 管理人
+
+login_plugin_unregist_title=退会
+login_plugin_unregist_msg=$NAMEさんの退会
+login_plugin_unregist_nowpass=パスワード
+login_plugin_unregist_passerr=パスワードが違います。
+login_plugin_unregist_nopass=パスワードが入力されていません。
+login_plugin_unregist_enq=よろしければ、ご意見がありましたら、入力をお願いします。（任意）
+login_plugin_unregist_button=退会する
+login_plugin_unregist_confirm_msg=本当に退会しますか？
+
+login_plugin_unregist_finish=$NAMEさん、ご利用頂きありがとうございました。またのご利用をお待ちしております。
+login_plugin_unregist_return=【戻る】
+
+login_plugin_unregist_mail_title=$TITLE 退会のお知らせ
+login_plugin_unregist_mail_to=$NAMEさん
+login_plugin_unregist_mail_from=$TITLE 管理人
+
+# date
+login_plugin_date_year=年
+login_plugin_date_mon=月
+login_plugin_date_day=日
+login_plugin_date_gannen=元
+login_plugin_date_wareki=1868|1912|明治,1912|1926|大正,1926|1989|昭和,1989|999999|平成
+
+# forget questions
+login_plugin_forget_reminders=3
+login_plugin_forget_title_1=合言葉１
+login_plugin_forget_title_2=合言葉２
+login_plugin_forget_title_3=合言葉３
+login_plugin_forget_title_4=合言葉４
+login_plugin_forget_title_5=合言葉５
+login_plugin_forget_title_6=合言葉６
+login_plugin_forget_title_7=合言葉７
+login_plugin_forget_title_8=合言葉８
+login_plugin_forget_title_9=合言葉９
+login_plugin_forget_title_10=合言葉１０
+
+
+login_plugin_forget_questions_1_text=生まれた町名は？
+login_plugin_forget_questions_1_minlength=2
+login_plugin_forget_questions_1_maxlength=10
+login_plugin_forget_questions_1_sample=○○県○○市
+
+login_plugin_forget_questions_2_text=在籍している、または卒業した小学校の名前は？
+login_plugin_forget_questions_2_minlength=4
+login_plugin_forget_questions_2_maxlength=20
+login_plugin_forget_questions_2_sample=○○小学校
+
+login_plugin_forget_questions_3_text=父親、または母親の旧姓は？
+login_plugin_forget_questions_3_minlength=1
+login_plugin_forget_questions_3_maxlength=5
+login_plugin_forget_questions_3_sample=旧姓を入力して下さい。
+
+login_plugin_forget_questions_4_text=最初に飼ったペットの名前は？
+login_plugin_forget_questions_4_minlength=0
+login_plugin_forget_questions_4_maxlength=20
+login_plugin_forget_questions_4_unknown=わからない、または忘れた
+login_plugin_forget_questions_4_sample=ペットの名前を入力して下さい。
+
+login_plugin_forget_questions_5_text=中学三年生の時の担任の名前は？
+login_plugin_forget_questions_5_minlength=1
+login_plugin_forget_questions_5_maxlength=20
+login_plugin_forget_questions_5_unknown=わからない、または忘れた
+login_plugin_forget_questions_5_sample=担任の先生の名前を入力して下さい。
+
+login_plugin_forget_questions_6_text=初めて旅行した場所は？
+login_plugin_forget_questions_6_minlength=1
+login_plugin_forget_questions_6_maxlength=50
+login_plugin_forget_questions_6_unknown=行ったことがない、または忘れた
+login_plugin_forget_questions_6_sample=○○○○○
+
+login_plugin_forget_questions_7_text=初めて乗った車は？
+login_plugin_forget_questions_7_minlength=1
+login_plugin_forget_questions_7_maxlength=20
+login_plugin_forget_questions_7_unknown=乗ったことがない、または忘れた
+login_plugin_forget_questions_7_sample=トヨタスターレット
+
+login_plugin_forget_questions_8_text=初恋の人の名前は？
+login_plugin_forget_questions_8_minlength=1
+login_plugin_forget_questions_8_maxlength=20
+login_plugin_forget_questions_8_unknown=初恋の人はいない
+login_plugin_forget_questions_8_sample=初恋の人の名前を入力して下さい。
+
+login_plugin_forget_questions_9_text=好きな食べ物は？
+login_plugin_forget_questions_9_minlength=1
+login_plugin_forget_questions_9_maxlength=20
+login_plugin_forget_questions_9_sample=好きな食べ物を１つ入力して下さい。
+
+login_plugin_forget_questions_10_text=好きな映画は？
+login_plugin_forget_questions_10_minlength=1
+login_plugin_forget_questions_10_maxlength=20
+login_plugin_forget_questions_10_unknown=好きな映画はない
+login_plugin_forget_questions_10_sample=好きな映画の名前を入力して下さい。
+
+login_plugin_forget_questions_11_text=好きなアニメ漫画は？
+login_plugin_forget_questions_11_minlength=1
+login_plugin_forget_questions_11_maxlength=20
+login_plugin_forget_questions_11_unknown=好きなアニメ漫画はない
+login_plugin_forget_questions_11_sample=好きなアニメ漫画の名前を入力して下さい。
+
+login_plugin_forget_questions_12_text=好きな歌手は？
+login_plugin_forget_questions_12_minlength=1
+login_plugin_forget_questions_12_maxlength=20
+login_plugin_forget_questions_12_unknown=好きな歌手はいない
+login_plugin_forget_questions_12_sample=好きな歌手の名前を入力して下さい。
+
+login_plugin_forget_questions_13_text=好きな有名人・俳優は？
+login_plugin_forget_questions_13_minlength=1
+login_plugin_forget_questions_13_maxlength=20
+login_plugin_forget_questions_13_unknown=好きな有名人・俳優はいない
+login_plugin_forget_questions_13_sample=好きな有名人・俳優の名前を入力して下さい。

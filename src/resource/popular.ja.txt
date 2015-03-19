@@ -1,0 +1,9 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+popular_plugin_total_frame=<h5>¿Íµ¤¤Î%d·ï</h5><div>%s</div>
+popular_plugin_today_frame=<h5>º£Æü¤Î%d·ï</h5><div>%s</div>
+popular_plugin_yesterday_frame=<h5>ºòÆü¤Î%d·ï</h5><div>%s</div>
+popular_plugin_week_frame=<h5>º£½µ¤Î%d·ï</h5><div>%s</div>
+popular_plugin_lastweek_frame=<h5>Àè½µ¤Î%d·ï</h5><div>%s</div>

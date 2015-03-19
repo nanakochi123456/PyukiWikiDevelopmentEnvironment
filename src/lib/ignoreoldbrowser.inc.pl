@@ -49,6 +49,10 @@ sub plugin_ignoreoldbrowser_init {
 					$browser="opera";
 					$ver=$1;
 				}
+				if($ua=~/trident\/\d+.\d+; rv:(\d+).(\d+)/) {
+					$browser="msie";
+					$ver=$1;
+				}
 				if($ua=~/msie(\d+).(\d+)/) {
 					$browser="msie";
 					$ver=$1;

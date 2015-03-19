@@ -1,0 +1,10 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+vote_plugin_choice=Choices
+vote_plugin_votes=Vote
+vote_plugin_addinput=Enter the votes
+vote_plugin_votecount=Votes
+vote_plugin_voteper=%
+vote_plugin_totalvote=Total votes

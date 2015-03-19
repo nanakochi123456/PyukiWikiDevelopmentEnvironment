@@ -1,0 +1,257 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+dmy=\
+\n\
+
+login_mail_confirmmail=\
+Subject:【重要】$wiki_title 認証メール\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　　　■■■■ 認証コード発行のお知らせ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+認証コードを発行致しました。\n\
+認証コードを発行したPC及びブラウザと同一のものでアクセスして下さい。\n\
+\n\
+リクエストを完了するには、確認キー入力画面で、以下の確認キーを\n\
+コピー＆ペースト等で入力して下さい。\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$confirm\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+\n\
+もしくは、以下のURLを、仮登録時と同じブラウザーでアクセスして下さい。\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$url?cmd=login&mode=confirm&x=$confirm\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+\n\
+こちらの確認キーは発行してから$expire時間有効です。\n\
+認証エラーが出る場合はもう一度登録から試してみて下さい。\n\
+\n\
+$url\n\
+\n\
+もし、このメールにご不明な点がありましたら、\n\
+$modifier_mail までお問い合わせ下さい。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+有効期限：$EXPIREDATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+login_mail_adduser=\
+Subject:【重要】$wiki_title 本登録のお知らせ\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　　　■■■■ 本登録のお知らせ ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$nickname様\n\
+\n\
+$wiki_titleにユーザー登録して頂き\n\
+ありがとうございます。\n\
+\n\
+これで、$wiki_title の編集等の制限が解除されました。\n\
+なお、元々凍結されているページは編集できません。\n\
+\n\
+今後もwikiを編集するには、ログインは必要になります。\n\
+\n\
+パスワードは安全の為、定期的に変更して下さい。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+login_mail_changemail=\
+Subject:【重要】$wiki_title メールアドレス変更通知\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　　　■■■■ メールアドレス変更通知 ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$nicknameさんの登録アドレスを以下のように変更致しました。\n\
+\n\
+変更前：$OLDMAIL\n\
+変更後：$MAIL\n\
+\n\
+このメールはメールアドレス変更の為の自動送信メールです。\n\
+もし、このメールにご不明な点がありましたら、\n\
+$modifier_mail までお問い合わせ下さい。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+login_mail_changepass=\
+Subject:【重要】$wiki_title パスワード変更通知\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　　　■■■■ パスワード変更通知 ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$nicknameさんのパスワードを変更致しました。\n\
+\n\
+このメールはパスワード変更の為の自動送信メールです。\n\
+もし、このメールにご不明な点がありましたら、\n\
+$modifier_mail までお問い合わせ下さい。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+login_mail_forget=\
+Subject:【重要】$wiki_title パスワード再発行通知\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　　　■■■■ パスワード再発行 ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+パスワードを以下のリンクから変更して下さい。\n\
+\n\
+$url?cmd=login&mode=newpass&x=$confirm\n\
+\n\
+このメールはパスワード再送信の為の自動送信メールです。\n\
+もし、このメールにご不明な点がありましたら、\n\
+$modifier_mail までお問い合わせ下さい。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+login_mail_unregist=\
+Subject:【重要】$wiki_title 退会のお知らせ\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　　　■■■■ 退会のお知らせ ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$nickname様\n\
+\n\
+$wiki_titleを今までご利用頂きありがとうございます。\n\
+\n\
+またのご利用をお待ちしております。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+login_mail_unauthorizedaccess1=\
+Subject:【重要】$wiki_title 不正アクセス検知のお知らせ\n\
+To:$nickname様\n\
+From:$wiki_title 管理人\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　■■■■ 不正アクセスの疑いの自動検知のお知らせ ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+$nickname様\n\
+\n\
+$wiki_titleにて、$nickname様のアカウントが、
+以前とは異なる環境からログインされたことが確認されました。\n\
+\n\
+確認の上、以下のURLにてネットワークアドレスの認証を行なって下さい。\n\
+\n\
+$url?cmd=login&mode=authip&x=$confirm\n\
+\n\
+$expire時間以内に認証が行われない場合、このネットワークアドレスからのアクセスは\n\
+拒否されます。\n\
+\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+■ 送信者情報\n\
+お名前：$nickname\n\
+端末の種類：$DEVICE\n\
+ユーザーエイジェント：$HTTP_USER_AGENT\n\
+ＩＰアドレス：$REMOTE_ADDR [$REMOTE_HOST]\n\
+検出されたネットワーク：$NETWORK_ADDR\n\
+検出された使用団体：$ORGANIZATION\n\
+検出されたＡＳ番号：$NETWORK_AS\n\
+アクセス元国、地方：$GEOIP_COUNTRY $GEOIP_CITY\n\
+登録日時：$DATETIME\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\

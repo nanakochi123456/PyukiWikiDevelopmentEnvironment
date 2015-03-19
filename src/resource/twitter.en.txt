@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+twitter_plugin_widget_tweet=Tweets by @$username
+twitter_plugin_widget_favorites=Favorite Tweets by @$username
+twitter_plugin_widget_list=Tweets from @$username/$listname
+twitter_plugin_widget_search=Tweets about "$keyword"

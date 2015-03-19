@@ -2,4 +2,837 @@
  * $Id$
  */
 
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('C w=36,d=w.5u,l=d.2I,n=5t,a="&5s;",e="=",h="",I="5r",H="5q",1G="?5p=5o",5n="2j=2Y",1F="5m=",5l="5k",1n="\\5j\\2h\\5i\\1p\\37",18="5h",2z="\\5g\\1p\\5f\\5e",2y="5d",2B="\\5c\\5b\\5a\\59\\1p\\57",2A="56",1t="\\55\\1p\\54\\2g\\37\\53\\2h",20="E-52",2m="\\1o\\2D\\19",1b="\\51\\50",28="\\26"+1b+"\\4Z",25="\\2f\\4Y\\4X\\2E\\4W\\4V\\V"+1b+"\\1u\\2q\\4U"+2m,23=1n+25,22="\\1u\\4T\\V"+2m,1Z=1t+22,21=" 24 4S.",1Y=20+21,17="4R",S="4Q",14="4P",2x="4O",11="4N",4M=R,1R=h,1Q=h,1y=0,13=0,12=0,s="4L";(D(){$(36).4K(D(){$("35[34=33],35[34=4J],4I").4H(D(){C b=$(Q).4G("4F");5(!(b==="")){$(Q).4E(\'<T 1U="33-4D:2l;Y:1z-2k;30:4C;"></T>\');$(Q).4B("T").4A(\'<T 1H="31">\'+b+"</T>");$(".31").1q({4z:"4y",2l:"4x",4w:"1N%",4v:"4u%",4t:"2l",4s:"#4r",4q:"4p",30:"4o",4n:"4m"}).4l(D(){$(Q).4k().P()});$(Q).P(D(){$(Q).1v("T").1q({Y:"1A"})});$(Q).4j(D(){C f=$(Q).2Z();5(f===""){$(Q).1v("T").1q({Y:"1z-2k"})}M{$(Q).1v("T").1q({Y:"1A"})}});C c=$(Q).2Z();5(c===""){$(Q).1v("T").1q({Y:"1z-2k"})}M{$(Q).1v("T").1q({Y:"1A"})}}})})});D 4i(o,p,b,c,f,m,j,i,q,k,g){7 2i(o,p,b,c,f,m,j,i,q,k,"2j=4h")}D 4g(o,p,b,c,f,m,j,i,q,k,g){7 2i(o,p,b,c,f,m,j,i,q,k,"2j=2Y")}D 2i(r,t,b,c,f,q,k,j,x,p,i,g){C o,v;5(p!==g){5(p!=h){o=F(x,p);5(o.8==h){2X(J(I,"\\4f\\4e\\1u\\1f\\1e\\1c\\2e\\1d\\V\\1o\\2d\\2c\\19\\n"+1t+"\\1o\\2U\\27\\2g\\2T\\2S\\2R\\2Q\\2P\\2f\\1f\\1e\\1K\\1d\\1J\\1c\\V\\19",H,"4d 4c 2b 1E 2a 29.\\2O e-2N 2M 2L 2K 2J."));o.P();7 G}v=r+1G+ +a+j+a+1F+t+a+b+e+o+a+f+e+q}}M{5(j!==g){5(j!=h){o=F(k,j);5(o.8==h){2X(J(I,"\\4b\\1p\\4a\\2h\\49\\2W\\47\\2V\\46\\1p\\26\\2W\\45\\2V\\44\\1u\\1f\\1e\\1c\\2e\\1d\\V\\1o\\2d\\2c\\19\\n"+1t+"\\1o\\2U\\27\\2g\\2T\\2S\\2R\\2Q\\2P\\2f\\1f\\1e\\1K\\1d\\1J\\1c\\V\\19",H,"43 42 S 2G 41 40 2b 1E 2a 29.\\2O e-2N 2M 2L 2K 2J."));o.P();7 G}v=r+1G+a+i+a+1F+t+a+b+e+c+o.8+a+f+e+q}}M{v=r+1G+a+i+a+1F+t+a+b+e+c+a+f+e+q}}2I.3Z=v;7 G}D 2H(c,b){7((b>0&&c.8.L==0)?1:0)}D 2F(f,c,b){7((f.8.L>=c&&f.8.L<=b)?0:1)}D K(f,c,b,g){f.1D=b;3Y(c,g)}D W(b,o,m,k,j,g,i,c,f){5(2H(j,g)||j.8==c){K(j,b,o,J(I,f+28+"\\1u\\1f\\1e\\1c\\2e\\1d\\V\\1o\\2d\\2c\\19",H,"3X 2b 1E 2a 29 1M 2G 2C "+f+"."));j.8="";O(j,c,k);7 1}5(2F(j,g,i)){K(j,b,o,J(I,f+28+"\\27"+g+1b+"\\3W"+i+1b+"\\26\\3V\\2E\\2D\\19",H,f+" 2C S 1I 24 3U "+g+" 3T "+i+" 1I."));O(j,c,k);7 1}5(!1V(j)){K(j,b,o,J(I,f+25,H,"3S 24 a 3R 3Q 3P 1E 3O 3N 1M "+a+"."));j.8=h;j.P();O(j,c,k);7 1}7 0}D X(f,b,c){5(f.8==b){f.8=h}f.1D=c}D O(f,c,b){5(f.8==h){f.8=c;f.1D=b}}D 16(c,b){c.1D=b}D 3M(f,q,r,c,b,k,p){C k=F(r,c),m=U(c),g=m.B("1m"),t=m.B("1l"),o=m.B("1k"),u=m.B("1j"),i=m.B("1i"),j=m.B("1h");5(q==17){16(k,t);7}5(q==S){X(k,g,t);7}5(q==14||q==11){5(W(b,u,t,o,k,i,j,g,J(I,2B,H,2A))){5(q==11&&f==R){k.P()}7 G}}K(k,b,t,h);O(k,g,o);1R=k.8;7 R}D 3L(f,q,r,c,b,k,p){C k=F(r,c),m=U(c),g=m.B("1m"),t=m.B("1l"),o=m.B("1k"),u=m.B("1j"),i=m.B("1i"),j=m.B("1h");5(q==17){16(k,t);7}5(q==S){X(k,g,t);7}O(k,g,o);7 R}D 3K(f,q,r,c,b,k,p){C k=F(r,c),m=U(c),g=m.B("1m"),t=m.B("1l"),o=m.B("1k"),u=m.B("1j"),i=m.B("1i"),j=m.B("1h");5(q==17){16(k,t);7}5(q==S){X(k,g,t);7}5(q==14||q==11){5(W(b,u,t,o,k,i,j,g,J(I,2z,H,2y))){5(q==11&&f==R){k.P()}7 G}}K(k,b,t,h);O(k,g,o);1Q=k.8;7 R}D 3J(f,q,r,c,b,k,p){C k=F(r,c),m=U(c),g=m.B("1m"),t=m.B("1l"),o=m.B("1k"),u=m.B("1j"),i=m.B("1i"),j=m.B("1h");5(q==17){16(k,t);7}5(q==S){X(k,g,t);7}5(q==14){5(W(b,u,t,o,k,i,j,g,J(I,1n,H,18))){7 G}5(!1W(k)){K(k,b,u,J(I,23,H,18));k.8=h;k.P();O(k,g,o);7 1}}K(k,b,t,h);O(k,g,o);7 R}D 3I(i,m,u,b,v,k,j){C k=F(u,b),q=U(b),o=q.B("1m"),r=q.B("1l"),x=q.B("1k"),p=q.B("1j"),c=q.B("1i"),t=q.B("1h");5(m==17||m==2x){K(k,v,r,1L(1w(k.8),c-k.8.L));7}5(m==S){X(k,o,r);K(k,v,r,1L(1w(k.8),c-k.8.L));7}5(m==14){5(W(v,p,r,x,k,c,t,o,J(I,1n,H,18))){7 G}5(!1W(k)){K(k,v,p,J(I,23,H,18));k.8=h;k.P();O(k,o,x);7 1}}C y=j.1r(","),g=F(u,y[0]),f=F(u,y[1]),z=0;5(m==11){5(W(v,p,r,x,k,c,t,o,J(I,1n,H,18))){7 G}5(g.8!=f.8){K(k,v,p,J(I,1n+22,H,18+21));g.8=h;f.8=h;g.P();7 G}}K(k,v,r,h);O(k,o,x);7 R}D 3H(g,r,u,f,b,m,q){C m=F(u,f),o=U(f),i=o.B("1m"),v=o.B("1l"),p=o.B("1k"),y=o.B("1j"),j=o.B("1i"),k=o.B("1h");C c=q.1r(","),x=F(u,c[0]);1s=F(u,c[1]);1C=F(u,c[2]);C t=(f==c[0]?x.8:1s.8+"@"+1C.8);5(r==17){16(m,v);7}5(r==S){X(m,i,v);7}5(r==14||r==11){5(f==c[0]&&W(b,y,v,p,m,j,k,i,J(I,1t,H,20))){5(r==11&&g==R){m.P()}7 G}5(f==c[0]&&!1X(t,0)){K(m,b,y,J(I,1Z,H,1Y));x.8=h;x.P();7 G}5(f==c[1]||f==c[2]){5(1s.8!=h&&1C.8!=h&&!1X(t,0)){K(m,b,y,J(I,1Z,H,1Y));1s.8=h;1C.8=h;1s.P();7 G}}}K(m,b,v,h);O(m,i,p);7 R}D 1X(f,c){C g=R;5(f==""){7 g}5(!c){5(f.1B(".")==-1){g=G}}5(f.1B("@")==-1){g=G}M{5(f.2r(f.1B("@")+1).1B("@")>-1){g=G}}C b=f.N(/[0-3G-2s-Z\\\\.\\\\@\\\\-\\\\1x]+/g);5(b!=f){g=G}7 g}D 1V(b){5(b.8.N(/[\\,\\=\\\\\\$\\\'\\"]+/g)){7 G}7 R}D 1W(b){7 1V(b)}D 2t(b){C c=b.2w(0);7 c<48?0:c<58?2:c<3F?0:c<3E?1:c<3D?0:c<3C?1:c<3B?0:0}D 3A(b){7 b.3z(/[\\!-\\~]/g,D(c){7 3y.3x(c.2w(0)+3w)})}D 3v(c,b){5(c==0){1y=b}5(c==1){13=b}5(c==2){12=b}}D 3u(m,o,f,c,v,t,i,r,q){C j=F(o,v),y=F(o,f),p=F(o,v),g=F(o,c),u=U(c),x=U(t),b=U(i),k=y.8.1r("|");5(q===3t 0){q=h}5(m=="3s"){5(k[4]==h){u.1U.Y="1A"}M{u.1U.Y="1z"}g.2v=G;p.8=h;x.1S=k[4];b.1S=h}M{5(m=="3r"){5(g.2v){p.8=k[4];16(p,"1T")}M{p.8=h}m=14}M{5(m==S){X(j,q,"1T");7}M{5(W(i,"3q","1T","2u",j,k[2],k[3],q,r)){7}M{b.1S=h}}}}O(j,q,"2u")}D 1O(k){C f=0,o=3p(),j=h,g=h,p=0;1a(C m=0;m<k.L;m++){C c=k.3o().3n(m),b=2t(c);5(p==b&&c!=32){g+=c;j=c;o[f]=g}M{5(g!=h&&g!=" "){o[f++]=g}p=b;g=c}}o[f]=g;7 o}C 1g,1P=0;D 1w(u){C r=3m 3l();C c=2,o=h,b,t="0",v=" ",k=1R+v+1Q+v;5(1y+13+12>0){k+=+1y+v+13+12+v+t+13+12+v+13+t+12+v+t+13+t+12+v}C q=s.1r("1x");1a(C m=0;m<q.L;m++){k+=q[m]+v}5(!1P){1g=1O(k);1P=1}b=1O(u);5(u==h){7 0}C p=1g.L;3k=0;1a(C m=0;m<1g.L;m++){1a(C g=0;g<b.L;g++){5(1g[m]!=h&&b[g]!=h){5(1g[m]==b[g]){7 2}}}}5(u.N(/[a-2s-Z]/)&&u.N(/\\d+/)){c+=10}5(u.N(/[a-z]/)&&u.N(/[A-Z]/)&&u.N(/\\d+/)){c+=15}5(u.N(/(\\d.*\\d.*\\d)/)){c+=10}5(u.N(/[!,@#$%^&*?1x~]/)){c+=15}5(u.N(/[a-z]/)&&u.N(/[A-Z]/)&&u.N(/\\d/)&&u.N(/[!,@#$%^&*?1x~]/)){c+=15}5(c>0){c+=u.L<9?0:(u.L-9)*2}5(c>1N){c=1N}1a(C m=0;m<u.L;m++){C f=u.2r(m,1);5(f 1M r){r[f]=1}M{c--}}5(u.L<6){7 1}M{5(c<2){7 2}}7 c}D 1L(k,c){C i=(k==0?J(I,"\\1f\\1e\\1K\\1d\\1J\\1c\\V",H,"3j 3i"):(k==1?J(I,"\\2q\\3h"+c+1b,H,c+" 1I 3g"):h));5(k>10){k=10}5(k<0){k=1}C g="3f 1w",j=\'<2p 1H="\',f="&3e;</2p>",b=\'<2n 1H="\'+g+\'"><2o>\'+j+g+"l"+k+\'">\'+i+f+j+g+"r"+k+\'">\'+f+"</2o></2n>";7 b}D 3d(c,k,j,g){5(!c){7 G}5(3c(g)==G){7}C b=j.1r(",");1a(C f=0;f<b.L;f++){3b(F(k,b[f]),F(k,b[f]+"3a"),F(k,b[f]+"39"))}38(k,g)};',62,341,'|||||if||return|value|||||||||||||||||||||||||||||getAttribute|var|function||gf|false|le|lj|ln|lerr|length|else|match|s_blur|focus|this|true|of|span|gid|u3044|lform|s_focus|display|||os|_d|_m|ob||s_onchange|oc|e_p|u3002|for|j_ch|u3055|u3066|u529b|u5165|tst|maxlength|minlength|errclass|defclass|inclass|default|j_p|u307e|u30fc|css|split|em1|j_e|u304c|next|strength|_|_y|inline|none|indexOf|em2|className|not|rf|cm|class|characters|u4e0b|u3057|strength_html|in|100|mktestword|_cr|ui|nn|innerHTML|inputword|style|checkstr|checkpass|checkEMail|e_ed|j_ed|e_e|e_d|j_d|j_pcant|is|j_cant|u306e|u306f|j_st|entered|been|has|u3093|u305b|u308c|u306b|u30a2|u30b9|_ologin|mode|block|left|j_masu|table|tr|td|u3042|substr|zA|ischr|defword|checked|charCodeAt|ou|e_u|j_u|e_n|j_n|string|u3059|u3067|lchk|the|nchk|location|name|account|or|address|mail|nEnter|u540d|u30c8|u30f3|u30a6|u30ab|u305f|u30a4|u30ed|alert|openid|val|position|placeholder||text|type|input|window|u30c9|fsubmitdelay|_token|_enc|pencf|keypress|lsubmit|nbsp|strengthcommon|after|u3068|enter|Please|testcounts|Array|new|charAt|toLowerCase|ar|errword|chk|sel|void|j_word|j_date|65248|fromCharCode|String|replace|tozen|128|123|97|91|65|9a|j_email|j_newpass|j_passwd|j_userid|j_form|j_nickname|used|be|can|that|character|There|to|between|u9593|u301c|It|sinss|href|provider|service|ID|Login|u30f3ID|u30b0|u30c0|u30d0||u30d7|u30d3|u30b5|URL|Authentication|u8a3cURL|u8a8d|openidlogin|oauth|oauthlogin|blur|prev|click|99|zIndex|absolute|hidden|overflow|999|color|textAlign|120|lineHeight|fontSize|5px|4px|top|append|parent|relative|align|wrapAll|title|attr|each|textarea|password|load|word_text|_p|onsubmit|onkeyup|onblur|onfocus|onchange|different|u9055|u308a|u306a|u304d|u7528|u4f7f|u5217|u5b57|u6587|Mail|u30ec|u30eb|u30e1|Nickname|u30e0||u30cd|u30af|u30c3|u30cb|UserID|u30fcID|u30b6|u30e6|Password|u30ef|u30d1|OpenID|od|refer|oid|login|cmd|en|ja|amp|navigator|document'.split('|')))
+
+
+
+
+var
+//	CHROME			= ua("CHROME"),
+//	MACOS			= ua("MACOS"),
+//	IPAD			= ua("IPAD"),
+//	NINTENDODS		= ua("NINTENDODS"),
+//	VERSION			= ua("VERSION"),
+
+	w				= window,
+	d				= w.document,
+	l				= d.location,
+	n				= navigator,
+
+
+	a="&amp;",
+	e="=",
+	h="",
+
+	lj="ja",
+	le="en",
+	cm="?cmd=login",
+	oid="mode=openid",
+	rf="refer=",
+
+	od="OpenID",
+	j_p="\u30d1\u30b9\u30ef\u30fc\u30c9",
+	e_p="Password",
+	j_u="\u30e6\u30fc\u30b6\u30fcID",
+	e_u="UserID",
+	j_n="\u30cb\u30c3\u30af\u30cd\u30fc\u30e0",
+	e_n="Nickname",
+	j_e="\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9",
+	e_e="E-Mail",
+
+	j_masu="\u307e\u3059\u3002",
+	j_ch="\u6587\u5b57",
+	j_st="\u306e" + j_ch + "\u5217",
+	j_cant="\u306b\u4f7f\u7528\u3067\u304d\u306a\u3044" + j_ch + "\u304c\u3042\u308a" + j_masu,
+	j_pcant=j_p + j_cant,
+	j_d="\u304c\u9055\u3044" + j_masu,
+	j_ed=j_e + j_d,
+	e_d=" is different.",
+	e_ed=e_e + e_d,
+
+	oc="onchange",
+	of="onfocus",
+	ob="onblur",
+	ou="onkeyup",
+	os="onsubmit",
+	_p=true,
+	nn=h,
+	ui=h,
+	_y=0,
+	_m=0,
+	_d=0,
+	// in password dictionary build/worddic.txt
+ s="word_text";
+
+
+
+
+(function(){
+	$(window).load(function(){
+		$('input[type=text],input[type=password],textarea').each(function(){
+			var thisTitle = $(this).attr('title');
+			if(!(thisTitle === '')){
+				$(this).wrapAll('<span style="text-align:left;display:inline-block;position:relative;"></span>');
+				$(this).parent('span').append('<span class="placeholder">' + thisTitle + '</span>');
+				$('.placeholder').css({
+					top:'4px',
+					left:'5px',
+					fontSize:'100%',
+					lineHeight:'120%',
+					textAlign:'left',
+					color:'#999',
+					overflow:'hidden',
+					position:'absolute',
+					zIndex:'99'
+				}).click(function(){
+					$(this).prev().focus();
+				});
+
+				$(this).focus(function(){
+					$(this).next('span').css({display:'none'});
+				});
+
+				$(this).blur(function(){
+					var thisVal = $(this).val();
+					if(thisVal === ''){
+						$(this).next('span').css({display:'inline-block'});
+					} else {
+						$(this).next('span').css({display:'none'});
+					}
+				});
+
+				var thisVal = $(this).val();
+				if(thisVal === ''){
+					$(this).next('span').css({display:'inline-block'});
+				} else {
+					$(this).next('span').css({display:'none'});
+				}
+			}
+		});
+	});
+});
+
+
+
+function oauthlogin(script, refer, urlform, url, sform, service, oform, oid, uform, uid, undefined) {
+	return _ologin(script, refer, urlform, url, sform, service, oform, oid, uform, uid, 'mode=oauth');
+}
+
+
+function openidlogin(script, refer, urlform, url, sform, service, oform, oid, uform, uid, undefined) {
+	return _ologin(script, refer, urlform, url, sform, service, oform, oid, uform, uid, 'mode=openid');
+}
+
+
+function _ologin(script, refer, urlform, url, sform, service, oform, oid, uform, uid, m, undefined) {
+	var loginform, u;
+
+	if(uid !== undefined) {
+		if(uid != h) {
+			loginform=gf(uform,uid);
+			if(loginform.value == h) {
+				alert(ln(
+					lj, "\u8a8d\u8a3cURL\u304c\u5165\u529b\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002\n" + j_e + "\u307e\u305f\u306f\u30a2\u30ab\u30a6\u30f3\u30c8\u540d\u306b\u5165\u529b\u3057\u3066\u4e0b\u3055\u3044\u3002"
+					,
+					le, "Authentication URL has not been entered.\nEnter e-mail address or account name."
+				));
+				loginform.focus();
+				return false;
+			}
+			u=
+				script
+				+ cm + + a + oid + a
+				+ rf + refer + a
+				+ urlform + e
+				+ loginform + a
+				+ sform + e + service;
+		}
+	} else if(oid !== undefined) {
+		if(oid != h) {
+			loginform=gf(oform,oid);
+			if(loginform.value == h) {
+				alert(ln(
+					lj, "\u30b5\u30fc\u30d3\u30b9\u30d7\u30ed\u30d0\u30a4\u30c0\u30fc\u306e\u30ed\u30b0\u30a4\u30f3ID\u304c\u5165\u529b\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002\n" + j_e + "\u307e\u305f\u306f\u30a2\u30ab\u30a6\u30f3\u30c8\u540d\u306b\u5165\u529b\u3057\u3066\u4e0b\u3055\u3044\u3002"
+					,
+					le, "Login ID of the service provider has not been entered.\nEnter e-mail address or account name."
+				));
+				loginform.focus();
+				return false;
+			}
+			u=
+				script
+				+ cm + a + m + a
+				+ rf + refer + a
+				+ urlform + e
+				+ url + loginform.value + a
+				+ sform + e + service;
+		}
+	} else {
+		u=
+			script
+			+ cm + a + m + a
+			+ rf + refer + a
+			+ urlform + e
+			+ url + a
+			+ sform + e + service;
+	}
+	location.href=u;
+	return false;
+}
+
+
+function nchk(o, s) {
+	return(
+		(s > 0 && o.value.length == 0)
+		? 1 : 0);
+}
+
+
+function lchk(o, s, l) {
+	return(
+		(o.value.length >= s && o.value.length <= l)
+		? 0 : 1);
+}
+
+
+function lerr(obj, errform, errclass, str) {
+	obj.className=errclass;
+	sinss(errform, str);
+}
+
+
+function lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def, msg) {
+
+	if(nchk(obj, minstr) || obj.value == def) {
+		lerr(obj, errform, errclass, ln(
+			lj, msg + j_st + "\u304c\u5165\u529b\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"
+			,
+			le, "It has not been entered in the string " + msg + "."
+		));
+		obj.value="";
+		s_blur(obj, def, defclass);
+		return 1;
+	}
+
+	if(lchk(obj, minstr, maxstr)) {
+		lerr(obj, errform, errclass, ln(
+			lj, msg + j_st + "\u306f" + minstr + j_ch + "\u301c" + maxstr + j_ch + "\u306e\u9593\u3067\u3059\u3002"
+			,
+			le, msg + " string of characters is between " + minstr + " to " + maxstr + " characters."
+		));
+		s_blur(obj, def, defclass);
+		return 1;
+	}
+	if(!checkstr(obj)) {
+		lerr(obj, errform, errclass, ln(
+			lj, msg + j_cant
+			,
+			le, "There is a character that can not be used in " + a + "."
+		));
+		obj.value=h;
+		obj.focus();
+		s_blur(obj, def, defclass);
+		return 1;
+	}
+	return 0;
+}
+
+
+function s_focus(obj, def, inclass) {
+	if(obj.value == def) {
+		obj.value=h;
+	}
+	obj.className=inclass;
+}
+
+
+function s_blur(obj, def, defclass) {
+	if(obj.value == h) {
+		obj.value=def;
+		obj.className=defclass;
+	}
+}
+
+
+function s_onchange(obj, inclass) {
+	obj.className=inclass;
+}
+
+
+function j_nickname(formtest, mode, formid, form, errform, obj, objs) {
+	var obj=gf(formid, form),
+		sobj=gid(form),
+		def=sobj.getAttribute("default"),
+		inclass=sobj.getAttribute("inclass"),
+		defclass=sobj.getAttribute("defclass"),
+		errclass=sobj.getAttribute("errclass"),
+		minstr=sobj.getAttribute("minlength"),
+		maxstr=sobj.getAttribute("maxlength");
+
+	if(mode == oc) {
+		s_onchange(obj, inclass);
+		return;
+	}
+	if(mode == of) {
+		s_focus(obj, def, inclass);
+		return;
+	}
+	if(mode == ob || mode == os){
+		if(lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def,
+			ln(
+			lj, j_n
+			,
+			le, e_n
+		))) {
+			if(mode == os && formtest == true)
+				obj.focus();
+			return false;
+		}
+	}
+	lerr(obj, errform, inclass, h);
+	s_blur(obj, def, defclass);
+	nn=obj.value;
+	return true;
+}
+
+
+function j_form(formtest, mode, formid, form, errform, obj, objs) {
+	var obj=gf(formid, form),
+		sobj=gid(form),
+		def=sobj.getAttribute("default"),
+		inclass=sobj.getAttribute("inclass"),
+		defclass=sobj.getAttribute("defclass"),
+		errclass=sobj.getAttribute("errclass"),
+		minstr=sobj.getAttribute("minlength"),
+		maxstr=sobj.getAttribute("maxlength");
+
+	if(mode == oc) {
+		s_onchange(obj, inclass);
+		return;
+	}
+	if(mode == of) {
+		s_focus(obj, def, inclass);
+		return;
+	}
+	s_blur(obj, def, defclass);
+	return true;
+}
+
+
+function j_userid(formtest, mode, formid, form, errform, obj, objs) {
+	var obj=gf(formid, form),
+		sobj=gid(form),
+		def=sobj.getAttribute("default"),
+		inclass=sobj.getAttribute("inclass"),
+		defclass=sobj.getAttribute("defclass"),
+		errclass=sobj.getAttribute("errclass"),
+		minstr=sobj.getAttribute("minlength"),
+		maxstr=sobj.getAttribute("maxlength");
+
+	if(mode == oc) {
+		s_onchange(obj, inclass);
+		return;
+	}
+	if(mode == of) {
+		s_focus(obj, def, inclass);
+		return;
+	}
+	if(mode == ob || mode == os){
+		if(lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def,
+			ln(
+			lj, j_u
+			,
+			le, e_u
+		))) {
+			if(mode == os && formtest == true)
+				obj.focus();
+			return false;
+		}
+	}
+	lerr(obj, errform, inclass, h);
+	s_blur(obj, def, defclass);
+	ui=obj.value;
+	return true;
+}
+
+
+function j_passwd(formtest, mode, formid, form, errform, obj, objs) {
+	var obj=gf(formid, form),
+		sobj=gid(form),
+		def=sobj.getAttribute("default"),
+		inclass=sobj.getAttribute("inclass"),
+		defclass=sobj.getAttribute("defclass"),
+		errclass=sobj.getAttribute("errclass"),
+		minstr=sobj.getAttribute("minlength"),
+		maxstr=sobj.getAttribute("maxlength");
+
+	if(mode == oc) {
+		s_onchange(obj, inclass);
+		return;
+	}
+	if(mode == of) {
+		s_focus(obj, def, inclass);
+		return;
+	}
+	if(mode == ob) {
+		if(lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def,
+			ln(
+			lj, j_p
+			,
+			le, e_p
+		))) {
+			return false;
+		}
+		if(!checkpass(obj)) {
+			lerr(obj, errform, errclass, ln(
+				lj, j_pcant
+				,
+				le, e_p
+			));
+			obj.value=h;
+			obj.focus();
+			s_blur(obj, def, defclass);
+			return 1;
+		}
+	}
+	lerr(obj, errform, inclass, h);
+	s_blur(obj, def, defclass);
+	return true;
+}
+
+
+function j_newpass(formtest, mode, formid, form, errform, obj, objs) {
+	var obj=gf(formid, form),
+		sobj=gid(form),
+		def=sobj.getAttribute("default"),
+		inclass=sobj.getAttribute("inclass"),
+		defclass=sobj.getAttribute("defclass"),
+		errclass=sobj.getAttribute("errclass"),
+		minstr=sobj.getAttribute("minlength"),
+		maxstr=sobj.getAttribute("maxlength");
+
+	if(mode == oc || mode == ou) {
+		lerr(obj, errform, inclass, strength_html(strength(obj.value), minstr - obj.value.length));
+		return;
+	}
+	if(mode == of) {
+		s_focus(obj, def, inclass);
+		lerr(obj, errform, inclass, strength_html(strength(obj.value), minstr - obj.value.length));
+		return;
+	}
+	if(mode == ob) {
+		if(lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def,
+			ln(
+			lj, j_p
+			,
+			le, e_p
+		))) {
+			return false;
+		}
+		if(!checkpass(obj)) {
+			lerr(obj, errform, errclass, ln(
+				lj, j_pcant
+				,
+				le, e_p
+			));
+			obj.value=h;
+			obj.focus();
+			s_blur(obj, def, defclass);
+			return 1;
+		}
+	}
+
+	var pf=objs.split(","),
+		pass1=gf(formid, pf[0]),
+		pass2=gf(formid, pf[1]),
+		flg=0;
+	if(mode == os) {
+		if(lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def,
+			ln(
+			lj, j_p
+			,
+			le, e_p
+		))) {
+			return false;
+		}
+
+		if(pass1.value != pass2.value) {
+			lerr(obj, errform, errclass, ln(
+				lj, j_p + j_d
+				,
+				le, e_p + e_d
+			));
+			pass1.value=h;
+			pass2.value=h;
+			pass1.focus();
+			return false;
+		}
+
+
+	}
+	lerr(obj, errform, inclass, h);
+	s_blur(obj, def, defclass);
+	return true;
+}
+
+
+function j_email(formtest, mode, formid, form, errform, obj, objs) {
+	var obj=gf(formid, form),
+		sobj=gid(form),
+		def=sobj.getAttribute("default"),
+		inclass=sobj.getAttribute("inclass"),
+		defclass=sobj.getAttribute("defclass"),
+		errclass=sobj.getAttribute("errclass"),
+		minstr=sobj.getAttribute("minlength"),
+		maxstr=sobj.getAttribute("maxlength");
+
+	var em=objs.split(","),
+		em0=gf(formid, em[0]);
+		em1=gf(formid, em[1]);
+		em2=gf(formid, em[2]);
+
+	var str=
+		(form == em[0] ? em0.value : em1.value + '@' + em2.value);
+
+	if(mode == oc) {
+		s_onchange(obj, inclass);
+		return;
+	}
+	if(mode == of) {
+		s_focus(obj, def, inclass);
+		return;
+	}
+	if(mode == ob || mode == os){
+		if(form == em[0] &&
+		   lform(errform, errclass, inclass, defclass, obj, minstr, maxstr, def,
+			ln(
+			lj, j_e
+			,
+			le, e_e
+		))) {
+			if(mode == os && formtest == true)
+				obj.focus();
+			return false;
+		}
+		if(form == em[0] &&
+		   !checkEMail(str, 0)) {
+			lerr(obj, errform, errclass, ln(
+				lj, j_ed
+				,
+				le, e_ed
+			));
+			em0.value=h;
+			em0.focus();
+			return false;
+		}
+		if(form == em[1] || form == em[2]) {
+			if( em1.value != h && em2.value != h
+			&&  !checkEMail(str, 0)) {
+			lerr(obj, errform, errclass, ln(
+				lj, j_ed
+				,
+				le, e_ed
+			));
+			em1.value=h;
+			em2.value=h;
+			em1.focus();
+			return false;
+}
+		}
+	}
+	lerr(obj, errform, inclass, h);
+	s_blur(obj, def, defclass);
+	return true;
+}
+
+
+function checkEMail(s, i){
+	var r=true;
+
+	if (s=='') return r;
+
+	if(!i) {
+		if (s.indexOf('.') == -1)
+			r=false;
+	}
+	if(s.indexOf('@') == -1)
+		r=false;
+	else if(s.substr(s.indexOf('@')+1).indexOf('@') > -1)
+		r=false;
+
+	var t=s.match(/[0-9a-zA-Z\\.\\@\\-\\_]+/g);
+	if(t!=s){
+		r=false;
+	}
+	return r;
+}
+
+
+function checkstr(o){
+	if(o.value.match(/[\,\=\\\$\'\"]+/g)) {
+		return false;
+	}
+	return true;
+}
+
+
+function checkpass(o){
+	return checkstr(o);
+}
+
+
+function ischr(ch) {
+	var code=ch.charCodeAt(0);
+
+	return	code < 48	? 0			
+		:	code < 58	? 2			
+		: 	code < 65	? 0			
+		:	code < 91	? 1			
+		:	code < 97	? 0			
+		:	code < 123	? 1			
+		:	code < 128	? 0			
+		:				  0;		
+}
+
+
+//	});
+
+
+function tozen(str) {
+	return str.replace(/[\!-\~]/g, function(s) {
+		return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+	});
+}
+
+
+function j_date(mode, value) {
+	if(mode == 0)
+		_y=value;
+	if(mode == 1)
+		_m=value;
+	if(mode == 2)
+		_d=value;
+}
+
+
+function j_word(mode, formid, sel, check, text, span, err, title, sample) {
+	// no, string, min, max, unknown
+	var	obj=gf(formid, text),
+		selform=gf(formid, sel),
+		txtform=gf(formid, text),
+		checkform=gf(formid, check),
+		checkspan=gid(check),
+		spanspan=gid(span),
+		errform=gid(err),
+		arr=selform.value.split("\|");
+
+	if(sample === void 0)
+		sample=h;
+
+	if(mode == "sel") {
+		if(arr[4] == h) {
+			checkspan.style.display="none";
+		} else {
+			checkspan.style.display="inline";
+		}
+		checkform.checked=false;
+		txtform.value=h;
+		spanspan.innerHTML=arr[4];
+		errform.innerHTML=h;
+	} else if(mode == "chk") {
+		if(checkform.checked) {
+			txtform.value=arr[4];
+			s_onchange(txtform, "inputword");
+		} else {
+			txtform.value=h;
+		}
+		mode = ob;
+	} else if(mode == of) {
+		s_focus(obj, sample, "inputword");
+		return;
+	} else {
+		if(lform(err, "errword", "inputword", "defword", obj, arr[2], arr[3], sample, title)) {
+			return;
+		} else {
+			errform.innerHTML=h;
+		}
+	}
+	s_blur(obj, sample, "defword");
+}
+
+
+function mktestword(teststr) {
+	var cnt=0,
+		testwords=ar(),
+		testchar = h,
+		testword = h,
+		testflg = 0;
+
+	for(var i=0; i < teststr.length; i++) {
+		var tst=teststr.toLowerCase().charAt(i),
+			flg = ischr(tst);
+		if(testflg == flg && tst != 32) {
+			testword += tst;
+			testchar = tst;
+			testwords[cnt]=testword;
+		} else {
+			if(testword != h && testword != " ") {
+				testwords[cnt++]=testword;
+			}
+			testflg=flg;
+			testword=tst;
+		}
+	}
+	testwords[cnt]=testword;
+	return testwords;
+}
+
+var	tst, _cr=0;
+
+
+function strength(str) {
+
+
+	var kb=new Array();
+
+	var level=2,
+		tmp=h,
+		testpass,
+		_z="0",
+		_s=" ",
+		teststr=nn + _s + ui + _s;
+		if(_y + _m + _d > 0) {
+			teststr +=
+				+ _y + _s
+//				+ _z + _m + _y + _s
+				+ _m + _d + _s
+				+ _z + _m + _d + _s
+				+ _m + _z + _d + _s
+				+ _z + _m + _z + _d + _s
+//				+ _z + _d + _z + _m + _s
+			;
+		}
+
+	var arr=s.split("_");
+	for (var i=0; i < arr.length; i++) {
+		teststr += arr[i] + _s;
+	}
+	if(!_cr) {
+		tst=mktestword(teststr);
+		_cr=1;
+	}
+	testpass=mktestword(str);
+
+
+	if(str == h)
+		return 0;
+
+	var loop=tst.length;
+	testcounts=0;
+
+	for(var i=0; i < tst.length; i++) {
+		for(var j=0; j < testpass.length; j++) {
+			if(tst[i] != h && testpass[j] != h) {
+				if(tst[i] == testpass[j]) {
+					return 2;
+				}
+			}
+		}
+	}
+
+	
+	if(str.match(/[a-zA-Z]/) && str.match(/\d+/))
+		level += 10;
+
+	
+	if(str.match(/[a-z]/) && str.match(/[A-Z]/) && str.match(/\d+/))
+		level += 15;
+
+	
+	if(str.match(/(\d.*\d.*\d)/))
+		level += 10;
+
+	
+	if(str.match(/[!,@#$%^&*?_~]/))
+		level += 15;
+
+	
+	if(str.match(/[a-z]/) && str.match(/[A-Z]/) && str.match(/\d/) && str.match(/[!,@#$%^&*?_~]/))
+		level += 15;
+
+	
+	if(level > 0)
+		level +=
+			str.length < 9 ? 0 : (str.length - 9) * 2;
+
+	if(level > 100)
+		level=100;
+
+	for(var i=0; i < str.length; i++) {
+		var chr=str.substr(i, 1);
+		if(chr in kb) {
+			kb[chr]=1;
+		} else {
+			level--;
+		}
+	}
+
+	if(str.length < 6)
+		return 1;
+	else if(level < 2)
+		return 2;
+
+
+	return level;
+}
+
+
+function strength_html(level, len) {
+	var msg=(
+		level == 0
+			? ln(
+				lj, "\u5165\u529b\u3057\u3066\u4e0b\u3055\u3044"
+				,
+				le, "Please enter"
+			)
+			: (
+			level == 1
+				? ln(
+					lj, "\u3042\u3068" + len + j_ch
+					,
+					le, len + " characters after"
+				)
+			: h)
+		);
+		if(level > 10)
+			level=10;
+
+		if(level < 0)
+			level=1;
+
+	var	cl="strengthcommon strength",
+		td='<td class="',
+		tdcl='&nbsp;</td>',
+		body=
+		  '<table class="' + cl + '"><tr>'
+		+ td + cl + 'l' + level + '">' + msg + tdcl
+		+ td + cl + 'r' + level + '">' + tdcl
+		+ '</tr></table>';
+	return body;
+}
+
+
+function lsubmit(flg, id, pform, ev) {
+	if(!flg) return false;
+	if(keypress(ev) == false) return;
+	var frms=pform.split(",");
+	for(var i=0; i < frms.length; i++) {
+		pencf(
+			  gf(id, frms[i])
+			, gf(id, frms[i] + "_enc")
+			, gf(id, frms[i] + "_token")
+		);
+	}
+	fsubmitdelay(id,ev);
+}
+
+

@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+adminedit_plugin_title=of Edit and  Freeze
+adminedit_plugin_passwordneeded=A password is required to freeze a page.

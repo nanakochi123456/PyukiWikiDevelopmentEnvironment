@@ -1,75 +1,871 @@
-Status: 503 Service unavailable Content-type: text/html
+PyukiWiki Explugin
 
-PyukiWiki Runtime Error
+<<$Id$>>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+ ・ PyukiWiki Explugin
+ ・ aguse.inc.pl
+ ・ antispam.inc.pl
+ ・ antispamwiki.inc.pl
+ ・ authadmin_cookie.inc.pl
+ ・ autometarobot.inc.pl
+ ・ canonical.inc.pl
+ ・ captcha.inc.pl
+ ・ cdn.inc.pl
+ ・ google_analytics.inc.pl
+ ・ google_translate.inc.pl
+ ・ iecompatiblehack.inc.pl
+ ・ ignoreoldbrowser.inc.pl
+ ・ lang.inc.pl
+ ・ linktrack.inc.pl
+ ・ logs.inc.pl
+ ・ ogp.inc.pl
+ ・ pathmenu.inc.pl
+ ・ ping.inc.pl
+ ・ punyurl.inc.pl
+ ・ slashpage.inc.pl
+ ・ stdin.inc.pl
+ ・ trackback.inc.pl
+ ・ urlhack.inc.pl
+ ・ xframe.inc.pl
+
+aguse.inc.pl
+
+aguse.inc.pl - PyukiWiki プラグイン
+
+概要
+
+クライアントのブラウザ上で、リンク先が安全であるかポップアップで確認できるプラ
+グイン
+
+重要度
+
+?????
+
+説明
+
+リンク先の安全性について、実際に行く前に調査しポップアップで表示します。
+
+使用方法
+
+aguse.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+なし
+
+antispam.inc.pl
+
+antispam.inc.pl - PyukiWiki プラグイン
+
+概要
+
+Anti Spam プラグイン
+
+重要度
+
+?????
+
+説明
+
+迷惑メール及びメールアドレス収集プログラムへの対策のために、PyukiWikiで出力され
+るメールアドレスをすべて暗号化し、ブラウザーで復号できるようにします。
+
+使用方法
+
+antispam.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+関数 make_link_mail を上書きします。
+
+注意事項
+
+プラグイン等から、直接 <a href="mailto:...."> のように出力された場合のメールア
+ドレスは暗号化されません。make_link_mail 関数を経由するようにして下さい。
+
+antispamwiki.inc.pl
+
+antispamwiki.inc.pl - PyukiWiki プラグイン
+
+概要
+
+wikiスパミング防止プラグイン
+
+重要度
+
+?????
+
+説明
+
+cookieを用いて、簡易的にwikiスパミングを防止します。
+
+使用方法
+
+antispamwiki.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+なし
+
+authadmin_cookie.inc.pl
+
+authadmin_cookie.inc.pl - PyukiWiki 管理者用プラグイン
+
+概要
+
+凍結パスワードを一時クッキーに保存するプラグイン
+
+重要度
+
+?????
+
+説明
+
+凍結パスワードを一時クッキーに保存します。一度凍結パスワードで認証されると、ブ
+ラウザを閉じるまで認証のテキストボックスが出現しなくなります。
+
+使用方法
+
+authadmin_cookie.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+関数 authadminpassword を上書きします。
+
+バグ
+
+このプラグインは評価版です。1.0において、実装方法が変更される予定です。
+
+autometarobot.inc.pl
+
+autometarobot.inc.pl - PyukiWiki 管理者用プラグイン
+
+概要
+
+ロボット型検索エンジン向けのキーワードを自動生成する
+
+重要度
+
+?????
+
+使用方法
+
+autometarobot.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+関数 meta_robots を上書きします。
+
+canonical.inc.pl
+
+canonical.inc.pl - PyukiWiki プラグイン
+
+概要
+
+検索エンジンに対して重複URLのオリジナルを指定する
+
+重要度
+
+?????
+
+説明
+
+検索エンジンに対して重複URLのオリジナルを指定する
+
+使用方法
+
+canonical.inc.cgi にリネームして下さい。
+
+$::canonical::url にオリジナルのURLを指定して下さい。
+
+上書きする関数
+
+なし
+
+備考
+
+CMSエンジンとして考慮すると、同一のページの別名URLの存在を消すことは、困難なこ
+とです。
+
+captcha.inc.pl
+
+captcha.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+SPAM防止の為の画像文字認証を処理する。
+
+説明
+
+SPAM防止の為の画像文字認証を処理する。
+
+使用方法
+
+GD モジュールをインストールして下さい。
+
+captcha.inc.cgi にリネームして下さい。
+
+skinディレクトリに、True Type フォントを指定して下さい。
+
+info/setup.cgi に使用するフォントのパスを $captcha::font 変数に指定して下さい。
+**上書きする関数
+
+spam_filter
+
+cdn.inc.pl
+
+cdn.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+PyukiWiki CDNを利用する。
+
+説明
+
+PyukiWikiをより快適に表示するために、コンテンツデリバリーネットワークを利用する
+。
+
+使用方法
+
+cdn.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+なし
+
+google_analytics.inc.pl
+
+google_analytics.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+google-analytics.com サービスによる、サイトトラッキングシステム
+
+説明
+
+googleアナリティスによるサイトトラッキングシステム
+
+使用方法
+
+google_analytics.inc.cgi にリネームします。
+
+info/setup.cgi に登録したアカウント (UA- で始まるもの) を
+
+$GOOGLEANALTYCS::ACCOUNT 変数にセットする。
+
+複数のサブドメインがある場合は、
+
+$GOOGLEANALTYCS::MULTISUB に「.example.com」の形式で記載する。
+
+複数のトップレベルドメインがある場合、
+
+$GOOGLEANALTYCS::MULTITOP=1 をセットする。
+
+上書きする関数
+
+なし
+
+注意
+
+合計で１ヶ月500万ビューを超えると課金が発生するようです。
+
+google_translate.inc.pl
+
+google_transrate.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+transrate.google.com サービスによる、自動翻訳サービス
+
+説明
+
+google翻訳による、選択式自動翻訳です。
+
+使用方法
+
+google_transrate.inc.cgi にリネームします。
+
+上書きする関数
+
+なし
+
+iecompatiblehack.inc.pl
+
+iecompatiblehack.inc.pl - PyukiWiki プラグイン
+
+概要
+
+IEの互換表示ボタンを強制的になくすプラグイン
+
+重要度
+
+?????
+
+説明
+
+Internet Explorere 8 以降で互換表示ボタンが表示されるのを阻止します。
+
+なお、他のコンテンツやスキンのCSSの互換が悪い場合には使用しないで下さい。ブラウ
+ジングできるようにします。
+
+備考
+
+2011年11月に発表された、Windows 8 の Internet Explorer では、互換表示ボタンがな
+くなりません。
+
+使用方法
+
+iecompatiblehack.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+なし
+
+ignoreoldbrowser.inc.pl
+
+ignoreoldbrowser.inc.pl - PyukiWiki プラグイン
+
+概要
+
+PyukiWikiと互換性のない古いブラウザーでアクセスされた場合、ブラウザーのアップデ
+ート促進画面を強制表示するプラグイン
+
+重要度
+
+?????
+
+説明
+
+PyukiWikiと互換性のない古いブラウザーでアクセスされた場合、ブラウザーのアップデ
+ート促進画面を強制表示するものです。
+
+備考
+
+PyukiWiki 0.2.1より、Internet Explorer 6 以前でのサポートがなくなるため、追加さ
+れました。
+
+使用方法
+
+ignoreoldbrowser.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+なし
+
+lang.inc.pl
+
+lang.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+Wiki国際化対応プラグイン
+
+説明
+
+言語別のwikiを作成できるようにします。
+
+HTTP_ACCEPT_LANGUAGEを自動認識し、優先される言語を表示し、プラグイン
+lang.inc.pl によって設定された言語を表示できるようにします。
+
+使用方法
+
+lang.inc.cgi にリネームして下さい。
+
+以下のディレクトリを作成して下さい。
+
+attach.(lang)  example attach.en
+diff.(lang)    example diff.ja
+cache.(lang)   example cache.zh-cn
+counter.(lang) example counter.en-us
+info.(lang)    example info.fr
+wiki.(lang)    example wiki.ja
+
+設定
+
+pyukiwiki.ini.cgi
+
+$::lang
+    デフォルトの言語を設定します。
+
+    ja en fr en-us etc... 
+$::charcode
+    未実装 
+$::kanjicode
+    日本語の場合のみ、表示する漢字コードを指定します。
+
+
+euc sjis utf8
+
+ 
+
+$::lang_list
+    必要とする言語リストをスペース区切りで指定します。
+
+
+$::lang_list="ja en";
+
+ 
+
+$::write_location=1;
+    このプラグインは、Locationによる移動を行ないます。
+
+
+バグ
+
+この機能を利用すると、以下の初期化が2回行なわれますが、仕様です。
+
+init_lang が2回呼び出される
+リソースの読み込み（上書きします）
+データベースをクローズし、ディレクトリを再設定し、データベースをオープン
+
+上書きする関数
+
+ありません
+
+linktrack.inc.pl
+
+linktrack.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+外部リンクへのカウンターを取る
+
+使用方法
+
+linktrack.inc.cgi にリネームして下さい。
+
+必要な場合、info/setup.cgi に以下の変数を記載して下さい。
+
+$linktrack::ignoredomain = wikiのURL (http://等のプリフィックスは除く）
+
+複数指定する場合は、「,」で区切って指定できます。
+
+例：abcdefg.com/~user,example.com
+
+logs.inc.pl
+
+logs.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+アクセスログをプラグイン
+
+説明
+
+wikiへのアクセスログを取得します。
+
+使用方法
+
+logs.inc.cgi にリネームして下さい。
+
+logs ディレクトリを作成して下さい。（デフォルト）
+
+設定
+
+$logs::compress
+    重いサイトを運用する時には、0 を設定して下さい。アクセスログが圧縮されませ
+    ん。
+
+    また、アクセスログのキャッシュ保持も圧縮されなくなります。 
+$logs::directory
+    アクセスログの保存先を設定します。
+
+
+バグ
+
+この機能を利用すると、以下の初期化が2回行なわれますが、仕様です。
+
+init_logs が2回呼び出される
+リソースの読み込み（上書きします）
+データベースをクローズし、ディレクトリを再設定し、データベースをオープン
+
+上書きする関数
+
+ありません
+
+ogp.inc.pl
+
+ogp.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+The Open Graph protocol
+
+説明
+
+The Open Graph protocol
+
+使用方法
+
+ogp.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+ありません
+
+pathmenu.inc.pl
+
+pathmenu.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+階層下にMenuBar等のシステムページを生成する。
+
+説明
+
+階層下にMenuBar等のシステムページを生成する。
+
+使用方法
+
+pathmenu.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+ありません
+
+ping.inc.pl
+
+ping.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+Weblog用のpingを送信する。
+
+説明
+
+指定したサーバーリストにWeblog用のpingを送信します。
+
+使用方法
+
+ping.inc.cgi にリネームして下さい。
+
+$ping::serverlist に pingサーバー一覧を1行ずつ記載します。
+
+RSSのURLが必要な場合は、パラメータ中に [RSSURIENC] を含めて下さい。
+
+デフォルトの登録内容だけでも、使用できるようになっています。
+
+上書きする関数
+
+関数 do_write_after を上書きします。
+
+punyurl.inc.pl
+
+punyurl.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+ASCII文字以外のドメイン名を持つURLをpunycode形式に変換する
+
+説明
+
+多言語文字等のASCII文字以外のドメイン名を持つURLをpunycode形式に変換します。
+
+http://日本語.jp/ ? http://xn--wgv71a119e.jp/
+
+警告
+
+perl 5.8.1 以降の環境でないと使用できません。
+
+現在のバージョンは日本語ドメインにしか対応していません。
+
+使用方法
+
+punyurl.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+関数 make_link_url を上書きします。
+
+slashpage.inc.pl
+
+slashpage.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+階層下のページ名を容易にリンクするプラグイン
+
+説明
+
+WikiName や、BracketName? でリンクしても、以下のような階層下にあるようなページ
+にリンクできるようにします。
+
+PyukiWiki/Glossary/WikiName
+PyukiWiki/Sample/BracketName
+
+先に、階層下よりも、実際のページ名で検索しますので、名前が重複する場合はすべて
+のページ名でエイリアス等を使用してリンクして下さい。
+
+使用方法
+
+slashpage.inc.cgi にリネームして下さい。
+
+上書きする関数
+
+関数 make_link_wikipage を上書きします。
+
+stdin.inc.pl
+
+stdin.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+スクリプトからページへ書き込む
+
+使用方法
+
+stdin.inc.cgi にリネームして下さい。
+
+echo "mypage=title&mymsg=wikipage" | perl index.cgi cmd=write
+
+trackback.inc.pl
+
+trackback.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+Weblog用のtrackbackを処理する。
+
+説明
+
+Weblog用のtrackbackを処理する。
+
+使用方法
+
+trackback.inc.cgi にリネームして下さい。
+
+./trackback ディレクトリを作成して下さい。
+
+上書きする関数
+
+なし
+
+urlhack.inc.pl
+
+urlhack.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+SEO対策の為に、URLから ? を取り除いて検索エンジンにヒットしやすくするプラグイン
+
+説明
+
+GoogleやYahoo等のロボット型検索エンジンでは、明らかにスクリプトであるようなペー
+ジをクロールしにくいようになっています。そのために、サイトの検索エンジンの結果
+がランクダウンしてしまう可能性があります。
+
+そのために、URLから ? 等を取り除いて、PyukiWikiを動的ページではなく、静的ページ
+としてロボットに認識させる方法を提供します。
+
+WikiName や、BracketName? でリンクしても、以下のような階層下にあるようなページ
+にリンクできるようにします。
+
+PyukiWiki/Glossary/WikiName
+PyukiWiki/Sample/BracketName
+
+先に、階層下よりも、実際のページ名で検索しますので、名前が重複する場合はすべて
+のページ名でエイリアス等を使用してリンクして下さい。
+
+使用方法
+
+プラグインを有効にする
+
+urlhack.inc.cgi にリネームして下さい。
+
+PATH_INFOを使用する場合
+
+デフォルトでは、PATH_INFOを使用するようになっていますので、そのまま使用利用でき
+ます。対応していないサーバーもあるものの、こちらのが軽快に動作します。
+
+http://example.com/ 等、CGI名をTOPページとして省略させるようなURLには対応してい
+ません。
+
+http://example.com/index.cgi が実態であれば index.cgiをwikiにリネームしてから、
+以下の記述を .htaccessに加えることをおすすめします。
+
+<FilesMatch "^wiki$">
+   ForceType application/x-httpd-cgi
+</FilesMatch>
+
+こうすることで、 http://example.com/wiki をTOPページとすることができます。
+
+404 Not foundエラーとしてサーバーからリダイレクトされるものを使用する場合
+
+こちらのが多くのサーバー、及び、省略されたURLに対応できますが、アクセスされる度
+にサーバーにエラーログが残るという問題があります。
+
+ただし、nphスクリプトが対応していないサーバーでは使用できません。
+
+index.cgi etc...
+    nphスクリプトとして動作させるために、nph-index.cgi 等にリネームします。 
+urlhack.inc.cgi
+    $use_path_info=1; を $use_path_info=0; に変更します。 
+.htaccess
+    DirectoryIndex B<nph-index.cgi> index.cgi wiki.cgi pyukiwiki.cgi index.html
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+RewriteRule ^=Y=?(.*)$ ./index.cgi?$1 [L]
+RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+RewriteRule ^(.+)/$ ./index.cgi/$1 [L]
+RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+RewriteRule ^$ ./index.cgi [L]
+ErrorDocument 400 /nph-index.cgi?cmd=servererror
+ErrorDocument 401 /nph-index.cgi?cmd=servererror
+ErrorDocument 402 /nph-index.cgi?cmd=servererror
+ErrorDocument 403 /nph-index.cgi?cmd=servererror
+ErrorDocument 404 /nph-index.cgi?cmd=servererror
+ErrorDocument 500 /nph-index.cgi?cmd=servererror
+
+設定
+
+$urlhack::use_path_info
+    PATH_INFO環境変数を使用する場合は１、404 Not found エラーを利用する場合は０
+    にします。 
+$urlhack::fake_extention
+    PATH_INFO使用時、偽装できるのは「/」のみです。拡張子等をつけて、偽装します
+    。
+
+$::fake_extention='/';
+http://example.com/FrontPage/
+http://example.com/PyukiWiki/Download/
+http://example.com/a5d8a5eba5d7/
+
+ 
+
+$urlhack::use_puny
+    0:16進エンコードを使用します。
+
+1:punyエンコードを使用します。少しURLが短くなります。
+2:UTF8エンコードを使用します。ブラウザーや検索結果に母国語が表示されます。
+3:短縮URLロジックを用いたエンコードを使用します。別途短縮用データベースの
+  ディレクトリ(./urldb/)が必要です。
+
+ 
+
+$urlhack::noconvert_marks
+    指定された文字のみで構成されるページ名の場合、エンコードをしません。
+
+
+0: 無条件エンコードをする
+1: 数字とアルファベットのみで構成されるページのみエンコードをしない
+2: 数字、アルファベット、dot(.)、slash(/)で構成されるページのみエンコードをしない
+
+上書きする関数
+
+関数 make_cookedurl を上書きします。
+
+xframe.inc.pl
+
+xframe.inc.pl - PyukiWiki プラグイン
+
+重要度
+
+?????
+
+概要
+
+クリックジャッキング対策を行なう。
+
+説明
+
+外部サイトからフレームタグで表示指定された時に、セキュリティー確保の理由で表示
+できなくするプラグイン
+
+Internet Explorer 8 から対応されています。
+
+使用方法
+
+xframe.inc.cgi にリネームして下さい。
+
+設定
+
+以下の内容が、info/setting.ini.cgi に記載できます。
+
+$XFRAME::MODE="DENY" - 他のWebページのframe上またはiframe上での表示を拒否する。
+
+$XFRAME::MODE="SAMEORIGIN" - Top-level-browsing-contextが一致した時のみ、他の
+Webページ上のframe又はiframe上での表示を許可する。
+
+備考
+
+クリックジャッキングとは、外部から判断のつかない悪意のある攻撃者サイトに誘導さ
+れた利用者が、気づかない間に標的サイト上で不正操作（ショッピングカートの送信、
+メール送信、広告のクリック、会員サービスからの退会）を引き起こすクリックをさせ
+られる可能性があります。攻撃事例はまだ少ないものの、Twitterにおいて利用者の意図
+しない投稿をさせられてしまう事件がありました。
+
+JavaScriptを用いたクリックジャッキング対策もありますが、今ではブラウザー側で、
+X-FRAME-OPTIONSを設定することで、外部サイトからFRAME、またはIFRAMEで表示しよう
+とした時に、阻止することができます。
+
+なお、このExpluginでは、HTTPヘッダで出力していますが、HTMLで出力することも可能
+で、または、ウェブサーバー上で、「X-FRAME-OPTIONS」ヘッダに、「DENY」か「
+SAMEORIGIN」を記述することでも、実現可能です。
+
+上書きする関数
+
+なし
+

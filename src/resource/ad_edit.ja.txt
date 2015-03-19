@@ -1,0 +1,76 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+ad_plugin_title=アフィリエイトプログラム用広告編集
+ad_plugin_title_add=広告の追加
+ad_plugin_title_edit=広告スペースの編集
+ad_plugin_title_delete=広告スペースの削除
+
+ad_plugin_msg_add=広告のHTMLコードを何も加工せず、そのまま貼り付けて下さい。
+
+ad_plugin_title_selspace=広告スペースの選択
+ad_plugin_msg_html_wh=%d x %dの広告と認識しました。広告バナーを確認し、掲載スペースを選択して下さい。
+ad_plugin_msg_html_w=%d x 不明の広告と認識しました。広告バナーを確認し、掲載スペースを選択して下さい。
+ad_plugin_msg_html_text=テキスト広告と認識しました。広告テキストを確認し、掲載スペースを選択して下さい。
+ad_plugin_msg_alt=代替テキスト（任意）
+ad_plugin_msg_displayurl=表示URL（任意）
+ad_plugin_msg_newspace=新規スペース名
+ad_plugin_msg_selspace=スペースを選択
+ad_plugin_msg_nospace=(該当するスペースがありません)
+ad_plugin_msg_confirm=以下の広告を登録します。よろしければ次へをクリックして下さい。
+ad_plugin_msg_finish=以下の広告を登録しました。
+
+ad_plugin_msg_space=広告スペース名
+ad_plugin_msg_id=広告ID
+ad_plugin_msg_wh=広告のサイズ: %d x %d
+ad_plugin_msg_w=広告のサイズ: %d x 不明
+ad_plugin_msg_adtext=広告のサイズ:テキスト
+ad_plugin_msg_altconfirm=代替テキスト
+ad_plugin_msg_altconfirm_none=（なし）
+ad_plugin_msg_displayurlconfirm=表示URL
+ad_plugin_msg_displayurlconfirm_none=（なし）
+ad_plugin_msg_html=広告HTMLコード
+ad_plugin_msg_create=登録日
+ad_plugin_msg_update=更新日
+ad_plugin_msg_start=開始日
+ad_plugin_msg_end=終了日
+ad_plugin_msg_priority=優先度
+ad_plugin_msg_memo=メモ
+
+ad_plugin_msg_delete=削除
+ad_plugin_msg_edit=編集
+ad_plugin_msg_spacesel=する広告スペースを選択して下さい。
+ad_plugin_msg_allsel=すべてのスペースを表示
+
+ad_plugin_wiki=*広告表示用データベース\nこのページは直接編集せず、?cmd=ad で編集して下さい。\nまた、凍結解除は絶対にしないで下さい。\n#contents\n----
+
+ad_plugin_msg_confirmdelete=広告スペース削除の確認
+ad_plugin_msg_confirmdelete2=広告スペース「%s」を削除します。確認したら次へをクリックして下さい。
+ad_plugin_msg_finishdelete=広告スペース「%s」を削除しました。
+
+ad_plugin_btn_back=戻る
+ad_plugin_btn_next=次へ
+ad_plugin_btn_finish=完了
+ad_plugin_btn_cancel=キャンセル
+ad_plugin_btn_update=更新
+ad_plugin_btn_edit=編集
+ad_plugin_btn_delete=削除
+ad_plugin_btn_jsconfirm=しますか？
+ad_plugin_btn_alldelete=すべて削除
+ad_plugin_err_adhtml=広告のHTMLコードが不正です。
+ad_plugin_err_spacename=掲載スペース名が不正です。
+ad_plugin_err_changed=広告HTMLコードが変更されています。もう一度確認して下さい。
+ad_plugin_err_dup=このスペースには同一の広告が既に存在します。
+ad_plugin_err_notfound=このスペースには広告が存在しません。
+ad_plugin_err_nospace=広告スペースがありません
+
+ad_plugin_msg_editfinish=以下の広告を%sしました。
+ad_plugin_sel_nosel=未選択
+ad_plugin_sel_year=年
+ad_plugin_sel_month=月
+ad_plugin_sel_day=日
+ad_plugin_msg_text=テキスト
+ad_plugin_msg_unknown=不明
+
+ad_plugin_msg_pluginusage=広告挿入用のwiki文

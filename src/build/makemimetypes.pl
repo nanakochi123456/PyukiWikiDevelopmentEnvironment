@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-$basemime="/usr/local/etc/apache24/mime.types";
+$basemime="/usr/local/etc/apache22/mime.types";
 $addmime="./build/mime_add.txt";
 $resource="./build/mime_res.txt";
 #$langlist="en ja";

@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+yetlist_plugin_title=未作成のページ一覧
+yetlist_plugin_nopage=未作成のページはありません

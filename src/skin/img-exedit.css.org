@@ -2,44 +2,44 @@
 /* $Id$ */
 /* Code=@@CODE@@ */
 
-#icn_center {
+#icn_attach {
 	background: url(../image/exedit.png) 0px 0px;
+	height: 20px;
+	width: 20px;
+}
+
+#icn_center {
+	background: url(../image/exedit.png) 0px -20px;
 	height: 11px;
 	width: 14px;
 	padding-top: 3px;
 }
 
 #icn_left_just {
-	background: url(../image/exedit.png) 0px -14px;
+	background: url(../image/exedit.png) 0px -34px;
 	height: 11px;
 	width: 14px;
 	padding-top: 3px;
 }
 
 #icn_list_ex {
-	background: url(../image/exedit.png) 0px -28px;
+	background: url(../image/exedit.png) 0px -48px;
 	height: 11px;
 	width: 14px;
 	padding-top: 3px;
 }
 
 #icn_numbered {
-	background: url(../image/exedit.png) 0px -42px;
+	background: url(../image/exedit.png) 0px -62px;
 	height: 11px;
 	width: 14px;
 	padding-top: 3px;
 }
 
 #icn_right_just {
-	background: url(../image/exedit.png) 0px -56px;
+	background: url(../image/exedit.png) 0px -76px;
 	height: 11px;
 	width: 14px;
 	padding-top: 3px;
-}
-
-#icn_attach {
-	background: url(../image/exedit.png) 0px -70px;
-	height: 20px;
-	width: 20px;
 }
 

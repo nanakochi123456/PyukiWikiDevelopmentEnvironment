@@ -13,6 +13,7 @@ var	w				= window,
 //	CHROME			= ua("CHROME"),
 //	SAFARI			= ua("SAFARI"),
 	MSIE			= ua("MSIE"),
+	TRIDENT			= ua("TRIDENT"),
 //	WINDOWS			= ua("WINDOWS"),
 //	MACOS			= ua("MACOS"),
 //	WINDOWSPHONE 	= ua("WINDOWSPHONE"),
@@ -49,7 +50,7 @@ function setbookmark(g, u, t, x){
 				ah
 				+ u + '" rel="sidebar" t="' + t + '">'
 				+ x + ac);
-	} else if(MSIE) {
+	} else if(MSIE || TRIDENT) {
 		sinsb(g,
 			ah + v0 + oc
 			+ "w.external.AddFavorite('" + u + "','" + t + "');" + '">'
@@ -68,7 +69,7 @@ function sethomepage(g, u, t, x, flg){
 	t=decodeURIComponent(t);
 	x=decodeURIComponent(x);
 
-	if(MSIE) {
+	if(MSIE || TRIDENT) {
 		var	useragent=n.userAgent.toUpperCase(),
 			msiever=n.appVersion.toUpperCase(),
 			msiever=(msiever.indexOf('MSIE')>-1)

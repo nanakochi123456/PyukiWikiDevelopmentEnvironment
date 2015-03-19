@@ -105,6 +105,7 @@ BUILDMAKER=\
 			${BUILDDIR}/build_img.pl \
 			${BUILDDIR}/build_img.mk \
 			${BUILDDIR}/build.pl \
+			${BUILDDIR}/buildhtfiles.pl \
 			${BUILDDIR}/compactmagic.pl \
 			${BUILDDIR}/compressfile.pl \
 			${BUILDDIR}/text.pl \
@@ -225,7 +226,49 @@ BUILDFILES=\
 			./resource/wiki-devel.en.txt.gz \
 			./resource/wiki-devel.ja.txt.gz \
 			./resource/mimetypes.en.txt \
-			./resource/mimetypes.ja.txt
+			./resource/mimetypes.ja.txt \
+			attach/.htaccess \
+			attach/index.html \
+			backup/.htaccess \
+			backup/index.html \
+			build/.htaccess \
+			build/index.html \
+			cache/.htaccess \
+			cache/index.html \
+			counter/.htaccess \
+			counter/index.html \
+			diff/.htaccess \
+			diff/index.html \
+			image/.htaccess \
+			image/index.html \
+			info/.htaccess \
+			info/index.html \
+			lib/.htaccess \
+			lib/index.html \
+			logs/.htaccess \
+			logs/index.html \
+			plugin/.htaccess \
+			plugin/index.html \
+			resource/.htaccess \
+			resource/index.html \
+			sample/.htaccess \
+			sample/index.html \
+			session/.htaccess \
+			session/index.html \
+			session/.htaccess \
+			session/index.html \
+			skin/.htaccess \
+			skin/index.html \
+			src/.htaccess \
+			src/index.html \
+			trackback/.htaccess \
+			trackback/index.html \
+			user/.htaccess \
+			user/index.html \
+			wiki/.htaccess \
+			wiki/index.html \
+			.htaccess \
+			.htpasswd
 
 ######################################################
 pkg:FORCE
@@ -315,7 +358,7 @@ mk:FORCE
 pkgtgz:FORCE
 #	@echo "Building ${PKGNAME}-${VERSION}${PKGPREFIX}"
 	mkdir -p ${RELEASE} 2>/dev/null
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE=${PKGTYPE} PKGPREFIX=${PKGPREFIX} CODE=${CODE} CRLF=${CRLF} ALL=${ALL}
+	@${MAKE} -j ${JOBS} -f ${BUILDDIR}/build.mk mk  PKGTYPE=${PKGTYPE} PKGPREFIX=${PKGPREFIX} CODE=${CODE} CRLF=${CRLF} ALL=${ALL}
 	@${MAKE} -f ${BUILDDIR}/build.mk tgz  PKGTYPE=${PKGTYPE} PKGPREFIX=${PKGPREFIX} CODE=${CODE} CRLF=${CRLF} ALL=${ALL}
 
 ######################################################
@@ -411,18 +454,16 @@ prof:FORCE
 ######################################################
 build:FORCE
 	@${MAKE} -f ${BUILDDIR}/build.mk buildnumber
-	@${MAKE} -f ${BUILDDIR}/build.mk buildsub
+	@${MAKE} -j ${JOBS} -f ${BUILDDIR}/build.mk buildsub
 
 ######################################################
-#buildsub:FORCE ${BUILDFILES} ${BUILDMAKER}
 buildsub:FORCE ${BUILDFILES} ${BUILDMAKER}
-
 
 ######################################################
 # Build file define
 ######################################################
 lib/File/magic.txt: lib/File/magic.txt.src ${BUILDMAKER}
-	${PERL} ${BUILDDIR}/compactmagic.pl lib/File/magic.txt.src>lib/File/magic.txt
+	${PERL} ${BUILDDIR}/compactmagic.pl lib/File/magic.txt.src>lib/File/magic.t
 
 ######################################################
 lib/File/magic_compact.txt: lib/File/magic.txt.src ${BUILDMAKER}
@@ -736,66 +777,227 @@ ngwords.ini.cgi: ${BUILDMAKER}
 	${PERL} build/mkngwords.pl
 
 ######################################################
-./resource/mimetypes.en.txt: ${BUILDMAKER}
-	${PERL} build/makemimetypes.pl en ./resource/mimetypes.en.txt
+resource/mimetypes.en.txt: ${BUILDMAKER}
+	${PERL} build/makemimetypes.pl en resource/mimetypes.en.txt
 
 ######################################################
-./resource/mimetypes.ja.txt: ${BUILDMAKER}
-	${PERL} build/makemimetypes.pl ja ./resource/mimetypes.ja.txt
+resource/mimetypes.ja.txt: ${BUILDMAKER}
+	${PERL} build/makemimetypes.pl ja resource/mimetypes.ja.txt
 
 ######################################################
-./resource/wiki-devel.en.txt.gz: ./resource/wiki-devel.en.txt
-	cd ./resource && ${GZIP_7Z} wiki-devel.en.txt.gz wiki-devel.en.txt >/dev/null 2>/dev/null
-#	cd ./resource && rm wiki-devel.en.txt
+resource/wiki-devel.en.txt.gz: resource/wiki-devel.en.txt
+	cd resource && ${GZIP_7Z} wiki-devel.en.txt.gz wiki-devel.en.txt >/dev/null 2>/dev/null
+#	cd resource && rm wiki-devel.en.txt
 
 ######################################################
-./resource/wiki-full.en.txt.gz: ./resource/wiki-full.en.txt
-	cd ./resource && ${GZIP_7Z} wiki-full.en.txt.gz wiki-full.en.txt >/dev/null 2>/dev/null
-#	cd ./resource && rm wiki-full.en.txt
+resource/wiki-full.en.txt.gz: resource/wiki-full.en.txt
+	cd resource && ${GZIP_7Z} wiki-full.en.txt.gz wiki-full.en.txt >/dev/null 2>/dev/null
+#	cd resource && rm wiki-full.en.txt
 
 ######################################################
-./resource/wiki-compact.en.txt.gz: ./resource/wiki-compact.en.txt
-	cd ./resource && ${GZIP_7Z} wiki-compact.en.txt.gz wiki-compact.en.txt >/dev/null 2>/dev/null
-#	cd ./resource && rm wiki-compact.en.txt
+resource/wiki-compact.en.txt.gz: resource/wiki-compact.en.txt
+	cd resource && ${GZIP_7Z} wiki-compact.en.txt.gz wiki-compact.en.txt >/dev/null 2>/dev/null
+#	cd resource && rm wiki-compact.en.txt
 
 ######################################################
-./resource/wiki-devel.ja.txt.gz: ./resource/wiki-devel.ja.txt
-	cd ./resource && ${GZIP_7Z} wiki-devel.ja.txt.gz wiki-devel.ja.txt >/dev/null 2>/dev/null
-#	cd ./resource && rm wiki-devel.ja.txt
+resource/wiki-devel.ja.txt.gz: resource/wiki-devel.ja.txt
+	cd resource && ${GZIP_7Z} wiki-devel.ja.txt.gz wiki-devel.ja.txt >/dev/null 2>/dev/null
+#	cd resource && rm wiki-devel.ja.txt
 
 ######################################################
-./resource/wiki-full.ja.txt.gz: ./resource/wiki-full.ja.txt
-	cd ./resource && ${GZIP_7Z} wiki-full.ja.txt.gz wiki-full.ja.txt >/dev/null 2>/dev/null
-#	cd ./resource && rm wiki-full.ja.txt
+resource/wiki-full.ja.txt.gz: resource/wiki-full.ja.txt
+	cd resource && ${GZIP_7Z} wiki-full.ja.txt.gz wiki-full.ja.txt >/dev/null 2>/dev/null
+#	cd resource && rm wiki-full.ja.txt
 
 ######################################################
-./resource/wiki-compact.ja.txt.gz: ./resource/wiki-compact.ja.txt
-	cd ./resource && ${GZIP_7Z} wiki-compact.ja.txt.gz wiki-compact.ja.txt >/dev/null 2>/dev/null
-#	cd ./resource && rm wiki-compact.ja.txt
+resource/wiki-compact.ja.txt.gz: resource/wiki-compact.ja.txt
+	cd resource && ${GZIP_7Z} wiki-compact.ja.txt.gz wiki-compact.ja.txt >/dev/null 2>/dev/null
+#	cd resource && rm wiki-compact.ja.txt
 
 ######################################################
-./resource/wiki-devel.ja.txt: ${WIKIFILE} ${BUILDMAKER}
+resource/wiki-devel.ja.txt: ${WIKIFILE} ${BUILDMAKER}
 	${PERL} ${BUILDDIR}/makewiki.pl devel
 
 ######################################################
-./resource/wiki-full.ja.txt: ${WIKIFILE} ${BUILDMAKER}
+resource/wiki-full.ja.txt: ${WIKIFILE} ${BUILDMAKER}
 	${PERL} ${BUILDDIR}/makewiki.pl full
 
 ######################################################
-./resource/wiki-compact.ja.txt: ${WIKIFILE} ${BUILDMAKER}
+resource/wiki-compact.ja.txt: ${WIKIFILE} ${BUILDMAKER}
 	${PERL} ${BUILDDIR}/makewiki.pl compact
 
 ######################################################
-./resource/wiki-devel.en.txt: ${WIKIFILE} ${BUILDMAKER}
+resource/wiki-devel.en.txt: ${WIKIFILE} ${BUILDMAKER}
 	${PERL} ${BUILDDIR}/makewiki.pl devel
 
 ######################################################
-./resource/wiki-full.en.txt: ${WIKIFILE} ${BUILDMAKER}
+resource/wiki-full.en.txt: ${WIKIFILE} ${BUILDMAKER}
 	${PERL} ${BUILDDIR}/makewiki.pl full
 
 ######################################################
-./resource/wiki-compact.en.txt: ${WIKIFILE} ${BUILDMAKER}
+resource/wiki-compact.en.txt: ${WIKIFILE} ${BUILDMAKER}
 	${PERL} ${BUILDDIR}/makewiki.pl compact
+
+######################################################
+attach/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+attach/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+backup/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+backup/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+build/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+build/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+cache/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+cache/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+counter/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+counter/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+diff/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+diff/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+image/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+image/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+info/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+info/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+lib/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+lib/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+logs/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+logs/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+plugin/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+plugin/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+resource/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+resource/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+sample/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+sample/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+session/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+session/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+skin/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+skin/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+src/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+src/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+trackback/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+trackback/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+user/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+user/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+wiki/.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+wiki/index.html: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+.htaccess: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
+######################################################
+.htpasswd: ${BUILDMAKER}
+	${PERL} ${BUILDDIR}/buildhtfiles.pl $@
+
 
 ######################################################
 ftp:
@@ -825,11 +1027,11 @@ build/list_hiragana_euc.txt: ${BUILDMAKER}
 
 ######################################################
 buildnumber:FORCE
-	${PERL} ./build/getversion.pl write
+	${PERL} build/getversion.pl write
 
 ######################################################
 FORCE:
 
 ######################################################
 mailaddr:FORCE
-	${PERL} ./build/mkfreemaillist.pl
+	${PERL} build/mkfreemaillist.pl

@@ -30,6 +30,9 @@ sub plugin_bookmark_inline {
 	return ' 'unless($agent=~/MSIE/ || $agent=~/Trident/|| $agent=~/Opera/ || $agent=~/Fire[Ff]ox/);
 
 	my $iever;
+	if($agent=~/Trident\/\d+.\d+; rv:(\d+).(\d+)/) {
+		$iever=$1 + 0;
+	}
 	if($agent=~/MSIE\s(.*?);/) {
 		$iever=$1 + 0;
 	}

@@ -1,0 +1,10 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+vote_plugin_choice=ÁªÂò»Ş
+vote_plugin_votes=ÅêÉ¼
+vote_plugin_addinput=¤½¤ÎÂ¾
+vote_plugin_votecount=ÆÀÉ¼¿ô
+vote_plugin_voteper=ÆÀÉ¼Î¨
+vote_plugin_totalvote=ÆÀÉ¼Áí¿ô

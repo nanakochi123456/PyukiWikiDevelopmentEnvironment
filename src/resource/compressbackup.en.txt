@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+compressbackup_plugin_title=Backup Directory Recompress
+compressbackup_pluin_converted=Recompressed backup directory.
+compressbackup_pluin_convert=Recompress backup directory  ? (This transrate is very heavy!)
+compressbackup_pluin_convert_yes=Next

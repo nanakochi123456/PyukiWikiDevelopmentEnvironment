@@ -1,0 +1,9 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+smedia_plugin_tweet=Tweet!
+smedia_plugin_yahoobookmark=Add Yahoo! Bookmark
+smedia_plugin_googlebookmark=Add Google Bookmark
+smedia_plugin_bookmark=Add Favorites
+smedia_plugin_ignorebookmark=Add to browser favorites, Not supported than Internet Explorer and FireFox.

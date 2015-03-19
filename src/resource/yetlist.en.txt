@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+yetlist_plugin_title=List of pages which have not yet been created.
+yetlist_plugin_nopage=All pages have been created.

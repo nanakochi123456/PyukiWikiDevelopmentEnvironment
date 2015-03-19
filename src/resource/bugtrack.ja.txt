@@ -1,0 +1,46 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+bugtrack_priority_list=emergency,important,usually,low
+bugtrack_priority_emergency=緊急
+bugtrack_priority_important=重要
+bugtrack_priority_usually=普通
+bugtrack_priority_low=低
+
+bugtrack_state_list=proposal,start,commit,finish,hold,rejection
+bugtrack_state_proposal=提案
+bugtrack_state_start=着手
+bugtrack_state_commit=コミット待ち
+bugtrack_state_finish=完了
+bugtrack_state_hold=保留
+bugtrack_state_rejection=却下
+
+bugtrack_statebgcolor_proposal=#ffccff
+bugtrack_statebgcolor_start=#ccccff
+bugtrack_statebgcolor_commit=#ffcc99
+bugtrack_statebgcolor_finish=#ccffcc
+bugtrack_statebgcolor_hold=#ccddcc
+bugtrack_statebgcolor_rejection=#cccccc
+bugtrack_statebgcolor_other=#cccccc
+
+bugtrack_headbgcolor=#ffffcc
+
+bugtrack_inputline=pagename,name,priority,state,category,date,summary,version
+bugtrack_line=pagename,state,priority,category,name,summary
+
+bugtrack_title=バグ追跡プラグイン
+bugtrack_base=ページ名
+bugtrack_summary=サマリ
+bugtrack_priority=優先順位
+bugtrack_state=状態
+bugtrack_name=投稿者
+bugtrack_date=投稿日
+bugtrack_body=メッセージ
+bugtrack_category=カテゴリー
+bugtrack_pagename=ページ名
+bugtrack_pagename_comment=空欄のままだと自動的にページ名が振られます。
+bugtrack_version=バージョン
+bugtrack_version_comment=空欄でも構いません
+bugtrack_submit=追加
+bugtrack_body=メッセージ

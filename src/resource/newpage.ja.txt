@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+newpage_plugin_title=ページ新規作成
+newpage_plugin_msg=ページ新規作成:
+newpage_plugin_under=以下の下層に作成する:
+newpage_plugin_none=-- 指定なし --

@@ -1,0 +1,12 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+sbookmark_plugin_yourname=Name:
+sbookmark_plugin_button=Bookmark!
+sbookmark_plugin_title=Page Title:
+sbookmark_plugin_url=Page URL:
+sbookmark_plugin_comment=Comment:
+sbookmark_plugin_err=Items mentioned are insufficient.
+sbookmark_plugin_urlerr=Ignore URL
+sbookmark_plugin_urlnot=URL not found

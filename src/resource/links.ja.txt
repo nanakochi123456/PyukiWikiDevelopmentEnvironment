@@ -1,0 +1,6 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+links_msg=<h5 class="links">アクセス元</h5><span class="links">$LINK</span>
+links_nodata=$PAGEのリンク元はありません。

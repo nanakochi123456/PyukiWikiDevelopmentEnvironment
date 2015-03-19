@@ -1,0 +1,464 @@
+# PyukiWiki Resource file
+# "PyukiWiki" ver 0.2.1-beta13 $$
+# $Id$
+
+filelist=\
+# document\n\
+document/DEVEL.ja.html	devel\n\
+document/htaccess-sample.ja.html	devel,release\n\
+document/htaccess-sample.ja.txt	devel,release\n\
+document/menu.ja.html	devel,release,compact\n\
+document/plugin_admin.ja.html	devel,release,compact\n\
+document/plugin_admin.ja.txt	devel,release,compact\n\
+document/plugin_all.ja.txt	devel,release,compact\n\
+document/plugin_explugin.ja.html	devel,release,compact\n\
+document/plugin_explugin.ja.txt	devel,release,compact\n\
+document/plugin_plugin_ah.ja.html	devel,release,compact\n\
+document/plugin_plugin_ip.ja.html	devel,release,compact\n\
+document/plugin_plugin_ip.ja.html	devel,release,compact\n\
+document/plugin_plugin_rz.ja.html	devel,release,compact\n\
+document/README.ja.html	devel,release,compact\n\
+document/sample.ja.html	devel,release\n\
+document/sample.ja.txt	devel,release,compact\n\
+document/specification.ja.html	devel\n\
+document/specification.ja.txt	devel\n\
+document/specification_wikicgi.ja.html	devel\n\
+document/specification_wikicgi.ja.txt	devel\n\
+document/specification_xs.ja.html	devel\n\
+document/specification_xs.ja.txt	devel\n\
+document/plugindoc-ad.ja.html	ad\n\
+document/plugindoc-ad.ja.txt	ad	\n\
+document/plugindoc-bookmark.ja.html	bookmark\n\
+document/plugindoc-bookmark.ja.txt	bookmark\n\
+document/plugindoc-exdate.ja.html	exdate\n\
+document/plugindoc-exdate.ja.txt	exdate\n\
+document/plugindoc-htmlhead.ja.html	htmlhead\n\
+document/plugindoc-htmlhead.ja.txt	htmlhead\n\
+document/plugindoc-playvideo.ja.html	playvideo\n\
+document/plugindoc-playvideo.ja.txt	playvideo\n\
+document/plugindoc-qrcode.ja.html	qrcode\n\
+document/plugindoc-qrcode.ja.txt	qrcode\n\
+document/plugindoc-sh.ja.html	sh\n\
+document/plugindoc-sh.ja.txt	sh\n\
+\n\
+# document src\n\
+doc/author_nanami.wiki	devel\n\
+doc/CGI_INSTALLER.ja.wiki	devel\n\
+doc/DEVEL.ja.wiki	devel\n\
+doc/document_acknowledgment.ja.wiki	devel\n\
+doc/document_author.ja.wiki	devel\n\
+doc/document_changes.ja.wiki	devel\n\
+doc/document_donation.ja.wiki	devel\n\
+doc/document_environment.ja.wiki	devel\n\
+doc/document_faq.ja.wiki	devel\n\
+doc/document_files_cgi.ja.wiki	devel\n\
+doc/document_files_chmod.ja.wiki	devel\n\
+doc/document_files_documents.ja.wiki	devel\n\
+doc/document_files_pub.ja.wiki	devel\n\
+doc/document_files_ref.ja.wiki	devel\n\
+doc/document_library.ja.wiki	devel\n\
+doc/document_license.ja.wiki	devel\n\
+doc/document_package.ja.wiki	devel\n\
+doc/foot.html	devel\n\
+doc/head.html	devel\n\
+doc/htaccess-sample.ja.wiki	devel\n\
+doc/index.ja.html	devel\n\
+doc/menu.ja.html	devel\n\
+doc/memo.ja.html	no\n\
+doc/p3p.ja.html	no\n\
+doc/plugin_admin.ja.wiki	devel\n\
+doc/plugin_all.ja.wiki	devel\n\
+doc/plugin_explugin.ja.wiki	devel\n\
+doc/plugin_plugin_ah.ja.wiki	devel\n\
+doc/plugin_plugin_ip.ja.wiki	devel\n\
+doc/plugin_plugin_rz.ja.wiki	devel\n\
+doc/plugindoc-ad.ja.wiki	devel\n\
+doc/plugindoc-bookmark.ja.wiki	devel\n\
+doc/plugindoc-clipcopy.ja.wiki	devel\n\
+doc/plugindoc-exdate.ja.wiki	devel\n\
+doc/plugindoc-htmlhead.ja.wiki	devel\n\
+doc/plugindoc-playvideo.ja.wiki	devel\n\
+doc/plugindoc-qrcode.ja.wiki	devel\n\
+doc/plugindoc-sh.ja.wiki	devel\n\
+doc/plugins_document.sh	devel\n\
+doc/README.ja.wiki	devel\n\
+doc/sample.ja.wiki	devel\n\
+doc/specification.ja.wiki	devel\n\
+doc/specification_body.ja.wiki	devel\n\
+doc/specification_dir.ja.wiki	devel\n\
+doc/specification_explugin.ja.wiki	devel\n\
+doc/specification_expluginlist.ja.wiki	devel\n\
+doc/specification_javascript.ja.wiki	devel\n\
+doc/specification_perlpm.ja.wiki	devel\n\
+doc/specification_plugin.ja.wiki	devel\n\
+doc/specification_values.ja.wiki	devel\n\
+doc/specification_wikicgi.ja.wiki	devel\n\
+doc/specification_xs.ja.wiki	devel\n\
+doc/wikicgi_document.sh	devel\n\
+doc/wikicgi_wikiauth.ja.wiki	devel\n\
+doc/wikicgi_wikicgi.ja.wiki	devel\n\
+doc/wikicgi_wikidb.ja.wiki	devel\n\
+doc/wikicgi_wikifunc.ja.wiki	devel\n\
+doc/wikicgi_wikihtml.ja.wiki	devel\n\
+doc/wikicgi_wikihttp.ja.wiki	devel\n\
+doc/wikicgi_wikiinit.ja.wiki	devel\n\
+doc/wikicgi_wikilink.ja.wiki	devel\n\
+doc/wikicgi_wikiplugin.ja.wiki	devel\n\
+doc/wikicgi_wikiskin.ja.wiki	devel\n\
+doc/wikicgi_wikispam.ja.wiki	devel\n\
+doc/wikicgi_wikiwiki.ja.wiki	devel\n\
+doc/wikicgi_wikiwrite.ja.wiki	devel\n\
+\n\
+# xs src\n\
+src/NanaXS-func/func.pm	devel,release\n\
+src/NanaXS-func/func.xs	devel,release\n\
+src/NanaXS-func/Makefile.PL	devel,release\n\
+src/NanaXS-func/MANIFEST	devel,release\n\
+src/NanaXS-func/version.h	devel,release\n\
+src/NanaXS-func/xs_date.c	devel,release\n\
+src/NanaXS-func/xs_dbmname.c	devel,release\n\
+src/NanaXS-func/xs_decode.c	devel,release\n\
+src/NanaXS-func/xs_encode.c	devel,release\n\
+src/NanaXS-func/xs_htmlspecialchars.c	devel,release\n\
+src/NanaXS-func/xs_undbmname.c	devel,release\n\
+src/NanaXS-func/t/date.t	devel,release\n\
+src/NanaXS-func/t/dbmname.t	devel,release\n\
+src/NanaXS-func/t/decode.t	devel,release\n\
+src/NanaXS-func/t/encode.t	devel,release\n\
+src/NanaXS-func/t/undbmname.t	devel,release\n\
+src/xslib/Makefile.PL	devel,release\n\
+src/xslib/version.h	devel,release\n\
+src/xslib/xs_memalloc.c	devel,release\n\
+src/xslib/xs_memfree.c	devel,release\n\
+src/xslib/xs_split.c	devel,release\n\
+src/xslib/xs_strchg.c	devel,release\n\
+src/xslib/xs_strlwr.c	devel,release\n\
+src/xslib/xs_strstr.c	devel,release\n\
+src/xslib/xs_strupr.c	devel,release\n\
+src/xslib/xs_version.c	devel,release\n\
+src/xslib/xslib.h	devel,release\n\
+src/xslib/xsversion.h	devel,release\n\
+src/xsmake/ppport.h	devel,release\n\
+src/xsmake/pyukiwikixs.pl	devel,release\n\
+src/xsmake/version.h	devel,release\n\
+\n\
+# skin\n\
+skin/pyukiwiki	devel,release,compact\n\
+skin/pyukiwikigreen	devel,release\n\
+skin/tdiary	devel\n\
+\n\
+# system\n\
+lib/wiki.cgi	devel,release,compact	index.cgi,pyukiwiki.ini.cgi,ngwords.ini.cgi,favicon.ico,lib/wiki_auth.cgi,lib/wiki_db.cgi,lib/wiki_func.cgi,lib/wiki_html.cgi,lib/wiki_http.cgi,lib/wiki_init.cgi,lib/wiki_link.cgi,lib/wiki_plugin.cgi,lib/wiki_skin.cgi,lib/wiki_spam.cgi,lib/wiki_sub.cgi,lib/wiki_version.cgi,lib/wiki_wiki.cgi,lib/wiki_write.cgi,image/face.png,image/navi.png,image/star.gif,skin/common,skin/img,skin/loader,skin/passwd\n\
+\n\
+# perl module\n\
+lib/Algorithm/Diff.pm	devel,release\n\
+lib/AWS/AWS_README.txt	devel,release\n\
+lib/AWS/browsers.pm	devel,release\n\
+lib/AWS/browsers_phone.pm	devel,release\n\
+lib/AWS/domains.pm	devel,release\n\
+lib/AWS/operating_systems.pm	devel,release\n\
+lib/AWS/robots.pm	devel,release\n\
+lib/AWS/search_engines.pm	devel,release\n\
+lib/Digest/Perl/MD5.pm	devel,release\n\
+lib/File/magic	devel,release\n\
+lib/File/magic.txt	devel,release\n\
+lib/File/magic.txt.src	devel\n\
+lib/File/magic_compact.txt	devel,release,compact\n\
+lib/File/MMagic.pm	devel,release,compact\n\
+lib/HTTP/Lite.pm	devel,release,compact\n\
+lib/IDNA/Punycode.pm	devel,release\n\
+lib/Jcode/_Classic.pm	devel,release\n\
+lib/Jcode/Constants.pm	devel,release\n\
+lib/Jcode/H2Z.pm	devel,release\n\
+lib/Jcode/Nihongo.pod	devel\n\
+lib/Jcode/Tr.pm	devel,release\n\
+lib/Jcode/Unicode/Constants.pm	devel,release\n\
+lib/Jcode/Unicode/NoXS.pm	devel,release\n\
+lib/Nana/Cache.pm	devel,release,compact\n\
+lib/Nana/Carp.pm	devel,release,compact\n\
+lib/Nana/Code.pm	devel,release,compact\n\
+lib/Nana/Cookie.pm	devel,release,compact\n\
+lib/Nana/Crypt.pm	devel,release,compact\n\
+lib/Nana/Date.pm	devel,release,compact\n\
+lib/Nana/Enc.pm	devel,release,compact\n\
+lib/Nana/File.pm	devel,release,compact\n\
+lib/Nana/GDBM.pm	devel,release\n\
+lib/Nana/GZIP.pm	devel,release,compact\n\
+lib/Nana/HTTP.pm	devel,release,compact\n\
+lib/Nana/HTTPCompress.pm	devel,release,compact\n\
+lib/Nana/ImageSize.pm	devel,release,compact\n\
+lib/Nana/IndexSearch.pm	no\n\
+lib/Nana/Kana.pm	devel,release\n\
+lib/Nana/Lock.pm	devel,release,compact\n\
+lib/Nana/Login.pm	devel,release\n\
+lib/Nana/Logs.pm	devel,release\n\
+lib/Nana/Mail.pm	devel,release,compact\n\
+lib/Nana/MD5.pm	devel,release,compact\n\
+lib/Nana/NetIP.pm	devel,release\n\
+lib/Nana/OpenID.pm	devel,release\n\
+lib/Nana/OPML.pm	devel,release\n\
+lib/Nana/Pod2Wiki.pm	devel,release,compact\n\
+lib/Nana/RemoteHost.pm	devel,release,compact\n\
+lib/Nana/RSS.pm	devel,release,compact\n\
+lib/Nana/Search.pm	devel,release\n\
+lib/Nana/Search.pm.ja.pod	devel\n\
+lib/Nana/ServerInfo.pm	devel,release,compact\n\
+lib/Nana/Sitemaps.pm	devel,release\n\
+lib/Nana/SQLite.pm	devel,release\n\
+lib/Nana/Temp.pm	devel,release,compact\n\
+lib/Nana/UserAgent.pm	devel,release,compact\n\
+lib/Nana/YukiWikiDB.pm	devel,release,compact\n\
+lib/Nana/YukiWikiDB_GZIP.pm	devel,release\n\
+lib/Time/Local.pm	devel,release\n\
+lib/Yuki/DiffText.pm	devel,release,compact\n\
+lib/Yuki/RSS.pm	devel,release\n\
+lib/Yuki/YukiWikiDB.pm	devel,release\n\
+\n\
+# explugin\n\
+lib/aguse	devel,release\n\
+lib/antispam	devel,release,compact\n\
+lib/antispamwiki	devel,release,compact\n\
+lib/authadmin_cookie	devel,release,compact\n\
+lib/autometarobot	devel,release,compact\n\
+lib/canonical	devel,release\n\
+lib/captcha	devel,release	skin/captcha\n\
+lib/debug	devel	skin/debugscript\n\
+lib/google_analytics	devel,release\n\
+lib/google_translate	devel,release\n\
+lib/iecompatiblehack	devel,release,compact\n\
+lib/ignoreoldbrowser	devel,release,compact\n\
+lib/lang	devel,release	plugin/lang,skin/img-lang,image/lang.png\n\
+lib/linktrack	devel,release	plugin/ck\n\
+lib/login	devel,release	plugin/login,plugin/loginsub,skin/login,skin/img-login,plugin/loginsub.inc.pl,resource/login_mail,resource/login_mailaddr,resource/login_teamofuse,resource/login_useradd,image/login16.png,image/login32.png\n\
+lib/logs	devel,release	plugin/logs_viewer\n\
+lib/ogp	devel,release\n\
+lib/pathmenu	devel,release\n\
+lib/ping	devel,release\n\
+lib/punyurl	devel,release\n\
+lib/setting	devel,release	plugin/setting,skin/setting\n\
+lib/slashpage	devel,release\n\
+lib/stdin	devel\n\
+lib/trackback	devel,release\n\
+lib/urlhack	devel,release\n\
+lib/xframe	devel,release,compact\n\
+\n\
+# plugin\n\
+plugin/adminedit	devel,release,compact\n\
+plugin/agent	devel,release\n\
+plugin/alias	devel,release,compact\n\
+plugin/aname	devel,release,compact\n\
+plugin/article	devel,release,compact\n\
+plugin/attach	devel,release,compact\n\
+plugin/back	devel,release,compact\n\
+plugin/backlink	devel,release\n\
+plugin/backup	devel,release\n\
+plugin/br	devel,release\n\
+plugin/bugtrack	devel,release\n\
+plugin/calendar	devel,release\n\
+plugin/calendar2	devel,release\n\
+plugin/captcha	devel,release	skin/captcha\n\
+plugin/ck	devel,release	lib/linktrack\n\
+plugin/clear	devel,release,compact\n\
+plugin/color	devel,release,compact\n\
+plugin/comment	devel,release,compact\n\
+plugin/contents	devel,release,compact\n\
+plugin/counter	devel,release,compact\n\
+plugin/date	devel,release,compact\n\
+plugin/diff	devel,release,compact\n\
+plugin/edit	devel,release,compact	skin/edit\n\
+plugin/edit_extend	devel,release	plugin/edit,skin/jquery,skin/farbtastic,skin/instag,skin/jqModal,skin/wheel.png,skin/mask.png,skin/marker.png,skin/img-exedit,image/exedit.png\n\
+plugin/env	devel,release\n\
+plugin/font	devel,release\n\
+plugin/frozen	devel,release,compact\n\
+plugin/help	devel,release,compact\n\
+plugin/hr	devel,release,compact\n\
+plugin/img	devel,release,compact\n\
+plugin/include	devel,release,compact\n\
+plugin/ipv6check	devel,release\n\
+plugin/lang	devel,release	lib/lang,skin/img-lang,image/lang.png\n\
+plugin/link	devel,release,compact\n\
+plugin/links	devel,release\n\
+plugin/list	devel,release,compact\n\
+plugin/location	devel,release,compact	skin/location\n\
+plugin/login	devel,release	lib/login,plugin/loginsub,skin/login,skin/img-login,plugin/loginsub.inc.pl,resource/login_mail,resource/login_mailaddr,resource/login_teamofuse,resource/login_useradd,image/login16.png,image/login32.png\n\
+plugin/lookup	devel,release,compact\n\
+plugin/ls2	devel,release,compact\n\
+plugin/mailform	devel,release\n\
+plugin/metarobots	devel,release,compact\n\
+plugin/multiarticle	devel,release\n\
+plugin/multicomment	devel,release\n\
+plugin/multimailform	devel,release\n\
+plugin/navi	devel,release\n\
+plugin/new	devel,release,compact\n\
+plugin/newpage	devel,release,compact\n\
+plugin/nofollow	devel,release,compact\n\
+plugin/norelated	devel,release,compact\n\
+plugin/now	devel,release,compact\n\
+plugin/online	devel,release,compact\n\
+plugin/opml	devel,release\n\
+plugin/pagenavi	devel,release\n\
+plugin/pcomment	devel,release,compact\n\
+plugin/perlpod	devel,release\n\
+plugin/popular	devel,release,compact\n\
+plugin/popup	devel,release\n\
+plugin/recent	devel,release,compact\n\
+plugin/ref	devel,release,compact\n\
+plugin/rss	devel,release,compact\n\
+plugin/rss10	devel,release\n\
+plugin/rss10page	devel,release\n\
+plugin/rsspage	devel,release,compact\n\
+plugin/ruby	devel,release,compact\n\
+plugin/sbookmark	devel,release\n\
+plugin/search	devel,release,compact\n\
+plugin/search_fuzzy	devel,release\n\
+plugin/server	devel,release,compact\n\
+plugin/servererror	devel,release,compact\n\
+plugin/setlinebreak	devel,release,compact\n\
+plugin/setting	devel,release	lib/setting,skin/setting\n\
+plugin/showrss	devel,release,compact\n\
+plugin/sitemap	devel,release\n\
+plugin/sitemaps	devel,release,compact\n\
+plugin/size	devel,release,compact\n\
+plugin/smedia	devel,release	skin/smedia\n\
+plugin/source	devel,release\n\
+plugin/star	devel,release\n\
+plugin/stdin	devel\n\
+plugin/sub	devel,release,compact\n\
+plugin/sup	devel,release,compact\n\
+plugin/tb	devel,release\n\
+plugin/time	devel,release,compact\n\
+plugin/title	devel,release,compact\n\
+plugin/topicpath	devel,release,compact\n\
+plugin/twitter	devel,release	skin/twitstat.skin/twitter\n\
+plugin/verb	devel,release,compact\n\
+plugin/vote	devel,release,compact\n\
+plugin/yetlist	devel,release,compact\n\
+\n\
+# admin plugin\n\
+plugin/admin	devel,release,compact\n\
+plugin/adminchangepassword	devel,release,compact	plugin/adminchangepassword.inc.js\n\
+plugin/compressbackup	devel,release,compact\n\
+plugin/convertutf8	devel,release,compact\n\
+plugin/counter_viewer	devel,release,compact\n\
+plugin/deletecache	devel,release,compact\n\
+plugin/freezeconvert	devel,release,compact\n\
+plugin/listfrozen	devel,release,compact	plugin/listfrozen.inc.js\n\
+plugin/logs_viewer	devel,release	lib/logs,skin/logs_viewer\n\
+plugin/rename	devel,release,compact\n\
+plugin/setupeditor	devel,release,compact\n\
+plugin/versionlist	devel,release,compact\n\
+\n\
+# build tool\n\
+build/arc.pl	devel\n\
+build/b64decode.pl	devel\n\
+build/base64-org.pl	devel\n\
+build/base64.pl	devel\n\
+build/block_plugin.regex	devel\n\
+build/block_plugin_name.regex	devel\n\
+build/bracketname.regex	devel\n\
+build/build.mk	devel\n\
+build/build.pl	devel\n\
+build/build_dir.pl	devel\n\
+build/build_doc.mk	devel\n\
+build/build_img.mk	devel\n\
+build/build_img.pl	devel\n\
+build/build_xs.mk	devel,release\n\
+build/CGI_INSTALLER.ja.html	devel\n\
+build/CGI_INSTALLER.ja.txt	devel\n\
+build/compactmagic.pl	devel\n\
+build/compressfile.pl	devel\n\
+build/csscolorbuilder.pl	devel\n\
+build/ext.pl	devel\n\
+build/ext_small.pl	devel\n\
+build/facemark.regex	devel\n\
+build/facemark_puki.regex	devel\n\
+build/filelist.pl	devel\n\
+build/freemail_all.txt	devel\n\
+build/getversion.pl	devel\n\
+build/image.regex	devel\n\
+build/inline_plugin.regex	devel\n\
+build/installer.css	devel\n\
+build/installer.sh	devel\n\
+build/installer_sub.sh	devel\n\
+build/installer2.sh	devel\n\
+build/interwikidef1.regex	devel\n\
+build/interwikidef2.regex	devel\n\
+build/interwikiname1.regex	devel\n\
+build/interwikiname2.regex	devel\n\
+build/Jcode-convert.pl	devel\n\
+build/lang.pl	devel\n\
+build/license_art.en.html	devel\n\
+build/license_art.ja.html	devel\n\
+build/license_art_en.html	devel\n\
+build/license_art_ja.html	devel\n\
+build/license_gpl.en.html	devel\n\
+build/license_gpl.ja.html	devel\n\
+build/license_gpl_en.html	devel\n\
+build/license_gpl_ja.html	devel\n\
+build/list_hiragana.pl	devel\n\
+build/list_hiragana.txt	devel\n\
+build/list_hiragana_euc.txt	devel\n\
+build/mail.regex	devel\n\
+build/mail_freemail.txt	devel\n\
+build/mail_intra.regex	devel\n\
+build/mail_mobile.txt	devel\n\
+build/mail_msnlive.txt	devel\n\
+build/mail_sp.txt	devel\n\
+build/makeinstaller.sh	devel\n\
+build/makesampleini.pl	devel\n\
+build/makewikisub.pl	devel\n\
+build/mkfreemaillist.pl	devel\n\
+build/mkngwords.pl	devel\n\
+build/ngwords.txt	devel\n\
+build/ngwords_frozenwrite.txt	devel\n\
+build/ngwords_frozenwrite_ja.txt	devel\n\
+build/ngwords_ja.txt	devel\n\
+build/ngwords_username.txt	devel\n\
+build/ngwords_username_ja.txt	devel\n\
+build/jsPacker.pl	devel\n\
+build/Pack.pm	devel\n\
+build/ParseMaster.pm	devel\n\
+build/regipv4.regex	devel\n\
+build/regipv6.regex	devel\n\
+build/search_eucpost.regex	devel\n\
+build/search_eucpre.regex	devel\n\
+build/search_tagoutsidereplace.regex	devel\n\
+build/sgmlescape.regex	devel\n\
+build/text.pl	devel\n\
+build/url.regex	devel\n\
+build/url_ispuny.regex	devel\n\
+build/url_puny.regex	devel\n\
+build/url_puny_withfile.regex	devel\n\
+build/url_withfile.regex	devel\n\
+build/utf16.pl	devel\n\
+build/wikiname.regex	devel\n\
+Makefile	devel,release\n\
+\n\
+# ad\n\
+plugin/ad	ad	skin/ad,plugin/ad_edit.inc.pl,plugin/ad_edit.inc.js	plugindoc-ad\n\
+\n\
+# bookmark\n\
+plugin/bookmark	bookmark	skin/bookmark	plugindoc-bookmark\n\
+\n\
+# exdate\n\
+lib/exdate	exdate	lib/exdate,lib/exdate-qreki	plugindoc-exdate\n\
+\n\
+# playaudio\n\
+plugin/playaudio	playaudio	skin/audio,skin/audio.swf,skin/audio.as\n\
+\n\
+# playvideo\n\
+plugin/playvideo	playvideo	v.cgi,plugin/playvideo_v_cgi.pl,skin/video-js,skin/video-js.png,skin/video-js.swf,skin/video,skin/videoresize,skin/flowplayer-3.2.6.min,skin/flowplayer-3.2.7.swf,skin/flowplayer.controls-3.2.5.swf	plugindoc-playvideo\n\
+\n\
+# qrcode\n\
+plugin/qrcode	qrcode		plugindoc-qrcode\n\
+\n\
+# htmlhead\n\
+plugin/html	htmlhead	plugin/head	plugindoc-htmlhead\n\
+plugin/head	htmlhead	plugin/html	plugindoc-htmlhead\n\
+\n\
+# sh\n\
+plugin/sh	sh	skin/syntaxhighlighter/XRegExp,skin/syntaxhighlighter/shAutoloader,skin/syntaxhighlighter/shBrushAS3,skin/syntaxhighlighter/shBrushAppleScript,skin/syntaxhighlighter/shBrushBash,skin/syntaxhighlighter/shBrushCSharp,skin/syntaxhighlighter/shBrushColdFusion,skin/syntaxhighlighter/shBrushCpp,skin/syntaxhighlighter/shBrushCss,skin/syntaxhighlighter/shBrushDelphi,skin/syntaxhighlighter/shBrushDiff,skin/syntaxhighlighter/shBrushErlang,skin/syntaxhighlighter/shBrushGroovy,skin/syntaxhighlighter/shBrushJScript,skin/syntaxhighlighter/shBrushJava,skin/syntaxhighlighter/shBrushJavaFX,skin/syntaxhighlighter/shBrushPerl,skin/syntaxhighlighter/shBrushPhp,skin/syntaxhighlighter/shBrushPlain,skin/syntaxhighlighter/shBrushPowerShell,skin/syntaxhighlighter/shBrushPython,skin/syntaxhighlighter/shBrushRuby,skin/syntaxhighlighter/shBrushSass,skin/syntaxhighlighter/shBrushScala,skin/syntaxhighlighter/shBrushSql,skin/syntaxhighlighter/shBrushVb,skin/syntaxhighlighter/shBrushXml,skin/syntaxhighlighter/shCore,skin/syntaxhighlighter/shThemeDefault,skin/syntaxhighlighter/shThemeDjango,skin/syntaxhighlighter/shThemeEclipse,skin/syntaxhighlighter/shThemeEmacs,skin/syntaxhighlighter/shThemeFadeToGrey,skin/syntaxhighlighter/shThemeMDUltra,skin/syntaxhighlighter/shThemeMidnight,skin/syntaxhighlighter/shThemeRDark	plugindoc-sh\n\
+\n\
+# xrea\n\
+plugin/xrea	xrea\n\
+

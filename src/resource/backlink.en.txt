@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+backlink_msg=Return to $1

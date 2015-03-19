@@ -1,0 +1,260 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+dmy=\
+\n\
+
+login_mail_confirmmail=\
+Subject:[Important]$wiki_title Identified Mail\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+　　　　　　　　 <<< Notice of issuance authentication code >>>
+------------------------------------------------------------------------\n\
+We have issued an authorization code.
+\n\
+Please access the PC ones that issued the authorization code, the same\n\
+as the mobile phone and browser.\n\
+\n\
+Key input confirmation screen to complete the request, please enter\n\
+the verification keys such as copy and paste the following.\n\
+------------------------------------------------------------------------\n\
+$confirm\n\
+------------------------------------------------------------------------\n\
+\n\
+Alternatively, you can access the same browser at the time of provisional\n\
+registration, the following URL.\n\
+------------------------------------------------------------------------\n\
+$url?cmd=login&mode=confirm&x=$confirm\n\
+------------------------------------------------------------------------\n\
+\n\
+Valid for $expire hours from the confirmation key issue here.\n\
+When an authentication error, please try out from register again.\n\
+\n\
+$url\n\
+\n\
+If you have any questions on this email, please contact to\n\
+$modifier_mail.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+login_mail_adduser=\
+Subject:[Important]$wiki_title Notice of registration\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+    　　　　　　　　 <<< Notice of registration >>>
+------------------------------------------------------------------------\n\
+Dear $nickname\n\
+\n\
+Thank you a registered user to $wiki_title.\n\
+\n\
+This limit of $ wiki_title and editing is canceled.\n\
+In addition, the pages that are originally frozen and can not be edited.\n\
+\n\
+To edit the wiki in the future, you will need a login.\n\
+\n\
+For safety reasons, the password should be changed regularly.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+login_mail_changemail=\
+Subject:[Important]$wiki_title Change notification e-mail address\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+ 　　　　　　 <<< Change notification e-mail address >>>
+------------------------------------------------------------------------\n\
+We make the following changes to the registered address.\n\.
+\n\
+Old : $OLDMAIL\n\
+New : $MAIL\n\
+\n\
+This email is an automated email for email address change.\n\
+If you have any questions on this email please contact $modifier_mail.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+login_mail_changepass=\
+Subject:[Important]$wiki_title Change notification password\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+     　　　　　　 <<< Change notification password >>>
+------------------------------------------------------------------------\n\
+Password changed.
+\n\
+This email is an automated email for password change.\n\
+If you have any questions on this email please contact $modifier_mail.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+login_mail_forget=\
+Subject:[Important]$wiki_title Forgot password notification\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+           　　　　　　 <<< Forgot password >>>
+------------------------------------------------------------------------\n\
+Please change the password from the following link.\n\
+\n\
+$url?cmd=login&mode=newpass&x=$confirm\n\
+\n\
+This email is an automated email for a new password.\n\
+If you have any questions on this email please contact $modifier_mail.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+login_mail_unregist=\
+Subject:[Important]$wiki_title Notice of unregist\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+         　　　　　　 <<< Notice of unregist >>>
+------------------------------------------------------------------------\n\
+Dear $nickname\n\
+\n\
+Thank you for your interest in ever $wiki_title.\n\
+\n\
+We are looking forward to serving you again.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\
+
+login_mail_unauthorizedaccess1=\
+Subject:[Important]$wiki_title Notice of unauthorized access detection\n\
+To:Dear $nickname\n\
+From:$wiki_title admin\n\
+------------------------------------------------------------------------\n\
+ <<< Notice of automatic detection of suspected unauthorized access >>>
+------------------------------------------------------------------------\n\
+Dear $nickname\n\
+\n\
+In that $wiki_title, account by $nickname have been logged from the environment that is different from the previously was confirmed.\n\
+\n\
+Please check the network address of the authentication is performed at the following URL.\n\
+\n\
+$url?cmd=login&mode=authip&x=$confirm\n\
+\n\
+If authentication is not performed within $expire hours from the network address of this access is denied.\n\
+\n\
+------------------------------------------------------------------------\n\
+# Sender information\n\
+Name : $nickname\n\
+Type of terminal : $DEVICE\n\
+Useragent : $HTTP_USER_AGENT\n\
+IP Address : $REMOTE_ADDR [$REMOTE_HOST]\n\
+Detected network : $NETWORK_ADDR\n\
+Detected organizations : ORGANIZATION\n\
+Detected AS Number : $NETWORK_AS\n\
+Access source country, region : $GEOIP_COUNTRY $GEOIP_CITY\n\
+Registered Date : $DATETIME\n\
+Expiration date : $EXPIREDATETIME\n\
+------------------------------------------------------------------------\n\
+Site $wiki_title\n\
+URL $url\n\
+EMail $modifier_mail\n\
+Admin $modifier_name\n\
+------------------------------------------------------------------------\n\

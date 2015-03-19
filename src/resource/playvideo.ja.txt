@@ -1,0 +1,47 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+playvideo_wmp_play=Windows Media Player
+playvideo_html5video_play=ブラウザーで再生
+playvideo_flashvideo_play=Flash
+playvideo_youtube_play=Youtube
+playvideo_youtube_fake_play=Youtube(Niconico経由)
+playvideo_nicovideio_play=ニコニコ動画
+playvideo_download=ダウンロード
+
+playvideo_err_noie=playvideo:インターネットエクスプローラで閲覧して下さい。
+playvideo_err_notfound=playvideo:ファイル $1 (形式 $2) がありません。
+playvideo_err_notsupport=playvideo:お使いのブラウザーは動画再生でサポートされていません。
+
+playvideo_ext_wmv=Windows Media Video
+playvideo_ext_html=HTML Video
+
+# Youtube
+playvideo_youtube_url=http://youtu.be/
+#playvideo_youtube_url="http://www.youtube.com/watch?v=
+# ニコニコ動画経由Youtube
+#playvideo_youtube_fakeniconico_url=http://video.niconico.com/watch/http://www.youtube.com/watch?v=
+playvideo_youtube_fakeniconico_url=http://video.niconico.com/watch/ut
+
+# ニコニコ動画
+playvideo_niconico_url=http://www.nicovideo.jp/watch/
+
+# Youtube埋め込み
+playvideo_youtube_object=<iframe width="560" height="315" src="http://www.youtube.com/embed/##ID##" frameborder="0" allowfullscreen="allowfullscreen"><a href="http://youtu.be/##ID##">Youtube ID ##ID## の動画に行きます。</a></iframe>
+
+# ニコニコ動画埋め込み（外部プレイヤー）
+playvideo_niconico_object=<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/##ID##"></script><noscript><a href="http://www.nicovideo.jp/watch/##ID##">ニコニコ動画 ID ##ID## の動画に行きます。</a></noscript>
+
+# ニコニコ動画埋め込み（動画のサムネイルと詳細情報）
+#playvideo_niconico_object<iframe width="312" height="176" src="http://ext.nicovideo.jp/thumb/##ID##" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/##ID##">ニコニコ動画 ID ##ID## の動画に行きます。</a></iframe>
+
+playvideo_total=TOTAL
+playvideo_today=TODAY
+playvideo_yesterday=YERSTERDAY
+
+playvideo_wmv_chrome=Windows Media Playerプラグインがインストールされていなければ、<a target="_blank" href="http://support.google.com/chrome/bin/answer.py?answer=95697">こちらの指示</a>に従ってインストールして下さい。
+
+playvideo_vcgi_author=作成者：
+playvideo_vcgi_copyright=著作権：
+playvideo_vcgi_closebutton=閉じる

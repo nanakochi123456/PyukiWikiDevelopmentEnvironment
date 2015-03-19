@@ -1,0 +1,11 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+list_plugin_title=List of pages
+list_plugin_otherchara=Others
+
+list_firstpage=Top
+list_prevpage=Prev
+list_nextpage=Next
+list_lastpage=Last

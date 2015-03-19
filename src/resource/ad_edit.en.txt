@@ -1,0 +1,80 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+ad_plugin_title=Advertising edit for affiliate programs
+ad_plugin_title_add=Advertising Addition
+ad_plugin_title_edit=Space Edit
+ad_plugin_title_delete=Space Delete
+
+ad_plugin_msg_add=Please process no advertising HTML codes but stick them as it is.
+
+ad_plugin_title_selspace=Selection of an advertising space
+ad_plugin_msg_html_wh=It has been recognized as the advertisement of size %d x %d. Please check an advertising banner and choose a printing space.
+ad_plugin_msg_html_w=It has been recognized as the advertisement of size %d x unknown. Please check an advertising banner and choose a printing space.
+ad_plugin_msg_html_text=It has been recognized as the text advertisement. Please check an advertising text and choose a printing space.
+
+ad_plugin_msg_alt=Alternate text (any)
+ad_plugin_msg_displayurl=Display URL (any)
+ad_plugin_msg_newspace=New Space Name
+ad_plugin_msg_selspace=Select Space
+ad_plugin_msg_nospace=(No corresponding space)
+ad_plugin_msg_confirm=The following advertisements are registered. Please click 'Next', if very well.
+ad_plugin_msg_finish=The following advertisements were registered.
+
+ad_plugin_msg_space=Space Name
+ad_plugin_msg_id=Advertising ID
+ad_plugin_msg_wh=Size: %d x %d
+ad_plugin_msg_w=Size: %d x unknown
+ad_plugin_msg_adtext=Size:Text
+ad_plugin_msg_altconfirm=Alternate text
+ad_plugin_msg_altconfirm_none=(none)
+ad_plugin_msg_displayurlconfirm=Display URL
+ad_plugin_msg_displayurlconfirm_none=(any)
+
+ad_plugin_msg_html=HTML
+ad_plugin_msg_create=Create
+ad_plugin_msg_update=Update
+ad_plugin_msg_start=Open
+ad_plugin_msg_end=Close
+ad_plugin_msg_priority=Priority
+ad_plugin_msg_memo=Memo
+
+ad_plugin_msg_delete=Delete
+ad_plugin_msg_edit=Edit
+ad_plugin_msg_spacesel= selection space
+ad_plugin_msg_allsel=View All Space
+
+ad_plugin_wiki=*The database for an advertising display\nThis page is not edited directly, using edit of ?cmd=ad\nMoreover, please do not make freeze release absolute.\n#contents\n----
+
+ad_plugin_msg_confirmdelete=Check of advertising space delete
+ad_plugin_msg_confirmdelete2=Delete space "A". Please click 'Next', if it checks.
+ad_plugin_msg_finishdelete=Space "A" was deleted.
+
+ad_plugin_btn_back=Back
+ad_plugin_btn_next=Next
+ad_plugin_btn_finish=Finish
+ad_plugin_btn_cancel=Cancel
+ad_plugin_btn_update=Update
+ad_plugin_btn_edit=Edit
+ad_plugin_btn_delete=Delete
+ad_plugin_btn_jsconfirm= this advertising ?
+ad_plugin_btn_alldelete=All Delete
+ad_plugin_err_adhtml=Injustice HTML code.
+ad_plugin_err_spacename=Injustice space name.
+ad_plugin_err_changed=The advertising HTML code is changed. Please check once again.
+ad_plugin_err_dup=The same advertisement already exists in this space.
+ad_plugin_err_notfound=An advertisement does not exist in this space.
+ad_plugin_err_nospace=There is no advertising space.
+
+ad_plugin_msg_editfinish=The following advertisements %sed
+
+ad_plugin_sel_nosel=(no sel)
+ad_plugin_sel_year=
+ad_plugin_sel_month=
+ad_plugin_sel_day=
+ad_plugin_msg_text=Text
+ad_plugin_msg_unknown=Unknown
+
+ad_plugin_msg_pluginusage=The wiki sentence for advertising insertion
+

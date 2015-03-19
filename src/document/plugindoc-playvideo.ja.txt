@@ -1,75 +1,270 @@
-Status: 503 Service unavailable Content-type: text/html
+playvideo プラグイン
 
-PyukiWiki Runtime Error
+セルフホストで動画再生ページを表示します。
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+ ・ playvideo プラグイン
+     □ 使用方法
+     □ 使用する前の簡単な設定
+     □ サンプルイメージ・・・
+     □ 主な使い方
+     □ オプション
+     □ 動画情報に付加できる情報
+         ☆ Windows Media Video
+         ☆ MP4
+     □ エンコーダーのダウンロード
+     □ フリーのエンコーダーのダウンロードと注意事項
+     □ 注意点
+     □ その他
+     □ 謝辞
+     □ ライセンス
+     □ 寄付のお願い
+     □ 作者
+
+使用方法
+
+&playvideo(filename [, option youtube video ID] [, option nicovideo video ID]...);
+#playvideo(filename [, option youtube video ID] [, option nicovideo video ID]...)
+
+拡張子はいれないでください。
+
+Windows Media Video 及び、変換してあれば、HTML5ビデオ、または、Flashビデオが再
+生できます。
+
+使用する前の簡単な設定
+
+plugin/playvideo.inc.pl を参考にして、info/setup.ini.cgi を追加する設定です。
+
+$::playvideo_plugin_usedownload=0;
+    ダウンロード機能を使わない場合
+$::playvideo_plugin_ziptmp="/tmp";
+    テンポラリディスクスペースに別の物理HDDが割り当てられていると速くなります。
+$::playvideo_plugin_videopath="video";
+    ビデオの配置してある./ からのパス、または絶対パス
+$::playvideo_plugin_playsite="http://$ENV{HTTP_HOST}/v.cgi";
+    デフォルトプレイサイト
+$::playvideo_plugin_videourl="http://$ENV{HTTP_HOST}/$videopath";
+    実際に配信したいビデオのホスト名〜パス
+$::playvideo_plugin_videourl{flv}="http://...";
+    $::playvideo_plugin_videourl{mp4}="http://...";
+    $::playvideo_plugin_videourl{ogv}="http://...";
+    $::playvideo_plugin_videourl{webm}="http://...";
+    各拡張子の動画を、PyukiWikiをデフォルトサーバー以外に設定する場合に指定する
+    。
+$::playvideo_plugin_downloadfilename_inwmv=0;
+    wmvのタイトルをzipに埋め込む
+$::playvideo_plugin_downloadfilename_inwmv_withauthor=0;
+    wmvの作者をzipに埋め込む
+$playvideo::usefakeyoutubeurl=0;
+    Youtubeの偽物（ニコニコ動画）を使用する
+
+サンプルイメージ・・・
+
+&playvideo(2pctest);
+?
+[Windows Media Player] [ダウンロード] (15.46 s)
+TOTAL: 6 TODAY: 0 YESTERDAY:1
+
+&playvideo(hisui3,1bQrBC-lpao,sm??????★);
+[Windows Media Player] [ブラウザーで再生] [Youtube] [ニコニコ動画] [ダウンロード] (06:46)
+TOTAL: 18 TODAY: 2 YESTERDAY:2
+
+主な使い方
+
+&playvideo(name, [options...]);
+#playvideo(name, [options...])
+
+name
+    ビデオファイル名
+    拡張子を指定しないと、リンクとして新しいウィンドウで開きます。
+    拡張子を指定すると（wmv、または html）その画面で開きます。
+    インナープレイヤーで、拡張子にYouTubeかニコニコ動画のIDを指定するとそのサイ
+    トの動画を表示します。
+
+オプション
+
+image=filename.jpg または gif または png
+    動画のサムネイル画像（一部のみ指定可能）添付でもURLでも可
+inline, inline=yes
+    拡張子を指定しなくても、その画面にプレイヤーを開く
+autoplay, autoplay=yes, autostart, autostart=yes
+    その画面にプレイヤーを開いた時に、自動再生をする
+loop, loop=yes
+    繰り返し再生をする
+    （新しいウィンドウのWMV/HTML5か、インナーウィンドウのHTML5のみ）
+notime, notime=yes
+    時間を表示しない（プレイヤーでは時間が表示されます）
+nodownload, nodownload=yes
+    ダウンロードリンクを設置しない
+size=(0-100)%
+    インナープレイヤーのサイズを指定する。
+width=xxx height=xxx or 640x480
+    インナープレイヤーのサイズを指定する。
+youtube=ID
+    YouTubeのIDを指定する。
+niconico=ID
+    ニコニコ動画のIDを指定する。
+
+動画情報に付加できる情報
+
+Windows Media Video
+
+Windows Media エンコーダーにおいて、以下のものを設定すれば、自動的に反映されま
+す。
+
+ ・ 題名
+ ・ 作成者
+ ・ 著作権
+
+MP4
+
+MP4エンコード時に、タイトルと作成者が設定できます。
+
+エンコーダーのダウンロード
+
+Windows Media Encoder 32bit版
+    http://www.microsoft.com/downloads/ja-jp/resultsForCategory.aspx?
+    displaylang=ja&categoryid=4
+Windows Media Encoder 64bit版
+    http://www.microsoft.com/downloads/ja-jp/details.aspx?FamilyID=
+    cc41218d-7e37-4546-bf0b-1276959ee3ef
+Microsoft Expression Encoder
+    http://www.microsoft.com/downloads/ja-jp/details.aspx?FamilyID=
+    75402BE0-C603-4998-A79C-BECDD197AA79
+
+フリーのエンコーダーのダウンロードと注意事項
+
+XMedia Recode (日本語対応)
+    http://www.xmedia-recode.de/
+    フレームレートをそのままである「オリジナルを保持」を選択すると、非常に巨大
+    なファイルが出来ます。適時、29.97もしくは 30 あたりを選択してみて下さい。
+ffmpeg
+    http://ja.wikipedia.org/wiki/FFmpeg
+    ffmpeg -y -i "入力ファイル名" -acodec libfaac -ar 44100 -ab 128k -vcodec
+    libx264 -level 41 -b ビットレート -bufsize 20000k -maxrate 25000k -g 250 -r
+    29.97 -coder 1 -flags +loop -cmp +chroma -partitions
+    +parti4x4+partp8x8+partb8x8 -me_method umh -subq 7 -me_range 16 -keyint_min
+    25 -sc_threshold 40 -i_qfactor 0.71 -rc_eq 'blurCplx^(1-qComp)' -bf 16
+    -b_strategy 1 -bidir_refine 1 -refs 6 -deblockalpha 0 -deblockbeta 0
+    -threads 2 "出力ファイル名.flv"
+    ffmpeg -y -i "入力ファイル名" -acodec libfaac -ar 44100 -ab 128k -vcodec
+    libx264 -level 41 -b ビットレート -bufsize 20000k -maxrate 25000k -g 250 -r
+    29.97 -coder 1 -flags +loop -cmp +chroma -partitions
+    +parti4x4+partp8x8+partb8x8 -me_method umh -subq 7 -me_range 16 -keyint_min
+    25 -sc_threshold 40 -i_qfactor 0.71 -rc_eq 'blurCplx^(1-qComp)' -bf 16
+    -b_strategy 1 -bidir_refine 1 -refs 6 -deblockalpha 0 -deblockbeta 0
+    -threads 2 "出力ファイル名.mp4"
+    ffmpeg -y -i "入力ファイル名" -f webm -vcodec libvpx -acodec libvorbis -ab
+    128k -r 29.97 -aq 90 -b ビットレート -threads 2 "出力ファイル名.webm"
+    ffmpeg -y -i "入力ファイル名" -acodec libvorbis -ab 128k -r 29.97 -aq 90 -b
+    ビットレート -threads 2 "出力ファイル名.ogv"
+iWisoft Free Video Converter (英語のみ)
+    http://www.easy-video-converter.com/
+    以前、紹介していましたが、現在お勧めできません。しかし、動画が認識できない
+    場合の、緊急回避用のエンコーダーとして利用することもできます。
+
+注意点
+
+アップデート時、及び、新たにHTML5ビデオやフラッシュビデオを使用するには、一度
+deletecacheプラグインでplayvideoを全て削除する必要があります。
+
+その他
+
+ ・ HTML5ビデオの、Android、iPad、iPhoneでは、完全なる動作確認できていませんが
+    、以前のバージョンより動作しやすいようになっています。
+    しかし、未サポート状態になっています。
+ ・ カウンターがV2でないとうまく昨日のが取得できないかもしれません。
+    多分ですが、PyukiWiki Classic では動作しません。
+ ・ あえて行っていませんが、v.cgi の外部からのアクセスの制限は行っていません。
+    そのため、他の人のyoutube IDやニコニコ動画のIDのビデオが再生される可能性が
+    あります。
+
+謝辞
+
+このプラグイン作成において、Image::ExifTool ver 8.50 及び、flowplayer 3.2.7、
+video.js 3.2.0を使用しています。
+
+Image::ExifTool
+    http://search.cpan.org/~exiftool/Image-ExifTool-8.50/
+flowplayer
+    http://flowplayer.org/
+HTML5 Video Player Video.js
+    http://videojs.com/
+
+ライセンス
+
+LGPL
+
+寄付のお願い
+
+開発環境強化、継続的な開発の為に、寄付をお願いしています。
+vector シェアレジ、銀行振り込みに対応しています。
+
+Paypal
+    http://pyukiwiki.info/Paypal/
+
+Vector シェアレジ (1,155円)
+    http://www.vector.co.jp/soft/unix/net/se496490.html
+
+Vector シェアレジ (3,255円)
+    http://www.vector.co.jp/soft/unix/net/se496491.html
+
+銀行振り込み、その他
+    銀行振り込み等は以下のお振込に対応しています。
+    住信SBIネット銀行　ミカン支店　普通　2786854
+    三菱東京UFJ銀行　大久保支店　普通　3980703
+    三井住友銀行　柏支店　普通　7638195
+    りそな銀行　北小金支店　普通　1167353
+    楽天銀行　メルマネ (<papu (at) users (dot) sourceforge (dot) jp> または <o
+    (at) daiba (dot) cx>) ゆうちょ銀行　10540-54047051
+
+寄付をしたくないが、安いものを買い物したい
+    [激安問屋！かいもの.jp] http://shop.daiba.cx/
+
+真似をして、VPSを使ってみたい
+    [VPS比較] http://vpsinfo.jp/
+
+-パソコンのパーツを買いたい
+    [自作PC最新情報] http://jisaku-pc.info/
+
+vectorのPCソフトのダウンロード
+    [サテライトサイトですみません http://down.jp.net/]
+
+VPS、または専用サーバーの導入相談を受け付けています
+    [VPSサーバー・専用サーバーの導入相談（個人向け）] http://www.abilie.com/
+    tickets/1585
+
+ネタかもしれませんが、これでもセキュリティーを守れます。
+    [できる限りタダでインターネットを安全に] （初心者〜中級者向けオンラインPDF
+    書籍） http://www.abilie.com/tickets/1595
+
+バナー＆テキスト広告をもっとクリックして！
+    こちらのチケットより、同様に作成された ad プラグインの拡張部分がダウンロー
+    ド可能です。
+    http://www.abilie.com/tickets/2050
+
+CGIスクリプトをインストールします。
+    http://www.abilie.com/tickets/8828
+
+誰でも必ずあり得る！介護を受けずに一人で車いすを活用する方法完全版
+    http://www.abilie.com/tickets/8827
+
+amazonから寄付をする
+    http://www.amazon.co.jp/registry/wishlist/1HJXA69R6EYZZ
+
+有料着メロのダウンロード
+    １曲ダウンロードに付、１円相当　大した曲はありませんが
+    http://j-ken.com/creator/4730/
+
+その他、寄付に関しまして
+    寄付に関してのURLは、以下となります。
+    http://www.daiba.cx/
+    %3a%e5%af%84%e4%bb%98%e3%81%8a%e6%8c%af%e8%be%bc%e5%85%88/
+
+作者
+
+Copyright (C) 2005-2015 by ななみ (ななこっち★)
+http://nanakochi.daiba.cx/　http://www.daiba.cx/　http://chat.daiba.cx/
+http://vpsinfo.jp/　http://eat.jp.net/　http://pyu.be/　http://power.daiba.cx/
+http://twitter.com/nanakochi123456/
+http://ja.wikipedia.org/wiki/%e5%88%a9%e7%94%a8%e8%80%85%3aPapu
+

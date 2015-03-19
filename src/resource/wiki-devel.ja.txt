@@ -4757,9 +4757,9 @@ L<http://pyukiwiki.info/>
 **ライセンス
 
 
-Copyright(C) 2005-2014 by Nanami.
+(C)2005-2015 by Nanami.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -5845,9 +5845,9 @@ L<http://pyukiwiki.info/>
 **ライセンス
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -6254,8 +6254,8 @@ yetlist.inc.pl - PyukiWiki プラグイン
 *PyukiWiki仕様書（仮）
 
 >>"PyukiWiki" ver 0.2.1-customoer-preview $$~
-Copyright (C) 2005-2014 PukiWiki Developers Team~
-Copyright (C) 2004-2014 Nekyo (Based on PukiWiki, YukiWiki)~
+Copyright (C) 2005-2015 PukiWiki Developers Team~
+Copyright (C) 2004-2015 Nekyo (Based on PukiWiki, YukiWiki)~
 License: GPL version 3 or (at your option) any later version~
 and/or Artistic version 1 or later version.~
 Based on YukiWiki http://www.hyuki.com/yukiwiki/~
@@ -6799,8 +6799,8 @@ http非同期クライアントです。コールバック関数は、以下の通りの引数です。
 現在、XSモジュールは、devel版のみのテスト実装です。
 
 >>"PyukiWiki" ver 0.2.1-customoer-preview $$~
-Copyright (C) 2005-2014 PukiWiki Developers Team~
-Copyright (C) 2004-2014 Nekyo (Based on PukiWiki, YukiWiki)~
+Copyright (C) 2005-2015 PukiWiki Developers Team~
+Copyright (C) 2004-2015 Nekyo (Based on PukiWiki, YukiWiki)~
 License: GPL version 3 or (at your option) any later version~
 and/or Artistic version 1 or later version.~
 Based on YukiWiki http://www.hyuki.com/yukiwiki/~
@@ -6901,9 +6901,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -6999,9 +6999,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -7114,9 +7114,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -7286,9 +7286,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -7711,9 +7711,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -7880,9 +7880,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -7953,9 +7953,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8131,9 +8131,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8270,9 +8270,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8398,9 +8398,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8570,9 +8570,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8640,9 +8640,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8797,9 +8797,9 @@ L<http://pyukiwiki.info/>
 **LICENSE
 
 
-Copyright(C) 2004-2007 by Nekyo.
+(C)2004-2007 by Nekyo.
 
-Copyright(C) 2005-2014 by PyukiWiki Developers Team
+(C)2005-2015 by PyukiWiki Developers Team
 
 License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.
 
@@ -8976,8 +8976,8 @@ modify it under the same terms as Perl itself.
 現在、XSモジュールは、devel版のみのテスト実装です。
 
 >>"PyukiWiki" ver 0.2.1-customoer-preview $$~
-Copyright (C) 2005-2014 PukiWiki Developers Team~
-Copyright (C) 2004-2014 Nekyo (Based on PukiWiki, YukiWiki)~
+Copyright (C) 2005-2015 PukiWiki Developers Team~
+Copyright (C) 2004-2015 Nekyo (Based on PukiWiki, YukiWiki)~
 License: GPL version 3 or (at your option) any later version~
 and/or Artistic version 1 or later version.~
 Based on YukiWiki http://www.hyuki.com/yukiwiki/~

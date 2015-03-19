@@ -1,0 +1,5 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+location_plugin_message=This page is moved. Please click <strong><a href="$URL">here</a></strong> when the page doesn't move.

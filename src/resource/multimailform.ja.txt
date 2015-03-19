@@ -1,0 +1,51 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+multimailform_plugin_mailsend=から送信しました
+multimailform_plugin_mailconfirm=からの送信
+multimailform_plugin_msg_title=内容を確認して下さい
+multimailform_plugin_msg_edit=内容の編集
+multimailform_plugin_btn_mailconfirm=確認
+multimailform_plugin_btnclear=クリア
+multimailform_plugin_btn_mailsend=上記の内容で送信
+multimailform_plugin_btn_back=やりなおし
+multimailform_plugin_info_from=メールアドレス:
+multimailform_plugin_info_name=お名前:
+multimailform_plugin_info_subject=表題:
+multimailform_plugin_info_data=内容:
+multimailform_plugin_copy_check=メールの控えを送信する
+multimailform_plugin_copy_notcheck=メールの控えを送信しない
+multimailform_plugin_copy_notice=（送信される控えは暗号化されません）
+
+multimailform_plugin_err_to=multimailform:送信先の$::modifier_mail変数が設定されていません。プラグインの実行はされません。
+multimailform_plugin_err_title=必要事項を確認してください。
+multimailform_plugin_err_from_nostr=メールアドレスが記載されていません。
+multimailform_plugin_err_from_err=メールアドレスが不正です。
+multimailform_plugin_err_url_err=URLが不正です。
+multimailform_plugin_err_noname=名前が記載されていません。
+multimailform_plugin_err_nosubject=表題が記載されていません。
+multimailform_plugin_err_nodata=内容が記載されていません。
+
+multimailform_plugin_mail_copy_from_name=$name様
+multimailform_plugin_mail_copy_subject=$wiki_title お問い合わせ控え
+multimailform_plugin_mail_copy_before=\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+　　　　　　■■■■ お問い合わせありがとうございます ■■■■\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+※このメールは$wiki_titleからの自動送信メールです。\n\
+※このメールにお心当たりのない場合、お手数ですがそのまま削除して下さい。\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+表題：$subject\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+
+multimailform_plugin_mail_copy_after=\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+サイト $wiki_title\n\
+URL    $url\n\
+EMail  $modifier_mail\n\
+管理人 $modifier_name\n\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
+
+

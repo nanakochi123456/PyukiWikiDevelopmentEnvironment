@@ -1,3 +1,229 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Language" content="ja"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><title>PyukiWiki Document</title><style type="text/css">
 body,td{color:black;background-color:white;margin-left:2%;margin-right:2%;font-size:100%;font-family:verdana,arial,helvetica,Sans-Serif}strong{text-shadow:inherit 0px 0px 0px;font-weight:bold}a:link{color:#215dc6;background-color:inherit;text-decoration:none}a:active{color:#215dc6;background-color:inherit;text-decoration:none}a:visited{color:#a63d21;background-color:inherit;text-decoration:none}a:hover{color:#215dc6;background-color:#CCDDEE;text-decoration:underline}h2{font-family:verdana,arial,helvetica,Sans-Serif;color:inherit;background-color:#DDEEFF;padding:.3em;border:0px;margin:0px 0px .5em 0px}h3{font-family:verdana,arial,helvetica,Sans-Serif;border-bottom:3px solid #DDEEFF;border-top:1px solid #DDEEFF;border-left:10px solid #DDEEFF;border-right:5px solid #DDEEFF;color:inherit;background-color:#FFFFFF;padding:.3em;margin:0px 0px .5em 0px}h4{font-family:verdana,arial,helvetica,Sans-Serif;border-left:18px solid #DDEEFF;color:inherit;background-color:#FFFFFF;padding:.3em;margin:0px 0px .5em 0px}font-weight:bold;background-color:transparent;padding:12px0px0px0px;border:0px;margin:12px0px0px0px}h1.error{color:red}*/ div#navigator{clear:both;padding:4px 0px 0px 0px;margin:0px}thead td.style_td,tfoot td.style_td{color:inherit;background-color:#d0d8e0}thead th.style_th,tfoot th.style_th{color:inherit;background-color:#e0e8f0}.style_table{padding:0px;border:0px;text-align:left;width:auto;margin-left:auto;margin-right:auto;color:inherit;background-color:#ccd5dd}.style_th{padding:5px;margin:1px;text-align:center;color:inherit;background-color:#eeeeee}.style_td{padding:5px;margin:1px;color:inherit;background-color:#eef5ff}
-</style></head><body>Status: 503 Service unavailable Content-type: text/html<html><body><h1>PyukiWiki Runtime Error</h1><hr/> <strong>Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.</strong><br/><table border="1" width="600"><tr><th colspan="4" align="center">Trace Info</th></tr><tr><th align="center">Package</th><th align="center">File</th><th align="center">Line</th><th align="center">FUnction</th></tr><tr><td>main</td><td>./lib/wiki_sub.cgi</td><td align="right">288</td><td>Nana::Carp::err 0</td></tr><tr><td colspan="4">285 : # Function init_dtd (wiki_html.cgi) # comment<br/>286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}<br/>287 : # Function is_no_xhtml (wiki_html.cgi) # comment<br/><strong>288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}</strong><br/>289 : # Function meta_robots (wiki_html.cgi) # comment<br/>290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}<br/>291 : # Function text_to_html (wiki_html.cgi) # comment<br/></td></tr><tr><td>main</td><td>./lib/wiki_html.cgi</td><td align="right">136</td><td>main::is_no_xhtml 1</td></tr><tr><td colspan="4">133 : );<br/>134 : <br/>135 : $::dtd=$::dtd{$::htmlmode};<br/><strong>136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);</strong><br/>137 : $::dtd.=qq(\n<meta name="generator" content="PyukiWiki $::version"/>\n);<br/>138 : <br/>139 : # XHTMLであるかのフラグを設定 # comment<br/></td></tr><tr><td>main</td><td>./lib/wiki_sub.cgi</td><td align="right">286</td><td>main::_init_dtd 1</td></tr><tr><td colspan="4">283 : # Function location (wiki_func.cgi) # comment<br/>284 : sub location {&load_wiki_module("func");return &_location(@_);}<br/>285 : # Function init_dtd (wiki_html.cgi) # comment<br/><strong>286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}</strong><br/>287 : # Function is_no_xhtml (wiki_html.cgi) # comment<br/>288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}<br/>289 : # Function meta_robots (wiki_html.cgi) # comment<br/></td></tr><tr><td>main</td><td>./lib/wiki.cgi</td><td align="right">280</td><td>main::init_dtd 1</td></tr><tr><td colspan="4">277 : &getbasehref;<br/>278 : <br/>279 : &init_lang;<br/><strong>280 : &init_dtd;</strong><br/>281 : &init_global;<br/>282 : &init_follow; #nocompact<br/>283 : &skin_init;<br/></td></tr><tr><td>main</td><td>./lib/wiki.cgi</td><td align="right">192</td><td>main::main 1</td></tr><tr><td colspan="4">189 : 	write => \&do_write,<br/>190 : );<br/>191 : <br/><strong>192 : &main;</strong><br/>193 : exit(0);<br/>194 : ############################## # comment<br/>195 : <br/></td></tr><tr><td>main</td><td>index.cgi</td><td align="right">48</td><td>(eval) 1</td></tr><tr><td colspan="4">45 : #	$::_conv_start = (times)[0];<br/>46 : #}<br/>47 : <br/><strong>48 : require "$::sys_dir/wiki.cgi";</strong><br/>49 : <br/>50 : __END__<br/>51 : <br/></td></tr></table><hr/><div align="right"> <i>PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop</i><br/> <i>Build on 2014-02-11 22:22:59 BuildNumber 2348</i><br/> <i>Server Admin </i><br/></body></html></body></html>
+</style></head><body><p></p><h2 id="i5079756B6957696B6920A5D7A5E9A5B0A5A4A5F32028492D50290">PyukiWiki プラグイン (I-P)</h2>&lt;&lt;$Id$&gt;&gt;<div class="contents"> <a id="i636F6E74656E7473136"></a> <ul><li><a href="?#i5079756B6957696B6920A5D7A5E9A5B0A5A4A5F32028492D50290">PyukiWiki プラグイン (I-P)</a></li><li><a href="?#i696D672E696E632E706C1">img.inc.pl</a></li><li><a href="?#i696E636C7564652E696E632E706C6">include.inc.pl</a></li><li><a href="?#i69707636636865636B2E696E632E706C11">ipv6check.inc.pl</a></li><li><a href="?#i6C696E6B2E706C15">link.pl</a></li><li><a href="?#i6C696E6B732E696E632E706C19">links.inc.pl</a></li><li><a href="?#i6C6973742E696E632E706C23">list.inc.pl</a></li><li><a href="?#i6C6F636174696F6E2E696E632E706C28">location.inc.pl</a></li><li><a href="?#i6C6F6F6B75702E696E632E706C33">lookup.inc.pl</a></li><li><a href="?#i6C73322E696E632E706C38">ls2.inc.pl</a></li><li><a href="?#i6D61696C666F726D2E696E632E706C43">mailform.inc.pl</a></li><li><a href="?#i6D657461726F626F74732E696E632E706C48">metarobots.inc.pl</a></li><li><a href="?#i6D756C746961727469636C652E696E632E706C52">multiarticle.inc.pl</a></li><li><a href="?#i6D756C7469636F6D6D656E742E696E632E706C59">multicomment.inc.pl</a></li><li><a href="?#i6D756C74696D61696C666F726D2E696E632E706C67">multimailform.inc.pl</a></li><li><a href="?#i6E6176692E696E632E706C74">navi.inc.pl</a></li><li><a href="?#i6E65772E696E632E706C79">new.inc.pl</a></li><li><a href="?#i6E6577706167652E696E632E706C85">newpage.inc.pl</a></li><li><a href="?#i6E6F666F6C6C6F772E696E632E706C90">nofollow.inc.pl</a></li><li><a href="?#i6E6F772E696E632E706C94">now.inc.pl</a></li><li><a href="?#i6F6E6C696E652E696E632E706C104">online.inc.pl</a></li><li><a href="?#i6F706D6C2E696E632E706C108">opml.inc.pl</a></li><li><a href="?#i706167656E6176692E696E632E706C112">pagenavi.inc.pl</a></li><li><a href="?#i70636F6D6D656E742E696E632E706C117">pcomment.inc.pl</a></li><li><a href="?#i706F70756C61722E696E632E706C125">popular.inc.pl</a></li><li><a href="?#i706F7075702E696E632E706C131">popup.inc.pl</a></li></ul></div><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i696D672E696E632E706C1">img.inc.pl</h2>img.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD72">概要</h3><p></p><p></p><pre>
+#img(<a href="http://example.com/image.png" class="url" target="_blank" title="http://example.com/image.png" rel="nofollow">http://example.com/image.png</a>)
+#img(<a href="http://example.com/image.jpg" class="url" target="_blank" title="http://example.com/image.jpg" rel="nofollow">http://example.com/image.jpg</a>,right)
+#img(<a href="http://example.com/image.gif" class="url" target="_blank" title="http://example.com/image.gif" rel="nofollow">http://example.com/image.gif</a>,l,AlternateText)
+#img(<a href="http://example.com/image.gif" class="url" target="_blank" title="http://example.com/image.gif" rel="nofollow">http://example.com/image.gif</a>,center,AlternateText)
+#img(,c)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D93">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC04">説明</h3><p></p><p>画像を表示します。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA15">使用方法</h3><p></p><p></p><pre>
+#img(image_url,[alt],[l|left],[r|right],center,c)
+</pre><p></p><p></p><p></p><dl class="list1"><dt>image_url</dt><dd>画像のあるURLを指定します。&nbsp;</dd><dt>left または l</dt><dd>左寄せします。&nbsp;</dd><dt>right または r</dt><dd>右寄せします。&nbsp;</dd><dt>center</dt><dd>センタリングします。&nbsp;</dd><dt>c</dt><dd>テキストの回りこみを解除します。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i696E636C7564652E696E632E706C6">include.inc.pl</h2>include.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD77">概要</h3><p></p><p></p><pre>
+#include(ページ名[,notitle])
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D98">重要度</h3><p></p><p>★★★☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC09">説明</h3><p></p><p>記述した場所に指定したページを挿入する</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA110">使用方法</h3><p></p><p></p><p></p><dl class="list1"><dt>notitle</dt><dd>挿入元のページ名を表示しない<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i69707636636865636B2E696E632E706C11">ipv6check.inc.pl</h2>ipv6check.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD712">概要</h3><p></p><p></p><pre>
+&amp;ipv6check([IPV6で表示するページ],[IPV4で表示するページ]);
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D913">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC014">説明</h3><p></p><p>クライアントからのアクセスのIPV4か、IPV6かをチェックするプラグイン</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6C696E6B2E706C15">link.pl</h2>link.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD716">概要</h3><p></p><p></p><pre>
+&amp;link(結城浩,<a href="http://www.hyuki.com/" class="url" target="_blank" title="http://www.hyuki.com/" rel="nofollow">http://www.hyuki.com/</a>,_blank|_top|frame name]);
+&amp;link(メール,&lt;mail (at) example (dot) com&gt;);
+&amp;link(メール,&lt;mail (at) example (dot) com?cc=cc&gt;@&lt;example (dot) com&amp;bcc=bcc (at) example (dot) com&gt;);
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D917">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC018">説明</h3><p></p><p>リンクをします。</p><p>PyukiWikiの内部パーサーの影響を受けません。</p><p>メールアドレスで、? 以降に他のオプションを指定した場合、ASCII文字以外を指定することはできません。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6C696E6B732E696E632E706C19">links.inc.pl</h2>links.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD720">概要</h3><p></p><p></p><pre>
+#links
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D921">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC022">説明</h3><p></p><p>自動的に逆リンクを行なうプラグイン</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6C6973742E696E632E706C23">list.inc.pl</h2>list.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD724">概要</h3><p></p><p></p><pre>
+?cmd=list
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D925">重要度</h3><p></p><p>★★★★☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC026">説明</h3><p></p><p>全ページの一覧を表示します。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i5449505327">TIPS</h3><p></p><p>perlモジュール MeCab、または、Text&#x3a;&#x3a;MeCabを導入すると、ひらがなでのインデックスも作成できます。</p><p>この機能は、設定で停止することもできます。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6C6F636174696F6E2E696E632E706C28">location.inc.pl</h2>location.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD729">概要</h3><p></p><p></p><pre>
+#location(url or ページ名)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D930">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC031">説明</h3><p></p><p>指定したURLまたはページ名に自動移動します。なお、安全の為に凍結されたページからしか使えません。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA132">使用方法</h3><p></p><p></p><pre>
+#location(url または ページ名)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6C6F6F6B75702E696E632E706C33">lookup.inc.pl</h2>lookup.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD734">概要</h3><p></p><p></p><pre>
+#lookup(google,Googleで検索)
+#lookup(pyukiwiki,PyukiWiki開発サイトのページ,Download)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D935">重要度</h3><p></p><p>★★★☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC036">説明</h3><p></p><p>記述した位置にテキスト入力欄とボタンを表示します。任意の文字列を入力してボタンを押すと、InterWikiNameと入力値から生成したURLへ移動します。これによって、検索エンジンにクエリを送信したり、番号をタイプするだけで該当するアーカイブにアクセスすることなどが可能になります。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA137">使用方法</h3><p></p><p></p><pre>
+#lookup(InterWikiName, [ボタン名], [入力欄の初期値])
+</pre><p></p><p></p><p></p><dl class="list1"><dt>InterWikiName</dt><dd>InterWikiNameに設定した値の一つを指定します。&nbsp;</dd><dt>ボタン名</dt><dd>ボタンに表示するキャプションを指定します。省略時は'LookUp'です。&nbsp;</dd><dt>入力欄の初期値</dt><dd>初期値を指定したい場合に記入します。省略時は空文字列になります。<br/><br/>**設定</dd></dl><p></p><p>URLの生成にはInterWikiを利用します。このプラグインが生成するURLは、以下のようなInterWikiと同じです。InterWikiNameのページに、あらかじめURLの生成に使用するInterWikiNameを設定しておく必要があります。</p><p></p><pre>
+[InterWikiName interwikiname]
+[URLサフィックス InterWikiName] utf8またはsjis,euc,jis,raw
+</pre><p></p><p></p><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6C73322E696E632E706C38">ls2.inc.pl</h2>ls2.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD739">概要</h3><p></p><p></p><pre>
+#ls2
+#ls2(パターン,[title],[include],[link],[reverse])
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D940">重要度</h3><p></p><p>★★★☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC041">説明</h3><p></p><p>指定したパターンで始まるページ名を一覧表示します。省略時には現在のページが起点となります。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA142">使用方法</h3><p></p><p></p><pre>
+#ls2(pattern, [title],[include],[link],[reverse])
+</pre><p></p><p></p><p></p><dl class="list1"><dt>pattern</dt><dd>パターンには表示するページ名の共通部分を指定します。省略時は&quot;設置したページ名/&quot;となります。省略する時、他のオプションを指定する場合は、カンマが必要です。&nbsp;</dd><dt>title</dt><dd>ページに含まれる見出し(*,**,***)の一覧を併記します。 &nbsp;</dd><dt>include</dt><dd>インクルードしているページの見出しを再帰的に列挙します。&nbsp;</dd><dt>link</dt><dd>actionプラグインを呼び出すリンクを表示します。&nbsp;</dd><dt>reverse</dt><dd>ページの並び順を反転し、降順にします。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6D61696C666F726D2E696E632E706C43">mailform.inc.pl</h2>mailform.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD744">概要</h3><p></p><p></p><pre>
+#mailform
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D945">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC046">説明</h3><p></p><p>メール送信フォームを表示し、管理人に匿名メールを送信します。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA147">使用方法</h3><p></p><p></p><pre>
+#mailform
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6D657461726F626F74732E696E632E706C48">metarobots.inc.pl</h2>metarobots.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD749">概要</h3><p></p><p></p><pre>
+#metarobots(キーワード[,キーワード]...[,noarchive])
+#metarobots(description,説明文)
+#metarobots(disable)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D950">重要度</h3><p></p><p>★★★★☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC051">説明</h3><p></p><p>robotsコントロールを設定します。</p><p>なお、安全の為に凍結されたページからしか使えません。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6D756C746961727469636C652E696E632E706C52">multiarticle.inc.pl</h2>multiarticle.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD753">概要</h3><p></p><p></p><pre>
+#multiarticle(name=name,subject=subject,textarea=comment,commentname=name,commenttextarea=comment)
+</pre><p></p><p></p><pre>
+#multiarticle(name=お名前,url=Webページ=http://,mail=メールアドレス=,
+select=選択ラベル=選択肢１|選択肢２|選択肢３|選択肢４|選択肢５,
+checkbox=チェックボックス=checked,checkbox=チェックボックス,
+star=点数,subject=タイトル,textarea=テキスト,
+commentlabel=コメントする,commentname=お名前,commenturl=Webページ=http://,
+commentmail=メールアドレス（任意）=,commenttextarea=コメント)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D954">重要度</h3><p></p><p>★☆☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC055">説明</h3><p></p><p>高機能BBS風プラグイン</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0DFC4EA56">設定</h3><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i7079756B6977696B692E696E692E636769A4CEC0DFC4EA57">pyukiwiki.ini.cgiの設定</h4><p></p><p></p><p></p><dl class="list1"><dt>$&#x3a;&#x3a;writefrozenplugin</dt><dd>１の場合、凍結されたページでも書き込めるようにする。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i6D756C746961727469636C652E696E632E706CA4CEC0DFC4EA58">multiarticle.inc.plの設定</h4><p></p><p></p><p></p><dl class="list1"><dt>$multiarticle&#x3a;&#x3a;cols</dt><dd>テキストエリアのカラム数&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;rows</dt><dd>テキストエリアの行数&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;name_cols</dt><dd>名前テキストエリアのカラム数&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;subject_cols</dt><dd>題名テキストエリアのカラム数&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;name_format</dt><dd>名前の挿入フォーマット（リソースに記述されています）&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;subject_format</dt><dd>題名の挿入フォーマット&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;ins</dt><dd>挿入する位置 1&#x3a;欄の前 0&#x3a;欄の後&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;comment</dt><dd>書き込み下に一行コメントを 1&#x3a;入れる 0&#x3a;入れない&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;auto_br</dt><dd>改行を自動的に変換する 1&#x3a;する 0&#x3a;しない&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;noname</dt><dd>1 の場合、名前なしで処理しない&nbsp;</dd><dt>$multiarticle&#x3a;&#x3a;nosubject</dt><dd>1 の場合、題名なしで処理しない<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6D756C7469636F6D6D656E742E696E632E706C59">multicomment.inc.pl</h2>multicomment.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD760">概要</h3><p></p><p></p><pre>
+#multicomment(label=コメントする=,name=お名前=,url=Webページ（任意）=http://,mail=メールアドレス（任意）=,textarea=コメント=)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D961">重要度</h3><p></p><p>★☆☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC062">説明</h3><p></p><p>高機能コメントフォームを表示して、訪問者からのコメント入力を受け付ける</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA163">使用方法</h3><p></p><p></p><pre>
+#multicomment(label=コメントする=,name=お名前=,url=Webページ（任意）=http://,mail=メールアドレス（任意）=,textarea=コメント=)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0DFC4EA64">設定</h3><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i7079756B6977696B692E696E692E636769A4CEC0DFC4EA65">pyukiwiki.ini.cgiの設定</h4><p></p><p></p><p></p><dl class="list1"><dt>$&#x3a;&#x3a;writefrozenplugin</dt><dd>１の場合、凍結されたページでも書き込めるようにする。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i6D756C7469636F6D6D656E742E696E632E706CA4CEC0DFC4EA66">multicomment.inc.plの設定</h4><p></p><p></p><p></p><dl class="list1"><dt>my $multicomment_format</dt><dd>Wiki文法でコメントを挿入する書式<br/><br/>&yen;x08はセパレーターなので、削除しないで下さい。&nbsp;</dd><dt>$multicomment&#x3a;&#x3a;noname</dt><dd>1 の場合、名前なしで処理しない&nbsp;</dd><dt>$multicomment&#x3a;&#x3a;nodata</dt><dd>1 の場合、コメントなしでエラーとする<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6D756C74696D61696C666F726D2E696E632E706C67">multimailform.inc.pl</h2>multimailform.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD768">概要</h3><p></p><p></p><pre>
+#multimailform(mail=Mail address,subject=Mail title,textarea=Body)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D969">重要度</h3><p></p><p>★☆☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC070">説明</h3><p></p><p>高機能メールフォーム</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA171">使用方法</h3><p></p><p></p><pre>
+#multimailform(name=name form,mail=Mail address,subject=Mail title,select=select|select|select,textarea=Body)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC3F8BCD472">著者</h3><p></p><p>=item ななみ</p><p>L&lt;<a href="http://nanakochi.daiba.cx/&gt;" class="url" target="_blank" title="http://nanakochi.daiba.cx/&gt;" rel="nofollow">http://nanakochi.daiba.cx/></a> etc...=item PyukiWiki Developers Team</p><p>L&lt;<a href="http://pyukiwiki.info/&gt;" class="url" target="_blank" title="http://pyukiwiki.info/&gt;" rel="nofollow">http://pyukiwiki.info/></a> </p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iA5E9A5A4A5BBA5F3A5B973">ライセンス</h3><p></p><p>(C)2005-2015 by ななみ.</p><p>(C)2005-2015 by PyukiWiki Developers Team</p><p>License is GNU GENERAL PUBLIC LICENSE 3 and/or Artistic 1 or each later version.</p><p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6E6176692E696E632E706C74">navi.inc.pl</h2>navi.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD775">概要</h3><p></p><p></p><pre>
+#navi([prefix] [,prefix_title] [,reverse])
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D976">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC077">説明</h3><p></p><p>DocBook風ナビゲーションバーを表示します。</p><p>目次となるページに下階層のページが存在する時、それら全てのページ（の先頭と末尾）に記述する事で Prev, Home, Next というリンクを表示します。これによって下階層のページを順に参照するのに便利になります。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA178">使用方法</h3><p></p><p></p><p></p><dl class="list1"><dt>prefix</dt><dd>目次ページに順番に見て回るページの上階層にあたるページを指定します。<br/><br/>例えば hoge, hoge/1, hoge/2, hoge/3 というページが存在する場合、hoge/2に&#x23;navi(hoge)を記述するとhogeに移動するHomeというリンク、hoge/1に移動するPrevというリンク、hoge/3に移動するNextというリンクを表示します。<br/><br/>ページで最初に呼び出した場合はヘッダイメージのリンクを出力します。ページで２度目以降に呼び出された場合はフッタイメージのリンクを出力します。現在のページが目次ページである場合は対象となるページの一覧を表示します。<br/><br/>省略した場合は、現在表示しているページの上位ページを設定します。&nbsp;</dd><dt>prefix_title</dt><dd>プリフィックスのタイトルを指定します。&nbsp;</dd><dt>reverse</dt><dd>ページを逆順にソートします。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6E65772E696E632E706C79">new.inc.pl</h2>new.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD780">概要</h3><p></p><p></p><pre>
+&amp;new{2006-01-01 (Sun) 00:00:00};
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D981">重要度</h3><p></p><p>★★★☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC082">説明</h3><p></p><p>指定した日時が最近であった場合、最近更新された事を強調表示します。</p><p>標準では5日以内の場合に New を、１日以内の場合に New! を表示します。期間や表示する文字列のパターンは設置者によってカスタマイズ可能です。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA183">使用方法</h3><p></p><p></p><pre>
+&amp;new{date-format};
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0DFC4EA84">設定</h3><p></p><p></p><p></p><dl class="list1"><dt>my $new_dates_short</dt><dd>New!を表示する時間を秒で指定します。&nbsp;</dd><dt>my $new_dates_long</dt><dd>Newを表示する時間を秒で指定します。&nbsp;</dd><dt>my $new_string_short</dt><dd>$new_dates_shortで指定された時間に表示される文字列をHTMLで設定します。&nbsp;</dd><dt>my $new_string_long</dt><dd>$new_dates_longで指定された時間に表示される文字列をHTMLで設定します。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6E6577706167652E696E632E706C85">newpage.inc.pl</h2>newpage.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD786">概要</h3><p></p><p></p><pre>
+?cmd=newpage&amp;mypage=ページ名&amp;refer=関連ページ
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D987">重要度</h3><p></p><p>★★★★★</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC088">説明</h3><p></p><p>新しいページを作成する</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0DFC4EA89">設定</h3><p></p><p>=head 2 pyukiwiki.ini.cgi</p><p></p><p></p><dl class="list1"><dt>$&#x3a;&#x3a;new_refer</dt><dd>新規作成の場合、関連ページのリンクを初期値として表示する画面を新規ページ名入力画面で表示する。<br/><br/>空文字にすると表示されません。&nbsp;</dd></dl><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6E6F666F6C6C6F772E696E632E706C90">nofollow.inc.pl</h2>nofollow.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD791">概要</h3><p></p><p></p><pre>
+#nofollow
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D992">重要度</h3><p></p><p>★☆☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC093">説明</h3><p></p><p>robotsコントロールを設定します。</p><p>PukiWiki互換性の為に設置されたプラグインです。</p><p>&#x23;metarobots(disable) でも、同じ効果を得ることができます。</p><p>なお、安全の為に凍結されたページからしか使えません。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6E6F772E696E632E706C94">now.inc.pl</h2>now.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD795">概要</h3><p></p><p></p><pre>
+&amp;now();
+&amp;now(now_format, [yyyy/mm/dd]);
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D996">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC097">説明</h3><p></p><p>現在または指定した日付を指定フォーマットで表示します。</p><p>「&#x26;now;」のように、() を指定しないで指定すると、書き込み時の日付に自動的に変換され、プラグインとして実行されません。</p><p>それ以外の場合は、現在の日付、または指定した日付を表示します。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA198">使用方法</h3><p></p><p>=now_formatnow_formatは、内部関数 date の書式文字列を指定できます。now_formatには、半角の ( ) を使用することはできません。詳しくは以下のサンプルを御覧下さい</p><dl class="list1"><dt>yyyy/mm/dd</dt><dd>表示する日付を指定します。省略時は当日の年月日となります。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iA5B5A5F3A5D7A5EB99">サンプル</h3><p></p><p>書式文字列のサンプルです。</p><p></p><p></p><dl class="list1"><dt>&#x26;now(Y-n-j[D],2006/1/1)</dt><dd>2006-1-1[Sun]&nbsp;</dd><dt>&#x26;now(y/m/J H&#x3a;m&#x3a;s,2006/1/1 23&#x3a;53&#x3a;11)</dt><dd>06/01/01 23&#x3a;53&#x3a;11&nbsp;</dd><dt>&#x26;now(SGGY年Zn月Zj日（lL） RS,2006/1/1) with exdate</dt><dd>平成１８年１月１日（日） 元旦<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDF1BCB0100">書式</h3><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i26237832363B6461746520A4C7BBC8A4A8A4EBA4B9A4D9A4C6A4CEBDF1BCB0A4C7A4B9A1A3101">&#x26;date で使えるすべての書式です。</h4><p></p><p></p><pre>
+西暦:Y:西暦(4桁)/y:西暦(2桁)
+</pre><p></p><pre>
+  月:n:1-12/m:01-12/M:Jan-Dec/F:January-December
+</pre><p></p><pre>
+  日:j:1-31/d:01-31
+</pre><p></p><pre>
+曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土
+</pre><p></p><pre>
+ampm:a:am or pm/A:AM or PM/AL:午前 or 午後
+</pre><p></p><pre>
+  時:g:1-12/G:0-23/h:01-12/H/00-23
+</pre><p></p><pre>
+  分:k:0-59/i:00-59
+</pre><p></p><pre>
+  秒:S:0-59/s:00-59
+</pre><p></p><pre>
+ t 指定した月の日数。 28 から 31
+ O グリニッジとの時間差
+ r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200
+ Z タイムゾーンのオフセット秒数。 -43200 から 43200
+ L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。
+ B Swatch インターネット時間 000 から 999
+ U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time()
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="iB3C8C4A5A5D7A5E9A5B0A5A4A5F36578646174652E696E632E636769C6B3C6FEBBFEA4CBBBC8A4A8A4EBA4B9A4D9A4C6A4CEBDF1BCB0A4C7A4B9A1A3102">拡張プラグインexdate.inc.cgi導入時に使えるすべての書式です。</h4><p></p><p></p><pre>
+    元号:SG:明治/大正/昭和/平成 Sg:明/大/昭/平
+         SA:M/T/S/H Sa:Ｍ/Ｔ/Ｓ/Ｈ
+</pre><p></p><pre>
+  元号年:SY:1-2桁(1〜10〜) Sy:0補完して2桁(01〜10〜)
+         GY:全角1-2桁(元〜２〜１０〜)
+         XY:全角1-2桁(元〜二〜十〜十一〜二十〜二十一〜)
+         Xy:全角1-2桁(元〜二〜一〇〜十一〜二〇〜二一〜)
+</pre><p></p><pre>
+    年度 N4SG N4Sg N4Sa N4SY N4Sy N4GY N4XY N4Xy 上記元号年同、４月を基点
+         N9SG N9Sg N9Sa N9SY N9Sy N9GY N9XY N9Xy 上記元号年と同、９月を基点
+</pre><p></p><pre>
+    西暦:Y:西暦(4桁)/y:西暦(2桁) - **
+        :ZY:全角4桁 Zy:全角2桁 KY:一七七〇〜二〇〇〇〜
+</pre><p></p><pre>
+    皇暦:TY:西暦(4桁)/Ty:西暦(2桁) - **
+        :TZY:全角4桁 TZy:全角2桁 TzY:一七七〇〜二〇〇〇〜
+</pre><p></p><pre>
+西暦年度:N4Y:西暦(4桁)/N4y:西暦(2桁)
+         N4ZY:全角2桁 N4Zy:全角2桁 N4KY:一七七〇〜二〇〇〇〜
+         N9ZY: N9Zy N9KY : ↑と同じで９月を基点
+</pre><p></p><pre>
+      月:n:1-12/m:01-12/M:Jan-Dec/F:January-December - **
+         Zn:全角1-2桁(１−１２) Zm:0補完して全角2桁(０１−１２）
+         Kn:一〜十〜十二/Km:一〜一〇〜一二
+         kn:睦月,如月...
+</pre><p></p><pre>
+      日:j:1-31/d:01-31 - **
+         Zj:全角1-2桁(１−３１) ZJ:0補完して全角2桁(０１−３１）
+         Kj:一〜十〜十一〜二十〜三十一/KJ:一〜一〇〜
+</pre><p></p><pre>
+    曜日:l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土 - **
+</pre><p></p><pre>
+    ampm:a:am or pm/A:AM or PM/AL:午前 or 午後 - **
+</pre><p></p><pre>
+      時:g:1-12/G:0-23/h:01-12/H/00-23 - **
+         Zg:１−１２/ZG:０−２３/Zh:０１−１２/ZH/００−２３
+         Kg:一〜十〜十二/KG:零〜十〜十一〜二十/二十三
+         Kh:一〜一〇〜一二/KH:〇〜一〇〜一一〜二〇〜二三
+</pre><p></p><pre>
+      分:k:0-59/i:00-59 - **
+         Zk:０−５９/Zi:００−５９
+         Kk:零〜五十九/Ki:〇〜五九
+</pre><p></p><pre>
+      秒:S:0-59/s:00-59 - **
+         ZS:０−５９/Zs:００−５９
+         KS:零〜五十九/Ks:〇〜五九
+</pre><p></p><pre>
+    祝日:RS:元旦/Rs:(元旦) 1948年より出力
+    行事:RG:七草/Rg:(七草) 1948年より出力
+  県民の:XG:都民の日/Xg:(都民の日) 1948年より出力
+    星座:SZ:おひつじ座/Sz:Aries
+  自分の:MG:.../Mg:(...) 1948年より出力
+  24節季:RK:立夏/Rk:(立夏)
+    六曜:RY:大安/赤口/先勝/友引/先負/仏滅
+  年干支:NK:甲子
+  日干支:HK:乙卵
+  日の宿:HY:角
+  旧暦年:QY:西暦(4桁)/Qy:西暦(2桁)
+        :QZY:全角4桁 QZy:全角2桁 QKY:一七七〇〜二〇〇〇〜
+</pre><p></p><pre>
+    皇暦:EY:西暦(4桁)/Ey:西暦(2桁)
+        :EZY:全角4桁 EZy:全角2桁 EzY:一七七〇〜二〇〇〇〜
+</pre><p></p><pre>
+      月:Qn:1-12/Qm:01-12
+         QZn:全角1-2桁(１−１２) QZm:0補完して全角2桁(０１−１２）
+         QKn:一〜十〜十二/QKm:一〜一〇〜一二
+         Qkn:睦月,如月...
+</pre><p></p><pre>
+      日:Qj:1-31/QJ:01-31 - **
+         QZj:全角1-2桁(１−３１) QZJ:0補完して全角2桁(０１−３１）
+         QKj:一〜十〜十一〜二十〜三十一/QKJ:一〜一〇〜
+</pre><p></p><pre>
+ t 指定した月の日数。 28 から 31
+ O グリニッジとの時間差
+ r RFC 822 フォーマットされた日付 例: Thu, 21 Dec 2000 16:01:07 +0200
+ Z タイムゾーンのオフセット秒数。 -43200 から 43200
+ L 閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。
+ B Swatch インターネット時間 000 から 999
+ U Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time()
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="iB0CAB2BCA4CE504850BDF1BCB0A4CFC2D0B1FEA4B7A4C6A4A4A4DEA4BBA4F3A1A3103">以下のPHP書式は対応していません。</h4><p></p><p></p><pre>
+W ISO-8601 月曜日に始まる年単位の週番号 (PHP 4.1.0で追加) 例: 42 (１年の第42週目)
+S 英語形式の序数を表すサフィックス。2 文字。 st, nd, rd or th. Works well with j
+T このマシーンのタイムゾーンの設定。 Examples: EST, MDT ...
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6F6E6C696E652E696E632E706C104">online.inc.pl</h2>online.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD7105">概要</h3><p></p><p></p><pre>
+&amp;online;
+#online
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D9106">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC0107">説明</h3><p></p><p>現在参照している、おおよそのユーザー数を表示します。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i6F706D6C2E696E632E706C108">opml.inc.pl</h2>opml.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD7109">概要</h3><p></p><p></p><pre>
+?cmd=opml[&amp;lang=lang]
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D9110">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC0111">説明</h3><p></p><p>OPMLを出力します。ページ内のRSSを全て出力することができます。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i706167656E6176692E696E632E706C112">pagenavi.inc.pl</h2>pagenavi.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD7113">概要</h3><p></p><p></p><pre>
+#pagenavi(string, string, string...)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D9114">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC0115">説明</h3><p></p><p>上層へのページへナビゲートをしやすいようにリンクをする。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA1116">使用方法</h3><p></p><p></p><p></p><dl class="list1"><dt>上層から現在のページへのリンク</dt><dd> PyukiWiki/用語集&gt;Glossary/ぴゅきうぃきについて&gt;PyukiWiki</dd>このように記載すると、以下のように変換されます。<br/><br/></dl><pre>
+PyukiWiki<a title="このページを編集します" class="editlink" href="?cmd=edit&amp;mypage=PyukiWiki" rel="nofollow">?</a>/用語集<a title="このページを編集します" class="editlink" href="?cmd=edit&amp;mypage=PyukiWiki%2fGlossary" rel="nofollow">?</a>/ぴゅきうぃきについて<a title="このページを編集します" class="editlink" href="?cmd=edit&amp;mypage=PyukiWiki%2fGlossary%2fPyukiWiki" rel="nofollow">?</a>
+</pre>&nbsp;<dl class="list1"><dt>パンくずリスト topicpath との相違</dt><dd>明示的に指定することで、ページ名に対して、擬似的に他の名前を指定し、エイリアス的な使い方ができます。<br/><br/>, で区切ることで、連続して指定することができます。&nbsp;</dd><dt>その他</dt><dd>その他は、通常のWiki文法で記述します。すべてのパラメータを結合してから、text_to_html関数でHTMLに変換されます。<br/><br/>=使用例</dd></dl><pre>
+#pagenavi(*,PyukiWiki/PyukiWikiダウンロード&gt;Download,について)
+</pre><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i70636F6D6D656E742E696E632E706C117">pcomment.inc.pl</h2>pcomment.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD7118">概要</h3><p></p><p></p><pre>
+#pcomment
+#pcomment({ [コメント記録ページ], [表示件数], [noname], [nodate], [above], [below], [reply] })
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D9119">重要度</h3><p></p><p>★★★☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC0120">説明</h3><p></p><p>別のページにコメントを記録することができるcommentプラグインです。設置した場所には最新のコメントだけを表示することができます。ラジオボタンを表示し、指定した部分にコメントを付けることもできます。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA1121">使用方法</h3><p></p><p></p><p></p><dl class="list1"><dt>コメント記録ページ</dt><dd>コメント記録ページ にはコメントを記録するページ名を指定します。省略すると、pcommentプラグイン内の $pcomment&#x3a;&#x3a;comment_page で指定されたページにコメントが記録されます。デフォルトは [コメント/(設置したページ名)] です。指定したページが存在しなくても、最初にコメントを追加した時に作成します。<br/><br/>コメント記録ページには数字だけで構成されるページ名を指定することができません。&nbsp;</dd><dt>表示件数</dt><dd>表示件数 は表示する最新コメントの数を指定します。第1レベルの番号なしリストだけをカウントします。省略すると、pcommentのデフォルト件数(通常10件。$pcomment&#x3a;&#x3a;num_comments で変更可能)が表示されます。&nbsp;</dd><dt>noname</dt><dd>名前の入力欄を表示しません。&nbsp;</dd><dt>nodate</dt><dd>日付を挿入しません。&nbsp;</dd><dt>above</dt><dd>挿入したコメントをフォームの上に表示します。コメントは上が古く、下に向かって新しい順に並びます。 &nbsp;</dd><dt>below</dt><dd>挿入したコメントをフォームの下に表示します。コメントは下が古く、上に向かって新しい順に並びます。 &nbsp;</dd><dt>reply</dt><dd>コメントの頭にラジオボタンを表示します。あるコメントに対するリプライが、そのコメントのラジオボタンをチェックすることで可能になります。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0DFC4EA122">設定</h3><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i7079756B6977696B692E696E692E636769A4CEC0DFC4EA123">pyukiwiki.ini.cgiの設定</h4><p></p><p></p><p></p><dl class="list1"><dt>$&#x3a;&#x3a;writefrozenplugin</dt><dd>１の場合、凍結されたページでも書き込めるようにする。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h4 id="i70636F6D6D656E742E696E632E706CA4CEC0DFC4EA124">pcomment.inc.plの設定</h4><p></p><p></p><p></p><dl class="list1"><dt>$pcomment&#x3a;&#x3a;format</dt><dd>コメント欄の全体フォーマットをWiki文法で指定します。<br/><br/>&yen;x08はセパレーターなので、削除しないで下さい。&nbsp;</dd><dt>$comment&#x3a;&#x3a;noname</dt><dd>1 の場合、名前なしで処理しない&nbsp;</dd><dt>$comment&#x3a;&#x3a;nodata</dt><dd>1 の場合、コメントなしでエラーとする&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;size_msg</dt><dd>コメントのテキストエリアの表示幅 &nbsp;</dd><dt>$pcomment&#x3a;&#x3a;size_name </dt><dd>コメントの名前テキストエリアの表示幅 &nbsp;</dd><dt>$pcomment&#x3a;&#x3a;format_name</dt><dd>コメントの名前挿入フォーマット&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;format_msg</dt><dd>コメントの欄の挿入フォーマット&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;format_now</dt><dd>コメントの日付挿入フォーマット &#x26;newプラグインで認識できる書式である必要があります。&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;comment_page</dt><dd>デフォルトのコメントページを指定します。&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;num_comments = 10</dt><dd>デフォルトの最新コメント表示数&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;direction_default</dt><dd>入力内容を1&#x3a;above(先頭)/0&#x3a;below(末尾)のどちらに挿入するかを指定します。&nbsp;</dd><dt>$pcomment&#x3a;&#x3a;timestamp</dt><dd>タイムスタンプ更新を以下のように指定します。<br/><br/></dd></dl><pre>
+0:なし
+1:設置ページのタイムスタンプ更新
+2:コメントページのタイムスタンプ更新 (デフォルト)
+3:両方
+</pre>&nbsp;<dl class="list1"><dt>$pcomment&#x3a;&#x3a;viewcommentpage</dt><dd>書き込み後の画面遷移を指定します。<br/><br/></dd></dl><pre>
+0:書き込み後コメントページへ戻る
+1:書き込み後設置ページへ戻る (デフォルト)
+</pre>&nbsp;<dl class="list1"><dt>$pcomment&#x3a;&#x3a;frozencommentpage</dt><dd>1&#x3a;コメントページ新規作成時、凍結した状態にしておきます。<br/><br/>pyukiwiki.ini.cgi にて、$&#x3a;&#x3a;writefrozenpluginが1に設定されていると、フォームからは書き込み可能です。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i706F70756C61722E696E632E706C125">popular.inc.pl</h2>popular.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD7126">概要</h3><p></p><p></p><pre>
+#popular(20,FrontPage|MenuBar,today)
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D9127">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC0128">説明</h3><p></p><p>人気のあるページをリスト表示します</p><p>やしがにもどき氏の作成されたpopular.inc.plをv0.1.6に対応し、改良したものです。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA1129">使用方法</h3><p></p><p></p><pre>
+#popular(最大表示件数,表示しないページを正規表現で[,total|today|yesterday][,notitle])
+</pre><p></p><p></p><p></p><dl class="list1"><dt>最大表示件数</dt><dd>表示する件数を設定します。デフォルトは10です。&nbsp;</dd><dt>表示しないページを正規表現で</dt><dd>表示しないページのリストを正規表現で設定します。&nbsp;</dd><dt>total</dt><dd>today|yesterday:全アクセスの表示、今日の表示、昨日の表示を設定します。デフォルトは全アクセスです。&nbsp;</dd><dt>notitle</dt><dd>タイトルを表示しなくなります。自由に設定できるようになります。<br/><br/></dd></dl><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC8F7B9CD130">備考</h3><p></p><p>counterプラグインのカウンター情報を利用しますので、集計対象のページの全てにcounterプラグインが設置されてないと意味がありませんが、全てのページに手動で設置するのは非効率である為、MenuBarやSideBarや、スキンから直接呼び出して使用するのが一般的です。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h2 id="i706F7075702E696E632E706C131">popup.inc.pl</h2>popup.inc.pl - PyukiWiki プラグイン<p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iB3B5CDD7132">概要</h3><p></p><p></p><pre>
+#popup(, NG Page or URL, OK Button, NG Button, width, height)
+wiki string
+wiki string
+...
+#popup
+</pre><p></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBDC5CDD7C5D9133">重要度</h3><p></p><p>★★☆☆☆</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iC0E2CCC0134">説明</h3><p></p><p>ページ訪問時に、ポップアップ画面を表示します。</p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="iBBC8CDD1CAFDCBA1135">使用方法</h3><p></p><p></p><pre>
+#popup(, <a href="http://example.jp/ignorer/" class="url" target="_blank" title="http://example.jp/ignorer/" rel="nofollow">http://example.jp/ignorer/</a>,同意する,同意しない,300,100)
+wiki文書
+...
+#popup
+</pre><p></p><p></p><pre>
+#popup(, <a href="http://example.jp/ignorer/" class="url" target="_blank" title="http://example.jp/ignorer/" rel="nofollow">http://example.jp/ignorer/</a>,はい,いいえ,する,同意しない,300,200)
+*１８歳以上ですか？
+このコンテンツは、未成年の方が閲覧できないコンテンツを含んでいます。
+あなたの年齢は１８才以上ですか？
+#popup
+</pre></body></html>

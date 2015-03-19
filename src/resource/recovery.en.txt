@@ -1,0 +1,12 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+recovery_plugin_title=PyukiWiki Recovery
+recovery_plugin_msg=To restore to the default page, the page that you update Please check.<br />If you do check the page with the link, it will be overwritten on the original page.
+recovery_plugin_confirm=Restore the selected pages.
+recovery_plugin_btn_submit=Submit
+recovery_plugin_btn_checkon=All check
+recovery_plugin_btn_checkoff=All remove
+recovery_plugin_btn_reset=Reset
+recovery_plugin_btn_write=Recovered.

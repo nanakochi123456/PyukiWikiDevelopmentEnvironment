@@ -1,75 +1,85 @@
-Status: 503 Service unavailable Content-type: text/html
+XS簡易仕様書
 
-PyukiWiki Runtime Error
+現在、XSモジュールは、devel版のみのテスト実装です。
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+        "PyukiWiki" ver 0.2.1-customoer-preview $$
+        Copyright (C) 2005-2015 PukiWiki Developers Team
+        Copyright (C) 2004-2015 Nekyo (Based on PukiWiki, YukiWiki)
+        License: GPL version 3 or (at your option) any later version
+        and/or Artistic version 1 or later version.
+        Based on YukiWiki http://www.hyuki.com/yukiwiki/
+        and PukiWiki http://pukiwiki.sfjp.jp/
+        URL:
+        http://pyukiwiki.info/
+
+        MAIL:
+        ななみ <nanami (at) daiba (dot) cx> (注：バーチャル女の子です)
+
+        $Id$
+        This text file written UTF-8 Codeset
+
+目次
+
+ ・ XS簡易仕様書
+     □ 目次
+     □ 実装目標
+     □ インストール等
+     □ perl XSモジュールの作成方法
+     □ ファイル内容
+
+実装目標
+
+make installxs をするだけで、あとは何も考えずに、PyukiWikiが高速化する仕組みを
+作る
+
+インストール等
+
+make buildxs
+    ビルドする
+make testxs
+    テストする
+make installxs
+    インストールをする。blibにファイルコピーをするだけです。
+    perlモジュール側の make installは使用しないで下さい。
+make deinstallxs
+    アンインストールをする。(blibを単純に削除するだけです。）
+make cleanxs
+    作業ディレクトリを削除する。
+    作業ファイル名を生成する為に、一度、perl Makefile.PL を実行します。
+
+perl XSモジュールの作成方法
+
+cd src
+h2xs -An Name::ModuleName
+
+cd Name-ModuleName
+editor ModuleName.xs（とりあえず１行書き換える）
+
+#include "ppport.h"
+?
+#include "../xsmake/ppport.h"
+
+editor Makefile.PL （全部書き換える）
+
+use 5.008100;
+use ExtUtils::MakeMaker;
+
+require "../xsmake/pyukiwikixs.pl";
+
+&writemakefile(
+        Module=>"Name::ModuleName",
+        File=>"lib/Name/ModuleName.pm",
+        Author=>'作者',
+);
+
+ファイル内容
+
+ ・ xsファイルには、可能な限りプロトタイプを指定する。
+ ・ xsファイルの中には、C言語コードを最小限しか記述しない
+    （call、jmp、ret命令相当のオーバーヘッドは出ますが、ここは気にしないで構い
+    ません）
+ ・ 関数の本体は、xs_funcname.c の中に記述する。
+ ・ xs_funcname.c に記述できる関数名は、xs_funcname とする
+ ・ その他、C言語コードは、視認性より、速度を優先して記述する。
+    わかりにくい部分は、コメントで記述すると良いかもしれません。
+

@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+comment_plugin_yourname=あなたの名前:
+comment_plugin_commentbutton=コメント追加
+comment_plugin_err=記載事項が不足しています
+comment_plugin_dmymsg=↑ここに入力フォームが表示されても、絶対に入力しないで下さい。

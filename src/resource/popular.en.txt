@@ -1,0 +1,9 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+popular_plugin_total_frame=<h5>Popular(%d)</h5><div>%s</div>
+popular_plugin_today_frame=<h5>Today's(%d)</h5><div>%s</div>
+popular_plugin_yesterday_frame=<h5>Yesterday's(%d)</h5><div>%s</div>
+popular_plugin_week_frame=<h5>This Week's(%d)</h5><div>%s</div>
+popular_plugin_lastweek_frame=<h5>Last Week's(%d)</h5><div>%s</div>

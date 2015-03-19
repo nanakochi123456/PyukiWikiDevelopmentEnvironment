@@ -1,75 +1,170 @@
-Status: 503 Service unavailable Content-type: text/html
+exdate 拡張日付表示
 
-PyukiWiki Runtime Error
+info/setup.ini.cgi にこんなのを入れてみてください。
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.
-┌─────────────────────────────────────────┐
-│                                    Trace Info                                    │
-├─────┬───────────────┬───┬───────────────┤
-│ Package  │             File             │ Line │           FUnction           │
-├─────┼───────────────┼───┼───────────────┤
-│main      │./lib/wiki_sub.cgi            │   288│Nana::Carp::err 0             │
-├─────┴───────────────┴───┴───────────────┤
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-│290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}       │
-│291 : # Function text_to_html (wiki_html.cgi) # comment                           │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_html.cgi           │   136│main::is_no_xhtml 1           │
-├─────┴───────────────┴───┴───────────────┤
-│133 : );                                                                          │
-│134 :                                                                             │
-│135 : $::dtd=$::dtd{$::htmlmode};                                                 │
-│136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);                   │
-│137 : $::dtd.=qq(\n\n);                                                           │
-│138 :                                                                             │
-│139 : # XHTMLであるかのフラグを設定 # comment                                     │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki_sub.cgi            │   286│main::_init_dtd 1             │
-├─────┴───────────────┴───┴───────────────┤
-│283 : # Function location (wiki_func.cgi) # comment                               │
-│284 : sub location {&load_wiki_module("func");return &_location(@_);}             │
-│285 : # Function init_dtd (wiki_html.cgi) # comment                               │
-│286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}             │
-│287 : # Function is_no_xhtml (wiki_html.cgi) # comment                            │
-│288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}       │
-│289 : # Function meta_robots (wiki_html.cgi) # comment                            │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   280│main::init_dtd 1              │
-├─────┴───────────────┴───┴───────────────┤
-│277 : &getbasehref;                                                               │
-│278 :                                                                             │
-│279 : &init_lang;                                                                 │
-│280 : &init_dtd;                                                                  │
-│281 : &init_global;                                                               │
-│282 : &init_follow; #nocompact                                                    │
-│283 : &skin_init;                                                                 │
-├─────┬───────────────┬───┬───────────────┤
-│main      │./lib/wiki.cgi                │   192│main::main 1                  │
-├─────┴───────────────┴───┴───────────────┤
-│189 : write => \&do_write,                                                        │
-│190 : );                                                                          │
-│191 :                                                                             │
-│192 : &main;                                                                      │
-│193 : exit(0);                                                                    │
-│194 : ############################## # comment                                    │
-│195 :                                                                             │
-├─────┬───────────────┬───┬───────────────┤
-│main      │index.cgi                     │    48│(eval) 1                      │
-├─────┴───────────────┴───┴───────────────┤
-│45 : # $::_conv_start = (times)[0];                                               │
-│46 : #}                                                                           │
-│47 :                                                                              │
-│48 : require "$::sys_dir/wiki.cgi";                                               │
-│49 :                                                                              │
-│50 : __END__                                                                      │
-│51 :                                                                              │
-└─────────────────────────────────────────┘
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                 PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop
-                                  Build on 2014-02-11 22:22:59 BuildNumber 2348
-                                                                   Server Admin
+$::lastmod_format="N4SGN4XY年度 KY年Kn月(kn)Kj日(DL) ALKg時Kk分KS秒 RsRgRk RY
+NK HK HY宿 SZ";
+
+なお、対応するPyukiWikiは、このバージョンでは 0.2.0 以降です。
+
+ ・ exdate 拡張日付表示
+     □ 特長
+     □ 変更履歴
+     □ 書式
+     □ 寄付のお願い
+     □ 作者
+
+特長
+
+とても重いスクリプトです。ので、表示された結果は、ある程度キャッシュに保存され
+ます。
+そのため、ファイルアクセスが、少し激しくなります。
+./cache ディレクトリが書き込み可能でないと使えません
+
+変更履歴
+
+ ・ 1.05 最新版に対応
+ ・ 1.04 UTF-8版に対応
+ ・ 1.01 初期化変数の変更
+ ・ 1.0 ユーザー設定をpyukiwiki.ini.cgi等からできるようにした
+
+書式
+
+元号       SG:明治/大正/昭和/平成 Sg:明/大/昭/平
+           SA:M/T/S/H Sa:Ｍ/Ｔ/Ｓ/Ｈ
+           SY:1-2桁(1〜10〜) Sy:0補完して2桁(01〜10〜)
+元号年     GY:全角1-2桁(元〜２〜１０〜)
+           XY:全角1-2桁(元〜二〜十〜十一〜二十〜二十一〜)
+           Xy:全角1-2桁(元〜二〜一〇〜十一〜二〇〜二一〜)
+年度       N4SG N4Sg N4Sa N4SY N4Sy N4GY N4XY N4Xy 上記元号年同、４月を基点
+           N9SG N9Sg N9Sa N9SY N9Sy N9GY N9XY N9Xy 上記元号年と同、９月を基点
+西暦       Y:西暦(4桁)/y:西暦(2桁)
+           ZY:全角4桁 Zy:全角2桁 KY:一七七〇〜二〇〇〇〜
+皇暦       TY:西暦(4桁)/Ty:西暦(2桁)
+           TZY:全角4桁 TZy:全角2桁 TzY:一七七〇〜二〇〇〇〜
+           N4Y:西暦(4桁)/N4y:西暦(2桁)
+西暦年度   N4ZY:全角2桁 N4Zy:全角2桁 N4KY:一七七〇〜二〇〇〇〜
+           N9ZY: N9Zy N9KY : ?と同じで９月を基点
+           n:1-12/m:01-12/M:Jan-Dec/F:January-December
+月         Zn:全角1-2桁(１?１２) Zm:0補完して全角2桁(０１?１２）
+           Kn:一〜十〜十二/Km:一〜一〇〜一二
+           kn:睦月,如月...
+           j:1-31/d:01-31
+日         Zj:全角1-2桁(１?３１) ZJ:0補完して全角2桁(０１?３１）
+           Kj:一〜十〜十一〜二十〜三十一/KJ:一〜一〇〜
+曜日       l:Sunday-Saturday/D:Sun-Sat/DL:日曜日-土曜日/lL:日-土
+午前午後   a:am or pm/A:AM or PM/AL:午前 or 午後
+           g:1-12/G:0-23/h:01-12/H/00-23
+時         Zg:１?１２/ZG:０?２３/Zh:０１?１２/ZH/００?２３
+           Kg:一〜十〜十二/KG:零〜十〜十一〜二十/二十三
+           Kh:一〜一〇〜一二/KH:〇〜一〇〜一一〜二〇〜二三
+           k:0-59/i:00-59
+分         Zk:０?５９/Zi:００?５９
+           Kk:零〜五十九/Ki:〇〜五九
+           S:0-59/s:00-59
+秒         ZS:０?５９/Zs:００?５９
+           KS:零〜五十九/Ks:〇〜五九
+祝日       RS:元旦/Rs:(元旦) 1948年より出力
+行事       RG:七草/Rg:(七草) 1948年より出力
+県民の日等 :XG:都民の日/Xg:(都民の日) 1948年より出力
+星座       SZ:おひつじ座/Sz:Aries
+自分の     MG:.../Mg:(...) 1948年より出力
+24節季     RK:立夏/Rk:(立夏)
+六曜       RY:大安/赤口/先勝/友引/先負/仏滅
+年干支     NK:甲子
+日干支     HK:乙卵
+日の宿     HY:角
+旧暦年     QY:西暦(4桁)/Qy:西暦(2桁)
+           QZY:全角4桁 QZy:全角2桁 QKY:一七七〇〜二〇〇〇〜
+皇暦年     EY:西暦(4桁)/Ey:西暦(2桁)
+           EZY:全角4桁 EZy:全角2桁 EzY:一七七〇〜二〇〇〇〜
+           Qn:1-12/Qm:01-12
+月         QZn:全角1-2桁(１?１２) QZm:0補完して全角2桁(０１?１２）
+           QKn:一〜十〜十二/QKm:一〜一〇〜一二
+           Qkn:睦月,如月...
+           Qj:1-31/QJ:01-31
+日         QZj:全角1-2桁(１?３１) QZJ:0補完して全角2桁(０１?３１）
+           QKj:一〜十〜十一〜二十〜三十一/QKJ:一〜一〇〜
+           以下、wiki.cgiと同一
+t          指定した月の日数。 28 から 31
+O          グリニッジとの時間差
+r          RFC 822 フォーマットされた日付例: Thu, 21 Dec 2000 16:01:07 +0200
+Z          タイムゾーンのオフセット秒数。 -43200 から 43200
+L          閏年であるかどうかを表す論理値。 1なら閏年。0なら閏年ではない。
+B          Swatch インターネット時間 000 から 999
+U          Unix 時(1970年1月1日0時0分0秒)からの秒数 See also time()
+
+寄付のお願い
+
+開発環境強化、継続的な開発の為に、寄付をお願いしています。
+vector シェアレジ、銀行振り込みに対応しています。
+
+Paypal
+    http://pyukiwiki.info/Paypal/
+
+Vector シェアレジ (1,155円)
+    http://www.vector.co.jp/soft/unix/net/se496490.html
+
+Vector シェアレジ (3,255円)
+    http://www.vector.co.jp/soft/unix/net/se496491.html
+
+銀行振り込み、その他
+    銀行振り込み等は以下のお振込に対応しています。
+    住信SBIネット銀行　ミカン支店　普通　2786854
+    三菱東京UFJ銀行　大久保支店　普通　3980703
+    三井住友銀行　柏支店　普通　7638195
+    りそな銀行　北小金支店　普通　1167353
+    楽天銀行　メルマネ (<papu (at) users (dot) sourceforge (dot) jp> または <o
+    (at) daiba (dot) cx>) ゆうちょ銀行　10540-54047051
+
+寄付をしたくないが、安いものを買い物したい
+    [激安問屋！かいもの.jp] http://shop.daiba.cx/
+
+真似をして、VPSを使ってみたい
+    [VPS比較] http://vpsinfo.jp/
+
+-パソコンのパーツを買いたい
+    [自作PC最新情報] http://jisaku-pc.info/
+
+vectorのPCソフトのダウンロード
+    [サテライトサイトですみません http://down.jp.net/]
+
+VPS、または専用サーバーの導入相談を受け付けています
+    [VPSサーバー・専用サーバーの導入相談（個人向け）] http://www.abilie.com/
+    tickets/1585
+
+ネタかもしれませんが、これでもセキュリティーを守れます。
+    [できる限りタダでインターネットを安全に] （初心者〜中級者向けオンラインPDF
+    書籍） http://www.abilie.com/tickets/1595
+
+バナー＆テキスト広告をもっとクリックして！
+    こちらのチケットより、同様に作成された ad プラグインの拡張部分がダウンロー
+    ド可能です。
+    http://www.abilie.com/tickets/2050
+
+CGIスクリプトをインストールします。
+    http://www.abilie.com/tickets/8828
+
+誰でも必ずあり得る！介護を受けずに一人で車いすを活用する方法完全版
+    http://www.abilie.com/tickets/8827
+
+amazonから寄付をする
+    http://www.amazon.co.jp/registry/wishlist/1HJXA69R6EYZZ
+
+有料着メロのダウンロード
+    １曲ダウンロードに付、１円相当　大した曲はありませんが
+    http://j-ken.com/creator/4730/
+
+その他、寄付に関しまして
+    寄付に関してのURLは、以下となります。
+    http://www.daiba.cx/
+    %3a%e5%af%84%e4%bb%98%e3%81%8a%e6%8c%af%e8%be%bc%e5%85%88/
+
+作者
+
+Copyright (C) 2005-2015 by ななみ (ななこっち★)
+http://nanakochi.daiba.cx/　http://www.daiba.cx/　http://chat.daiba.cx/
+http://vpsinfo.jp/　http://eat.jp.net/　http://pyu.be/　http://power.daiba.cx/
+http://twitter.com/nanakochi123456/
+http://ja.wikipedia.org/wiki/%e5%88%a9%e7%94%a8%e8%80%85%3aPapu
+

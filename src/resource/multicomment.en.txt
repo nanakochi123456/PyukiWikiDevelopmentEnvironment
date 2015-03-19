@@ -1,0 +1,8 @@
+# PyukiWiki Resource file (English)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+multicomment_plugin_btn=Post Comment
+multicomment_plugin_clear=Clear
+multicomment_plugin_err=Items mentioned are insufficient.
+multicomment_plugin_dmymsg=If you see an input form on this immediately, please do not enter into the absolute.

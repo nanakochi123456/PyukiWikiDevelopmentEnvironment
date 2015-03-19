@@ -15,6 +15,12 @@
 sub plugin_iecompatiblehack_init {
 	my $agent=$ENV{HTTP_USER_AGENT};
 	my $header;
+	if($ENV{HTTP_USER_AGENT}=~/Trident\/\d+.\d+; rv:(\d+).(\d+)/) {
+		$header=<<EOM;
+X-UA-Compatible: IE=$1
+EOM
+	}
+
 	if($ENV{HTTP_USER_AGENT}=~/MSIE (\d+).(\d+)/) {
 		if($1 > 6) {
 			$header=<<EOM;

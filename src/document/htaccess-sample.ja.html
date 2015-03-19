@@ -1,3 +1,301 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Language" content="ja"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><title>PyukiWiki Document</title><style type="text/css">
 body,td{color:black;background-color:white;margin-left:2%;margin-right:2%;font-size:100%;font-family:verdana,arial,helvetica,Sans-Serif}strong{text-shadow:inherit 0px 0px 0px;font-weight:bold}a:link{color:#215dc6;background-color:inherit;text-decoration:none}a:active{color:#215dc6;background-color:inherit;text-decoration:none}a:visited{color:#a63d21;background-color:inherit;text-decoration:none}a:hover{color:#215dc6;background-color:#CCDDEE;text-decoration:underline}h2{font-family:verdana,arial,helvetica,Sans-Serif;color:inherit;background-color:#DDEEFF;padding:.3em;border:0px;margin:0px 0px .5em 0px}h3{font-family:verdana,arial,helvetica,Sans-Serif;border-bottom:3px solid #DDEEFF;border-top:1px solid #DDEEFF;border-left:10px solid #DDEEFF;border-right:5px solid #DDEEFF;color:inherit;background-color:#FFFFFF;padding:.3em;margin:0px 0px .5em 0px}h4{font-family:verdana,arial,helvetica,Sans-Serif;border-left:18px solid #DDEEFF;color:inherit;background-color:#FFFFFF;padding:.3em;margin:0px 0px .5em 0px}font-weight:bold;background-color:transparent;padding:12px0px0px0px;border:0px;margin:12px0px0px0px}h1.error{color:red}*/ div#navigator{clear:both;padding:4px 0px 0px 0px;margin:0px}thead td.style_td,tfoot td.style_td{color:inherit;background-color:#d0d8e0}thead th.style_th,tfoot th.style_th{color:inherit;background-color:#e0e8f0}.style_table{padding:0px;border:0px;text-align:left;width:auto;margin-left:auto;margin-right:auto;color:inherit;background-color:#ccd5dd}.style_th{padding:5px;margin:1px;text-align:center;color:inherit;background-color:#eeeeee}.style_td{padding:5px;margin:1px;color:inherit;background-color:#eef5ff}
-</style></head><body>Status: 503 Service unavailable Content-type: text/html<html><body><h1>PyukiWiki Runtime Error</h1><hr/> <strong>Undefined subroutine &main::_is_no_xhtml called at ./lib/wiki_sub.cgi line 288.</strong><br/><table border="1" width="600"><tr><th colspan="4" align="center">Trace Info</th></tr><tr><th align="center">Package</th><th align="center">File</th><th align="center">Line</th><th align="center">FUnction</th></tr><tr><td>main</td><td>./lib/wiki_sub.cgi</td><td align="right">288</td><td>Nana::Carp::err 0</td></tr><tr><td colspan="4">285 : # Function init_dtd (wiki_html.cgi) # comment<br/>286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}<br/>287 : # Function is_no_xhtml (wiki_html.cgi) # comment<br/><strong>288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}</strong><br/>289 : # Function meta_robots (wiki_html.cgi) # comment<br/>290 : sub meta_robots {&load_wiki_module("html");return &_meta_robots(@_);}<br/>291 : # Function text_to_html (wiki_html.cgi) # comment<br/></td></tr><tr><td>main</td><td>./lib/wiki_html.cgi</td><td align="right">136</td><td>main::is_no_xhtml 1</td></tr><tr><td colspan="4">133 : );<br/>134 : <br/>135 : $::dtd=$::dtd{$::htmlmode};<br/><strong>136 : $::dtd=$::dtd{html4} if($::dtd eq '') || &is_no_xhtml(0);</strong><br/>137 : $::dtd.=qq(\n<meta name="generator" content="PyukiWiki $::version"/>\n);<br/>138 : <br/>139 : # XHTMLであるかのフラグを設定 # comment<br/></td></tr><tr><td>main</td><td>./lib/wiki_sub.cgi</td><td align="right">286</td><td>main::_init_dtd 1</td></tr><tr><td colspan="4">283 : # Function location (wiki_func.cgi) # comment<br/>284 : sub location {&load_wiki_module("func");return &_location(@_);}<br/>285 : # Function init_dtd (wiki_html.cgi) # comment<br/><strong>286 : sub init_dtd {&load_wiki_module("html");return &_init_dtd(@_);}</strong><br/>287 : # Function is_no_xhtml (wiki_html.cgi) # comment<br/>288 : sub is_no_xhtml {&load_wiki_module("html");return &_is_no_xhtml(@_);}<br/>289 : # Function meta_robots (wiki_html.cgi) # comment<br/></td></tr><tr><td>main</td><td>./lib/wiki.cgi</td><td align="right">280</td><td>main::init_dtd 1</td></tr><tr><td colspan="4">277 : &getbasehref;<br/>278 : <br/>279 : &init_lang;<br/><strong>280 : &init_dtd;</strong><br/>281 : &init_global;<br/>282 : &init_follow; #nocompact<br/>283 : &skin_init;<br/></td></tr><tr><td>main</td><td>./lib/wiki.cgi</td><td align="right">192</td><td>main::main 1</td></tr><tr><td colspan="4">189 : 	write => \&do_write,<br/>190 : );<br/>191 : <br/><strong>192 : &main;</strong><br/>193 : exit(0);<br/>194 : ############################## # comment<br/>195 : <br/></td></tr><tr><td>main</td><td>index.cgi</td><td align="right">48</td><td>(eval) 1</td></tr><tr><td colspan="4">45 : #	$::_conv_start = (times)[0];<br/>46 : #}<br/>47 : <br/><strong>48 : require "$::sys_dir/wiki.cgi";</strong><br/>49 : <br/>50 : __END__<br/>51 : <br/></td></tr></table><hr/><div align="right"> <i>PyukiWiki version 0.2.1-customoer-preview-utf8 pkgtype develop</i><br/> <i>Build on 2014-02-11 22:22:59 BuildNumber 2348</i><br/> <i>Server Admin </i><br/></body></html></body></html>
+</style></head><body><p></p><p></p><h2 id="i2E687461636365737320A5B5A5F3A5D7A5EBA5D5A5A1A5A4A5EBBDB80">.htaccess サンプルファイル集</h2><p>&lt;&lt;$Id$&gt;&gt;</p><p><div class="contents"> <a id="i636F6E74656E74738"></a> <ul><li><a href="?#i2E687461636365737320A5B5A5F3A5D7A5EBA5D5A5A1A5A4A5EBBDB80">.htaccess サンプルファイル集</a></li><ul><li><a href="?#i544F50A5DAA1BCA5B8CDD1A4CE2E68746163636573731">TOPページ用の.htaccess</a></li><li><a href="?#i61747461636820A4CE2E68746163636573732">attach の.htaccess</a></li><li><a href="?#i6261636B7570A1A2636F756E746572A1A2696E666FA1A277696B69A4CE2E68746163636573733">backup、counter、info、wikiの.htaccess</a></li><li><a href="?#i636163686520A4CE2E68746163636573734">cache の.htaccess</a></li><li><a href="?#i696D616765A4CE2E686163636573735">imageの.haccess</a></li><li><a href="?#i6C6962A1A2706C7567696EA1A27265736F75726365A4CE2E68746161636573736">lib、plugin、resourceの.htaacess</a></li><li><a href="?#i736B696EA4CE2E68746161636573737">skinの.htaacess</a></li></ul></ul></div></p><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i544F50A5DAA1BCA5B8CDD1A4CE2E68746163636573731">TOPページ用の.htaccess</h3><p></p><pre>
+## / で終わるURLのデフォルトインデックスを指定する。
+DirectoryIndex nph-index.cgi index.cgi wiki.cgi pyukiwiki.cgi index.php index.html index.htm
+</pre><p></p><pre>
+## 末尾 ini.cgi、pl、txt で終わる拡張子を見れなくする
+&lt;FilesMatch &quot;&yen;.(ini&yen;.cgi|pl|txt)$&quot;&gt;
+    Order allow,deny
+    Deny from all
+&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## 上記で、.txt を見れなくしたため、robots.txt を見れるようにする
+&lt;FilesMatch &quot;^robots&yen;.txt$&quot;&gt;
+    Order deny,allow
+    Allow from all
+&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## .htaccess を見れなくする
+&lt;FilesMatch &quot;^&yen;.ht&quot;&gt;
+     Order allow,deny
+     Deny from all
+&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## 末尾 /wiki 等で終わるURLで、urlhackを利用する。
+#&lt;FilesMatch &quot;^wiki$&quot;&gt;
+#     ForceType application/x-httpd-cgi
+#&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## BASIC認証を利用する。
+#AuthType Basic
+#AuthName      &quot;Authentication required&quot;
+#AuthUserFile  /fullpath/.htpasswwd
+#AuthGroupFile /dev/null
+#Require       valid-user
+</pre><p></p><pre>
+## SPAM対策の為に、書き込みのみBASIC認証を利用する。
+## (パスワードは空欄でも可： 例：user:
+#&lt;Limit POST&gt;
+#     AuthType          Basic
+#     AuthName          &quot;Please Input Username: user&quot;
+#     AuthUserFile     /fullpath/.htpasswd
+#     AuthGroupFile     /dev/null
+#     Require               valid-user
+#     require valid-user
+#&lt;/Limit&gt;
+</pre><p></p><pre>
+## urlhackを利用する
+#RewriteEngine on
+#RewriteBase /
+#
+#RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+#RewriteRule ^&yen;?(.*)$ ./index.cgi?$1 [L]
+#RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+#RewriteRule ^(.+)/$ ./index.cgi/$1 [L]
+#RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+#RewriteRule ^$ ./index.cgi [L]
+</pre><p></p><pre>
+## もしくは
+#
+#RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+#RewriteRule ^&yen;?(.*)$ /cgi-bin/w?$1 [L]
+#RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+#RewriteRule ^(.+)/$ /cgi-bin/w/$1 [L]
+#RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
+#RewriteRule ^$ /cgi-bin/w [L]
+</pre><p></p><pre>
+## サーバーエラー出力をPyukiWikiで行なうようにする。
+#
+#ErrorDocument 400 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 401 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 402 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 403 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 404 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 405 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 406 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 407 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 408 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 409 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 410 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 411 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 412 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 413 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 414 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 415 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 416 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 417 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 418 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 419 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 420 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 421 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 422 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 423 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 424 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 425 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 426 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 500 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 501 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 502 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 503 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 504 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 505 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 506 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 507 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 508 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 509 ./nph-index.cgi?cmd=servererror
+#ErrorDocument 510 ./nph-index.cgi?cmd=servererror
+</pre><p></p><pre>
+## もしくは
+#
+#ErrorDocument 400 <a href="http://hogehoge/?cmd=servererror&amp;code=400" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=400" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=400</a>
+#ErrorDocument 401 <a href="http://hogehoge/?cmd=servererror&amp;code=401" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=401" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=401</a>
+#ErrorDocument 402 <a href="http://hogehoge/?cmd=servererror&amp;code=402" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=402" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=402</a>
+#ErrorDocument 403 <a href="http://hogehoge/?cmd=servererror&amp;code=403" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=403" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=403</a>
+#ErrorDocument 404 <a href="http://hogehoge/?cmd=servererror&amp;code=404" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=404" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=404</a>
+#ErrorDocument 405 <a href="http://hogehoge/?cmd=servererror&amp;code=405" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=405" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=405</a>
+#ErrorDocument 406 <a href="http://hogehoge/?cmd=servererror&amp;code=406" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=406" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=406</a>
+#ErrorDocument 407 <a href="http://hogehoge/?cmd=servererror&amp;code=407" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=407" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=407</a>
+#ErrorDocument 408 <a href="http://hogehoge/?cmd=servererror&amp;code=408" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=408" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=408</a>
+#ErrorDocument 409 <a href="http://hogehoge/?cmd=servererror&amp;code=409" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=409" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=409</a>
+#ErrorDocument 410 <a href="http://hogehoge/?cmd=servererror&amp;code=410" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=410" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=410</a>
+#ErrorDocument 411 <a href="http://hogehoge/?cmd=servererror&amp;code=411" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=411" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=411</a>
+#ErrorDocument 412 <a href="http://hogehoge/?cmd=servererror&amp;code=412" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=412" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=412</a>
+#ErrorDocument 413 <a href="http://hogehoge/?cmd=servererror&amp;code=413" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=413" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=413</a>
+#ErrorDocument 414 <a href="http://hogehoge/?cmd=servererror&amp;code=414" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=414" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=414</a>
+#ErrorDocument 415 <a href="http://hogehoge/?cmd=servererror&amp;code=415" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=415" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=415</a>
+#ErrorDocument 416 <a href="http://hogehoge/?cmd=servererror&amp;code=416" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=416" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=416</a>
+#ErrorDocument 417 <a href="http://hogehoge/?cmd=servererror&amp;code=417" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=417" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=417</a>
+#ErrorDocument 418 <a href="http://hogehoge/?cmd=servererror&amp;code=418" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=418" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=418</a>
+#ErrorDocument 419 <a href="http://hogehoge/?cmd=servererror&amp;code=419" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=419" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=419</a>
+#ErrorDocument 420 <a href="http://hogehoge/?cmd=servererror&amp;code=420" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=420" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=420</a>
+#ErrorDocument 421 <a href="http://hogehoge/?cmd=servererror&amp;code=421" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=421" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=421</a>
+#ErrorDocument 422 <a href="http://hogehoge/?cmd=servererror&amp;code=422" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=422" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=422</a>
+#ErrorDocument 423 <a href="http://hogehoge/?cmd=servererror&amp;code=423" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=423" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=423</a>
+#ErrorDocument 424 <a href="http://hogehoge/?cmd=servererror&amp;code=424" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=424" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=424</a>
+#ErrorDocument 425 <a href="http://hogehoge/?cmd=servererror&amp;code=425" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=425" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=425</a>
+#ErrorDocument 426 <a href="http://hogehoge/?cmd=servererror&amp;code=426" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=426" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=426</a>
+#ErrorDocument 500 <a href="http://hogehoge/?cmd=servererror&amp;code=500" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=500" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=500</a>
+#ErrorDocument 501 <a href="http://hogehoge/?cmd=servererror&amp;code=501" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=501" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=501</a>
+#ErrorDocument 502 <a href="http://hogehoge/?cmd=servererror&amp;code=502" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=502" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=502</a>
+#ErrorDocument 503 <a href="http://hogehoge/?cmd=servererror&amp;code=503" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=503" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=503</a>
+#ErrorDocument 504 <a href="http://hogehoge/?cmd=servererror&amp;code=504" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=504" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=504</a>
+#ErrorDocument 505 <a href="http://hogehoge/?cmd=servererror&amp;code=505" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=505" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=505</a>
+#ErrorDocument 506 <a href="http://hogehoge/?cmd=servererror&amp;code=506" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=506" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=506</a>
+#ErrorDocument 507 <a href="http://hogehoge/?cmd=servererror&amp;code=507" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=507" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=507</a>
+#ErrorDocument 508 <a href="http://hogehoge/?cmd=servererror&amp;code=508" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=508" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=508</a>
+#ErrorDocument 509 <a href="http://hogehoge/?cmd=servererror&amp;code=509" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=509" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=509</a>
+#ErrorDocument 510 <a href="http://hogehoge/?cmd=servererror&amp;code=510" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=510" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=510</a>
+#ErrorDocument 400 <a href="http://hogehoge/?cmd=servererror&amp;code=400" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=400" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=400</a>
+#ErrorDocument 401 <a href="http://hogehoge/?cmd=servererror&amp;code=401" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=401" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=401</a>
+#ErrorDocument 402 <a href="http://hogehoge/?cmd=servererror&amp;code=402" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=402" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=402</a>
+#ErrorDocument 403 <a href="http://hogehoge/?cmd=servererror&amp;code=403" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=403" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=403</a>
+#ErrorDocument 404 <a href="http://hogehoge/?cmd=servererror&amp;code=404" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=404" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=404</a>
+#ErrorDocument 405 <a href="http://hogehoge/?cmd=servererror&amp;code=405" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=405" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=405</a>
+#ErrorDocument 406 <a href="http://hogehoge/?cmd=servererror&amp;code=406" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=406" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=406</a>
+#ErrorDocument 407 <a href="http://hogehoge/?cmd=servererror&amp;code=407" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=407" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=407</a>
+#ErrorDocument 408 <a href="http://hogehoge/?cmd=servererror&amp;code=408" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=408" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=408</a>
+#ErrorDocument 409 <a href="http://hogehoge/?cmd=servererror&amp;code=409" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=409" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=409</a>
+#ErrorDocument 410 <a href="http://hogehoge/?cmd=servererror&amp;code=410" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=410" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=410</a>
+#ErrorDocument 411 <a href="http://hogehoge/?cmd=servererror&amp;code=411" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=411" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=411</a>
+#ErrorDocument 412 <a href="http://hogehoge/?cmd=servererror&amp;code=412" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=412" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=412</a>
+#ErrorDocument 413 <a href="http://hogehoge/?cmd=servererror&amp;code=413" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=413" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=413</a>
+#ErrorDocument 414 <a href="http://hogehoge/?cmd=servererror&amp;code=414" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=414" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=414</a>
+#ErrorDocument 415 <a href="http://hogehoge/?cmd=servererror&amp;code=415" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=415" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=415</a>
+#ErrorDocument 416 <a href="http://hogehoge/?cmd=servererror&amp;code=416" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=416" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=416</a>
+#ErrorDocument 417 <a href="http://hogehoge/?cmd=servererror&amp;code=417" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=417" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=417</a>
+#ErrorDocument 418 <a href="http://hogehoge/?cmd=servererror&amp;code=418" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=418" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=418</a>
+#ErrorDocument 419 <a href="http://hogehoge/?cmd=servererror&amp;code=419" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=419" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=419</a>
+#ErrorDocument 420 <a href="http://hogehoge/?cmd=servererror&amp;code=420" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=420" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=420</a>
+#ErrorDocument 421 <a href="http://hogehoge/?cmd=servererror&amp;code=421" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=421" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=421</a>
+#ErrorDocument 422 <a href="http://hogehoge/?cmd=servererror&amp;code=422" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=422" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=422</a>
+#ErrorDocument 423 <a href="http://hogehoge/?cmd=servererror&amp;code=423" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=423" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=423</a>
+#ErrorDocument 424 <a href="http://hogehoge/?cmd=servererror&amp;code=424" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=424" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=424</a>
+#ErrorDocument 425 <a href="http://hogehoge/?cmd=servererror&amp;code=425" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=425" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=425</a>
+#ErrorDocument 426 <a href="http://hogehoge/?cmd=servererror&amp;code=426" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=426" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=426</a>
+#ErrorDocument 500 <a href="http://hogehoge/?cmd=servererror&amp;code=500" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=500" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=500</a>
+#ErrorDocument 501 <a href="http://hogehoge/?cmd=servererror&amp;code=501" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=501" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=501</a>
+#ErrorDocument 502 <a href="http://hogehoge/?cmd=servererror&amp;code=502" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=502" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=502</a>
+#ErrorDocument 503 <a href="http://hogehoge/?cmd=servererror&amp;code=503" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=503" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=503</a>
+#ErrorDocument 504 <a href="http://hogehoge/?cmd=servererror&amp;code=504" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=504" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=504</a>
+#ErrorDocument 505 <a href="http://hogehoge/?cmd=servererror&amp;code=505" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=505" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=505</a>
+#ErrorDocument 506 <a href="http://hogehoge/?cmd=servererror&amp;code=506" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=506" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=506</a>
+#ErrorDocument 507 <a href="http://hogehoge/?cmd=servererror&amp;code=507" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=507" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=507</a>
+#ErrorDocument 508 <a href="http://hogehoge/?cmd=servererror&amp;code=508" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=508" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=508</a>
+#ErrorDocument 509 <a href="http://hogehoge/?cmd=servererror&amp;code=509" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=509" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=509</a>
+#ErrorDocument 510 <a href="http://hogehoge/?cmd=servererror&amp;code=510" class="url" target="_blank" title="http://hogehoge/?cmd=servererror&amp;amp;code=510" rel="nofollow">http://hogehoge/?cmd=servererror&amp;code=510</a>
+</pre><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i61747461636820A4CE2E68746163636573732">attach の.htaccess</h3><p></p><pre>
+# 末尾 .html からのアクセスを禁止する
+Order allow,deny
+Allow from all
+</pre><p></p><pre>
+&lt;FilesMatch &quot;&yen;.(html)$&quot;&gt;
+     Order allow,deny
+     Deny from all
+&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## 一覧の取得とCGIの実行を禁止する。
+#Options -Indexes -ExecCGI
+</pre><p></p><pre>
+## 外部サイトから参照できないようにする
+#SetEnvIf Referer &quot;^<a href="http://pyukiwiki.sourceforge.jp/&quot;" class="url" target="_blank" title="http://pyukiwiki.sourceforge.jp/&quot;" rel="nofollow">http://pyukiwiki.sourceforge.jp/"</a> ref01
+#Order deny,allow
+#Deny from all
+#Allow from env=ref01
+</pre><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i6261636B7570A1A2636F756E746572A1A2696E666FA1A277696B69A4CE2E68746163636573733">backup、counter、info、wikiの.htaccess</h3><p></p><pre>
+# 全体から見れなくする
+Order allow,deny
+Deny from all
+</pre><p></p><pre>
+## 一覧の取得とCGIの実行を禁止する。
+#Options -Indexes -ExecCGI
+</pre><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i636163686520A4CE2E68746163636573734">cache の.htaccess</h3><p></p><pre>
+# 一部の拡張子のみ有効にする
+Order deny,allow
+Deny from all
+</pre><p></p><pre>
+&lt;FilesMatch &quot;&yen;.(htm|html|gif|png|jpg|js|json)$&quot;&gt;
+     Allow from all
+&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## 一覧の取得とCGIの実行を禁止する。
+#Options -Indexes -ExecCGI
+</pre><p></p><pre>
+## 外部サイトから参照できないようにする
+#SetEnvIf Referer &quot;^<a href="http://pyukiwiki.sourceforge.jp/&quot;" class="url" target="_blank" title="http://pyukiwiki.sourceforge.jp/&quot;" rel="nofollow">http://pyukiwiki.sourceforge.jp/"</a> ref01
+#Order deny,allow
+#Deny from all
+#Allow from env=ref01
+</pre><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i696D616765A4CE2E686163636573735">imageの.haccess</h3><p></p><pre>
+# 全体から見えるようにする。
+Order allow,deny
+Allow from all
+</pre><p></p><pre>
+## 一覧の取得とCGIの実行を禁止する。
+#Options -Indexes -ExecCGI
+</pre><p></p><pre>
+## 外部サイトから参照できないようにする
+#SetEnvIf Referer &quot;^<a href="http://pyukiwiki.sourceforge.jp/&quot;" class="url" target="_blank" title="http://pyukiwiki.sourceforge.jp/&quot;" rel="nofollow">http://pyukiwiki.sourceforge.jp/"</a> ref01
+#Order deny,allow
+#Deny from all
+#Allow from env=ref01
+</pre><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i6C6962A1A2706C7567696EA1A27265736F75726365A4CE2E68746161636573736">lib、plugin、resourceの.htaacess</h3><p></p><pre>
+# 全体から見えなくする
+Order allow,deny
+Deny from all
+</pre><p></p><pre>
+## 一覧の取得とCGIの実行を禁止する。
+#Options -Indexes -ExecCGI
+</pre><p></p><pre>
+## 自作プラグインをこのディレクトり配下で公開する場合、有効にする
+## lib、pluginの場合
+#&lt;FilesMatch &quot;&yen;.(inc&yen;.pl|pl|pm|pod)$&quot;&gt;
+#     Order deny,allow
+#     Allow from all
+#&lt;/FilesMatch&gt;
+#AddType text/plain .pl
+#AddType text/plain .pm
+#AddType text/plain .pod
+</pre><p></p><pre>
+##resourceの場合
+#&lt;FilesMatch &quot;&yen;.(txt)$&quot;&gt;
+#     Order deny,allow
+#     Allow from all
+#&lt;/FilesMatch&gt;
+#AddType text/plain .txt
+</pre><p></p><div class="jumpmenu"><a href="?#navigator">&uarr;</a></div><h3 id="i736B696EA4CE2E68746161636573737">skinの.htaacess</h3><p></p><pre>
+# 全体から見えなくする
+Order allow,deny
+Deny from all
+</pre><p></p><pre>
+# 以下の意拡張子を見えるようにする
+&lt;FilesMatch &quot;&yen;.(cgi|php|css|js|gz|swf|gif|jpg|jpeg|png)$&quot;&gt;
+     Order allow,deny
+     Allow from all
+&lt;/FilesMatch&gt;
+</pre><p></p><pre>
+## 一覧の取得を禁止する。
+#Options -Indexes
+</pre><p></p><pre>
+## 外部サイトから参照できないようにする
+#SetEnvIf Referer &quot;^<a href="http://pyukiwiki.sourceforge.jp/&quot;" class="url" target="_blank" title="http://pyukiwiki.sourceforge.jp/&quot;" rel="nofollow">http://pyukiwiki.sourceforge.jp/"</a> ref01
+#Order deny,allow
+#Deny from all
+#Allow from env=ref01
+</pre><p></p><pre>
+## 圧縮済(gz)のJavaScriptとCSSを用いる時に選択する
+#RewriteEngine on
+#RewriteCond %{HTTP:Accept-Encoding} gzip
+#RewriteCond %{REQUEST_FILENAME}&yen;.gz -s
+#RewriteRule .+ %{REQUEST_URI}.gz
+#
+#&lt;FilesMatch &quot;&yen;.css&yen;.gz$&quot;&gt;
+#     ForceType   text/css
+#     AddEncoding x-gzip .gz
+#&lt;/FilesMatch&gt;
+#
+#&lt;FilesMatch &quot;&yen;.js&yen;.gz$&quot;&gt;
+#     ForceType   application/x-javascript
+#     AddEncoding x-gzip .gz
+#&lt;/FilesMatch&gt;
+</pre></body></html>

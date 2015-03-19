@@ -1,0 +1,9 @@
+# PyukiWiki Resource file (Japanese EUC-JP)
+# @@PYUKIWIKIVERSION@@
+# $Id$
+
+article_plugin_name=お名前:
+article_plugin_subject=題名:
+article_plugin_btn=記事の投稿
+article_plugin_err=記載事項が不足しています
+article_plugin_dmymsg=↑ここに入力フォームが表示されても、絶対に入力しないで下さい。
