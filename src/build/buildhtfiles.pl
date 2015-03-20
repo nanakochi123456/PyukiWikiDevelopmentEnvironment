@@ -139,22 +139,22 @@ DirectoryIndex nph-index.cgi index.cgi wiki.cgi pyukiwiki.cgi index.php index.ht
 #RewriteBase /
 #
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^\?(.*)$ ./index.cgi?$1 [L]
+#RewriteRule ^\?(.*)\$ ./index.cgi?\$1 [L]
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^$ ./index.cgi [L]
+#RewriteRule ^\$ ./index.cgi [L]
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^/$ ./index.cgi [L]
+#RewriteRule ^/\$ ./index.cgi [L]
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^(.+)/$ ./index.cgi/$1 [L]
+#RewriteRule ^(.+)/\$ ./index.cgi/\$1 [L]
 #
 # or...
 #
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^\?(.*)$ /cgi-bin/w?$1 [L]
+#RewriteRule ^\?(.*)\$ /cgi-bin/w?\$1 [L]
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^(.+)/$ /cgi-bin/w/$1 [L]
+#RewriteRule ^(.+)/\$ /cgi-bin/w/\$1 [L]
 #RewriteCond %{REQUEST_URI} !^/(attach|cache|image|skin)
-#RewriteRule ^$ /cgi-bin/w [L]
+#RewriteRule ^\$ /cgi-bin/w [L]
 
 ######################################################################
 ## use servererror.inc.pl, comment delete it.

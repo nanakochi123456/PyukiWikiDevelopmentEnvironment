@@ -281,7 +281,7 @@ pkg:FORCE
 	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=updatecompact PKGPREFIX="-update-compact" CODE="euc" CRLF="lf"	#euc
 	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=devel PKGPREFIX="-devel" CODE="euc" CRLF="lf"	#euc
 	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=updatedevel PKGPREFIX="-update-devel" CODE="euc" CRLF="lf"	#euc
-	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=release PKGPREFIX="-full-utf8-utf8" CODE="utf8" CRLF="lf"	#utf8
+	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=release PKGPREFIX="-full-utf8" CODE="utf8" CRLF="lf"	#utf8
 	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=update PKGPREFIX="-update-full"	 CODE="utf8" CRLF="lf"	#utf8
 	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=compact PKGPREFIX="-compact-utf8" CODE="utf8" CRLF="lf"	#utf8
 	@${MAKE} -f ${BUILDDIR}/build.mk pkgtgz PKGTYPE=updatecompact PKGPREFIX="-update-compact-utf8" CODE="utf8" CRLF="lf"	#utf8
@@ -294,12 +294,18 @@ release:FORCE
 	@${MAKE} -f ${BUILDDIR}/build.mk cvsclean
 	@${MAKE} -f ${BUILDDIR}/build.mk tempclean
 	@${MAKE} -f ${BUILDDIR}/build.mk buildnumber
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE="release" PKGPREFIX="-full" CODE="euc" CRLF="lf"
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE="compact" PKGPREFIX="-compact" CODE="euc" CRLF="lf"
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE="update" PKGPREFIX="-update" CODE="euc" CRLF="lf"
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE="updatecompact" PKGPREFIX="-update-compact" CODE="euc" CRLF="lf"
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE="devel" PKGPREFIX="-devel" CODE="euc" CRLF="lf"
-	@${MAKE} -f ${BUILDDIR}/build.mk mk  PKGTYPE="updatedevel" PKGPREFIX="-update-devel" CODE="euc" CRLF="lf"
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=release PKGPREFIX="-full" CODE="euc" CRLF="lf"	#euc
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=update PKGPREFIX="-update-full"	 CODE="euc" CRLF="lf"	#euc
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=compact PKGPREFIX="-compact" CODE="euc" CRLF="lf"	#euc
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=updatecompact PKGPREFIX="-update-compact" CODE="euc" CRLF="lf"	#euc
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=devel PKGPREFIX="-devel" CODE="euc" CRLF="lf"	#euc
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=updatedevel PKGPREFIX="-update-devel" CODE="euc" CRLF="lf"	#euc
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=release PKGPREFIX="-full-utf8" CODE="utf8" CRLF="lf"	#utf8
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=update PKGPREFIX="-update-full"	 CODE="utf8" CRLF="lf"	#utf8
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=compact PKGPREFIX="-compact-utf8" CODE="utf8" CRLF="lf"	#utf8
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=updatecompact PKGPREFIX="-update-compact-utf8" CODE="utf8" CRLF="lf"	#utf8
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=devel PKGPREFIX="-devel-utf8" CODE="utf8" CRLF="lf"	#utf8
+	@${MAKE} -f ${BUILDDIR}/build.mk mk PKGTYPE=updatedevel PKGPREFIX="-update-devel-utf8" CODE="utf8" CRLF="lf"	#utf8
 
 ######################################################
 releasedevel:FORCE
@@ -352,7 +358,7 @@ mk:FORCE
 	mkdir -p ${RELEASE}
 	mkdir -p "${RELEASE}/${CODE}-${CRLF}/${PKGNAME}-${VERSION}${PKGPREFIX}"
 	${PERL} ${BUILDDIR}/build.pl mk ${TEMP} ${RELEASE}/${CODE}-${CRLF}/${PKGNAME}-${VERSION}${PKGPREFIX} ${TEMP}/${CODE}-${CRLF}-${PKGNAME}-${VERSION}${PKGPREFIX}.mk ${PKGTYPE} ${CRLF} ${CODE} ${ALL}
-	${MAKE} -f ${TEMP}/${CODE}-${CRLF}-${PKGNAME}-${VERSION}${PKGPREFIX}.mk PKGTYPE=${PKGTYPE} RELEASE=${RELEASE} CODE=${CODE} CRLF=${CRLF} PKGNAME=${PKGNAME} VERSION=${VERSION} PKGPREFIX=${PKGPREFIX} GZIP_7Z="${GZIP_7Z}"
+	${MAKE} -j ${JOBS} -f ${TEMP}/${CODE}-${CRLF}-${PKGNAME}-${VERSION}${PKGPREFIX}.mk PKGTYPE=${PKGTYPE} RELEASE=${RELEASE} CODE=${CODE} CRLF=${CRLF} PKGNAME=${PKGNAME} VERSION=${VERSION} PKGPREFIX=${PKGPREFIX} GZIP_7Z="${GZIP_7Z}"
 
 ######################################################
 pkgtgz:FORCE

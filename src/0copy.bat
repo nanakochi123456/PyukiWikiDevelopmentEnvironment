@@ -9,9 +9,9 @@ rmdir /s /q %githubcurrent%
 mkdir %githubdev%
 mkdir %githubcurrent%
 
-xcopy /s %builddir%\*.* %githubdev%
+xcopy /s %builddir%\*.* %githubdev% >nul
 rmdir /s /q %githubdev%\archive
 rmdir /s /q %githubdev%\release
 rmdir /s /q %githubdev%\temp
 
-xcopy /s %releasedir%\*.* %githubcurrent%
+xcopy /s %releasedir%\*.* %githubcurrent% >nul

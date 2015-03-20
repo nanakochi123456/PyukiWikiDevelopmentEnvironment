@@ -14,7 +14,7 @@ var	w=window,
 	op = (u.indexOf("opera") > x),
 	ff = (u.indexOf("firefox") > x),
 	moz = (u.indexOf("gecko") > x || ff),
-	ie = (u.indexOf("msie") > x && !op && !moz),
+	ie = ((u.indexOf("msie") || u.indexOf("trident")) > x && !op && !moz),
 	h="",
 
 	jp_twfo='\u3092\u30d5\u30a9\u30ed\u30fc</a>',

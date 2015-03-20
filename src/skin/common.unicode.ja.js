@@ -34,7 +34,7 @@ function uz() {
 	ur["GECKO"]			= us("GECKO") || us("FIREFOX");
 	ur["CHROME"]		= us("CHROME");
 	ur["SAFARI"]		= us("SAFARI") && !ur["CHROME"];
-	ur["MSIE"]			= us("MSIE") && !ur["OPERA"] && !ur["GECKO"] || us("TRIDENT");
+	ur["MSIE"]			= (us("MSIE") || us("TRIDENT")) && !ur["OPERA"] && !ur["GECKO"] || us("TRIDENT");
 
 	// OS
 	ur["WINDOWS" + h + "PHONE"]	= us("WINDOWS" + s + "PHONE");

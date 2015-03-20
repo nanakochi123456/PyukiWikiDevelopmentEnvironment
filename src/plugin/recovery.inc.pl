@@ -25,6 +25,7 @@ sub do_recovery {
 
 	my $gz = new Nana::GZIP();
 	my $data=$gz->uncompress(Nana::File::lock_fetch($recovery_file));
+	$data=&code_convert(\$data, $::kanjicode);
 
 	my @list;
 	my $dt;
@@ -49,7 +50,7 @@ sub do_recovery_form {
 	my (@pagelist)=@_;
 
 	$::IN_JSHEADVALUE.=<<EOM;
-function allcheckbox(b){var c=d.getElementById("sel"),a=c.elements.length;for(i=0;i<a;i++){l=c.elements[i];if(l.type=="checkbox"){if(b==1){if(!l.checked){l.click()}}else{if(l.checked){l.click()}}}}};
+function allcheckbox(b){var c=document.getElementById("sel"),a=c.elements.length;for(i=0;i<a;i++){l=c.elements[i];if(l.type=="checkbox"){if(b==1){if(!l.checked){l.click()}}else{if(l.checked){l.click()}}}}};
 EOM
 	my $body=<<EOM;
 <h2>$::resource{recovery_plugin_title}</h2>

@@ -1,4 +1,4 @@
 #!/bin/sh
 rm -rf *.core
-make  JOBS=8 pkg
+make  JOBS=12 release
 rm -rf *.core

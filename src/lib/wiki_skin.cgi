@@ -97,6 +97,9 @@ sub _skinex {
 			$editable=&is_frozen($pagename) ? 1 : 0;
 		}
 	}
+	# v0.2.1 add										# comment
+	$body.=$::addlasthtml;
+
 	&makenavigator($::form{mypage} ne $page ? $::form{mypage} : $page,$is_page,$editable,$admineditable)
 		if($::disable_navigator eq 0);
 
@@ -121,7 +124,14 @@ sub _skinex {
 	&escapeoff($::use_escapeoff);
 
 	if(!-r $::skin_file) {
-		&print_error("Can't read $::skin_file");
+		my $body=<<EOM;
+<html><head><title>PyukiWiki Error</title></head>
+<body><h1>Skin file not found</h1>
+Can't read [$::skin_file]
+</body></html>
+EOM
+		&content_output($::HTTP_HEADER, $body);
+		exit;
 	}
 
 	require $::skin_file;
@@ -307,13 +317,124 @@ sub skinsubpage {
 
 =lang ja
 
-=head2 skinhead
+=head2 cssloader
 
 =over 4
 
 =item 入力値
 
-&skinhead(ページ名, HTML);
+&cssloader;
+
+=item 出力
+
+$::IN_CSSFILES
+
+=item オーバーライド
+
+可
+
+=item 概要
+
+CSSローダーを定義する
+
+=back
+
+=cut
+
+sub _cssloader {
+	my %cssload;
+	foreach(@::CSSFILES) {
+		my ($file, $sub)=split(/\t/, $_);
+		if(!$cssload{$file}++) {
+			$::IN_CSSFILES.=<<EOM;
+<link rel="stylesheet" href="$::skin_url/$file" type="text/css" $sub charset="$::charset" />
+EOM
+		}
+	}
+}
+
+=lang ja
+
+=head2 jsloader
+
+=over 4
+
+=item 入力値
+
+&jsloader;
+
+=item 出力
+
+$::IN_JSLOADER
+$::IN_JSLOADMAIN
+
+=item オーバーライド
+
+可
+
+=item 概要
+
+JavaScriptローダーを定義する
+
+=back
+
+=cut
+
+sub _jsloader {
+	my $load;
+	my $script;
+
+	my $flg=$::jsloader;
+
+	if($ENV{HTTP_USER_AGENT}=~/MSIE\s(\d+)\./) {
+		if($1 < 9) {
+			if(!$ENV{HTTP_USER_AGENT}=~/Opera/) {
+				$flg=0;
+			}
+		}
+	}
+	if($flg) {
+		$::IN_JSLOADER.=<<EOM;
+<script type="text/javascript" src="$::skin_url/loader.js" charset="$::charset"></script>
+EOM
+		my $jsloader="ld(initfunction,";
+		my $first=0;
+		for(my $i=$::IN_JSMAX; $i >= 0; $i--) {
+			my $jsarray=$::IN_JSARRAY[$i];
+			$jsarray=~s/^\t//g;
+			next if($jsarray eq "");
+			foreach(split(/\t/, $jsarray)) {
+				$jsloader.=qq(") . $_ . qq(",);
+			}
+			$jsloader=~s/\,$//g;
+			$jsloader.=',"",';
+		}
+		$jsloader=~s/\,$//g;
+		$jsloader.=");\n";
+		$::IN_JSLOADMAIN=$jsloader;
+	} else {
+		for(my $i=$::IN_JSMAX; $i >= 0; $i--) {
+			my $jsarray=$::IN_JSARRAY[$i];
+			foreach(split(/\t/, $jsarray)) {
+				next if($_ eq "");
+				$::IN_JSLOADER.=<<EOM;
+<script type="text/javascript" src="$::skin_url/$_" charset="$::charset"></script>
+EOM
+			}
+			$::IN_JSLOADMAIN="window.onload=initfunction;\n";
+		}
+	}
+}
+
+=lang ja
+
+=head2 skin_head
+
+=over 4
+
+=item 入力値
+
+&skin_head(ページ名, HTML);
 
 =item 出力
 
@@ -331,35 +452,121 @@ sub skinsubpage {
 
 =cut
 
-sub _skinhead {
+=lang ja
+
+=head2 skin_head
+
+=over 4
+
+=item 入力値
+
+&skin_head(ページ名, HTML);
+
+=item 出力
+
+なし
+
+=item オーバーライド
+
+可
+
+=item 概要
+
+head内を表示する関数
+
+=back
+
+=cut
+
+sub _skin_head {
 	my($page, $body)=@_;
 	# add v0.2.1
+	&cssloader;
+	&jsloader;
 
-	$::IN_HEAD=<<EOM;
+	my $tmp;
+	$tmp=<<EOM;
+@{[$basehref eq '' ? '' : qq(<base href="$basehref" />)]}
+@{[$::AntiSpam ne "" || $::modifier_mail eq "" ? '' : qq(<link rev="made" href="mailto:$::modifier_mail" />)]}
+<link rel="top" href="$::script" />
+<link rel="index" href="$::script?cmd=list" />
+@{[$::use_SiteMap eq 1 ? qq(<link rel="contents" href="$::script?cmd=sitemap" />) : '<link rel="contents" href="' . $::script . '?cmd=list" />']}
+<link rel="search" href="$::script?cmd=search" />
+<link rel="help" href="$::script?$HelpPage" />
+<link rel="author" href="$::modifierlink" />@{[$description]}
+<meta name="author" content="$::modifier" />
+<meta name="copyright" content="$::modifier" />
 $::IN_CSSFILES
-$::IN_JSLOADER
 $::IN_HEAD
 EOM
 
 	if($::IN_CSSHEAD) {
-		$::IN_HEAD.=<<EOM;
+		$tmp.=<<EOM;
 <style type="text/css"><!--
 $::IN_CSSHEAD
 //--></style>
 EOM
 	}
-	$::IN_HEAD.=<<EOM;
+
+	if(!$::js_lasttag) {
+		$tmp.=<<EOM;
+$::IN_JSLOADER
 <script type="text/javascript"><!--
 var pyukiwiki=$::versionnumber;
-@{[$::IN_JSFILES ne "" ? "loadScript($::IN_JSFILES);\n" : ""]}
+$::IN_JSLOADMAIN
 $::IN_JSHEADVALUE
 function initfunction() {
 $::IN_JSHEAD
 }
 //--></script>
 EOM
+	}
+	return $tmp . $body;
+}
 
-	return $body;
+=lang ja
+
+=head2 skin_last
+
+=over 4
+
+=item 入力値
+
+&skin_last(ページ名, HTML);
+
+=item 出力
+
+なし
+
+=item オーバーライド
+
+可
+
+=item 概要
+
+head内を表示する関数
+
+=back
+
+=cut
+
+sub _skin_last {
+	my($page, $body)=@_;
+	my $tmp;
+	if($::js_lasttag) {
+		$tmp=<<EOM;
+$::IN_JSLOADER
+<script type="text/javascript"><!--
+var pyukiwiki=$::versionnumber;
+$::IN_JSLOADMAIN
+$::IN_JSHEADVALUE
+function initfunction() {
+$::IN_JSHEAD
+}
+//--></script>
+EOM
+	}
+	return $tmp . $body;
 }
 
 =lang ja
@@ -405,9 +612,9 @@ sub _makenavigator {
 		if($admineditable) {
 			&makenavigator_sub1("adminedit","mypage",$mypage);
 			&makenavigator_sub1("diff","mypage",$mypage);
-			if($::useBackUp eq 1) {#nocompact
-				&makenavigator_sub1("backup","mypage",$mypage);#nocompact
-			}#nocompact
+			if($::useBackUp eq 1) {
+				&makenavigator_sub1("backup","mypage",$mypage);
+			}
 			&makenavigator_sub1("attach","mypage",$mypage) if($::file_uploads > 0);
 			&makenavigator_sub1("rename","refer",$mypage);
 		}
@@ -437,35 +644,26 @@ sub _makenavigator {
 
 	# リンクの並び順を設定									# comment
 	my @naviindex;
-	my $backupnavi="";#compact
-	my $backupnavi="backup" if($::useBackUp);#nocompact
+	my $backupnavi="backup" if($::useBackUp);
 	if($::naviindex eq 0) {
-		@naviindex=(#compact
-			"reload","","newpage","edit","adminedit","diff","attach","",#compact
-			"top","list","sitemap","search","recent","help",#compact
-			"rss10","rss20","atom","opml");#compact
-		@naviindex=(#nocompact
-			"reload","","newpage","edit","adminedit","diff",$backupnavi,"attach","",#nocompact
-			"top","list","sitemap","search","recent","help",#nocompact
-			"rss10","rss20","atom","opml");#nocompact
+		@naviindex=(
+			"reload","","newpage","edit","adminedit","diff",$backupnavi,"attach","",
+			"top","list","sitemap","search","recent","help",
+			"rss10","rss20","atom","opml");
 
 	} else {
 
-		@naviindex=(#compact
-			"top","","edit","adminedit","diff","attach","reload","",#compact
-			"newpage","list","sitemap","search","recent","help",#compact
-			"rss10","rss20","atom","opml");#compact
-		if($::useBackUp) {#nocompact
-			@naviindex=(#nocompact
-				"top","","edit","adminedit","diff",$backupnavi,"attach","reload","",#nocompact
-				"newpage","list","sitemap","search","recent","help",#nocompact
-				"rss10","rss20","atom","opml");#nocompact
-		} else {#nocompact
-			@naviindex=(#nocompact
-				"top","","edit","adminedit","diff",$backupnavi,"attach","reload","",#nocompact
-				"newpage","list","sitemap","search","recent","help",#nocompact
-				"rss10","rss20","atom","opml");#nocompact
-		}#nocompact
+		if($::useBackUp) {
+			@naviindex=(
+				"top","","edit","adminedit","diff",$backupnavi,"attach","reload","",
+				"newpage","list","sitemap","search","recent","help",
+				"rss10","rss20","atom","opml");
+		} else {
+			@naviindex=(
+				"top","","edit","adminedit","diff",$backupnavi,"attach","reload","",
+				"newpage","list","sitemap","search","recent","help",
+				"rss10","rss20","atom","opml");
+		}
 	}
 
 	# 追加リンクの設定										# comment
@@ -618,30 +816,31 @@ HTML
 sub _skin_footer {
 	my ($skinfooterbody)=@_;
 	my $htmlbody;
-	my $footerbody;
-	if($::lang eq 'ja') {
-		$footerbody=<<EOD;
-@{[$::wiki_title ne '' ? qq(''[[$::wiki_title>$basehref]]'' ) : '']}Modified by [[$::modifier>$::modifierlink]]~
+	my $footerbody=<<EOM;
+@{[$::wiki_title ne '' ? qq(''[[$::wiki_title>$basehref f]]'' ) : '']}Modified by [[$::modifier>$::modifierlink f]]~
 \$skinfooterbody
 ~
-''[[PyukiWiki $::version>@@PYUKI_URL@@]]''
-Copyright&copy; 2004-@@YEAR@@ by Nekyo, [[PyukiWiki Developers Team>@@PYUKI_URL@@]]
-License is [[GPL>@@GPLJP_URL@@]], [[Artistic>@@ARTISTICJP_URL@@]]~
-Based on "[[YukiWiki>@@YUKIWIKI_URL@@]]" 2.1.0 by [[yuki>@@YUKI_URL@@]]
-and [[PukiWiki>@@PUKIWIKI_URL@@]] by [[PukiWiki Developers Term>@@PUKIWIKIDEV_URL@@]]~
-EOD
-	} else {
-	# lang=en and/or other
-		$footerbody=<<EOD;
-@{[$::wiki_title ne '' ? qq(''[[$::wiki_title>$basehref]]'' ) : '']}Modified by [[$::modifier>$::modifierlink]]
-\$skinfooterbody
-~
-''[[PyukiWiki $::version>@@PYUKI_URL@@]]''
-Copyright&copy; 2004-@@YEAR@@ by Nekyo, [[PyukiWiki Developers Team>@@PYUKI_URL@@]]
-License is [[GPL>@@GPL_URL@@]], [[Artistic>A@@RTISTIC_URL@@]]~
-Based on "[[YukiWiki>@@YUKIWIKI_URL@@]]" 2.1.0 by [[yuki>@@YUKI_URL@@]]
-and [[PukiWiki>@@PUKIWIKI_URL@@]] by [[PukiWiki Developers Term>@@PUKIWIKIDEV_URL@@]]~
-EOD
+EOM
+	my $_lang=$::lang eq "ja" ? "?cmd=lang&amp;lang=ja" : "?cmd=lang&amp;lang=en";
+
+	$footerbody.=<<EOM;
+''[[PyukiWiki $::version>http://pyukiwiki.sfjp.jp/$_lang f]]''
+Copyright&copy; 2004-2013 by Nekyo, [[PyukiWiki Developers Team>http://pyukiwiki.sfjp.jp/$_lang f]]
+EOM
+	if(!$::easy_footer) {
+		if($::lang eq "ja") {
+			$footerbody.=<<EOM;
+License is [[GPL>http://sfjp.jp/projects/opensource/wiki/GPLv3_Info f]], [[Artistic>http://www.opensource.jp/artistic/ja/Artistic-ja.html f]]~
+EOM
+		} else {
+			$footerbody.=<<EOM;
+License is [[GPL>http://www.gnu.org/licenses/gpl.html f f]], [[Artistic>http://dev.perl.org/licenses/artistic.html f]]~
+EOM
+		}
+		$footerbody.=<<EOM;
+Based on "[[YukiWiki>http://www.hyuki.com/yukiwiki/ f]]" 2.1.0 by [[yuki>http://www.hyuki.com/ f]]
+and [[PukiWiki>http://pukiwiki.sfjp.jp/ f]] by [[PukiWiki Developers Term>http://pyukiwiki.sfjp.jp/ f]]~
+EOM
 	}
 	$footerbody= &text_to_html($footerbody);
 	$footerbody=~s/\$skinfooterbody/$skinfooterbody/;

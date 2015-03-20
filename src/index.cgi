@@ -24,7 +24,7 @@ BEGIN {
 	$::setup_file="";
 	$::ini_file = "pyukiwiki.ini.cgi" if($::ini_file eq "");
 	require "$::ini_file";
-	require "$::$setup_file" if(-r "$::setup_file");
+	require "$::setup_file" if(-r "$::setup_file");
 
 	# don't delete for XS module
 	push @INC, "$sysxs_dir";
