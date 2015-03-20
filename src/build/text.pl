@@ -36,14 +36,14 @@ if($TYPE=~/compact/) {
 $text{BASEHEAD2}=<<EOM;
 (C)2005-$year PyukiWiki Developers Team/2004-2007 Nekyo
 # \@\@PYUKI_URL\@\@
-# @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and/or Artistic License
+# @\@CRLF\@\@ \@\@CODE\@\@ TAB=4Spaces GPL3 and/or Artistic License
 EOM
 $text{BASEHEAD4}=<<EOM;
 (C)2000-$year - Laurent Destailleur - eldy@users.sourceforge.net
 # \@\@AWSTATS_URL\@\@
 # (C)2005-$year PyukiWiki Developers Team/2004-2007 Nekyo
 # \@\@PYUKI_URL\@\@
-# @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and/or Artistic License
+# @\@CRLF\@\@ \@\@CODE\@\@ TAB=4Spaces GPL3 and/or Artistic License
 EOM
 } else {
 $text{BASEHEAD2}=<<EOM;
@@ -52,8 +52,7 @@ $text{BASEHEAD2}=<<EOM;
 # \@\@PYUKI_URL\@\@
 # Based on YukiWiki \@\@YUKIWIKI_URL\@\@
 # Powerd by PukiWiki \@\@PUKIWIKI_URL\@\@
-# License GPL3 and/or Artistic or each later version
-# @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and/or Artistic License
+# @\@CRLF\@\@ \@\@CODE\@\@ TAB=4Spaces GPL3 and/or Artistic License
 EOM
 $text{BASEHEAD4}=<<EOM;
 (C)2000-$year - Laurent Destailleur - eldy@users.sourceforge.net
@@ -63,11 +62,7 @@ $text{BASEHEAD4}=<<EOM;
 # \@\@PYUKI_URL\@\@
 # Based on YukiWiki \@\@YUKIWIKI_URL\@\@
 # Powerd by PukiWiki \@\@PUKIWIKI_URL\@\@
-# License GPL3 and/or Artistic or each later version
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl itself.
-# Return=\@\@CRLF\@\@ Code=\@\@CODE\@\@ 1TAB=4Spaces
+# @\@CRLF\@\@ \@\@CODE\@\@ TAB=4Spaces GPL3 and/or Artistic License
 EOM
 }
 
@@ -276,11 +271,7 @@ $text{HEADERPLUGIN_SYNTAXHIGHLIGHTER_NANAMI}=<<EOM;
 # \@\@PYUKI_URL\@\@
 # Based on YukiWiki \@\@YUKIWIKI_URL\@\@
 # Powerd by PukiWiki \@\@PUKIWIKI_URL\@\@
-# License: GPL3 and MIT each later version
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl itself.
-# Return:\@\@CRLF\@\@ Code=\@\@CODE\@\@ 1TAB=4Spaces
+# @\@CRLF\@\@ \@\@CODE\@\@ 4Spaces GPL3 and MIT License
 EOM
 
 #############################################################
@@ -395,7 +386,7 @@ if($fn=~/\.ja/) {
 	$text{NANAMI}='Nanami';
 	$text{YASHIGANIMODOKI}='YashiganiModoki';
 }
-$text{NANAMI_URL}='http://nanakochi.daiba.cx/';
+$text{NANAMI_URL}='http://nano.daiba.cx/';
 $text{NANAMI_MAIL}='nanami@daiba.cx';
 
 $text{YASHIGANIMODOKI_URL}='http://hpcgi1.nifty.com/it2f/wikinger/pyukiwiki.cgi';

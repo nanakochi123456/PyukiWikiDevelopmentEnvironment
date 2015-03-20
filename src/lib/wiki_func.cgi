@@ -176,9 +176,12 @@ sub _jscss_include {
 	my($v, $sub, $p)=@_;
 	my($name, $func)=split(/:/,$v);
 
+	my @jsarray;
+	my $jsmax=0;
+
 	if(!$::jscss_included{$name}) {
 		if($oldflg eq 0) {
-			$oldflg=&_is_no_xhtml(1) eq 0 ? 2 : 1;
+			$oldflg=&is_no_xhtml(1) eq 0 ? 2 : 1;
 		}
 
 		$::jscss_included{$name}=1;
@@ -189,27 +192,22 @@ sub _jscss_include {
 			my $result=&skin_check($_, "");
 			if($result ne '') {
 				if($result=~/\.js$/) {
-					if($oldflg eq 2) {
-						if(!$::jscss_included{"loader"}) {
-							$::IN_JSLOADER.=<<EOM;
-<script type="text/javascript" src="$::skin_url/loader.js" charset="$::charset"></script>
-EOM
-							$::jscss_included{"loader"}=2;
-						}
+#					if($oldflg eq 2) {
 						my $pro=$p + 0 > 0 ? $p : $name=~/common/ ? 6 : $name eq "jquery" ? 9 : $name=~/jquery/ ? 7 : 3;
 	#					my $pro=$p+0>0 ? $p : $_pro;
-						$::IN_JSFILES.=',"' . "$pro,$::skin_url/$result@{[$func ? qq(\|$func) : qq()]}" . '"';
-					} else {
-							$::IN_JSLOADER.=<<EOM;
-<script type="text/javascript" src="$::skin_url/$result" charset="$::charset"></script>
-EOM
-					}
+						#$::IN_JSFILES.=',"' . "$pro,$::skin_url/$result@{[$func ? qq(\|$func) : qq()]}" . '"';
+						#$::IN_JSFILES.="," . '"' . "$pro,$::skin_url/$result" . '"';
+						$::IN_JSMAX=$::IN_JSMAX+0 < $pro ? $pro : $::IN_JSMAX+0;
+						$::IN_JSARRAY[$pro].="\t$result";
+#					} else {
+#							$::IN_JSLOADER.=<<EOM;
+#<script type="text/javascript" src="$::skin_url/$result" charset="$::charset"></script>
+#EOM
+#					}
 					$::jscss_included{$name}=2;
 				} elsif($result=~/\.css$/) {
 					$sub='media="screen"' if($sub eq "");
-					$::IN_CSSFILES.=<<EOM;
-<link rel="stylesheet" href="$::skin_url/$result" type="text/css" $sub charset="$::charset" />
-EOM
+					push(@::CSSFILES, "$result\t$sub");
 					$::jscss_included{$name}=2;
 				}
 			}

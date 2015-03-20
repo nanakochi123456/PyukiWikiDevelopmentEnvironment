@@ -4750,7 +4750,7 @@ multimailform.inc.pl - PyukiWiki プラグイン
 
 =item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 

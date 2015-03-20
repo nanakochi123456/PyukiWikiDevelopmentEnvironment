@@ -4750,7 +4750,7 @@ multimailform.inc.pl - PyukiWiki プラグイン
 
 =item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -6894,7 +6894,7 @@ PyukiWiki can treat Japanese WikiNames (enclosed with [[ and ]]).PyukiWiki provi
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -6992,7 +6992,7 @@ wiki_auth.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -7107,7 +7107,7 @@ wiki_db.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -7279,7 +7279,7 @@ wiki_func.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -7704,7 +7704,7 @@ wiki_html.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -7873,7 +7873,7 @@ wiki_http.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -7946,7 +7946,7 @@ wiki_init.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -8124,7 +8124,7 @@ wiki_link.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -8263,7 +8263,7 @@ wiki_plugin.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -8391,7 +8391,7 @@ wiki_skin.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -8563,7 +8563,7 @@ wiki_spam.cgi - This is PyukiWiki, yet another Wiki clone.
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -8633,7 +8633,7 @@ PyukiWiki can treat Japanese WikiNames (enclosed with [[ and ]]).PyukiWiki provi
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 
@@ -8790,7 +8790,7 @@ PyukiWiki can treat Japanese WikiNames (enclosed with [[ and ]]).PyukiWiki provi
 
 obsoleted=item Nanami
 
-L<http://nanakochi.daiba.cx/> etc...=item PyukiWiki Developers Team
+L<http://nano.daiba.cx/> etc...=item PyukiWiki Developers Team
 
 L<http://pyukiwiki.info/>
 

@@ -9,6 +9,9 @@ use Exporter;
 use vars qw($VERSION);
 $VERSION="0.1";
 
+# Text::MeCab ‚ª“®ì‚µ‚È‚¢ŠÂ‹«‚ª‚ ‚é‚½‚ß
+$::force_text_mecab=0 if($::force_text_mecab ne 0);
+
 # http://chalow.net/2006-02-25-4.html
 # http://chalow.net/2006-09-24-3.html
 
@@ -115,7 +118,7 @@ sub new {
 	if(&load_module("MeCab")) {
 		$method="MeCab";
 		$obj=new MeCab::Tagger ("");
-	} elsif(&load_module("Text::MeCab")) {
+	} elsif(&load_module("Text::MeCab") && $::force_text_mecab) {
 		$method="Text::MeCab";
 		$obj=Text::MeCab->new();
 	} else {
