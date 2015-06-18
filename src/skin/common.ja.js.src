@@ -27,18 +27,29 @@ function uz() {
 	var	VERSION, START, END;
 
 	// browser
+	// Opera PC & Mobile Browsers
 	ur["OPERA"]			= us("OPERA");
+
+	// FireFox PC & Mobile Browsers
 	ur["FIREFOX"]		= us("FIREFOX");
 	ur["GECKO"]			= us("GECKO") || us("FIREFOX");
-	ur["CHROME"]		= us("CHROME");
+
+	// Microsoft Edge PC & Mobile Browsers
+	ur["EDGE"]			= us("EDGE");
+
+	// Google Chrome PC & Mobile Browsers
+	ur["CHROME"]		= us("CHROME") && !ur["EDGE"];
+
+	// Apple Safari PC & Mobile Browsers
 	ur["SAFARI"]		= us("SAFARI") && !ur["CHROME"];
+
+	// Microsoft Internet Explorer
 	ur["MSIE"]			= (us("MSIE") || us("TRIDENT")) && !ur["OPERA"] && !ur["GECKO"] || us("TRIDENT");
 
 	// OS
 	ur["WINDOWS" + h + "PHONE"]	= us("WINDOWS" + s + "PHONE");
 	ur["WINDOWS"]		= us("WINDOWS") && !ur["WINDOWS"];
-	ur["MACOS"]			= us("MACINTOSH")
-						||us("MAC_POWERPC");
+	ur["MACOS"]		= us("MACINTOSH") || us("MAC_POWERPC");
 	ur["LINUX"]			= us("LINUX");
 	ur["FREEBSD"]		= us("FREEBSD");
 
@@ -56,6 +67,7 @@ function uz() {
 	ur["PSP"]			= us("PSP" + s + "PLAYSTATION" + s + "PORTABLE");
 	ur["PS2"]			= us("PS2");
 	ur["PS3"]			= us("PLAYSTATION" + s + "3");
+	ur["PS4"]			= us("PLAYSTATION" + s + "4");
 
 	if(ur["MSIE"]) {
 		START		= u.indexOf("MSIE"),
@@ -152,11 +164,11 @@ function keyCode(e){
 	var e=eve(e);
 
 	if(document.all)
-          return e.keyCode;
-     else if(document.getElementById)
-         return e.keyCode ? e.keyCode : e.charCode;
-     else if(document.layers)
-         return e.which;
+		return e.keyCode;
+	else if(document.getElementById)
+		return e.keyCode ? e.keyCode : e.charCode;
+	else if(document.layers)
+		return e.which;
 }
 
 /*

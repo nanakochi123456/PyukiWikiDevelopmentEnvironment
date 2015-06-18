@@ -392,7 +392,7 @@ $text{NANAMI_MAIL}='nanami@daiba.cx';
 $text{YASHIGANIMODOKI_URL}='http://hpcgi1.nifty.com/it2f/wikinger/pyukiwiki.cgi';
 #$text{YASHIGANIMODOKI_URL}='';
 
-$text{SOURCEFORGE_JP_DOMAIN}="sfjp.jp";
+$text{SOURCEFORGE_JP_DOMAIN}="osdn.jp";
 $text{SOURCEFORGE_NET_DOMAIN}="sf.net";
 $text{PYUKI_SFJP_URL}="http://pyukiwiki.$text{SOURCEFORGE_JP_DOMAIN}/";
 $text{PYUKI_URL}="http://pyukiwiki.info/";
@@ -407,6 +407,10 @@ $text{AWSTATS_URL}="http://awstats.$text{SOURCEFORGE_NET_DOMAIN}/";
 $text{BASEURL}="http://pyukiwiki.info";
 $text{CVSURL}="http://$text{SOURCEFORGE_JP_DOMAIN}/cvs/view/pyukiwiki";
 $text{CVSURLDEV}="http://cvs.pyukiwiki.info/cgi-bin/cvsweb.cgi";
+
+$text{GITHUBURL}="https://github.com/nanakochi123456/PyukiWiki-Release/tree/master/src/";
+$text{GITHUBURLDEV}="https://github.com/nanakochi123456/PyukiWiki-Current/tree/master/src";
+$text{GITHUBURLDEVENV}="https://github.com/nanakochi123456/PyukiWikiDevelopmentEnvironment/tree/master/src";
 
 $text{RECENTDATE}=&date("Y-m-d (D)");
 
